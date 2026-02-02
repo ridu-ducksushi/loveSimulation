@@ -1,4 +1,5 @@
 using UnityEngine;
+using LoveSimulation.Data;
 using LoveSimulation.Events;
 
 namespace LoveSimulation.Core
@@ -19,6 +20,7 @@ namespace LoveSimulation.Core
         protected override void OnSingletonAwake()
         {
             _currentState = _initialState;
+            CharacterDatabase.Initialize();
             Debug.Log($"[GameManager] 초기화 완료. 상태: {_currentState}");
         }
 

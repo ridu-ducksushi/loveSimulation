@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using LoveSimulation.Events;
 
 namespace LoveSimulation.Core
 {
@@ -9,10 +10,40 @@ namespace LoveSimulation.Core
     public static class GameData
     {
         private static readonly Dictionary<string, int> _affection = new Dictionary<string, int>();
+        private static readonly Dictionary<string, int> _maxAffection = new Dictionary<string, int>();
         private static readonly Dictionary<string, bool> _flags = new Dictionary<string, bool>();
 
+        private const int DefaultMaxAffection = 100;
+        private const int MinAffection = 0;
+
         /// <summary>
-        /// 캐릭터 호감도 변경.
+        /// 캐릭터별 최대 호감도 등록. CharacterData에서 호출.
+        /// </summary>
+        public static void SetMaxAffection(string characterId, int max)
+        {
+            if (string.IsNullOrEmpty(characterId))
+            {
+                return;
+            }
+
+            _maxAffection[characterId] = max;
+        }
+
+        /// <summary>
+        /// 캐릭터 최대 호감도 조회.
+        /// </summary>
+        public static int GetMaxAffection(string characterId)
+        {
+            if (string.IsNullOrEmpty(characterId))
+            {
+                return DefaultMaxAffection;
+            }
+
+            return _maxAffection.TryGetValue(characterId, out int max) ? max : DefaultMaxAffection;
+        }
+
+        /// <summary>
+        /// 캐릭터 호감도 변경. 클램핑 적용 및 이벤트 발행.
         /// </summary>
         public static void AddAffection(string characterId, int amount)
         {
@@ -27,8 +58,84 @@ namespace LoveSimulation.Core
                 _affection[characterId] = 0;
             }
 
-            _affection[characterId] += amount;
-            Debug.Log($"[GameData] 호감도 변경: {characterId} {(amount >= 0 ? "+" : "")}{amount} → {_affection[characterId]}");
+            int previousValue = _affection[characterId];
+            int maxAffection = GetMaxAffection(characterId);
+            int newValue = Mathf.Clamp(previousValue + amount, MinAffection, maxAffection);
+
+            _affection[characterId] = newValue;
+
+            int actualDelta = newValue - previousValue;
+            Debug.Log($"[GameData] 호감도 변경: {characterId} {(actualDelta >= 0 ? "+" : "")}{actualDelta} → {newValue}");
+
+            PublishAffectionEvents(characterId, previousValue, newValue, actualDelta);
+        }
+
+        /// <summary>
+        /// 캐릭터 호감도 절대값 설정. 로드 시 사용.
+        /// </summary>
+        public static void SetAffection(string characterId, int value)
+        {
+            if (string.IsNullOrEmpty(characterId))
+            {
+                Debug.LogWarning("[GameData] 빈 characterId로 호감도 설정 시도 무시.");
+                return;
+            }
+
+            int maxAffection = GetMaxAffection(characterId);
+            int previousValue = _affection.TryGetValue(characterId, out int current) ? current : 0;
+            int newValue = Mathf.Clamp(value, MinAffection, maxAffection);
+
+            _affection[characterId] = newValue;
+
+            if (previousValue != newValue)
+            {
+                PublishAffectionEvents(characterId, previousValue, newValue, newValue - previousValue);
+            }
+        }
+
+        /// <summary>
+        /// 호감도 변경 이벤트 발행. 레벨 변경 시 추가 이벤트 발행.
+        /// </summary>
+        private static void PublishAffectionEvents(string characterId, int previousValue, int newValue, int delta)
+        {
+            EventBus.Publish(new AffectionChanged
+            {
+                CharacterId = characterId,
+                PreviousValue = previousValue,
+                NewValue = newValue,
+                Delta = delta
+            });
+
+            // 레벨 변경 체크 (CharacterDatabase가 초기화된 경우에만)
+            string previousLevel = GetAffectionLevelName(characterId, previousValue);
+            string newLevel = GetAffectionLevelName(characterId, newValue);
+
+            if (!string.IsNullOrEmpty(previousLevel) && previousLevel != newLevel)
+            {
+                EventBus.Publish(new AffectionLevelChanged
+                {
+                    CharacterId = characterId,
+                    PreviousLevel = previousLevel,
+                    NewLevel = newLevel
+                });
+
+                Debug.Log($"[GameData] 호감도 레벨 변경: {characterId} [{previousLevel}] → [{newLevel}]");
+            }
+        }
+
+        /// <summary>
+        /// CharacterData를 통한 레벨명 조회. CharacterDatabase 미초기화 시 빈 문자열 반환.
+        /// </summary>
+        private static string GetAffectionLevelName(string characterId, int affection)
+        {
+            // CharacterDatabase에 직접 의존하지 않고, 있으면 사용
+            var characterData = Data.CharacterDatabase.GetCharacter(characterId);
+            if (characterData == null)
+            {
+                return string.Empty;
+            }
+
+            return characterData.GetLevelName(affection);
         }
 
         /// <summary>
@@ -126,6 +233,7 @@ namespace LoveSimulation.Core
         public static void Reset()
         {
             _affection.Clear();
+            _maxAffection.Clear();
             _flags.Clear();
             Debug.Log("[GameData] 데이터 초기화 완료.");
         }

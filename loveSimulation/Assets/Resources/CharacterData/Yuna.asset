@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44f8696a8037734b95ac1af987a9747, type: 3}
+  m_Name: Yuna
+  m_EditorClassIdentifier: Assembly-CSharp::LoveSimulation.Data.CharacterData
+  _characterId: "\uC720\uB098"
+  _displayName: "\uC720\uB098"
+  _description: "\uBC1D\uACE0 \uD65C\uBC1C\uD55C \uC131\uACA9\uC758 \uC18C\uAFC9\uCE5C\uAD6C."
+  _maxAffection: 100
+  _affectionLevels:
+  - LevelName: "\uB0AF\uC120 \uC0AC\uC774"
+    Threshold: 0
+  - LevelName: "\uC9C0\uC778"
+    Threshold: 20
+  - LevelName: "\uCE5C\uAD6C"
+    Threshold: 40
+  - LevelName: "\uD638\uAC10"
+    Threshold: 60
+  - LevelName: "\uC5F0\uC778"
+    Threshold: 80
+  _portrait: {fileID: 0}
