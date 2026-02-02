@@ -73,6 +73,8 @@ namespace LoveSimulation.Core
                 SaveDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
 
+            GameData.ExportTo(data);
+
             bool success = WriteToFile(slotIndex, data);
             PublishSaveCompleted(slotIndex, success);
         }
@@ -215,6 +217,8 @@ namespace LoveSimulation.Core
 
             gameManager.SetPlayTime(data.PlayTime);
             gameManager.ChangeState(data.GameState);
+
+            GameData.ImportFrom(data);
 
             // 씬 전환 요청
             EventBus.Publish(new SceneTransitionRequested
