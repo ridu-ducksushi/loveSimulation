@@ -4,7 +4,7 @@
 - **엔진**: Unity 6 (6000.3.6f1)
 - **렌더링**: Universal Render Pipeline (URP) 2D
 - **입력**: Unity New Input System
-- **해상도**: 1920x1080
+- **해상도**: 1080x1920 (세로형)
 - **Color Space**: Linear
 - **빌드 타겟**: Windows Desktop (기본), WebGL (보조)
 
@@ -100,6 +100,6 @@
 - 스크립트 수정 후 `recompile_scripts`로 컴파일 확인
 
 ## UI 규칙
-- Canvas Scaler: Scale With Screen Size (1920x1080 기준)
+- Canvas Scaler: Scale With Screen Size (1080x1920 기준, 세로형)
 - 한국어 텍스트: TextMeshPro + 한글 폰트 에셋 사용
 - 2D 프로젝트이므로 Z축은 레이어 정렬 용도로만 사용

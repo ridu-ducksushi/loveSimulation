@@ -1,0 +1,39 @@
+{
+  "dialogueId": "sample_dialogue",
+  "lines": [
+    {
+      "speaker": "",
+      "text": "봄바람이 부는 어느 날, 학교 앞에서 한 소녀와 마주쳤다."
+    },
+    {
+      "speaker": "유나",
+      "text": "혹시 이 근처 살아? 나 전학 왔는데 길을 잘 모르겠어."
+    },
+    {
+      "speaker": "",
+      "text": "소녀는 수줍게 웃으며 지도를 내밀었다."
+    },
+    {
+      "speaker": "유나",
+      "text": "같이 가줄 수 있어? 학교까지만이라도..."
+    },
+    {
+      "speaker": "",
+      "text": "그렇게, 유나와의 첫 만남이 시작되었다.",
+      "choices": [
+        {
+          "text": "같이 가자",
+          "nextDialogueId": "ch01_walk",
+          "affectionChange": 5,
+          "flagToSet": "met_yuna"
+        },
+        {
+          "text": "미안, 바빠",
+          "nextDialogueId": "ch01_refuse",
+          "affectionChange": -2,
+          "flagToSet": "refused_yuna"
+        }
+      ]
+    }
+  ]
+}

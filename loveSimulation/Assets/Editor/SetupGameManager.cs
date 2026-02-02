@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using LoveSimulation.Core;
+using LoveSimulation.Dialogue;
 
 public static class SetupGameManager
 {
@@ -20,10 +21,11 @@ public static class SetupGameManager
         go.AddComponent<GameManager>();
         go.AddComponent<SaveLoadManager>();
         go.AddComponent<SceneTransitionManager>();
+        go.AddComponent<DialogueManager>();
 
         Selection.activeGameObject = go;
         EditorUtility.SetDirty(go);
 
-        Debug.Log("[Setup] GameManager 오브젝트 생성 완료. 컴포넌트 3개 부착됨.");
+        Debug.Log("[Setup] GameManager 오브젝트 생성 완료. 컴포넌트 4개 부착됨.");
     }
 }
