@@ -15,12 +15,22 @@ namespace LoveSimulation.Dialogue
         [JsonProperty("nextDialogueId")]
         public string NextDialogueId;
 
-        // Phase 3에서 활용
+        /// <summary>
+        /// 같은 파일 내 섹션으로 점프. nextDialogueId보다 우선 처리.
+        /// </summary>
+        [JsonProperty("goto")]
+        public string Goto;
+
         [JsonProperty("affectionChange")]
         public int AffectionChange;
 
         [JsonProperty("flagToSet")]
         public string FlagToSet;
+
+        /// <summary>
+        /// 같은 파일 내 섹션 점프 여부.
+        /// </summary>
+        public bool IsInternalJump => !string.IsNullOrEmpty(Goto);
     }
 
     /// <summary>
@@ -45,6 +55,16 @@ namespace LoveSimulation.Dialogue
     }
 
     /// <summary>
+    /// 대화 섹션 데이터. 한 파일 내 여러 분기를 관리.
+    /// </summary>
+    [System.Serializable]
+    public class DialogueSection
+    {
+        [JsonProperty("lines")]
+        public List<DialogueLine> Lines;
+    }
+
+    /// <summary>
     /// JSON 대화 파일 전체 구조.
     /// </summary>
     [System.Serializable]
@@ -53,7 +73,39 @@ namespace LoveSimulation.Dialogue
         [JsonProperty("dialogueId")]
         public string DialogueId;
 
+        /// <summary>
+        /// 기존 방식: 단일 라인 리스트.
+        /// </summary>
         [JsonProperty("lines")]
         public List<DialogueLine> Lines;
+
+        /// <summary>
+        /// 섹션 방식: 여러 분기를 딕셔너리로 관리.
+        /// </summary>
+        [JsonProperty("sections")]
+        public Dictionary<string, DialogueSection> Sections;
+
+        /// <summary>
+        /// 섹션 방식 사용 여부.
+        /// </summary>
+        public bool HasSections => Sections != null && Sections.Count > 0;
+
+        /// <summary>
+        /// 지정된 섹션의 라인 리스트 반환. 섹션이 없으면 null.
+        /// </summary>
+        public List<DialogueLine> GetSectionLines(string sectionName)
+        {
+            if (Sections == null)
+            {
+                return null;
+            }
+
+            if (Sections.TryGetValue(sectionName, out DialogueSection section))
+            {
+                return section.Lines;
+            }
+
+            return null;
+        }
     }
 }

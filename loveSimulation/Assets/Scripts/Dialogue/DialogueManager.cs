@@ -13,6 +13,7 @@ namespace LoveSimulation.Dialogue
     {
         private DialogueData _currentDialogue;
         private int _currentLineIndex;
+        private string _currentSection;
         private bool _isTyping;
         private bool _isDialogueActive;
         private bool _isShowingChoices;
@@ -37,6 +38,14 @@ namespace LoveSimulation.Dialogue
         /// </summary>
         public void StartDialogue(string dialogueId)
         {
+            StartDialogue(dialogueId, null);
+        }
+
+        /// <summary>
+        /// 대화 시작 (섹션 지정 가능). JSON 로드 후 첫 라인 표시.
+        /// </summary>
+        public void StartDialogue(string dialogueId, string sectionName)
+        {
             if (_isDialogueActive)
             {
                 Debug.LogWarning("[DialogueManager] 이미 대화 진행 중.");
@@ -55,12 +64,29 @@ namespace LoveSimulation.Dialogue
             _isTyping = false;
             _isShowingChoices = false;
 
+            // 섹션 방식이면 시작 섹션 설정
+            if (data.HasSections)
+            {
+                _currentSection = string.IsNullOrEmpty(sectionName) ? "start" : sectionName;
+                if (data.GetSectionLines(_currentSection) == null)
+                {
+                    Debug.LogError($"[DialogueManager] 섹션을 찾을 수 없음: {_currentSection}");
+                    _isDialogueActive = false;
+                    return;
+                }
+            }
+            else
+            {
+                _currentSection = null;
+            }
+
             // 현재 GameState 저장 후 Dialogue로 전환
             _previousState = GameManager.Instance.CurrentState;
             GameManager.Instance.ChangeState(GameState.Dialogue);
 
             EventBus.Publish(new DialogueStarted { DialogueId = dialogueId });
-            Debug.Log($"[DialogueManager] 대화 시작: {dialogueId}");
+            Debug.Log($"[DialogueManager] 대화 시작: {dialogueId}" +
+                      (_currentSection != null ? $" (섹션: {_currentSection})" : ""));
 
             ShowCurrentLine();
         }
@@ -91,23 +117,42 @@ namespace LoveSimulation.Dialogue
         }
 
         /// <summary>
+        /// 현재 섹션 또는 기본 라인 리스트 반환.
+        /// </summary>
+        private List<DialogueLine> GetCurrentLines()
+        {
+            if (_currentDialogue == null)
+            {
+                return null;
+            }
+
+            if (_currentDialogue.HasSections && !string.IsNullOrEmpty(_currentSection))
+            {
+                return _currentDialogue.GetSectionLines(_currentSection);
+            }
+
+            return _currentDialogue.Lines;
+        }
+
+        /// <summary>
         /// 현재 라인을 UI에 표시 요청.
         /// </summary>
         private void ShowCurrentLine()
         {
-            if (_currentDialogue == null || _currentDialogue.Lines == null)
+            List<DialogueLine> lines = GetCurrentLines();
+            if (lines == null)
             {
                 EndDialogue();
                 return;
             }
 
-            if (_currentLineIndex >= _currentDialogue.Lines.Count)
+            if (_currentLineIndex >= lines.Count)
             {
                 EndDialogue();
                 return;
             }
 
-            DialogueLine line = _currentDialogue.Lines[_currentLineIndex];
+            DialogueLine line = lines[_currentLineIndex];
             _isTyping = true;
 
             EventBus.Publish(new DialogueLineRequested
@@ -123,7 +168,14 @@ namespace LoveSimulation.Dialogue
         /// </summary>
         private void RequestNextLine()
         {
-            DialogueLine currentLine = _currentDialogue.Lines[_currentLineIndex];
+            List<DialogueLine> lines = GetCurrentLines();
+            if (lines == null || _currentLineIndex >= lines.Count)
+            {
+                EndDialogue();
+                return;
+            }
+
+            DialogueLine currentLine = lines[_currentLineIndex];
 
             // 선택지가 있는 라인이면 선택지 대기 (선택지 UI에서 처리)
             if (currentLine.HasChoices)
@@ -142,17 +194,18 @@ namespace LoveSimulation.Dialogue
         {
             _isTyping = false;
 
-            if (_currentDialogue == null || _currentDialogue.Lines == null)
+            List<DialogueLine> lines = GetCurrentLines();
+            if (lines == null)
             {
                 return;
             }
 
-            if (_currentLineIndex >= _currentDialogue.Lines.Count)
+            if (_currentLineIndex >= lines.Count)
             {
                 return;
             }
 
-            DialogueLine currentLine = _currentDialogue.Lines[_currentLineIndex];
+            DialogueLine currentLine = lines[_currentLineIndex];
             if (currentLine.HasChoices)
             {
                 ShowChoices(currentLine.Choices);
@@ -179,7 +232,13 @@ namespace LoveSimulation.Dialogue
                 return;
             }
 
-            DialogueLine currentLine = _currentDialogue.Lines[_currentLineIndex];
+            List<DialogueLine> lines = GetCurrentLines();
+            if (lines == null || _currentLineIndex >= lines.Count)
+            {
+                return;
+            }
+
+            DialogueLine currentLine = lines[_currentLineIndex];
             if (!currentLine.HasChoices)
             {
                 return;
@@ -194,7 +253,44 @@ namespace LoveSimulation.Dialogue
 
             DialogueChoice choice = currentLine.Choices[evt.ChoiceIndex];
             ApplyChoiceEffects(choice);
-            ChainToNextDialogue(choice.NextDialogueId);
+
+            // goto가 있으면 내부 섹션 점프, 없으면 외부 대화 연결
+            if (choice.IsInternalJump)
+            {
+                JumpToSection(choice.Goto);
+            }
+            else
+            {
+                ChainToNextDialogue(choice.NextDialogueId);
+            }
+        }
+
+        /// <summary>
+        /// 같은 파일 내 다른 섹션으로 점프.
+        /// </summary>
+        private void JumpToSection(string sectionName)
+        {
+            if (!_currentDialogue.HasSections)
+            {
+                Debug.LogError("[DialogueManager] 섹션 방식이 아닌 대화에서 goto 사용 불가.");
+                EndDialogue();
+                return;
+            }
+
+            List<DialogueLine> sectionLines = _currentDialogue.GetSectionLines(sectionName);
+            if (sectionLines == null)
+            {
+                Debug.LogError($"[DialogueManager] 섹션을 찾을 수 없음: {sectionName}");
+                EndDialogue();
+                return;
+            }
+
+            _currentSection = sectionName;
+            _currentLineIndex = 0;
+            _isShowingChoices = false;
+
+            Debug.Log($"[DialogueManager] 섹션 점프: {sectionName}");
+            ShowCurrentLine();
         }
 
         /// <summary>
@@ -222,9 +318,15 @@ namespace LoveSimulation.Dialogue
         /// </summary>
         private string GetCurrentSpeaker()
         {
+            List<DialogueLine> lines = GetCurrentLines();
+            if (lines == null)
+            {
+                return string.Empty;
+            }
+
             for (int i = _currentLineIndex; i >= 0; i--)
             {
-                string speaker = _currentDialogue.Lines[i].Speaker;
+                string speaker = lines[i].Speaker;
                 if (!string.IsNullOrEmpty(speaker))
                 {
                     return speaker;
@@ -264,6 +366,7 @@ namespace LoveSimulation.Dialogue
             _isShowingChoices = false;
             _currentDialogue = null;
             _currentLineIndex = 0;
+            _currentSection = null;
 
             GameManager.Instance.ChangeState(_previousState);
 
@@ -286,11 +389,22 @@ namespace LoveSimulation.Dialogue
             try
             {
                 DialogueData data = JsonConvert.DeserializeObject<DialogueData>(textAsset.text);
-                if (data == null || data.Lines == null || data.Lines.Count == 0)
+                if (data == null)
                 {
                     Debug.LogError($"[DialogueManager] 대화 데이터가 비어있음: {dialogueId}");
                     return null;
                 }
+
+                // 섹션 방식 또는 기존 방식 중 하나는 유효해야 함
+                bool hasLines = data.Lines != null && data.Lines.Count > 0;
+                bool hasSections = data.HasSections;
+
+                if (!hasLines && !hasSections)
+                {
+                    Debug.LogError($"[DialogueManager] 대화 데이터가 비어있음: {dialogueId}");
+                    return null;
+                }
+
                 return data;
             }
             catch (JsonException e)

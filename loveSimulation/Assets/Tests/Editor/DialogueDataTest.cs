@@ -24,6 +24,35 @@ namespace LoveSimulation.Tests
             ]
         }";
 
+        private const string SectionJson = @"{
+            ""dialogueId"": ""chapter01"",
+            ""sections"": {
+                ""start"": {
+                    ""lines"": [
+                        { ""speaker"": """", ""text"": ""시작 나레이션."" },
+                        {
+                            ""speaker"": ""유나"",
+                            ""text"": ""선택해줘."",
+                            ""choices"": [
+                                { ""text"": ""옵션 A"", ""goto"": ""branch_a"", ""affectionChange"": 5 },
+                                { ""text"": ""옵션 B"", ""goto"": ""branch_b"", ""affectionChange"": -2 }
+                            ]
+                        }
+                    ]
+                },
+                ""branch_a"": {
+                    ""lines"": [
+                        { ""speaker"": ""유나"", ""text"": ""A를 골랐구나!"" }
+                    ]
+                },
+                ""branch_b"": {
+                    ""lines"": [
+                        { ""speaker"": ""유나"", ""text"": ""B를 골랐구나!"" }
+                    ]
+                }
+            }
+        }";
+
         [Test]
         public void DialogueData_JSON_역직렬화_성공()
         {
@@ -92,6 +121,94 @@ namespace LoveSimulation.Tests
             Assert.IsNotNull(data);
             Assert.AreEqual("sample_dialogue", data.DialogueId);
             Assert.IsTrue(data.Lines.Count > 0);
+        }
+
+        [Test]
+        public void DialogueData_섹션방식_역직렬화_성공()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SectionJson);
+
+            Assert.IsNotNull(data);
+            Assert.AreEqual("chapter01", data.DialogueId);
+            Assert.IsTrue(data.HasSections);
+            Assert.AreEqual(3, data.Sections.Count);
+        }
+
+        [Test]
+        public void DialogueData_섹션_라인_정상_조회()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SectionJson);
+
+            var startLines = data.GetSectionLines("start");
+            Assert.IsNotNull(startLines);
+            Assert.AreEqual(2, startLines.Count);
+
+            var branchALines = data.GetSectionLines("branch_a");
+            Assert.IsNotNull(branchALines);
+            Assert.AreEqual(1, branchALines.Count);
+            Assert.AreEqual("A를 골랐구나!", branchALines[0].Text);
+        }
+
+        [Test]
+        public void DialogueData_존재하지않는_섹션_Null반환()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SectionJson);
+
+            var invalidSection = data.GetSectionLines("invalid_section");
+            Assert.IsNull(invalidSection);
+        }
+
+        [Test]
+        public void DialogueChoice_Goto필드_정상파싱()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SectionJson);
+
+            var startLines = data.GetSectionLines("start");
+            var choiceLine = startLines[1];
+
+            Assert.IsTrue(choiceLine.HasChoices);
+            Assert.AreEqual(2, choiceLine.Choices.Count);
+
+            var choiceA = choiceLine.Choices[0];
+            Assert.AreEqual("branch_a", choiceA.Goto);
+            Assert.IsTrue(choiceA.IsInternalJump);
+            Assert.IsNull(choiceA.NextDialogueId);
+        }
+
+        [Test]
+        public void DialogueChoice_NextDialogueId만_있으면_IsInternalJump_False()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SampleJson);
+            var choice = data.Lines[1].Choices[0];
+
+            Assert.AreEqual("next_01", choice.NextDialogueId);
+            Assert.IsFalse(choice.IsInternalJump);
+            Assert.IsNull(choice.Goto);
+        }
+
+        [Test]
+        public void DialogueData_기존방식_HasSections_False()
+        {
+            var data = JsonConvert.DeserializeObject<DialogueData>(SampleJson);
+
+            Assert.IsFalse(data.HasSections);
+            Assert.IsNull(data.Sections);
+            Assert.IsNotNull(data.Lines);
+        }
+
+        [Test]
+        public void Chapter01_JSON파일_Resources_로드()
+        {
+            var textAsset = UnityEngine.Resources.Load<UnityEngine.TextAsset>("Dialogues/chapter01");
+            Assert.IsNotNull(textAsset, "chapter01.json이 Resources/Dialogues/에 존재해야 합니다.");
+
+            var data = JsonConvert.DeserializeObject<DialogueData>(textAsset.text);
+            Assert.IsNotNull(data);
+            Assert.AreEqual("chapter01", data.DialogueId);
+            Assert.IsTrue(data.HasSections);
+            Assert.IsTrue(data.Sections.ContainsKey("start"));
+            Assert.IsTrue(data.Sections.ContainsKey("walk_branch"));
+            Assert.IsTrue(data.Sections.ContainsKey("refuse_branch"));
         }
     }
 }

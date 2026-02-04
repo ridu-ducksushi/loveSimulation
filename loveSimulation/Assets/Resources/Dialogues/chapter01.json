@@ -1,0 +1,83 @@
+{
+  "dialogueId": "chapter01",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "봄바람이 부는 어느 날, 학교 앞에서 한 소녀와 마주쳤다."
+        },
+        {
+          "speaker": "유나",
+          "text": "혹시 이 근처 살아? 나 전학 왔는데 길을 잘 모르겠어."
+        },
+        {
+          "speaker": "",
+          "text": "소녀는 수줍게 웃으며 지도를 내밀었다."
+        },
+        {
+          "speaker": "유나",
+          "text": "같이 가줄 수 있어? 학교까지만이라도..."
+        },
+        {
+          "speaker": "",
+          "text": "그렇게, 유나와의 첫 만남이 시작되었다.",
+          "choices": [
+            {
+              "text": "같이 가자",
+              "goto": "walk_branch",
+              "affectionChange": 5,
+              "flagToSet": "met_yuna"
+            },
+            {
+              "text": "미안, 바빠",
+              "goto": "refuse_branch",
+              "affectionChange": -2,
+              "flagToSet": "refused_yuna"
+            }
+          ]
+        }
+      ]
+    },
+    "walk_branch": {
+      "lines": [
+        {
+          "speaker": "유나",
+          "text": "정말? 고마워! 같이 가자!"
+        },
+        {
+          "speaker": "",
+          "text": "유나의 얼굴에 환한 미소가 번졌다."
+        },
+        {
+          "speaker": "유나",
+          "text": "이 근처에 예쁜 카페가 있다고 들었는데... 학교 끝나고 같이 갈래?"
+        },
+        {
+          "speaker": "",
+          "text": "함께 학교로 향하는 길, 봄바람이 유난히 따뜻하게 느껴졌다."
+        }
+      ]
+    },
+    "refuse_branch": {
+      "lines": [
+        {
+          "speaker": "유나",
+          "text": "아... 그렇구나. 바쁜데 미안."
+        },
+        {
+          "speaker": "",
+          "text": "유나는 살짝 실망한 표정을 지었지만, 곧 웃음을 되찾았다."
+        },
+        {
+          "speaker": "유나",
+          "text": "괜찮아! 다음에 또 마주치면 그때 알려줘!"
+        },
+        {
+          "speaker": "",
+          "text": "유나는 손을 흔들며 혼자 학교 쪽으로 걸어갔다."
+        }
+      ]
+    }
+  }
+}
