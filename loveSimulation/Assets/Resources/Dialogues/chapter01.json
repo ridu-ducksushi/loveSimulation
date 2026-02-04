@@ -5,77 +5,281 @@
       "lines": [
         {
           "speaker": "",
-          "text": "봄바람이 부는 어느 날, 학교 앞에서 한 소녀와 마주쳤다."
+          "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다."
         },
         {
-          "speaker": "유나",
-          "text": "혹시 이 근처 살아? 나 전학 왔는데 길을 잘 모르겠어."
-        },
-        {
-          "speaker": "",
-          "text": "소녀는 수줍게 웃으며 지도를 내밀었다."
-        },
-        {
-          "speaker": "유나",
-          "text": "같이 가줄 수 있어? 학교까지만이라도..."
+          "speaker": "me",
+          "text": "…손님이 계시는군요."
         },
         {
           "speaker": "",
-          "text": "그렇게, 유나와의 첫 만남이 시작되었다.",
+          "text": "대공의 집무실에 눈부신 금발 머리를 가진\n아름다운 여인이 있었다."
+        },
+        {
+          "speaker": "대공",
+          "text": "대공비군. 마침 잘왔어."
+        },
+        {
+          "speaker": "낯선 여인",
+          "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요."
+        },
+        {
+          "speaker": "대공",
+          "text": "숲에서 사냥을 하다 크게 다쳤는데…\n이 여자가 날 치료해줬어."
+        },
+        {
+          "speaker": "대공",
+          "text": "이상하게도, 그 순간엔 운명 같더군."
+        },
+        {
+          "speaker": "대공",
+          "text": "그녀가 아니었으면 난 지금쯤…"
+        },
+        {
+          "speaker": "",
+          "text": "대공은 소년같은 미소를 지으며\n그녀를 바라보았다."
+        },
+        {
+          "speaker": "",
+          "text": "그 웃음은, 어린 시절\n나에게 보여주던 모습과 닮아 있었다."
+        },
+        {
+          "speaker": "대공",
+          "text": "성에 머물게 할 생각이야.\n상처도 아직 완전히 낫지 않았고."
+        },
+        {
+          "speaker": "me",
+          "text": "성에 머문다니요.\n그런 결정은 상의가—"
+        },
+        {
+          "speaker": "대공",
+          "text": "그녀를 정부로 맞이하려고 해."
+        },
+        {
+          "speaker": "",
+          "text": "낯선 여인을 정부로 맞이한다는 남편의 말",
           "choices": [
             {
-              "text": "같이 가자",
-              "goto": "walk_branch",
+              "text": "뭐라고?",
+              "goto": "confrontation",
               "affectionChange": 5,
-              "flagToSet": "met_yuna"
+              "flagToSet": "ch1_confronted"
             },
             {
-              "text": "미안, 바빠",
-              "goto": "refuse_branch",
+              "text": "설마 농담이지?",
+              "goto": "denial",
               "affectionChange": -2,
-              "flagToSet": "refused_yuna"
+              "flagToSet": "ch1_denied"
             }
           ]
         }
       ]
     },
-    "walk_branch": {
+    "confrontation": {
       "lines": [
         {
-          "speaker": "유나",
-          "text": "정말? 고마워! 같이 가자!"
+          "speaker": "me",
+          "text": "신분도 모르는 자를 들이는 건 말도 안돼요!"
+        },
+        {
+          "speaker": "대공",
+          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 고아출신 아이라는군."
+        },
+        {
+          "speaker": "대공",
+          "text": "내가 책임지고 돌볼 생각이야."
         },
         {
           "speaker": "",
-          "text": "유나의 얼굴에 환한 미소가 번졌다."
+          "text": "대공의 단호한 태도에 나는 할 말을 잃었다."
         },
         {
-          "speaker": "유나",
-          "text": "이 근처에 예쁜 카페가 있다고 들었는데... 학교 끝나고 같이 갈래?"
+          "speaker": "대공",
+          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지."
+        },
+        {
+          "speaker": "me",
+          "text": "…알겠어요. 당신이 그렇게 원한다면."
         },
         {
           "speaker": "",
-          "text": "함께 학교로 향하는 길, 봄바람이 유난히 따뜻하게 느껴졌다."
+          "text": "나는 깊은 한숨을 내쉬었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_decision"
+            }
+          ]
         }
       ]
     },
-    "refuse_branch": {
+    "denial": {
       "lines": [
         {
-          "speaker": "유나",
-          "text": "아... 그렇구나. 바쁜데 미안."
+          "speaker": "me",
+          "text": "농담이라고 해줘요."
+        },
+        {
+          "speaker": "대공",
+          "text": "진심이야.\n그녀가 없었다면 난 지금쯤 죽었을지도 몰라."
+        },
+        {
+          "speaker": "대공",
+          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지."
+        },
+        {
+          "speaker": "me",
+          "text": "…당신이 그렇게 원한다면."
         },
         {
           "speaker": "",
-          "text": "유나는 살짝 실망한 표정을 지었지만, 곧 웃음을 되찾았다."
+          "text": "나는 깊은 한숨을 내쉬었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_decision"
+            }
+          ]
+        }
+      ]
+    },
+    "after_decision": {
+      "lines": [
+        {
+          "speaker": "낯선 여인",
+          "text": "잘 부탁드려요, 대공비님.\n저는 아델린이라고 불러주세요."
         },
         {
-          "speaker": "유나",
-          "text": "괜찮아! 다음에 또 마주치면 그때 알려줘!"
+          "speaker": "아델린",
+          "text": "사실… 저는 대공비님을\n꼭 한번 뵙고 싶었어요."
+        },
+        {
+          "speaker": "me",
+          "text": "네가 나를?"
+        },
+        {
+          "speaker": "아델린",
+          "text": "네. 제가 태어난 남부에는\n대공비님을 찬양하는 목소리가 가득하답니다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "북부를 지키는 분.\n냉철하고, 빈틈없고…"
+        },
+        {
+          "speaker": "아델린",
+          "text": "아주 완벽한 귀부인이라고요."
         },
         {
           "speaker": "",
-          "text": "유나는 손을 흔들며 혼자 학교 쪽으로 걸어갔다."
+          "text": "칭찬이었다. 그러나 어딘가 서늘한 기분이 들었다."
+        },
+         {
+          "speaker": "",
+          "text": "며칠 뒤."
+        },
+        {
+          "speaker": "",
+          "text": "성 안에서의 그녀의 존재감은\n날이 갈수록 커져갔다."
+        },
+        {
+          "speaker": "하녀",
+          "text": "대공비님, 오늘 저녁 만찬에\n'아델린'님도 참석하신다고 합니다."
+        },
+        {
+          "speaker": "me",
+          "text": "…그래."
+        },
+        {
+          "speaker": "",
+          "text": "대공은 그녀와 함께 있는 시간이 늘어났고,\n나와의 대화는 점점 줄어들었다."
+        },
+        {
+          "speaker": "",
+          "text": "만찬장으로 향하는 복도에서\n익숙한 웃음소리가 들려왔다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공님, 정말 재미있으시네요."
+        },
+        {
+          "speaker": "대공",
+          "text": "하하, 자네와 있으면 시간 가는 줄 모르겠어."
+        },
+        {
+          "speaker": "",
+          "text": "두 사람이 나란히 걸어오고 있었다.",
+          "choices": [
+            {
+              "text": "모른 척 지나간다",
+              "goto": "ignore_them",
+              "flagToSet": "ch1_ignored_couple"
+            },
+            {
+              "text": "먼저 인사한다",
+              "goto": "greet_them",
+              "flagToSet": "ch1_greeted_couple"
+            }
+          ]
+        }
+      ]
+    },
+    "ignore_them": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 시선을 피해 빠르게 지나쳤다."
+        },
+        {
+          "speaker": "대공",
+          "text": "…대공비?"
+        },
+        {
+          "speaker": "",
+          "text": "뒤에서 부르는 소리가 들렸지만,\n나는 멈추지 않았다."
+        },
+        {
+          "speaker": "me",
+          "text": "(이럴거 까진 아니었는데...)"
+        },
+        {
+          "speaker": "",
+          "text": "가슴 한구석이 답답하게 조여왔다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 1 End —"
+        }
+      ]
+    },
+    "greet_them": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "전하. 만찬장으로 가시는 길인가요?"
+        },
+        {
+          "speaker": "대공",
+          "text": "아, 대공비. 그래, 같이 가지."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님도 함께 하시니 영광이에요."
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 미소는 완벽했다.\n흠잡을 곳 하나 없이."
+        },
+        {
+          "speaker": "me",
+          "text": "(대체 이 여자의 정체는 뭘까…)"
+        },
+        {
+          "speaker": "",
+          "text": "나는 억지로 미소를 지으며\n두 사람과 함께 만찬장으로 향했다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 1 End —"
         }
       ]
     }

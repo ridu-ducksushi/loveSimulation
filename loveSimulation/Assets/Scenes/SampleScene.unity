@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1cf2fd9d67eb54ea4f4ec588f9ee61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoveSimulation.Testing.DialogueTestTrigger
-  _dialogueId: sample_dialogue
+  _dialogueId: chapter01
 --- !u!4 &663950710
 Transform:
   m_ObjectHideFlags: 0
