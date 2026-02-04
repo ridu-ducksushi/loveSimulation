@@ -9,7 +9,8 @@ namespace LoveSimulation.Testing
     /// </summary>
     public class DialogueTestTrigger : MonoBehaviour
     {
-        [SerializeField] private string _dialogueId = "sample_dialogue";
+        [Tooltip("Resources/Dialogues 폴더의 JSON 파일을 드래그하세요")]
+        [SerializeField] private TextAsset _dialogueFile;
 
         private void Update()
         {
@@ -26,10 +27,17 @@ namespace LoveSimulation.Testing
                     return;
                 }
 
+                if (_dialogueFile == null)
+                {
+                    Debug.LogError("[DialogueTestTrigger] 대화 파일이 설정되지 않음.");
+                    return;
+                }
+
                 if (!DialogueManager.Instance.IsDialogueActive)
                 {
-                    Debug.Log($"[DialogueTestTrigger] 대화 시작 요청: {_dialogueId}");
-                    DialogueManager.Instance.StartDialogue(_dialogueId);
+                    string dialogueId = _dialogueFile.name;
+                    Debug.Log($"[DialogueTestTrigger] 대화 시작 요청: {dialogueId}");
+                    DialogueManager.Instance.StartDialogue(dialogueId);
                 }
             }
         }

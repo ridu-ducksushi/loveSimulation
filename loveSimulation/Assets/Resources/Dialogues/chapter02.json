@@ -1,0 +1,413 @@
+{
+  "dialogueId": "chapter02",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "해가 저물 무렵.\n대공성의 불은 하나둘 꺼져갔다."
+        },
+        {
+          "speaker": "",
+          "text": "그러나 대공비의 집무실만은 아직 밝았다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단의 보고서, 귀족들의 청원서,\n북부 국경의 식량 수급 현황."
+        },
+        {
+          "speaker": "",
+          "text": "산더미 같은 서류를 홀로 처리하는데도\n대공은 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "…이 정도면 오늘도 무사히 넘겼군."
+        },
+        {
+          "speaker": "",
+          "text": "북부 대공가의 업무는 언제나\n대공비 혼자만의 몫이었다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "와아… 늦은 시간까지 일하고 계셨네요?"
+        },
+        {
+          "speaker": "",
+          "text": "집무실에 방문한 아델린.",
+          "choices": [
+            {
+              "text": "반갑지 않은 손님",
+              "goto": "rude_response",
+              "affectionChange": -3,
+              "flagToSet": "ch2_rude"
+            },
+            {
+              "text": "무슨 일이지?",
+              "goto": "curious_response",
+              "affectionChange": 0,
+              "flagToSet": "ch2_curious"
+            }
+          ]
+        }
+      ]
+    },
+    "rude_response": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "…노크도 없이 들어오다니."
+        },
+        {
+          "speaker": "me",
+          "text": "나는 부른적이 없을 텐데."
+        },
+        {
+          "speaker": "아델린",
+          "text": "어머, 죄송해요.\n문이 열려있길래…"
+        },
+        {
+          "speaker": "",
+          "text": "그녀는 전혀 미안해하는 기색이 없었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "adeline_interest"
+            }
+          ]
+        }
+      ]
+    },
+    "curious_response": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "…무슨 일이지?"
+        },
+        {
+          "speaker": "아델린",
+          "text": "아, 특별한 건 아니에요.\n그냥 불이 켜져 있길래 궁금해서요."
+        },
+        {
+          "speaker": "",
+          "text": "그녀는 자연스럽게 집무실 안으로 들어섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "adeline_interest"
+            }
+          ]
+        }
+      ]
+    },
+    "adeline_interest": {
+      "lines": [
+        {
+          "speaker": "아델린",
+          "text": "바쁘신가 보네요."
+        },
+        {
+          "speaker": "",
+          "text": "아델린은 책상 위의 서류들을 힐끗 바라보았다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "어머, 이건 북부의 기사단 이야기인가 보죠?"
+        },
+        {
+          "speaker": "me",
+          "text": "…그래."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님께서 직접 기사단 업무까지 보시는군요.\n정말 대단하세요."
+        },
+        {
+          "speaker": "",
+          "text": "칭찬인지 비꼬는 것인지 알 수 없는 말투였다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공님은… 이런 일은 안 하시나요?"
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 질문에 펜을 쥔 손이 멈췄다.",
+          "choices": [
+            {
+              "text": "대공님은 바쁘시니까",
+              "goto": "defend_duke",
+              "affectionChange": 2,
+              "flagToSet": "ch2_defended_duke"
+            },
+            {
+              "text": "네가 알 바 아니야",
+              "goto": "refuse_answer",
+              "affectionChange": -5,
+              "flagToSet": "ch2_refused_answer"
+            }
+          ]
+        }
+      ]
+    },
+    "defend_duke": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "대공님은… 바쁘시니까."
+        },
+        {
+          "speaker": "아델린",
+          "text": "그렇군요."
+        },
+        {
+          "speaker": "",
+          "text": "아델린은 의미심장한 미소를 지었다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님은 정말 헌신적이시네요.\n이렇게 밤늦도록 혼자서…"
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 시선이 책상 위 서류로 향했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "document_conflict"
+            }
+          ]
+        }
+      ]
+    },
+    "refuse_answer": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "네가 알 바 아니야."
+        },
+        {
+          "speaker": "아델린",
+          "text": "…"
+        },
+        {
+          "speaker": "",
+          "text": "순간, 그녀의 눈빛이 차갑게 변했다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "…그렇군요. 실례했어요."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 아델린은 물러서지 않았다.\n오히려 책상 위 서류에 손을 뻗었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "document_conflict"
+            }
+          ]
+        }
+      ]
+    },
+    "document_conflict": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "뭐하는 짓이지?"
+        },
+        {
+          "speaker": "아델린",
+          "text": "죄송해요. 대공비님의 업무가\n어떤 건지 궁금했거든요."
+        },
+        {
+          "speaker": "아델린",
+          "text": "…근데 이건 조금 비효율적이지 않나요?"
+        },
+        {
+          "speaker": "me",
+          "text": "…뭐라고?"
+        },
+        {
+          "speaker": "아델린",
+          "text": "보급량을 조금 줄이고, 여분은 귀족들에게 넘기면\n불만도 없고 좋을 것 같은데요."
+        },
+        {
+          "speaker": "me",
+          "text": "당장 내려놓게."
+        },
+        {
+          "speaker": "아델린",
+          "text": "저는 그냥 더 나은 방법이 있을 것 같아서…"
+        },
+        {
+          "speaker": "대공",
+          "text": "여기 있었군."
+        },
+        {
+          "speaker": "",
+          "text": "때마침 대공이 집무실로 들어섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "duke_arrives"
+            }
+          ]
+        }
+      ]
+    },
+    "duke_arrives": {
+      "lines": [
+        {
+          "speaker": "아델린",
+          "text": "전하, 마침 잘 오셨어요.\n대공비님 업무를 도와드리고 있었거든요."
+        },
+        {
+          "speaker": "me",
+          "text": "도움이라니. 허락도 없이 서류를 뒤적인 것을?"
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님이 피곤해보이셔서요.\n대공님은 어떻게 생각하세요?"
+        },
+        {
+          "speaker": "대공",
+          "text": "그런 일이었군\n당신은 너무 상냥해서 문제라니까."
+        },
+        {
+          "speaker": "",
+          "text": "대공은 아델린의 어깨를 토닥였다.",
+          "choices": [
+            {
+              "text": "먼 산을 본다",
+              "goto": "stay_silent",
+              "affectionChange": -2,
+              "flagToSet": "ch2_silent"
+            },
+            {
+              "text": "둘 다 나가",
+              "goto": "confront_both",
+              "affectionChange": 5,
+              "flagToSet": "ch2_confronted"
+            }
+          ]
+        }
+      ]
+    },
+    "stay_silent": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 아무 말도 하지 않았다."
+        },
+        {
+          "speaker": "대공",
+          "text": "너무 딱딱하게 받아들일 필요는 없지 않나."
+        },
+        {
+          "speaker": "대공",
+          "text": "잘 몰라서 하는 이야기니 넘어가지 그래?"
+        },
+        {
+          "speaker": "대공",
+          "text": "자네도 조금은 유연해질 필요도 있고."
+        },
+        {
+          "speaker": "",
+          "text": "유연함 보다 중요한 것은\n현재 북부의 상황이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ending"
+            }
+          ]
+        }
+      ]
+    },
+    "confront_both": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...용건이 끝났으면\n두 분 다 나가주셨으면 합니다."
+        },
+        {
+          "speaker": "대공",
+          "text": "..."
+        },
+        {
+          "speaker": "대공",
+          "text": "너무 딱딱하게 받아들일 필요는 없지 않나."
+        },
+        {
+          "speaker": "대공",
+          "text": "좋은 마음으로 하는 이야기니 넘어가지 그래?"
+        },
+        {
+          "speaker": "대공",
+          "text": "자네도 조금은 유연해질 필요도 있고."
+        },
+        {
+          "speaker": "",
+          "text": "유연함 보다 중요한 것은\n현재 북부의 상황이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ending"
+            }
+          ]
+        }
+      ]
+    },
+    "ending": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "몬스터 침략의 주기가 짧아지고 있습니다.\n그런데도 왕실에선 북부 기사단을 견제하고만 있어요"
+        },
+        {
+          "speaker": "me",
+          "text": "북부는 방어의 요새입니다."
+        },
+        {
+          "speaker": "me",
+          "text": "이대로 가다간, 몬스터에게 국경을 내줄지도 몰라요."
+        },
+        {
+          "speaker": "대공",
+          "text": "…당신 말이 맞아."
+        },
+         {
+          "speaker": "대공",
+          "text": "그런데 말야... \n지금 그 얘기를 하기엔 조금 피곤한 것 같군."
+        },
+        {
+          "speaker": "대공",
+          "text": "나는 이만 돌아가봐야겠어"
+        },
+        {
+          "speaker": "",
+          "text": "업무얘기를 꺼내자\n대공은 머리를 감싸며 피곤한 표정을 지었다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "즐거웠어요, 저도 이만 가볼게요."
+        }, 
+         {
+          "speaker": "",
+          "text": "도망치듯 집무실을 나서는 대공을\n아델린이 따라갔다."
+        },       
+         {
+          "speaker": "",
+          "text": "...문이 닫겼고,\n집무실은 다시 조용해졌다."
+        },
+        {
+          "speaker": "",
+          "text": "남은 것은 대공비와 서류 더미뿐이었다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 2 End —"
+        }
+      ]
+    }
+  }
+}
