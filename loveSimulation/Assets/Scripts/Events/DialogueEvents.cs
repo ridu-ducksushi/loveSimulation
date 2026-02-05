@@ -55,4 +55,17 @@ namespace LoveSimulation.Events
     {
         public string DialogueId;
     }
+
+    /// <summary>
+    /// 챕터 제목 표시 요청. Manager → ChapterTitleUI.
+    /// </summary>
+    public struct ChapterTitleRequested
+    {
+        public string Title;
+    }
+
+    /// <summary>
+    /// 챕터 제목 표시 완료. ChapterTitleUI → Manager.
+    /// </summary>
+    public struct ChapterTitleCompleted { }
 }

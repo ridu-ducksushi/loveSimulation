@@ -18,6 +18,7 @@ namespace LoveSimulation.Dialogue
         private bool _isDialogueActive;
         private bool _isShowingChoices;
         private bool _isPendingSingleChoice;
+        private bool _isWaitingForChapterTitle;
         private DialogueChoice _pendingChoice;
         private GameState _previousState;
 
@@ -27,12 +28,14 @@ namespace LoveSimulation.Dialogue
         {
             EventBus.Subscribe<DialogueTypingCompleted>(OnTypingCompleted);
             EventBus.Subscribe<ChoiceSelected>(OnChoiceSelected);
+            EventBus.Subscribe<ChapterTitleCompleted>(OnChapterTitleCompleted);
         }
 
         private void OnDisable()
         {
             EventBus.Unsubscribe<DialogueTypingCompleted>(OnTypingCompleted);
             EventBus.Unsubscribe<ChoiceSelected>(OnChoiceSelected);
+            EventBus.Unsubscribe<ChapterTitleCompleted>(OnChapterTitleCompleted);
         }
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace LoveSimulation.Dialogue
             _isTyping = false;
             _isShowingChoices = false;
             _isPendingSingleChoice = false;
+            _isWaitingForChapterTitle = false;
             _pendingChoice = null;
 
             // 섹션 방식이면 시작 섹션 설정
@@ -92,7 +96,15 @@ namespace LoveSimulation.Dialogue
             Debug.Log($"[DialogueManager] 대화 시작: {dialogueId}" +
                       (_currentSection != null ? $" (섹션: {_currentSection})" : ""));
 
-            ShowCurrentLine();
+            // 챕터 제목이 있고 섹션이 시작점(start 또는 null)이면 제목 연출
+            if (data.HasChapterTitle && (string.IsNullOrEmpty(sectionName) || sectionName == "start"))
+            {
+                StartChapterTitleSequence(data.ChapterTitle);
+            }
+            else
+            {
+                ShowCurrentLine();
+            }
         }
 
         /// <summary>
@@ -105,8 +117,8 @@ namespace LoveSimulation.Dialogue
                 return;
             }
 
-            // 선택지 표시 중에는 입력 차단
-            if (_isShowingChoices)
+            // 선택지 표시 중이거나 챕터 제목 표시 중에는 입력 차단
+            if (_isShowingChoices || _isWaitingForChapterTitle)
             {
                 return;
             }
@@ -125,6 +137,30 @@ namespace LoveSimulation.Dialogue
             }
 
             RequestNextLine();
+        }
+
+        /// <summary>
+        /// 챕터 제목 연출 시작.
+        /// </summary>
+        private void StartChapterTitleSequence(string title)
+        {
+            _isWaitingForChapterTitle = true;
+            EventBus.Publish(new ChapterTitleRequested { Title = title });
+            Debug.Log($"[DialogueManager] 챕터 제목 연출 시작: {title}");
+        }
+
+        /// <summary>
+        /// 챕터 제목 연출 완료 핸들러.
+        /// </summary>
+        private void OnChapterTitleCompleted(ChapterTitleCompleted _)
+        {
+            if (!_isWaitingForChapterTitle)
+            {
+                return;
+            }
+
+            _isWaitingForChapterTitle = false;
+            ShowCurrentLine();
         }
 
         /// <summary>
@@ -416,6 +452,7 @@ namespace LoveSimulation.Dialogue
             _isTyping = false;
             _isShowingChoices = false;
             _isPendingSingleChoice = false;
+            _isWaitingForChapterTitle = false;
             _pendingChoice = null;
             _currentDialogue = null;
             _currentLineIndex = 0;

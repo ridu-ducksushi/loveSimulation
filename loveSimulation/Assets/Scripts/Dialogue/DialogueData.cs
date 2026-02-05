@@ -74,6 +74,12 @@ namespace LoveSimulation.Dialogue
         public string DialogueId;
 
         /// <summary>
+        /// 챕터 제목. 챕터 시작 시 연출과 함께 표시.
+        /// </summary>
+        [JsonProperty("chapterTitle")]
+        public string ChapterTitle;
+
+        /// <summary>
         /// 기존 방식: 단일 라인 리스트.
         /// </summary>
         [JsonProperty("lines")]
@@ -84,6 +90,11 @@ namespace LoveSimulation.Dialogue
         /// </summary>
         [JsonProperty("sections")]
         public Dictionary<string, DialogueSection> Sections;
+
+        /// <summary>
+        /// 챕터 제목 존재 여부.
+        /// </summary>
+        public bool HasChapterTitle => !string.IsNullOrEmpty(ChapterTitle);
 
         /// <summary>
         /// 섹션 방식 사용 여부.
