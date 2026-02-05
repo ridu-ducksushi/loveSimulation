@@ -17,6 +17,8 @@ namespace LoveSimulation.Dialogue
         private bool _isTyping;
         private bool _isDialogueActive;
         private bool _isShowingChoices;
+        private bool _isPendingSingleChoice;
+        private DialogueChoice _pendingChoice;
         private GameState _previousState;
 
         public bool IsDialogueActive => _isDialogueActive;
@@ -63,6 +65,8 @@ namespace LoveSimulation.Dialogue
             _isDialogueActive = true;
             _isTyping = false;
             _isShowingChoices = false;
+            _isPendingSingleChoice = false;
+            _pendingChoice = null;
 
             // 섹션 방식이면 시작 섹션 설정
             if (data.HasSections)
@@ -110,6 +114,13 @@ namespace LoveSimulation.Dialogue
             if (_isTyping)
             {
                 EventBus.Publish(new DialogueSkipRequested());
+                return;
+            }
+
+            // 단일 선택지 대기 중이면 해당 선택지 실행
+            if (_isPendingSingleChoice)
+            {
+                ExecutePendingSingleChoice();
                 return;
             }
 
@@ -227,10 +238,29 @@ namespace LoveSimulation.Dialogue
         }
 
         /// <summary>
-        /// 선택지가 1개일 때 자동으로 해당 선택지 처리.
+        /// 선택지가 1개일 때 사용자 입력 대기 상태로 전환.
         /// </summary>
         private void ProcessSingleChoice(DialogueChoice choice)
         {
+            _isPendingSingleChoice = true;
+            _pendingChoice = choice;
+            // 사용자가 화면을 클릭하면 AdvanceDialogue에서 처리
+        }
+
+        /// <summary>
+        /// 대기 중인 단일 선택지 실행.
+        /// </summary>
+        private void ExecutePendingSingleChoice()
+        {
+            if (!_isPendingSingleChoice || _pendingChoice == null)
+            {
+                return;
+            }
+
+            DialogueChoice choice = _pendingChoice;
+            _isPendingSingleChoice = false;
+            _pendingChoice = null;
+
             ApplyChoiceEffects(choice);
 
             if (choice.IsInternalJump)
@@ -385,6 +415,8 @@ namespace LoveSimulation.Dialogue
             _isDialogueActive = false;
             _isTyping = false;
             _isShowingChoices = false;
+            _isPendingSingleChoice = false;
+            _pendingChoice = null;
             _currentDialogue = null;
             _currentLineIndex = 0;
             _currentSection = null;
