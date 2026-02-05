@@ -1,0 +1,685 @@
+{
+  "dialogueId": "chapter04",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 왕도, 세 달째 —"
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 북부의 입장을 대변하며\n귀족 회의에서 버티고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 왕실과 귀족들의 견제는\n날이 갈수록 거세졌다."
+        },
+        {
+          "speaker": "",
+          "text": "그날도 회랑을 지나던 중,\n익숙한 대화가 귓가에 스며들었다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "대공이 왜 저 여자와 결혼했는지 알겠어."
+        },
+        {
+          "speaker": "귀족2",
+          "text": "집안이 필요했겠지. 몰락한 백작가라도\n적통 황녀의 피가 섞였으니."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "황녀? 아버지한테 버림받은 서녀잖아."
+        },
+        {
+          "speaker": "귀족2",
+          "text": "그래서 지금 피 터지게 일하고 있지.\n자기 값어치 증명하려고."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "크크, 불쌍하기도 해.\n정작 남편은 새로운 정부나 들이고"
+        },
+        {
+          "speaker": "귀족2",
+          "text": "둘 사이에 아이라도 생긴다면\n대공비는 끝이야."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 표정이 굳어졌다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 앞으로 나서려 했지만,\n대공비가 손짓으로 제지했다.",
+          "choices": [
+            {
+              "text": "못 들어주겠어",
+              "goto": "choice_cant_stand",
+              "affectionChange": 3,
+              "flagToSet": "ch4_cant_stand"
+            },
+            {
+              "text": "허위 사실이에요!",
+              "goto": "choice_false_rumors",
+              "affectionChange": 5,
+              "flagToSet": "ch4_false_rumors"
+            },
+            {
+              "text": "기사단장의 귀를 막는다",
+              "goto": "choice_cover_ears",
+              "affectionChange": 10,
+              "flagToSet": "ch4_cover_ears"
+            }
+          ]
+        }
+      ]
+    },
+    "choice_cant_stand": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "더 이상은 못 들어주겠네요."
+        },
+        {
+          "speaker": "",
+          "text": "대공비가 회랑으로 모습을 드러내자\n귀족들의 얼굴이 하얗게 질렸다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "대, 대공비 전하...!"
+        },
+        {
+          "speaker": "귀족2",
+          "text": "저, 저희는 그저..."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 묵묵히 대공비 옆에 섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "noble_confrontation"
+            }
+          ]
+        }
+      ]
+    },
+    "choice_false_rumors": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "귀족들의 언행이\n이렇게 가벼워서야 되겠습니까?"
+        },
+        {
+          "speaker": "",
+          "text": "대공비가 차갑게 말하며 모습을 드러냈다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "저, 전하...!"
+        },
+        {
+          "speaker": "귀족2",
+          "text": "그, 그건 그저 농담..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "농담이라 할 수 있는\n얘기는 아니었던 것 같습니다만."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 서늘한 눈빛에\n귀족들이 움찔했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "noble_confrontation"
+            }
+          ]
+        }
+      ]
+    },
+    "choice_cover_ears": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "대공비가 조용히 다가가\n기사단장의 양쪽 귀를 손으로 막았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...전하?!"
+        },
+        {
+          "speaker": "me",
+          "text": "듣지 마요. 쓸데없는 소리니까."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "하지만 저런 말을..."
+        },
+        {
+          "speaker": "me",
+          "text": "어차피 처음 듣는 얘기도 아녜요."
+        },
+        {
+          "speaker": "me",
+          "text": "단장이 화내봐야 나만 곤란해져요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 대공비의 손을 느끼며\n가만히 있었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...전하께서 괜찮으시다면."
+        },
+        {
+          "speaker": "",
+          "text": "그때 회랑을 지나던 귀족들이\n대공비와 눈이 마주쳤다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "...대공비 전하?!"
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 천천히 손을 내리며\n귀족들을 향해 돌아섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "noble_confrontation"
+            }
+          ]
+        }
+      ]
+    },
+    "noble_confrontation": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "출처 없는 말은 소문이고,"
+        },
+        {
+          "speaker": "me",
+          "text": "소문은 곧 선동이 됩니다."
+        },
+        {
+          "speaker": "me",
+          "text": "귀족 회의장에서 그런 말씀을 하셔도 되는지\n여쭙고 싶군요."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "그, 그건..."
+        },
+        {
+          "speaker": "귀족2",
+          "text": "저희가 경솔했습니다, 전하..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "다음에 비슷한 일이 있다면\n가만히 있지 않겠습니다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 낮은 목소리에\n귀족들은 황급히 자리를 피했다."
+        },
+        {
+          "speaker": "",
+          "text": "둘만 남은 회랑에 침묵이 흘렀다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...전하."
+        },
+        {
+          "speaker": "me",
+          "text": "네?"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "괜찮으십니까?"
+        },
+        {
+          "speaker": "me",
+          "text": "괜찮아요. 익숙하니까."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "그 말이 더 마음에 걸립니다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 쓸쓸한 표정으로 대공비를 바라보았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_confrontation"
+            }
+          ]
+        }
+      ]
+    },
+    "after_confrontation": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "대공비는 잠시 발걸음을 멈추고\n기사단장을 돌아보았다."
+        },
+        {
+          "speaker": "me",
+          "text": "...아까 왜 가만히 있었어요?"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하께서 막으셨으니까요."
+        },
+        {
+          "speaker": "me",
+          "text": "평소 같으면 먼저 뛰쳐나갔을 텐데."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하께서 곤란해지실까봐요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 조용히 시선을 내렸다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "제가 나서면 전하께서 감싸야 하니까..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "그게 더 싫었습니다."
+        },
+        {
+          "speaker": "me",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 잠시 말이 없다가\n입을 열었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...고마워요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하...?"
+        },
+        {
+          "speaker": "me",
+          "text": "내 편이 되어줘서요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 귀가 붉어졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "six_months_north"
+            }
+          ]
+        }
+      ]
+    },
+    "six_months_north": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 여섯 달째, 북부성 —"
+        },
+        {
+          "speaker": "",
+          "text": "대공은 서재에서 서류 더미에 파묻혀 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "대공비가 없는 동안 처리해야 할 일들이\n산더미처럼 쌓여 있었다."
+        },
+        {
+          "speaker": "대공",
+          "text": "...언제 돌아온다고 했더라."
+        },
+        {
+          "speaker": "아델린",
+          "text": "전하, 차를 가져왔어요."
+        },
+        {
+          "speaker": "",
+          "text": "아델린이 살며시 방으로 들어왔다."
+        },
+        {
+          "speaker": "대공",
+          "text": "...그래."
+        },
+        {
+          "speaker": "아델린",
+          "text": "요즘 너무 무리하시는 것 같아요."
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님이 안 계시니까\n전하께서 전부 하셔야 하잖아요."
+        },
+        {
+          "speaker": "대공",
+          "text": "원래 내 일이야."
+        },
+        {
+          "speaker": "아델린",
+          "text": "그래도... 저라도 곁에서 도와드릴게요."
+        },
+        {
+          "speaker": "",
+          "text": "아델린이 대공의 어깨에 손을 얹었다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "전하, 잠시 쉬세요."
+        },
+        {
+          "speaker": "아델린",
+          "text": "전하 곁은 제가 지킬게요."
+        },
+        {
+          "speaker": "대공",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "대공은 아무 말 없이 서류를 내려놓았다."
+        },
+        {
+          "speaker": "",
+          "text": "아델린은 만족스러운 미소를 지으며\n자리를 지켰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ten_months_royal"
+            }
+          ]
+        }
+      ]
+    },
+    "ten_months_royal": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 열 달째, 왕도 —"
+        },
+        {
+          "speaker": "",
+          "text": "북부에서 오는 소식이 점점 줄어들었다."
+        },
+        {
+          "speaker": "",
+          "text": "보낸 전령도 돌아오지 않고,\n대공의 답신도 끊긴 지 오래였다."
+        },
+        {
+          "speaker": "me",
+          "text": "또 공문이야..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비의 책상 위에는\n왕실에서 보낸 서류가 쌓여 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "북부 재정 점검 요청,\n기사단 인원 보고 독촉,\n변경 방어 현황 확인..."
+        },
+        {
+          "speaker": "me",
+          "text": "전하께 확인받아야 하는 건데..."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 대공의 답신은 오지 않았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하, 또 밤을 새우실 겁니까."
+        },
+        {
+          "speaker": "me",
+          "text": "...할 일이 많아요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "북부에서 연락이 없다고 들었습니다."
+        },
+        {
+          "speaker": "me",
+          "text": "네. 전령도 돌아오지 않고..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 창밖을 바라보며\n한숨을 내쉬었다.",
+          "choices": [
+            {
+              "text": "대공은 대체 뭘 하고 있는 거야",
+              "goto": "choice_worried_duke",
+              "affectionChange": 0,
+              "flagToSet": "ch4_worried_duke"
+            },
+            {
+              "text": "...단장도 고생이네",
+              "goto": "choice_worried_knight",
+              "affectionChange": 5,
+              "flagToSet": "ch4_worried_knight"
+            }
+          ]
+        }
+      ]
+    },
+    "choice_worried_duke": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "대공은 대체 뭘 하고 있는 거야..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "..."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하께서 걱정하실 일은 아닙니다."
+        },
+        {
+          "speaker": "me",
+          "text": "내가 걱정하지 않으면 누가 해요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...그것도 그렇군요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 씁쓸한 표정을 지었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "inspection_team"
+            }
+          ]
+        }
+      ]
+    },
+    "choice_worried_knight": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...단장도 많이 고생하고 있죠."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하...?"
+        },
+        {
+          "speaker": "me",
+          "text": "나 때문에 왕도까지 와서\n고생만 시키네요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "아닙니다. 전하 곁에 있는 게..."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 말을 멈추고 고개를 숙였다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...전하께서 건강하시면 그걸로 됩니다."
+        },
+        {
+          "speaker": "me",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 조용히 미소 지었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "inspection_team"
+            }
+          ]
+        }
+      ]
+    },
+    "inspection_team": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "며칠 후, 귀족 회의가 열렸다."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "북부 대공령의 재정 상황이 불투명합니다."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "왕실에서 감찰단을 파견하여\n직접 확인하겠습니다."
+        },
+        {
+          "speaker": "",
+          "text": "회의장이 술렁였다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "감찰단이라니... 전례가 없는 일인데."
+        },
+        {
+          "speaker": "귀족2",
+          "text": "북부가 뭔가 숨기고 있나?"
+        },
+        {
+          "speaker": "me",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 이를 악물었다."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "감찰단은 북부성에 장기 주둔하며\n모든 재정 서류를 검토할 것입니다."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "결재가 미비한 서류가 상당수 발견되었다고\n보고를 받았습니다."
+        },
+        {
+          "speaker": "me",
+          "text": "그건 제가 왕도에 있는 동안..."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "대공비 전하께서 직접 확인하실 수 있도록\n북부로 돌아가셔도 좋습니다."
+        },
+        {
+          "speaker": "",
+          "text": "왕실 대신의 눈가에 미소가 스쳤다."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "아, 그리고..."
+        },
+        {
+          "speaker": "왕실대신",
+          "text": "대공 전하께서는 요즘 사냥에 빠지셨다던데,\n건강하신지 확인해 주시길 바랍니다."
+        },
+        {
+          "speaker": "",
+          "text": "주변 귀족들이 낮은 웃음을 흘렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 주먹을 꽉 쥐었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하..."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 조용히 옆에 섰다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "북부로 돌아가시죠."
+        },
+        {
+          "speaker": "me",
+          "text": "...네."
+        },
+        {
+          "speaker": "",
+          "text": "열 달 만에 북부로 돌아가게 되었다.\n감찰단과 함께.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "chapter_end": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "왕도에서 보낸 열 달.\n쌓인 것은 피로와 의심뿐이었다."
+        },
+        {
+          "speaker": "",
+          "text": "기다리는 것은 무엇일까."
+        },
+        {
+          "speaker": "",
+          "text": "남편의 변명인지,\n정부의 비웃음인지,\n아니면 더 큰 시련인지..."
+        },
+        {
+          "speaker": "",
+          "text": "대공비는 마차에 올라\n북쪽 하늘을 바라보았다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 4 End —"
+        }
+      ]
+    }
+  }
+}
