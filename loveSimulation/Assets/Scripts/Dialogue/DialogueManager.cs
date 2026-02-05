@@ -189,18 +189,14 @@ namespace LoveSimulation.Dialogue
 
         /// <summary>
         /// 타이핑 완료 이벤트 핸들러. 선택지 라인이면 자동으로 선택지 표시.
+        /// 단, 선택지가 1개면 버튼 없이 바로 진행.
         /// </summary>
         private void OnTypingCompleted(DialogueTypingCompleted _)
         {
             _isTyping = false;
 
             List<DialogueLine> lines = GetCurrentLines();
-            if (lines == null)
-            {
-                return;
-            }
-
-            if (_currentLineIndex >= lines.Count)
+            if (lines == null || _currentLineIndex >= lines.Count)
             {
                 return;
             }
@@ -208,7 +204,15 @@ namespace LoveSimulation.Dialogue
             DialogueLine currentLine = lines[_currentLineIndex];
             if (currentLine.HasChoices)
             {
-                ShowChoices(currentLine.Choices);
+                // 선택지가 1개면 자동 진행 (계속하기 버튼 제거)
+                if (currentLine.Choices.Count == 1)
+                {
+                    ProcessSingleChoice(currentLine.Choices[0]);
+                }
+                else
+                {
+                    ShowChoices(currentLine.Choices);
+                }
             }
         }
 
@@ -220,6 +224,23 @@ namespace LoveSimulation.Dialogue
             _isShowingChoices = true;
             EventBus.Publish(new ChoiceRequested { Choices = choices });
             Debug.Log($"[DialogueManager] 선택지 {choices.Count}개 표시.");
+        }
+
+        /// <summary>
+        /// 선택지가 1개일 때 자동으로 해당 선택지 처리.
+        /// </summary>
+        private void ProcessSingleChoice(DialogueChoice choice)
+        {
+            ApplyChoiceEffects(choice);
+
+            if (choice.IsInternalJump)
+            {
+                JumpToSection(choice.Goto);
+            }
+            else
+            {
+                ChainToNextDialogue(choice.NextDialogueId);
+            }
         }
 
         /// <summary>
