@@ -41,6 +41,8 @@ namespace LoveSimulation.Dialogue
             EventBus.Subscribe<DialogueLineRequested>(OnDialogueLineRequested);
             EventBus.Subscribe<DialogueSkipRequested>(OnDialogueSkipRequested);
             EventBus.Subscribe<DialogueEnded>(OnDialogueEnded);
+            EventBus.Subscribe<ChapterTitleRequested>(OnChapterTitleRequested);
+            EventBus.Subscribe<ChapterTitleCompleted>(OnChapterTitleCompleted);
         }
 
         private void OnDisable()
@@ -49,6 +51,8 @@ namespace LoveSimulation.Dialogue
             EventBus.Unsubscribe<DialogueLineRequested>(OnDialogueLineRequested);
             EventBus.Unsubscribe<DialogueSkipRequested>(OnDialogueSkipRequested);
             EventBus.Unsubscribe<DialogueEnded>(OnDialogueEnded);
+            EventBus.Unsubscribe<ChapterTitleRequested>(OnChapterTitleRequested);
+            EventBus.Unsubscribe<ChapterTitleCompleted>(OnChapterTitleCompleted);
         }
 
         private void Update()
@@ -84,6 +88,28 @@ namespace LoveSimulation.Dialogue
         /// 대화 시작 → 패널 활성화.
         /// </summary>
         private void OnDialogueStarted(DialogueStarted evt)
+        {
+            if (_dialoguePanel != null)
+            {
+                _dialoguePanel.SetActive(true);
+            }
+        }
+
+        /// <summary>
+        /// 챕터 제목 연출 시작 시 패널 숨김.
+        /// </summary>
+        private void OnChapterTitleRequested(ChapterTitleRequested _)
+        {
+            if (_dialoguePanel != null)
+            {
+                _dialoguePanel.SetActive(false);
+            }
+        }
+
+        /// <summary>
+        /// 챕터 제목 연출 완료 시 패널 재활성화.
+        /// </summary>
+        private void OnChapterTitleCompleted(ChapterTitleCompleted _)
         {
             if (_dialoguePanel != null)
             {

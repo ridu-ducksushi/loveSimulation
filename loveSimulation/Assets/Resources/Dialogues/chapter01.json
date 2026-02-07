@@ -1,6 +1,6 @@
 {
   "dialogueId": "chapter01",
-  "chapterTitle": "-불청객-",
+  "chapterTitle": "-공작가의 불청객-",
   "sections": {
     "start": {
       "lines": [
@@ -174,7 +174,7 @@
           "speaker": "",
           "text": "칭찬이었다. 그러나 어딘가 서늘한 기분이 들었다."
         },
-         {
+        {
           "speaker": "",
           "text": "며칠 뒤."
         },
