@@ -28,6 +28,25 @@ namespace LoveSimulation.Core
             }
         }
 
+        /// <summary>
+        /// 인스턴스 존재 여부 확인. 종료 중이면 false.
+        /// </summary>
+        public static bool HasInstance
+        {
+            get
+            {
+                if (_isQuitting)
+                {
+                    return false;
+                }
+
+                lock (_lock)
+                {
+                    return _instance != null;
+                }
+            }
+        }
+
         protected virtual void Awake()
         {
             lock (_lock)

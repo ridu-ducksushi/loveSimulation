@@ -93,6 +93,18 @@ namespace LoveSimulation.Dialogue
         public List<CharacterDisplayInfo> Characters;
 
         /// <summary>
+        /// 텍스트 정렬. "left", "center", "right". optional (기본값: left).
+        /// </summary>
+        [JsonProperty("textAlign")]
+        public string TextAlign;
+
+        /// <summary>
+        /// 이 라인이 끝나면 캐릭터 숨김. optional (기본값: false).
+        /// </summary>
+        [JsonProperty("hideCharactersAfter")]
+        public bool HideCharactersAfter;
+
+        /// <summary>
         /// 선택지가 존재하는지 여부.
         /// </summary>
         public bool HasChoices => Choices != null && Choices.Count > 0;

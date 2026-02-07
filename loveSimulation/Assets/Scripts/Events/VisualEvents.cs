@@ -32,4 +32,15 @@ namespace LoveSimulation.Events
         public string BackgroundId;
         public float Duration;
     }
+
+    /// <summary>
+    /// 화자 강조 요청. 해당 위치의 캐릭터를 밝게, 나머지는 어둡게.
+    /// </summary>
+    public struct CharacterHighlightRequested
+    {
+        /// <summary>
+        /// 강조할 캐릭터 위치. null이면 모두 동일 밝기.
+        /// </summary>
+        public CharacterPosition? Position;
+    }
 }

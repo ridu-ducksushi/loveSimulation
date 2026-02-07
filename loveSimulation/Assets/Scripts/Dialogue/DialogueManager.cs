@@ -219,7 +219,8 @@ namespace LoveSimulation.Dialogue
             {
                 Speaker = line.Speaker,
                 Text = line.Text,
-                HasChoices = line.HasChoices
+                HasChoices = line.HasChoices,
+                TextAlign = line.TextAlign
             });
 
             Debug.Log($"[DialogueManager] 라인 표시: {line.Speaker}: {line.Text?.Substring(0, System.Math.Min(20, line.Text?.Length ?? 0))}...");
@@ -227,12 +228,18 @@ namespace LoveSimulation.Dialogue
 
         /// <summary>
         /// 캐릭터 표시 이벤트 발행.
+        /// characters 필드가 명시된 경우에만 캐릭터를 표시.
         /// </summary>
         private void PublishCharacterDisplay(DialogueLine line)
         {
-            // 복수 캐릭터 배치 정보가 있으면 우선 사용
+            // characters 필드가 명시된 경우에만 캐릭터 표시
             if (line.HasCharacters)
             {
+                CharacterPosition? speakerPosition = null;
+                string speakerId = string.IsNullOrEmpty(line.Speaker)
+                    ? null
+                    : ConvertSpeakerToId(line.Speaker);
+
                 foreach (CharacterDisplayInfo charInfo in line.Characters)
                 {
                     EventBus.Publish(new CharacterDisplayRequested
@@ -242,28 +249,26 @@ namespace LoveSimulation.Dialogue
                         Position = charInfo.Position,
                         FadeIn = true
                     });
-                }
-                return;
-            }
 
-            // 화자가 있으면 중앙에 표시
-            if (!string.IsNullOrEmpty(line.Speaker))
-            {
-                // 화자 이름을 ID로 변환 (간단한 매핑)
-                string characterId = ConvertSpeakerToId(line.Speaker);
-                EventBus.Publish(new CharacterDisplayRequested
-                {
-                    CharacterId = characterId,
-                    Emotion = line.Emotion ?? "neutral",
-                    Position = CharacterPosition.Center,
-                    FadeIn = true
-                });
+                    // 화자 위치 파악
+                    if (speakerId != null && charInfo.Id == speakerId)
+                    {
+                        speakerPosition = charInfo.Position;
+                    }
+                }
+
+                // 화자 강조 발행
+                PublishCharacterHighlight(speakerPosition);
             }
-            else
-            {
-                // 나레이션: 캐릭터 숨김
-                EventBus.Publish(new CharacterHideRequested { Position = null });
-            }
+            // characters 필드가 없으면 캐릭터 상태 유지 (아무것도 하지 않음)
+        }
+
+        /// <summary>
+        /// 화자 강조 이벤트 발행.
+        /// </summary>
+        private void PublishCharacterHighlight(CharacterPosition? speakerPosition)
+        {
+            EventBus.Publish(new CharacterHighlightRequested { Position = speakerPosition });
         }
 
         /// <summary>
@@ -324,6 +329,13 @@ namespace LoveSimulation.Dialogue
             }
 
             DialogueLine currentLine = lines[_currentLineIndex];
+
+            // hideCharactersAfter가 설정되어 있으면 캐릭터 숨김
+            if (currentLine.HideCharactersAfter)
+            {
+                EventBus.Publish(new CharacterHideRequested { Position = null });
+            }
+
             if (currentLine.HasChoices)
             {
                 // 선택지가 1개면 자동 진행 (계속하기 버튼 제거)

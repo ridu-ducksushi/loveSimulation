@@ -7,12 +7,12 @@
         {
           "speaker": "",
           "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다.",
-          "background": "castle_hall"
+          "textAlign": "center"
         },
         {
           "speaker": "me",
           "text": "…손님이 계시는군요.",
-          "emotion": "me_neutral"
+          "background": "castle_hall"
         },
         {
           "speaker": "",
@@ -23,13 +23,19 @@
           "text": "대공비군. 마침 잘왔어."
         },
         {
-          "speaker": "낯선 여인",
+          "speaker": "아델린",
           "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요.",
           "emotion": "smile"
         },
         {
           "speaker": "대공",
-          "text": "숲에서 사냥을 하다 크게 다쳤는데…\n이 여자가 날 치료해줬어."
+          "text": "숲에서 사냥을 하다 크게 다쳤는데…\n이 여자가 날 치료해줬어.",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "happy"},
+            {"id": "duke", "position": "Right", "emotion": "neutral"}
+          ],
+          "hideCharactersAfter": true
+
         },
         {
           "speaker": "대공",

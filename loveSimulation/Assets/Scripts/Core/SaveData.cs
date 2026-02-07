@@ -64,5 +64,29 @@ namespace LoveSimulation.Core
         /// </summary>
         [JsonProperty("extraData")]
         public Dictionary<string, string> ExtraData = new Dictionary<string, string>();
+
+        /// <summary>
+        /// 현재 일차.
+        /// </summary>
+        [JsonProperty("currentDay")]
+        public int CurrentDay = 1;
+
+        /// <summary>
+        /// 현재 시간대 (TimeOfDay enum 값).
+        /// </summary>
+        [JsonProperty("currentTimeOfDay")]
+        public int CurrentTimeOfDay = 0;
+
+        /// <summary>
+        /// 현재 장소 (Location enum 값).
+        /// </summary>
+        [JsonProperty("currentLocation")]
+        public int CurrentLocation = 0;
+
+        /// <summary>
+        /// 트리거된 이벤트 ID 목록.
+        /// </summary>
+        [JsonProperty("triggeredEvents")]
+        public List<string> TriggeredEvents = new List<string>();
     }
 }

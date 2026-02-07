@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76c0aa73831dbb4da89af0e10a3f354, type: 3}
+  m_Name: TestMorningEvent
+  m_EditorClassIdentifier:
+  _eventId: test_morning_event
+  _dialogueId: chapter01
+  _conditions:
+    MinDay: 1
+    MaxDay: -1
+    RequiredTimeOfDay: 0
+    RequiredLocation: 0
+    CharacterId:
+    MinAffection: -1
+    MaxAffection: -1
+    RequiredFlags: []
+    ForbiddenFlags: []
+  _priority: 10
+  _repeatable: 0
+  _description: "1일차 아침, 집에서 트리거되는 테스트 이벤트. chapter01 대화를 시작합니다."

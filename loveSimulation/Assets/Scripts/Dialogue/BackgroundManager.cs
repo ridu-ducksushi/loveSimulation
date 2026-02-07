@@ -48,14 +48,33 @@ namespace LoveSimulation.Dialogue
 
         private void OnEnable()
         {
+            EventBus.Subscribe<DialogueStarted>(OnDialogueStarted);
             EventBus.Subscribe<BackgroundChangeRequested>(OnBackgroundChangeRequested);
             EventBus.Subscribe<DialogueEnded>(OnDialogueEnded);
         }
 
         private void OnDisable()
         {
+            EventBus.Unsubscribe<DialogueStarted>(OnDialogueStarted);
             EventBus.Unsubscribe<BackgroundChangeRequested>(OnBackgroundChangeRequested);
             EventBus.Unsubscribe<DialogueEnded>(OnDialogueEnded);
+        }
+
+        private void OnDialogueStarted(DialogueStarted _)
+        {
+            // 대화 시작 시 배경 초기화
+            if (_fadeCoroutine != null)
+            {
+                StopCoroutine(_fadeCoroutine);
+                _fadeCoroutine = null;
+            }
+
+            SetImageAlpha(_backgroundImage1, 0f);
+            SetImageAlpha(_backgroundImage2, 0f);
+            _backgroundImage1.sprite = null;
+            _backgroundImage2.sprite = null;
+            _currentBackgroundId = null;
+            _activeImageIndex = 0;
         }
 
         private void OnBackgroundChangeRequested(BackgroundChangeRequested evt)
@@ -85,9 +104,38 @@ namespace LoveSimulation.Dialogue
 
         private void OnDialogueEnded(DialogueEnded _)
         {
-            // 대화 종료 시 배경 유지 (필요시 페이드 아웃 가능)
-            // 현재는 배경을 유지하고 상태만 리셋
+            // 대화 종료 시 배경 페이드 아웃
+            if (_fadeCoroutine != null)
+            {
+                StopCoroutine(_fadeCoroutine);
+            }
+
+            _fadeCoroutine = StartCoroutine(FadeOutBackground());
+        }
+
+        /// <summary>
+        /// 배경 페이드 아웃 코루틴.
+        /// </summary>
+        private IEnumerator FadeOutBackground()
+        {
+            Image activeImage = _activeImageIndex == 0 ? _backgroundImage1 : _backgroundImage2;
+            float startAlpha = activeImage.color.a;
+
+            float elapsed = 0f;
+            while (elapsed < _defaultFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / _defaultFadeDuration);
+                SetImageAlpha(activeImage, Mathf.Lerp(startAlpha, 0f, t));
+                yield return null;
+            }
+
+            SetImageAlpha(_backgroundImage1, 0f);
+            SetImageAlpha(_backgroundImage2, 0f);
+            _backgroundImage1.sprite = null;
+            _backgroundImage2.sprite = null;
             _currentBackgroundId = null;
+            _fadeCoroutine = null;
         }
 
         /// <summary>

@@ -20,6 +20,7 @@ namespace LoveSimulation.Events
         public string Speaker;
         public string Text;
         public bool HasChoices;
+        public string TextAlign;
     }
 
     /// <summary>

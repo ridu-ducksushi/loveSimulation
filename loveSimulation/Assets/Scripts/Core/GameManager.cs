@@ -21,6 +21,7 @@ namespace LoveSimulation.Core
         {
             _currentState = _initialState;
             CharacterDatabase.Initialize();
+            StoryEventDatabase.Initialize();
             Debug.Log($"[GameManager] 초기화 완료. 상태: {_currentState}");
         }
 

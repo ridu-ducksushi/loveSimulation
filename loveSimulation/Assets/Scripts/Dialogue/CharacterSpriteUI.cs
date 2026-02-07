@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using LoveSimulation.Core;
@@ -7,54 +8,165 @@ using LoveSimulation.Events;
 namespace LoveSimulation.Dialogue
 {
     /// <summary>
-    /// 캐릭터 스프라이트 표시 UI. 화자만 중앙에 표시하는 심플 모드.
+    /// 캐릭터 스프라이트 표시 UI. Left/Center/Right 3개 슬롯 지원.
     /// </summary>
     public class CharacterSpriteUI : MonoBehaviour
     {
-        [SerializeField] private Image _characterImage;
-        [SerializeField] private float _fadeDuration = 0.3f;
+        [System.Serializable]
+        private class CharacterSlot
+        {
+            public Image FrontImage;
+            public Image BackImage;
+            [System.NonSerialized] public string CurrentCharacterId;
+            [System.NonSerialized] public string CurrentEmotion;
+            [System.NonSerialized] public Coroutine FadeCoroutine;
+        }
 
-        private Coroutine _fadeCoroutine;
-        private string _currentCharacterId;
-        private string _currentEmotion;
+        [Header("Left Position")]
+        [SerializeField] private Image _leftFront;
+        [SerializeField] private Image _leftBack;
+
+        [Header("Center Position")]
+        [SerializeField] private Image _centerFront;
+        [SerializeField] private Image _centerBack;
+
+        [Header("Right Position")]
+        [SerializeField] private Image _rightFront;
+        [SerializeField] private Image _rightBack;
+
+        [Header("Settings")]
+        [SerializeField] private float _fadeDuration = 0.3f;
+        [SerializeField] private float _dimmedAlpha = 0.5f;
+
+        private Dictionary<CharacterPosition, CharacterSlot> _slots;
+        private CharacterPosition? _activeSpeakerPosition;
 
         private void Awake()
         {
-            if (_characterImage == null)
+            InitializeSlots();
+        }
+
+        private void InitializeSlots()
+        {
+            _slots = new Dictionary<CharacterPosition, CharacterSlot>();
+
+            // Left 슬롯
+            if (_leftFront != null || _leftBack != null)
             {
-                _characterImage = GetComponentInChildren<Image>();
+                CharacterSlot leftSlot = new CharacterSlot
+                {
+                    FrontImage = _leftFront,
+                    BackImage = _leftBack
+                };
+                _slots[CharacterPosition.Left] = leftSlot;
+                InitializeSlotImages(leftSlot);
             }
 
-            if (_characterImage == null)
+            // Center 슬롯
+            if (_centerFront != null || _centerBack != null)
             {
-                Debug.LogWarning("[CharacterSpriteUI] Image 컴포넌트를 찾을 수 없음. 비활성화됨.");
+                CharacterSlot centerSlot = new CharacterSlot
+                {
+                    FrontImage = _centerFront,
+                    BackImage = _centerBack
+                };
+                _slots[CharacterPosition.Center] = centerSlot;
+                InitializeSlotImages(centerSlot);
+            }
+
+            // Right 슬롯
+            if (_rightFront != null || _rightBack != null)
+            {
+                CharacterSlot rightSlot = new CharacterSlot
+                {
+                    FrontImage = _rightFront,
+                    BackImage = _rightBack
+                };
+                _slots[CharacterPosition.Right] = rightSlot;
+                InitializeSlotImages(rightSlot);
+            }
+
+            if (_slots.Count == 0)
+            {
+                Debug.LogWarning("[CharacterSpriteUI] 슬롯이 하나도 설정되지 않음. 비활성화됨.");
                 enabled = false;
-                return;
+            }
+        }
+
+        private void InitializeSlotImages(CharacterSlot slot)
+        {
+            if (slot.FrontImage != null)
+            {
+                SetImageAlpha(slot.FrontImage, 0f);
+                slot.FrontImage.raycastTarget = false;
             }
 
-            // 초기 상태: 숨김, 클릭 통과
-            SetImageAlpha(0f);
-            _characterImage.raycastTarget = false;
+            if (slot.BackImage != null)
+            {
+                SetImageAlpha(slot.BackImage, 0f);
+                slot.BackImage.raycastTarget = false;
+            }
         }
 
         private void OnEnable()
         {
+            EventBus.Subscribe<DialogueStarted>(OnDialogueStarted);
             EventBus.Subscribe<CharacterDisplayRequested>(OnCharacterDisplayRequested);
             EventBus.Subscribe<CharacterHideRequested>(OnCharacterHideRequested);
+            EventBus.Subscribe<CharacterHighlightRequested>(OnCharacterHighlightRequested);
             EventBus.Subscribe<DialogueEnded>(OnDialogueEnded);
         }
 
         private void OnDisable()
         {
+            EventBus.Unsubscribe<DialogueStarted>(OnDialogueStarted);
             EventBus.Unsubscribe<CharacterDisplayRequested>(OnCharacterDisplayRequested);
             EventBus.Unsubscribe<CharacterHideRequested>(OnCharacterHideRequested);
+            EventBus.Unsubscribe<CharacterHighlightRequested>(OnCharacterHighlightRequested);
             EventBus.Unsubscribe<DialogueEnded>(OnDialogueEnded);
+        }
+
+        private void OnDialogueStarted(DialogueStarted _)
+        {
+            // 대화 시작 시 모든 캐릭터 슬롯 초기화
+            _activeSpeakerPosition = null;
+            foreach (var kvp in _slots)
+            {
+                ClearSlotImmediate(kvp.Value);
+            }
+        }
+
+        /// <summary>
+        /// 슬롯 즉시 초기화 (페이드 없이).
+        /// </summary>
+        private void ClearSlotImmediate(CharacterSlot slot)
+        {
+            if (slot.FadeCoroutine != null)
+            {
+                StopCoroutine(slot.FadeCoroutine);
+                slot.FadeCoroutine = null;
+            }
+
+            slot.CurrentCharacterId = null;
+            slot.CurrentEmotion = null;
+
+            if (slot.FrontImage != null)
+            {
+                SetImageAlpha(slot.FrontImage, 0f);
+                slot.FrontImage.sprite = null;
+            }
+
+            if (slot.BackImage != null)
+            {
+                SetImageAlpha(slot.BackImage, 0f);
+                slot.BackImage.sprite = null;
+            }
         }
 
         private void OnCharacterDisplayRequested(CharacterDisplayRequested evt)
         {
-            // 심플 모드: Center 위치만 사용
-            if (evt.Position != CharacterPosition.Center)
+            // 해당 위치 슬롯이 없으면 무시
+            if (!_slots.TryGetValue(evt.Position, out CharacterSlot slot))
             {
                 return;
             }
@@ -63,7 +175,7 @@ namespace LoveSimulation.Dialogue
             string emotion = string.IsNullOrEmpty(evt.Emotion) ? "neutral" : evt.Emotion;
 
             // 같은 캐릭터/표정이면 무시
-            if (_currentCharacterId == characterId && _currentEmotion == emotion)
+            if (slot.CurrentCharacterId == characterId && slot.CurrentEmotion == emotion)
             {
                 return;
             }
@@ -76,90 +188,216 @@ namespace LoveSimulation.Dialogue
                 return;
             }
 
-            // 페이드 전환
-            if (_fadeCoroutine != null)
+            // 기존 코루틴 중지
+            if (slot.FadeCoroutine != null)
             {
-                StopCoroutine(_fadeCoroutine);
+                StopCoroutine(slot.FadeCoroutine);
             }
 
-            _fadeCoroutine = StartCoroutine(TransitionCharacter(sprite, characterId, emotion, evt.FadeIn));
+            slot.FadeCoroutine = StartCoroutine(TransitionSlot(slot, sprite, characterId, emotion, evt.FadeIn));
         }
 
         private void OnCharacterHideRequested(CharacterHideRequested evt)
         {
-            // 모든 캐릭터 숨김 또는 Center 위치
-            if (evt.Position == null || evt.Position == CharacterPosition.Center)
+            if (evt.Position == null)
             {
-                HideCharacter();
+                // 모든 슬롯 숨김
+                foreach (var kvp in _slots)
+                {
+                    HideSlot(kvp.Value);
+                }
             }
+            else if (_slots.TryGetValue(evt.Position.Value, out CharacterSlot slot))
+            {
+                HideSlot(slot);
+            }
+        }
+
+        private void OnCharacterHighlightRequested(CharacterHighlightRequested evt)
+        {
+            _activeSpeakerPosition = evt.Position;
+            ApplyHighlight();
         }
 
         private void OnDialogueEnded(DialogueEnded _)
         {
-            HideCharacter();
+            _activeSpeakerPosition = null;
+            foreach (var kvp in _slots)
+            {
+                HideSlot(kvp.Value);
+            }
         }
 
         /// <summary>
-        /// 캐릭터 스프라이트 전환 코루틴.
+        /// 슬롯 전환 코루틴. 크로스페이드 방식.
         /// </summary>
-        private IEnumerator TransitionCharacter(Sprite newSprite, string characterId, string emotion, bool fadeIn)
+        private IEnumerator TransitionSlot(CharacterSlot slot, Sprite newSprite, string characterId, string emotion, bool fadeIn)
         {
-            // 현재 캐릭터가 있으면 페이드 아웃
-            if (!string.IsNullOrEmpty(_currentCharacterId))
+            float targetAlpha = GetTargetAlpha(slot);
+
+            // BackImage가 있으면 크로스페이드, 없으면 단순 페이드
+            if (slot.BackImage != null && slot.FrontImage != null)
             {
-                yield return Fade(1f, 0f, _fadeDuration);
+                // 현재 Front를 Back으로 복사
+                if (!string.IsNullOrEmpty(slot.CurrentCharacterId))
+                {
+                    slot.BackImage.sprite = slot.FrontImage.sprite;
+                    SetImageAlpha(slot.BackImage, GetCurrentAlpha(slot.FrontImage));
+                }
+
+                // Front에 새 스프라이트 설정
+                slot.FrontImage.sprite = newSprite;
+
+                if (fadeIn)
+                {
+                    SetImageAlpha(slot.FrontImage, 0f);
+                    yield return CrossFade(slot.FrontImage, slot.BackImage, targetAlpha, _fadeDuration);
+                }
+                else
+                {
+                    SetImageAlpha(slot.FrontImage, targetAlpha);
+                    SetImageAlpha(slot.BackImage, 0f);
+                }
+            }
+            else if (slot.FrontImage != null)
+            {
+                // 단순 페이드
+                if (!string.IsNullOrEmpty(slot.CurrentCharacterId) && fadeIn)
+                {
+                    yield return Fade(slot.FrontImage, targetAlpha, 0f, _fadeDuration / 2);
+                }
+
+                slot.FrontImage.sprite = newSprite;
+
+                if (fadeIn)
+                {
+                    yield return Fade(slot.FrontImage, 0f, targetAlpha, _fadeDuration / 2);
+                }
+                else
+                {
+                    SetImageAlpha(slot.FrontImage, targetAlpha);
+                }
             }
 
-            // 새 스프라이트 설정
-            _characterImage.sprite = newSprite;
-            _currentCharacterId = characterId;
-            _currentEmotion = emotion;
-
-            // 페이드 인
-            if (fadeIn)
-            {
-                yield return Fade(0f, 1f, _fadeDuration);
-            }
-            else
-            {
-                SetImageAlpha(1f);
-            }
-
-            _fadeCoroutine = null;
+            slot.CurrentCharacterId = characterId;
+            slot.CurrentEmotion = emotion;
+            slot.FadeCoroutine = null;
         }
 
         /// <summary>
-        /// 캐릭터 숨김.
+        /// 슬롯 숨김.
         /// </summary>
-        private void HideCharacter()
+        private void HideSlot(CharacterSlot slot)
         {
-            if (_fadeCoroutine != null)
+            if (slot.FadeCoroutine != null)
             {
-                StopCoroutine(_fadeCoroutine);
+                StopCoroutine(slot.FadeCoroutine);
             }
 
-            _fadeCoroutine = StartCoroutine(FadeOutAndClear());
+            slot.FadeCoroutine = StartCoroutine(FadeOutSlot(slot));
         }
 
-        private IEnumerator FadeOutAndClear()
+        private IEnumerator FadeOutSlot(CharacterSlot slot)
         {
-            if (!string.IsNullOrEmpty(_currentCharacterId))
+            if (!string.IsNullOrEmpty(slot.CurrentCharacterId))
             {
-                yield return Fade(1f, 0f, _fadeDuration);
+                if (slot.FrontImage != null)
+                {
+                    yield return Fade(slot.FrontImage, GetCurrentAlpha(slot.FrontImage), 0f, _fadeDuration);
+                }
+
+                if (slot.BackImage != null)
+                {
+                    SetImageAlpha(slot.BackImage, 0f);
+                }
             }
 
-            _currentCharacterId = null;
-            _currentEmotion = null;
-            _characterImage.sprite = null;
-            _fadeCoroutine = null;
+            slot.CurrentCharacterId = null;
+            slot.CurrentEmotion = null;
+            if (slot.FrontImage != null)
+            {
+                slot.FrontImage.sprite = null;
+            }
+            if (slot.BackImage != null)
+            {
+                slot.BackImage.sprite = null;
+            }
+            slot.FadeCoroutine = null;
         }
 
         /// <summary>
-        /// 페이드 코루틴.
+        /// 화자 강조 적용.
         /// </summary>
-        private IEnumerator Fade(float from, float to, float duration)
+        private void ApplyHighlight()
         {
-            if (_characterImage == null)
+            foreach (var kvp in _slots)
+            {
+                CharacterSlot slot = kvp.Value;
+                if (string.IsNullOrEmpty(slot.CurrentCharacterId))
+                {
+                    continue;
+                }
+
+                float targetAlpha = GetTargetAlpha(slot);
+                if (slot.FrontImage != null)
+                {
+                    SetImageAlpha(slot.FrontImage, targetAlpha);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 슬롯의 목표 알파 계산 (화자 강조 고려).
+        /// </summary>
+        private float GetTargetAlpha(CharacterSlot slot)
+        {
+            // 화자 강조가 없으면 모두 1.0
+            if (_activeSpeakerPosition == null)
+            {
+                return 1f;
+            }
+
+            // 해당 슬롯이 화자면 1.0, 아니면 dimmed
+            foreach (var kvp in _slots)
+            {
+                if (kvp.Value == slot)
+                {
+                    return kvp.Key == _activeSpeakerPosition.Value ? 1f : _dimmedAlpha;
+                }
+            }
+
+            return 1f;
+        }
+
+        /// <summary>
+        /// 크로스페이드 코루틴.
+        /// </summary>
+        private IEnumerator CrossFade(Image front, Image back, float targetAlpha, float duration)
+        {
+            float elapsed = 0f;
+            float backStart = GetCurrentAlpha(back);
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / duration);
+
+                SetImageAlpha(front, Mathf.Lerp(0f, targetAlpha, t));
+                SetImageAlpha(back, Mathf.Lerp(backStart, 0f, t));
+
+                yield return null;
+            }
+
+            SetImageAlpha(front, targetAlpha);
+            SetImageAlpha(back, 0f);
+        }
+
+        /// <summary>
+        /// 단순 페이드 코루틴.
+        /// </summary>
+        private IEnumerator Fade(Image image, float from, float to, float duration)
+        {
+            if (image == null)
             {
                 yield break;
             }
@@ -169,23 +407,28 @@ namespace LoveSimulation.Dialogue
             {
                 elapsed += Time.deltaTime;
                 float t = Mathf.Clamp01(elapsed / duration);
-                SetImageAlpha(Mathf.Lerp(from, to, t));
+                SetImageAlpha(image, Mathf.Lerp(from, to, t));
                 yield return null;
             }
 
-            SetImageAlpha(to);
+            SetImageAlpha(image, to);
         }
 
-        private void SetImageAlpha(float alpha)
+        private void SetImageAlpha(Image image, float alpha)
         {
-            if (_characterImage == null)
+            if (image == null)
             {
                 return;
             }
 
-            Color color = _characterImage.color;
+            Color color = image.color;
             color.a = alpha;
-            _characterImage.color = color;
+            image.color = color;
+        }
+
+        private float GetCurrentAlpha(Image image)
+        {
+            return image != null ? image.color.a : 0f;
         }
 
         /// <summary>

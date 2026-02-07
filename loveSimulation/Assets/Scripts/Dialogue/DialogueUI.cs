@@ -135,8 +135,29 @@ namespace LoveSimulation.Dialogue
                 _speakerText.text = evt.Speaker;
             }
 
+            // 텍스트 정렬 적용
+            ApplyTextAlignment(evt.TextAlign);
+
             // 타이핑 시작
             StartTyping(evt.Text);
+        }
+
+        /// <summary>
+        /// 텍스트 정렬 적용.
+        /// </summary>
+        private void ApplyTextAlignment(string textAlign)
+        {
+            if (_dialogueText == null)
+            {
+                return;
+            }
+
+            _dialogueText.alignment = textAlign switch
+            {
+                "center" => TextAlignmentOptions.Top,
+                "right" => TextAlignmentOptions.TopRight,
+                _ => TextAlignmentOptions.TopLeft
+            };
         }
 
         /// <summary>
