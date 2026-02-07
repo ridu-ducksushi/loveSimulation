@@ -276,7 +276,9 @@ namespace LoveSimulation.Dialogue
             {
                 "나" => "me",
                 "아델린" => "adelin",
+                "낯선 여인" => "adelin",
                 "공작" => "duke",
+                "대공" => "duke",
                 "리온" => "leon",
                 "황녀" => "princess",
                 _ => speaker.ToLower()

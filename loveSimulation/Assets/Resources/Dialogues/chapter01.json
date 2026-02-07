@@ -11,7 +11,8 @@
         },
         {
           "speaker": "me",
-          "text": "…손님이 계시는군요."
+          "text": "…손님이 계시는군요.",
+          "emotion": "me_neutral"
         },
         {
           "speaker": "",
