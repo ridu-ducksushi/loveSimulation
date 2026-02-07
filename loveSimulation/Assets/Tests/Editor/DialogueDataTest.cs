@@ -207,8 +207,9 @@ namespace LoveSimulation.Tests
             Assert.AreEqual("chapter01", data.DialogueId);
             Assert.IsTrue(data.HasSections);
             Assert.IsTrue(data.Sections.ContainsKey("start"));
-            Assert.IsTrue(data.Sections.ContainsKey("walk_branch"));
-            Assert.IsTrue(data.Sections.ContainsKey("refuse_branch"));
+            Assert.IsTrue(data.Sections.ContainsKey("confrontation"));
+            Assert.IsTrue(data.Sections.ContainsKey("denial"));
+            Assert.IsTrue(data.Sections.ContainsKey("after_decision"));
         }
     }
 }

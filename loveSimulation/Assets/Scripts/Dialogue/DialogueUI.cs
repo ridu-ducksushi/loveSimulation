@@ -67,11 +67,19 @@ namespace LoveSimulation.Dialogue
 
             bool advancePressed = false;
 
-            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            // 터치 입력 (모바일)
+            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             {
                 advancePressed = true;
             }
 
+            // 마우스 클릭 (PC)
+            if (!advancePressed && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                advancePressed = true;
+            }
+
+            // 키보드 (PC)
             if (!advancePressed && Keyboard.current != null)
             {
                 if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
