@@ -21,6 +21,10 @@ namespace LoveSimulation.Events
         public string Text;
         public bool HasChoices;
         public string TextAlign;
+        /// <summary>
+        /// true면 대화 패널을 숨기고 배경만 표시.
+        /// </summary>
+        public bool HidePanel;
     }
 
     /// <summary>

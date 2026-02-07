@@ -105,6 +105,18 @@ namespace LoveSimulation.Dialogue
         public bool HideCharactersAfter;
 
         /// <summary>
+        /// 배경만 표시하고 대사 없이 클릭 대기. optional (기본값: false).
+        /// </summary>
+        [JsonProperty("pause")]
+        public bool Pause;
+
+        /// <summary>
+        /// 화자 강조 비활성화. true이면 모든 캐릭터가 100% 불투명도로 표시. optional (기본값: false).
+        /// </summary>
+        [JsonProperty("noHighlight")]
+        public bool NoHighlight;
+
+        /// <summary>
         /// 선택지가 존재하는지 여부.
         /// </summary>
         public bool HasChoices => Choices != null && Choices.Count > 0;

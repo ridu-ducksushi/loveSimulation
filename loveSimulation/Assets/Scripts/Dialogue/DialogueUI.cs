@@ -24,6 +24,7 @@ namespace LoveSimulation.Dialogue
         private Coroutine _typingCoroutine;
         private WaitForSeconds _typingWait;
         private bool _isTyping;
+        private bool _isPauseLine;
 
         private void Awake()
         {
@@ -57,8 +58,9 @@ namespace LoveSimulation.Dialogue
 
         private void Update()
         {
-            // 대화 진행 중일 때만 입력 처리
-            if (_dialoguePanel == null || !_dialoguePanel.activeSelf)
+            // 대화 진행 중일 때만 입력 처리 (pause 상태에서도 입력 허용)
+            bool panelActive = _dialoguePanel != null && _dialoguePanel.activeSelf;
+            if (!panelActive && !_isPauseLine)
             {
                 return;
             }
@@ -122,6 +124,31 @@ namespace LoveSimulation.Dialogue
         /// </summary>
         private void OnDialogueLineRequested(DialogueLineRequested evt)
         {
+            // HidePanel이 true면 패널 숨기고 빈 텍스트로 즉시 완료 처리
+            if (evt.HidePanel)
+            {
+                _isPauseLine = true;
+
+                if (_dialoguePanel != null)
+                {
+                    _dialoguePanel.SetActive(false);
+                }
+
+                // 빈 텍스트면 즉시 타이핑 완료 이벤트 발행
+                _isTyping = false;
+                EventBus.Publish(new DialogueTypingCompleted());
+                return;
+            }
+
+            // pause 상태 해제
+            _isPauseLine = false;
+
+            // 패널 활성화 (HidePanel이 아닌 경우)
+            if (_dialoguePanel != null)
+            {
+                _dialoguePanel.SetActive(true);
+            }
+
             // 화자 표시 처리
             bool isNarration = string.IsNullOrEmpty(evt.Speaker);
 
@@ -174,6 +201,7 @@ namespace LoveSimulation.Dialogue
         private void OnDialogueEnded(DialogueEnded evt)
         {
             StopTypingCoroutine();
+            _isPauseLine = false;
 
             if (_dialoguePanel != null)
             {

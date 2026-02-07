@@ -1,61 +1,143 @@
 {
   "dialogueId": "chapter01",
-  "chapterTitle": "-Chapter01-\n낯선 손님",
+  "chapterTitle": "Chapter01\n낯선 손님",
   "sections": {
     "start": {
       "lines": [
+           {
+          "speaker": "",
+          "text": "제국력 993년, 어느 날 밤\n차가운 북부의 설원을 지키는 공작가",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "",
+          "text": "사냥을 나갔던 대공이 부상을 입고 돌아왔단 소식에\n한 달음에 달려간 그 날.",
+          "textAlign": "center"
+        },
         {
           "speaker": "",
           "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다.",
           "textAlign": "center"
         },
         {
+          "speaker": "",
+          "text": "",
+          "background": "castle_hall",
+          "pause": true
+        },
+        {
           "speaker": "me",
-          "text": "…손님이 계시는군요.",
-          "background": "castle_hall"
+          "text": "…손님이 계시는군요."
         },
         {
           "speaker": "",
-          "text": "대공의 집무실에 눈부신 금발 머리를 가진\n아름다운 여인이 있었다."
+          "text": "대공의 집무실에 도착했을 때 보인 것은\n웃고있는 대공과 낯선 여인이었다."
         },
         {
-          "speaker": "대공",
-          "text": "대공비군. 마침 잘왔어."
+          "speaker": "",
+          "text": "찬란하고 눈부신 금발 머리를 가진\n가녀리고 아름다운 여인."
         },
         {
-          "speaker": "아델린",
-          "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요.",
-          "emotion": "smile"
+          "speaker": "",
+          "text": "그 여인은 나를 발견하자\n천진난만한 미소를 지으며 다가왔다."
         },
         {
-          "speaker": "대공",
-          "text": "숲에서 사냥을 하다 크게 다쳤는데…\n이 여자가 날 치료해줬어.",
+          "speaker": "",
+          "text": "",
           "characters": [
-            {"id": "adelin", "position": "Left", "emotion": "happy"},
-            {"id": "duke", "position": "Right", "emotion": "neutral"}
+            {"id": "adelin", "position": "Center", "emotion": "neutral"}
+          ],
+          "pause": true
+        },
+        {
+          "speaker": "낯선 여인",
+          "text": "대공비님...!",
+          "characters": [
+            {"id": "adelin", "position": "Center", "emotion": "neutral"}
           ],
           "hideCharactersAfter": true
-
         },
         {
           "speaker": "대공",
-          "text": "이상하게도, 그 순간엔 운명 같더군."
+          "text": "대공비군. 마침 잘왔어.",
+          "emotion":"neutral"
+        },
+        {
+          "speaker": "낯선 여인",
+          "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요.",
+          "characters": [
+            {"id": "adelin", "position": "Center", "emotion": "neutral"}
+          ],
+          "pause": true,
+          "hideCharactersAfter": true
+        },
+         {
+          "speaker": "",
+          "text": "서툴지만 정중한 예법을 담아 인사하는 여인."
+        },
+          {
+          "speaker": "",
+          "text": "나의 당황스러움이 느껴졌는지\n대공이 미소를 지으며 말을 이었다."
         },
         {
           "speaker": "대공",
-          "text": "그녀가 아니었으면 난 지금쯤…"
+          "text": "이 여자는 아델린이라고 해.\n내가 숲에서 만난 은인이지.",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "neutral"},
+            {"id": "duke", "position": "Right", "emotion": "neutral"}
+          ],
+          "noHighlight": true
+        },
+        {
+          "speaker": "대공",
+          "text": "숲에서 사냥을 하다 크게 다쳤는데…\n아델린이 날 치료해줬어.",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "neutral"},
+            {"id": "duke", "position": "Right", "emotion": "neutral"}
+          ],
+          "noHighlight": true
+        },
+        {
+          "speaker": "대공",
+          "text": "그녀가 아니었으면 난 지금쯤…",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "neutral"},
+            {"id": "duke", "position": "Right", "emotion": "smile"}
+          ],
+          "noHighlight": true
+        },
+        {
+          "speaker": "대공",
+          "text": "그순간엔, 내게 운명이 찾아온 것 같더군.",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "neutral"},
+            {"id": "duke", "position": "Right", "emotion": "neutral"}
+          ],
+          "noHighlight": true,
+          "hideCharactersAfter": true
         },
         {
           "speaker": "",
-          "text": "대공은 소년같은 미소를 지으며\n그녀를 바라보았다."
+          "text": "대공은 쑥스러운 미소를 지으며\n그녀를 바라보았다."          
         },
         {
           "speaker": "",
-          "text": "그 웃음은, 어린 시절\n나에게 보여주던 모습과 닮아 있었다."
+          "text": "그 모습은 마치,\n첫사랑에 빠진 소년과도 같았다."
+        },
+         {
+          "speaker": "대공",
+          "text": "그래서 말인데,",
+          "emotion":"neutral"
         },
         {
           "speaker": "대공",
-          "text": "성에 머물게 할 생각이야.\n상처도 아직 완전히 낫지 않았고."
+          "text": "성에 머물게 할 생각이야.\n상처도 아직 완전히 낫지 않았고.",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
+        },
+        {
+          "speaker": "me",
+          "text": "...잠시만요"
         },
         {
           "speaker": "me",
@@ -63,7 +145,9 @@
         },
         {
           "speaker": "대공",
-          "text": "그녀를 정부로 맞이하려고 해."
+          "text": "그녀를 정부로 맞이하려고 해.",
+          "emotion":"smile",
+          "hideCharactersAfter": true          
         },
         {
           "speaker": "",
@@ -93,11 +177,14 @@
         },
         {
           "speaker": "대공",
-          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 고아출신 아이라는군."
+          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 고아출신 아이라는군.",
+          "emotion":"neutral"
         },
         {
           "speaker": "대공",
-          "text": "내가 책임지고 돌볼 생각이야."
+          "text": "내가 책임지고 돌볼 생각이야.",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "",
@@ -105,7 +192,9 @@
         },
         {
           "speaker": "대공",
-          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지."
+          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지.",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "me",
@@ -156,13 +245,15 @@
     "after_decision": {
       "lines": [
         {
-          "speaker": "낯선 여인",
-          "text": "잘 부탁드려요, 대공비님.\n저는 아델린이라고 불러주세요."
+          "speaker": "아델린",
+          "text": "잘 부탁드려요, 대공비님.\n저는 아델린이라고 불러주세요.",
+          "emotion": "neutral"
         },
         {
           "speaker": "아델린",
           "text": "사실… 저는 대공비님을\n꼭 한번 뵙고 싶었어요.",
-          "emotion": "smile"
+          "emotion": "smile",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "me",
@@ -170,11 +261,13 @@
         },
         {
           "speaker": "아델린",
-          "text": "네. 제가 태어난 남부에는\n대공비님을 찬양하는 목소리가 가득하답니다."
+          "text": "네. 제가 태어난 남부에는\n대공비님을 찬양하는 목소리가 가득하답니다.",
+          "emotion": "smile"
         },
         {
           "speaker": "아델린",
-          "text": "북부를 지키는 분.\n냉철하고, 빈틈없고…"
+          "text": "북부를 지키는 분.\n냉철하고, 빈틈없고…",
+          "emotion": "neutral"
         },
         {
           "speaker": "아델린",
@@ -183,7 +276,8 @@
         },
         {
           "speaker": "",
-          "text": "칭찬이었다. 그러나 어딘가 서늘한 기분이 들었다."
+          "text": "칭찬이었다. 그러나 어딘가 서늘한 기분이 들었다.",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "",
@@ -205,6 +299,12 @@
           "speaker": "",
           "text": "대공은 그녀와 함께 있는 시간이 늘어났고,\n나와의 대화는 점점 줄어들었다."
         },
+           {
+          "speaker": "",
+          "text": "",
+          "background": "castle_dishroom",
+          "pause": true
+        },
         {
           "speaker": "",
           "text": "만찬장으로 향하는 복도에서\n익숙한 웃음소리가 들려왔다."
@@ -212,11 +312,15 @@
         {
           "speaker": "아델린",
           "text": "대공님, 정말 재미있으시네요.",
-          "emotion": "smile"
+          "emotion": "smile",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "대공",
-          "text": "하하, 자네와 있으면 시간 가는 줄 모르겠어."
+          "text": "하하, 자네와 있으면 시간 가는 줄 모르겠어.",
+          "emotion":"smile",
+          "hideCharactersAfter": true
+
         },
         {
           "speaker": "",
@@ -252,11 +356,14 @@
         },
         {
           "speaker": "me",
-          "text": "(이럴거 까진 아니었는데...)"
+          "text": "(이럴거 까진 아니었는데...)",
+          "emotion":"neutral"
         },
         {
           "speaker": "",
-          "text": "가슴 한구석이 답답하게 조여왔다."
+          "text": "가슴 한구석이 답답하게 조여왔다.",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "",
@@ -268,24 +375,40 @@
       "lines": [
         {
           "speaker": "me",
-          "text": "전하. 만찬장으로 가시는 길인가요?"
+          "text": "전하. 만찬장으로 가시는 길인가요?",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "대공",
-          "text": "아, 대공비. 그래, 같이 가지."
+          "text": "아, 대공비. 그래, 같이 가지.",
+          "emotion":"smile"
         },
         {
           "speaker": "아델린",
           "text": "대공비님도 함께 하시니 영광이에요.",
-          "emotion": "smile"
-        },
-        {
-          "speaker": "",
-          "text": "그녀의 미소는 완벽했다.\n흠잡을 곳 하나 없이."
+          "emotion": "smile",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "me",
-          "text": "(대체 이 여자의 정체는 뭘까…)"
+          "text": "...네"
+        },
+         {
+          "speaker": "",
+          "text": "그녀의 싱그러운 눈웃음을 본 하인들은\n그녀를 쳐다보기 바빴다."
+        },
+        {
+          "speaker": "",
+          "text": "그녀를 바라보는 대공 또한 행복해 보였다."
+        },
+        {
+          "speaker": "",
+          "text": "나만 혼자 그 사이에 낀\n방해꾼이 된 기분이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(불편해…)"
         },
         {
           "speaker": "",

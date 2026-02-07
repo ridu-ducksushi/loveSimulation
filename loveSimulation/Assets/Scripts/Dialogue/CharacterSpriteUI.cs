@@ -180,6 +180,9 @@ namespace LoveSimulation.Dialogue
                 return;
             }
 
+            // 같은 캐릭터의 표정만 바뀌는 경우 즉시 교체 (페이드 없음)
+            bool isSameCharacter = slot.CurrentCharacterId == characterId;
+
             // 스프라이트 로드
             Sprite sprite = LoadCharacterSprite(characterId, emotion);
             if (sprite == null)
@@ -194,7 +197,9 @@ namespace LoveSimulation.Dialogue
                 StopCoroutine(slot.FadeCoroutine);
             }
 
-            slot.FadeCoroutine = StartCoroutine(TransitionSlot(slot, sprite, characterId, emotion, evt.FadeIn));
+            // 같은 캐릭터면 즉시 교체, 다른 캐릭터면 기존 페이드 로직 적용
+            bool shouldFade = evt.FadeIn && !isSameCharacter;
+            slot.FadeCoroutine = StartCoroutine(TransitionSlot(slot, sprite, characterId, emotion, shouldFade));
         }
 
         private void OnCharacterHideRequested(CharacterHideRequested evt)

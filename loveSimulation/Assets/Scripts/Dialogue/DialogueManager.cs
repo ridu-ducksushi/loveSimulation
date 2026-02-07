@@ -215,30 +215,52 @@ namespace LoveSimulation.Dialogue
             // 캐릭터 표시 요청
             PublishCharacterDisplay(line);
 
+            // pause 라인이면 패널 숨기고 빈 텍스트로 처리
+            bool isPauseLine = line.Pause && string.IsNullOrEmpty(line.Text);
+
             EventBus.Publish(new DialogueLineRequested
             {
                 Speaker = line.Speaker,
                 Text = line.Text,
                 HasChoices = line.HasChoices,
-                TextAlign = line.TextAlign
+                TextAlign = line.TextAlign,
+                HidePanel = isPauseLine
             });
 
-            Debug.Log($"[DialogueManager] 라인 표시: {line.Speaker}: {line.Text?.Substring(0, System.Math.Min(20, line.Text?.Length ?? 0))}...");
+            if (isPauseLine)
+            {
+                Debug.Log("[DialogueManager] Pause 라인 - 배경만 표시");
+            }
+            else
+            {
+                Debug.Log($"[DialogueManager] 라인 표시: {line.Speaker}: {line.Text?.Substring(0, System.Math.Min(20, line.Text?.Length ?? 0))}...");
+            }
         }
 
         /// <summary>
         /// 캐릭터 표시 이벤트 발행.
-        /// characters 필드가 명시된 경우에만 캐릭터를 표시.
+        /// characters 필드, emotion 필드, pause 상태에 따라 적절히 처리.
         /// </summary>
         private void PublishCharacterDisplay(DialogueLine line)
         {
-            // characters 필드가 명시된 경우에만 캐릭터 표시
+            // 1) pause 라인에서 캐릭터 명시가 없으면 모든 캐릭터 숨김 (버그 2 수정)
+            if (line.Pause && !line.HasCharacters && string.IsNullOrEmpty(line.Emotion))
+            {
+                EventBus.Publish(new CharacterHideRequested { Position = null });
+                return;
+            }
+
+            // 2) characters 필드가 명시된 경우
             if (line.HasCharacters)
             {
                 CharacterPosition? speakerPosition = null;
-                string speakerId = string.IsNullOrEmpty(line.Speaker)
-                    ? null
-                    : ConvertSpeakerToId(line.Speaker);
+
+                // noHighlight가 false일 때만 화자 위치 파악
+                string speakerId = null;
+                if (!line.NoHighlight && !string.IsNullOrEmpty(line.Speaker))
+                {
+                    speakerId = ConvertSpeakerToId(line.Speaker);
+                }
 
                 foreach (CharacterDisplayInfo charInfo in line.Characters)
                 {
@@ -250,17 +272,39 @@ namespace LoveSimulation.Dialogue
                         FadeIn = true
                     });
 
-                    // 화자 위치 파악
+                    // 화자 위치 파악 (noHighlight가 false일 때만)
                     if (speakerId != null && charInfo.Id == speakerId)
                     {
                         speakerPosition = charInfo.Position;
                     }
                 }
 
-                // 화자 강조 발행
+                // 화자 강조 발행 (noHighlight가 true이면 null로 강조 해제)
                 PublishCharacterHighlight(speakerPosition);
+                return;
             }
-            // characters 필드가 없으면 캐릭터 상태 유지 (아무것도 하지 않음)
+
+            // 3) emotion 필드만 있고 speaker가 있는 경우 - 단일 캐릭터 표시 (버그 1, 4 수정)
+            if (!string.IsNullOrEmpty(line.Emotion) && !string.IsNullOrEmpty(line.Speaker))
+            {
+                string characterId = ConvertSpeakerToId(line.Speaker);
+                if (!string.IsNullOrEmpty(characterId))
+                {
+                    EventBus.Publish(new CharacterDisplayRequested
+                    {
+                        CharacterId = characterId,
+                        Emotion = line.Emotion,
+                        Position = CharacterPosition.Center,
+                        FadeIn = true
+                    });
+                }
+                // 단일 캐릭터 표시이므로 강조 해제
+                PublishCharacterHighlight(null);
+                return;
+            }
+
+            // 4) 둘 다 없으면 캐릭터 상태 유지, 강조만 해제 (버그 3 수정)
+            PublishCharacterHighlight(null);
         }
 
         /// <summary>
@@ -310,6 +354,12 @@ namespace LoveSimulation.Dialogue
                 return;
             }
 
+            // 다음 라인으로 넘어가기 전에 캐릭터 숨김 처리
+            if (currentLine.HideCharactersAfter)
+            {
+                EventBus.Publish(new CharacterHideRequested { Position = null });
+            }
+
             _currentLineIndex++;
             ShowCurrentLine();
         }
@@ -329,12 +379,6 @@ namespace LoveSimulation.Dialogue
             }
 
             DialogueLine currentLine = lines[_currentLineIndex];
-
-            // hideCharactersAfter가 설정되어 있으면 캐릭터 숨김
-            if (currentLine.HideCharactersAfter)
-            {
-                EventBus.Publish(new CharacterHideRequested { Position = null });
-            }
 
             if (currentLine.HasChoices)
             {
