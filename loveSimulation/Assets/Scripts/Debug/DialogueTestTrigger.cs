@@ -14,31 +14,48 @@ namespace LoveSimulation.Testing
 
         private void Update()
         {
-            if (Keyboard.current == null)
+            bool triggerPressed = false;
+
+            // 키보드 입력 (PC 테스트용)
+            if (Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
+            {
+                triggerPressed = true;
+            }
+
+            // 터치 입력 (모바일)
+            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+            {
+                triggerPressed = true;
+            }
+
+            // 마우스 클릭 (PC 테스트용)
+            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                triggerPressed = true;
+            }
+
+            if (!triggerPressed)
             {
                 return;
             }
 
-            if (Keyboard.current.tKey.wasPressedThisFrame)
+            if (DialogueManager.Instance == null)
             {
-                if (DialogueManager.Instance == null)
-                {
-                    Debug.LogError("[DialogueTestTrigger] DialogueManager 인스턴스 없음.");
-                    return;
-                }
+                Debug.LogError("[DialogueTestTrigger] DialogueManager 인스턴스 없음.");
+                return;
+            }
 
-                if (_dialogueFile == null)
-                {
-                    Debug.LogError("[DialogueTestTrigger] 대화 파일이 설정되지 않음.");
-                    return;
-                }
+            if (_dialogueFile == null)
+            {
+                Debug.LogError("[DialogueTestTrigger] 대화 파일이 설정되지 않음.");
+                return;
+            }
 
-                if (!DialogueManager.Instance.IsDialogueActive)
-                {
-                    string dialogueId = _dialogueFile.name;
-                    Debug.Log($"[DialogueTestTrigger] 대화 시작 요청: {dialogueId}");
-                    DialogueManager.Instance.StartDialogue(dialogueId);
-                }
+            if (!DialogueManager.Instance.IsDialogueActive)
+            {
+                string dialogueId = _dialogueFile.name;
+                Debug.Log($"[DialogueTestTrigger] 대화 시작 요청: {dialogueId}");
+                DialogueManager.Instance.StartDialogue(dialogueId);
             }
         }
     }
