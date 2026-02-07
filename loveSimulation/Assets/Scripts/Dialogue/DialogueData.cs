@@ -4,6 +4,32 @@ using Newtonsoft.Json;
 namespace LoveSimulation.Dialogue
 {
     /// <summary>
+    /// 캐릭터 위치.
+    /// </summary>
+    public enum CharacterPosition
+    {
+        Left,
+        Center,
+        Right
+    }
+
+    /// <summary>
+    /// 복수 캐릭터 배치 정보.
+    /// </summary>
+    [System.Serializable]
+    public class CharacterDisplayInfo
+    {
+        [JsonProperty("id")]
+        public string Id;
+
+        [JsonProperty("position")]
+        public CharacterPosition Position;
+
+        [JsonProperty("emotion")]
+        public string Emotion;
+    }
+
+    /// <summary>
     /// 대화 선택지 데이터.
     /// </summary>
     [System.Serializable]
@@ -49,9 +75,32 @@ namespace LoveSimulation.Dialogue
         public List<DialogueChoice> Choices;
 
         /// <summary>
+        /// 캐릭터 표정 (neutral, smile, sad, angry 등). optional.
+        /// </summary>
+        [JsonProperty("emotion")]
+        public string Emotion;
+
+        /// <summary>
+        /// 배경 ID. optional.
+        /// </summary>
+        [JsonProperty("background")]
+        public string Background;
+
+        /// <summary>
+        /// 복수 캐릭터 배치 정보. optional.
+        /// </summary>
+        [JsonProperty("characters")]
+        public List<CharacterDisplayInfo> Characters;
+
+        /// <summary>
         /// 선택지가 존재하는지 여부.
         /// </summary>
         public bool HasChoices => Choices != null && Choices.Count > 0;
+
+        /// <summary>
+        /// 복수 캐릭터 배치 정보가 있는지 여부.
+        /// </summary>
+        public bool HasCharacters => Characters != null && Characters.Count > 0;
     }
 
     /// <summary>

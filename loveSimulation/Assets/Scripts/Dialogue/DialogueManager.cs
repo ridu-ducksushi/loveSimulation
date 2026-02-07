@@ -202,12 +202,85 @@ namespace LoveSimulation.Dialogue
             DialogueLine line = lines[_currentLineIndex];
             _isTyping = true;
 
+            // 배경 변경 요청
+            if (!string.IsNullOrEmpty(line.Background))
+            {
+                EventBus.Publish(new BackgroundChangeRequested
+                {
+                    BackgroundId = line.Background,
+                    Duration = 0.5f
+                });
+            }
+
+            // 캐릭터 표시 요청
+            PublishCharacterDisplay(line);
+
             EventBus.Publish(new DialogueLineRequested
             {
                 Speaker = line.Speaker,
                 Text = line.Text,
                 HasChoices = line.HasChoices
             });
+
+            Debug.Log($"[DialogueManager] 라인 표시: {line.Speaker}: {line.Text?.Substring(0, System.Math.Min(20, line.Text?.Length ?? 0))}...");
+        }
+
+        /// <summary>
+        /// 캐릭터 표시 이벤트 발행.
+        /// </summary>
+        private void PublishCharacterDisplay(DialogueLine line)
+        {
+            // 복수 캐릭터 배치 정보가 있으면 우선 사용
+            if (line.HasCharacters)
+            {
+                foreach (CharacterDisplayInfo charInfo in line.Characters)
+                {
+                    EventBus.Publish(new CharacterDisplayRequested
+                    {
+                        CharacterId = charInfo.Id,
+                        Emotion = charInfo.Emotion,
+                        Position = charInfo.Position,
+                        FadeIn = true
+                    });
+                }
+                return;
+            }
+
+            // 화자가 있으면 중앙에 표시
+            if (!string.IsNullOrEmpty(line.Speaker))
+            {
+                // 화자 이름을 ID로 변환 (간단한 매핑)
+                string characterId = ConvertSpeakerToId(line.Speaker);
+                EventBus.Publish(new CharacterDisplayRequested
+                {
+                    CharacterId = characterId,
+                    Emotion = line.Emotion ?? "neutral",
+                    Position = CharacterPosition.Center,
+                    FadeIn = true
+                });
+            }
+            else
+            {
+                // 나레이션: 캐릭터 숨김
+                EventBus.Publish(new CharacterHideRequested { Position = null });
+            }
+        }
+
+        /// <summary>
+        /// 화자 이름을 캐릭터 ID로 변환.
+        /// </summary>
+        private string ConvertSpeakerToId(string speaker)
+        {
+            // 간단한 매핑 (추후 확장 가능)
+            return speaker switch
+            {
+                "나" => "me",
+                "아델린" => "adelin",
+                "공작" => "duke",
+                "리온" => "leon",
+                "황녀" => "princess",
+                _ => speaker.ToLower()
+            };
         }
 
         /// <summary>
