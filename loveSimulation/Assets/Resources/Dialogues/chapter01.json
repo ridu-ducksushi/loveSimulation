@@ -1,12 +1,13 @@
 {
   "dialogueId": "chapter01",
-  "chapterTitle": "-공작가의 불청객-",
+  "chapterTitle": "-Chapter01-\n낯선 손님",
   "sections": {
     "start": {
       "lines": [
         {
           "speaker": "",
-          "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다."
+          "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다.",
+          "background": "castle_hall"
         },
         {
           "speaker": "me",
@@ -22,7 +23,8 @@
         },
         {
           "speaker": "낯선 여인",
-          "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요."
+          "text": "처음 뵙겠습니다, 대공비님.\n이렇게 직접 인사를 드리게 되어 영광이에요.",
+          "emotion": "smile"
         },
         {
           "speaker": "대공",
@@ -152,7 +154,8 @@
         },
         {
           "speaker": "아델린",
-          "text": "사실… 저는 대공비님을\n꼭 한번 뵙고 싶었어요."
+          "text": "사실… 저는 대공비님을\n꼭 한번 뵙고 싶었어요.",
+          "emotion": "smile"
         },
         {
           "speaker": "me",
@@ -168,7 +171,8 @@
         },
         {
           "speaker": "아델린",
-          "text": "아주 완벽한 귀부인이라고요."
+          "text": "아주 완벽한 귀부인이라고요.",
+          "emotion": "smile"
         },
         {
           "speaker": "",
@@ -200,7 +204,8 @@
         },
         {
           "speaker": "아델린",
-          "text": "대공님, 정말 재미있으시네요."
+          "text": "대공님, 정말 재미있으시네요.",
+          "emotion": "smile"
         },
         {
           "speaker": "대공",
@@ -264,7 +269,8 @@
         },
         {
           "speaker": "아델린",
-          "text": "대공비님도 함께 하시니 영광이에요."
+          "text": "대공비님도 함께 하시니 영광이에요.",
+          "emotion": "smile"
         },
         {
           "speaker": "",
