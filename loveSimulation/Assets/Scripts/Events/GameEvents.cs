@@ -61,4 +61,17 @@ namespace LoveSimulation.Events
         public int SlotIndex;
         public bool Success;
     }
+
+    /// <summary>
+    /// 세이브/로드 UI 열기 요청 이벤트.
+    /// </summary>
+    public struct SaveLoadUIRequested
+    {
+        public bool IsSaveMode;
+    }
+
+    /// <summary>
+    /// 세이브/로드 UI 닫힘 알림 이벤트.
+    /// </summary>
+    public struct SaveLoadUIClosed { }
 }
