@@ -164,6 +164,13 @@
               "goto": "denial",
               "affectionChange": -2,
               "flagToSet": "ch1_denied"
+            },
+            {
+              "text": "달콤하게 속삭이기",
+              "goto": "confrontation",
+              "affectionChange": 15,
+              "flagToSet": "ch1_sweet",
+              "currencyCost": 5
             }
           ]
         }

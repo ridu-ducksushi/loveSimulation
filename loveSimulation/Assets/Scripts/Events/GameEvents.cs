@@ -74,4 +74,14 @@ namespace LoveSimulation.Events
     /// 세이브/로드 UI 닫힘 알림 이벤트.
     /// </summary>
     public struct SaveLoadUIClosed { }
+
+    /// <summary>
+    /// 재화(다이아몬드) 변경 이벤트. GameData에서 발행.
+    /// </summary>
+    public struct CurrencyChanged
+    {
+        public int PreviousValue;
+        public int NewValue;
+        public int Delta;
+    }
 }

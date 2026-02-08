@@ -12,6 +12,7 @@ namespace LoveSimulation.Core
         private static readonly Dictionary<string, int> _affection = new Dictionary<string, int>();
         private static readonly Dictionary<string, int> _maxAffection = new Dictionary<string, int>();
         private static readonly Dictionary<string, bool> _flags = new Dictionary<string, bool>();
+        private static int _diamonds;
 
         private const int DefaultMaxAffection = 100;
         private const int MinAffection = 0;
@@ -152,6 +153,70 @@ namespace LoveSimulation.Core
         }
 
         /// <summary>
+        /// 다이아몬드 현재 수량 조회.
+        /// </summary>
+        public static int GetDiamonds()
+        {
+            return _diamonds;
+        }
+
+        /// <summary>
+        /// 다이아몬드 추가. CurrencyChanged 이벤트 발행.
+        /// </summary>
+        public static void AddDiamonds(int amount)
+        {
+            if (amount <= 0)
+            {
+                Debug.LogWarning("[GameData] 0 이하의 다이아몬드 추가 시도 무시.");
+                return;
+            }
+
+            int previousValue = _diamonds;
+            _diamonds += amount;
+
+            Debug.Log($"[GameData] 다이아몬드 추가: +{amount} → {_diamonds}");
+
+            EventBus.Publish(new CurrencyChanged
+            {
+                PreviousValue = previousValue,
+                NewValue = _diamonds,
+                Delta = amount
+            });
+        }
+
+        /// <summary>
+        /// 다이아몬드 소모. 잔액 부족 시 false 반환.
+        /// </summary>
+        public static bool SpendDiamonds(int amount)
+        {
+            if (amount <= 0)
+            {
+                Debug.LogWarning("[GameData] 0 이하의 다이아몬드 소모 시도 무시.");
+                return false;
+            }
+
+            if (_diamonds < amount)
+            {
+                Debug.LogWarning($"[GameData] 다이아몬드 부족: 보유 {_diamonds}, 필요 {amount}");
+                return false;
+            }
+
+            int previousValue = _diamonds;
+            _diamonds -= amount;
+
+            Debug.Log($"[GameData] 다이아몬드 소모: -{amount} → {_diamonds}");
+
+            EventBus.Publish(new CurrencyChanged
+            {
+                PreviousValue = previousValue,
+                NewValue = _diamonds,
+                Delta = -amount
+            });
+
+            return true;
+        }
+
+        /// <summary>
         /// 플래그 설정.
         /// </summary>
         public static void SetFlag(string flagName)
@@ -192,6 +257,7 @@ namespace LoveSimulation.Core
 
             data.AffectionData = new Dictionary<string, int>(_affection);
             data.Flags = new Dictionary<string, bool>(_flags);
+            data.Diamonds = _diamonds;
         }
 
         /// <summary>
@@ -207,6 +273,7 @@ namespace LoveSimulation.Core
 
             _affection.Clear();
             _flags.Clear();
+            _diamonds = data.Diamonds;
 
             if (data.AffectionData != null)
             {
@@ -235,6 +302,7 @@ namespace LoveSimulation.Core
             _affection.Clear();
             _maxAffection.Clear();
             _flags.Clear();
+            _diamonds = 0;
             Debug.Log("[GameData] 데이터 초기화 완료.");
         }
     }

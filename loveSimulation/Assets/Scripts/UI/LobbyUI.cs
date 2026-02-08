@@ -13,6 +13,8 @@ namespace LoveSimulation.UI
     {
         [SerializeField] private GameObject _lobbyPanel;
         [SerializeField] private Button _episode01Button;
+        [SerializeField] private Button _characterButton;
+        [SerializeField] private SpeechBubbleUI _speechBubbleUI;
 
         private void Awake()
         {
@@ -43,11 +45,24 @@ namespace LoveSimulation.UI
             {
                 _episode01Button.onClick.AddListener(OnEpisode01Clicked);
             }
+
+            if (_characterButton != null)
+            {
+                _characterButton.onClick.AddListener(OnCharacterClicked);
+            }
         }
 
         private void OnGameStateChanged(GameStateChanged evt)
         {
             SetPanelActive(evt.NewState == GameState.Title);
+        }
+
+        private void OnCharacterClicked()
+        {
+            if (_speechBubbleUI != null)
+            {
+                _speechBubbleUI.ShowRandomLine();
+            }
         }
 
         private void OnEpisode01Clicked()

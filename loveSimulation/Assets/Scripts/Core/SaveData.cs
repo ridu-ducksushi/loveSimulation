@@ -60,6 +60,12 @@ namespace LoveSimulation.Core
         public Dictionary<string, bool> Flags = new Dictionary<string, bool>();
 
         /// <summary>
+        /// 다이아몬드 재화.
+        /// </summary>
+        [JsonProperty("diamonds")]
+        public int Diamonds;
+
+        /// <summary>
         /// 범용 문자열 데이터 저장. 추후 시스템 확장용.
         /// </summary>
         [JsonProperty("extraData")]

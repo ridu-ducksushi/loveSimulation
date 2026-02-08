@@ -54,6 +54,17 @@ namespace LoveSimulation.Dialogue
         public string FlagToSet;
 
         /// <summary>
+        /// 프리미엄 선택지 비용 (다이아몬드). 0이면 무료.
+        /// </summary>
+        [JsonProperty("currencyCost")]
+        public int CurrencyCost;
+
+        /// <summary>
+        /// 프리미엄(유료) 선택지 여부.
+        /// </summary>
+        public bool IsPremium => CurrencyCost > 0;
+
+        /// <summary>
         /// 같은 파일 내 섹션 점프 여부.
         /// </summary>
         public bool IsInternalJump => !string.IsNullOrEmpty(Goto);
