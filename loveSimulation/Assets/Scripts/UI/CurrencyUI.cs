@@ -15,6 +15,8 @@ namespace LoveSimulation.UI
         [SerializeField] private GameObject _panel;
         [SerializeField] private TextMeshProUGUI _diamondText;
         [SerializeField] private Image _diamondIcon;
+        [SerializeField] private TextMeshProUGUI _clueText;
+        [SerializeField] private Image _clueIcon;
 
         private void Awake()
         {
@@ -42,6 +44,16 @@ namespace LoveSimulation.UI
             {
                 _diamondIcon = FindComponentInChildren<Image>("DiamondIcon");
             }
+
+            if (_clueText == null)
+            {
+                _clueText = FindComponentInChildren<TextMeshProUGUI>("ClueText");
+            }
+
+            if (_clueIcon == null)
+            {
+                _clueIcon = FindComponentInChildren<Image>("ClueIcon");
+            }
         }
 
         private T FindComponentInChildren<T>(string childName) where T : Component
@@ -62,6 +74,7 @@ namespace LoveSimulation.UI
         private void OnEnable()
         {
             EventBus.Subscribe<CurrencyChanged>(OnCurrencyChanged);
+            EventBus.Subscribe<ClueCurrencyChanged>(OnClueCurrencyChanged);
             EventBus.Subscribe<GameStateChanged>(OnGameStateChanged);
             UpdateDisplay();
         }
@@ -69,6 +82,7 @@ namespace LoveSimulation.UI
         private void OnDisable()
         {
             EventBus.Unsubscribe<CurrencyChanged>(OnCurrencyChanged);
+            EventBus.Unsubscribe<ClueCurrencyChanged>(OnClueCurrencyChanged);
             EventBus.Unsubscribe<GameStateChanged>(OnGameStateChanged);
         }
 
@@ -80,7 +94,12 @@ namespace LoveSimulation.UI
 
         private void OnCurrencyChanged(CurrencyChanged evt)
         {
-            UpdateDisplay();
+            UpdateDiamondDisplay();
+        }
+
+        private void OnClueCurrencyChanged(ClueCurrencyChanged evt)
+        {
+            UpdateClueDisplay();
         }
 
         private void OnGameStateChanged(GameStateChanged evt)
@@ -88,14 +107,25 @@ namespace LoveSimulation.UI
             UpdateVisibility(evt.NewState);
         }
 
-        /// <summary>
-        /// 현재 다이아몬드 수량 텍스트 갱신.
-        /// </summary>
         private void UpdateDisplay()
+        {
+            UpdateDiamondDisplay();
+            UpdateClueDisplay();
+        }
+
+        private void UpdateDiamondDisplay()
         {
             if (_diamondText != null)
             {
                 _diamondText.text = GameData.GetDiamonds().ToString();
+            }
+        }
+
+        private void UpdateClueDisplay()
+        {
+            if (_clueText != null)
+            {
+                _clueText.text = GameData.GetClues().ToString();
             }
         }
 

@@ -17,7 +17,6 @@ namespace LoveSimulation.UI
         private const string ChapterPrefix = "chapter";
         private const string CompletedSuffix = "_completed";
 
-        [SerializeField] private GameObject _lobbyPanel;
         [SerializeField] private Button _episode01Button;
         [SerializeField] private Button _characterButton;
         [SerializeField] private SpeechBubbleUI _speechBubbleUI;
@@ -35,10 +34,6 @@ namespace LoveSimulation.UI
 
         private void Start()
         {
-            // 초기 상태에 따라 패널 표시 여부 결정
-            bool isTitle = GameManager.Instance != null
-                && GameManager.Instance.CurrentState == GameState.Title;
-            SetPanelActive(isTitle);
             UpdateEpisodeButton();
         }
 
@@ -67,8 +62,6 @@ namespace LoveSimulation.UI
 
         private void OnGameStateChanged(GameStateChanged evt)
         {
-            SetPanelActive(evt.NewState == GameState.Title);
-
             if (evt.NewState == GameState.Title)
             {
                 // 다른 핸들러에서 완료 플래그 설정 후 버튼 업데이트되도록 한 프레임 지연
@@ -129,12 +122,5 @@ namespace LoveSimulation.UI
             _episodeButtonText.text = $"Episode {episodeNumber:D2}\n시작하기";
         }
 
-        private void SetPanelActive(bool active)
-        {
-            if (_lobbyPanel != null)
-            {
-                _lobbyPanel.SetActive(active);
-            }
-        }
     }
 }

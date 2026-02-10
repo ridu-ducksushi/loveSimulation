@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using LoveSimulation.Events;
@@ -13,9 +14,13 @@ namespace LoveSimulation.Core
         private static readonly Dictionary<string, int> _maxAffection = new Dictionary<string, int>();
         private static readonly Dictionary<string, bool> _flags = new Dictionary<string, bool>();
         private static int _diamonds;
+        private static int _clues;
+        private static int _dailyInvestigationsRemaining = MaxDailyInvestigations;
+        private static string _lastInvestigationResetDate = string.Empty;
 
         private const int DefaultMaxAffection = 100;
         private const int MinAffection = 0;
+        public const int MaxDailyInvestigations = 3;
 
         /// <summary>
         /// 캐릭터별 최대 호감도 등록. CharacterData에서 호출.
@@ -216,6 +221,117 @@ namespace LoveSimulation.Core
             return true;
         }
 
+        // ── 단서 재화 ──
+
+        /// <summary>
+        /// 단서 현재 수량 조회.
+        /// </summary>
+        public static int GetClues()
+        {
+            return _clues;
+        }
+
+        /// <summary>
+        /// 단서 추가. ClueCurrencyChanged 이벤트 발행.
+        /// </summary>
+        public static void AddClues(int amount)
+        {
+            if (amount <= 0)
+            {
+                Debug.LogWarning("[GameData] 0 이하의 단서 추가 시도 무시.");
+                return;
+            }
+
+            int previousValue = _clues;
+            _clues += amount;
+
+            Debug.Log($"[GameData] 단서 추가: +{amount} → {_clues}");
+
+            EventBus.Publish(new ClueCurrencyChanged
+            {
+                PreviousValue = previousValue,
+                NewValue = _clues,
+                Delta = amount
+            });
+        }
+
+        /// <summary>
+        /// 단서 소모. 잔액 부족 시 false 반환.
+        /// </summary>
+        public static bool SpendClues(int amount)
+        {
+            if (amount <= 0)
+            {
+                Debug.LogWarning("[GameData] 0 이하의 단서 소모 시도 무시.");
+                return false;
+            }
+
+            if (_clues < amount)
+            {
+                Debug.LogWarning($"[GameData] 단서 부족: 보유 {_clues}, 필요 {amount}");
+                return false;
+            }
+
+            int previousValue = _clues;
+            _clues -= amount;
+
+            Debug.Log($"[GameData] 단서 소모: -{amount} → {_clues}");
+
+            EventBus.Publish(new ClueCurrencyChanged
+            {
+                PreviousValue = previousValue,
+                NewValue = _clues,
+                Delta = -amount
+            });
+
+            return true;
+        }
+
+        // ── 일일 조사 ──
+
+        /// <summary>
+        /// 남은 일일 조사 횟수 조회. 날짜 변경 시 자동 리셋.
+        /// </summary>
+        public static int GetDailyInvestigationsRemaining()
+        {
+            CheckDailyReset();
+            return _dailyInvestigationsRemaining;
+        }
+
+        /// <summary>
+        /// 일일 조사 횟수 1회 차감. 남은 횟수 없으면 false 반환.
+        /// </summary>
+        public static bool UseInvestigation()
+        {
+            CheckDailyReset();
+
+            if (_dailyInvestigationsRemaining <= 0)
+            {
+                Debug.LogWarning("[GameData] 일일 조사 횟수 소진.");
+                return false;
+            }
+
+            _dailyInvestigationsRemaining--;
+            Debug.Log($"[GameData] 조사 사용. 남은 횟수: {_dailyInvestigationsRemaining}/{MaxDailyInvestigations}");
+            return true;
+        }
+
+        /// <summary>
+        /// 날짜 변경 시 일일 조사 횟수 리셋.
+        /// </summary>
+        private static void CheckDailyReset()
+        {
+            string today = DateTime.Now.ToString("yyyy-MM-dd");
+            if (_lastInvestigationResetDate == today)
+            {
+                return;
+            }
+
+            _lastInvestigationResetDate = today;
+            _dailyInvestigationsRemaining = MaxDailyInvestigations;
+            Debug.Log("[GameData] 일일 조사 횟수 리셋.");
+        }
+
         /// <summary>
         /// 플래그 설정.
         /// </summary>
@@ -258,6 +374,10 @@ namespace LoveSimulation.Core
             data.AffectionData = new Dictionary<string, int>(_affection);
             data.Flags = new Dictionary<string, bool>(_flags);
             data.Diamonds = _diamonds;
+
+            data.ExtraData["clues"] = _clues.ToString();
+            data.ExtraData["dailyInvestigationsRemaining"] = _dailyInvestigationsRemaining.ToString();
+            data.ExtraData["lastInvestigationResetDate"] = _lastInvestigationResetDate;
         }
 
         /// <summary>
@@ -291,7 +411,32 @@ namespace LoveSimulation.Core
                 }
             }
 
-            Debug.Log($"[GameData] 데이터 로드 완료. 호감도: {_affection.Count}건, 플래그: {_flags.Count}건");
+            // 단서/조사 데이터 (구 세이브 호환)
+            _clues = 0;
+            _dailyInvestigationsRemaining = MaxDailyInvestigations;
+            _lastInvestigationResetDate = string.Empty;
+
+            if (data.ExtraData != null)
+            {
+                if (data.ExtraData.TryGetValue("clues", out string cluesStr)
+                    && int.TryParse(cluesStr, out int clues))
+                {
+                    _clues = clues;
+                }
+
+                if (data.ExtraData.TryGetValue("dailyInvestigationsRemaining", out string remainStr)
+                    && int.TryParse(remainStr, out int remain))
+                {
+                    _dailyInvestigationsRemaining = remain;
+                }
+
+                if (data.ExtraData.TryGetValue("lastInvestigationResetDate", out string dateStr))
+                {
+                    _lastInvestigationResetDate = dateStr;
+                }
+            }
+
+            Debug.Log($"[GameData] 데이터 로드 완료. 호감도: {_affection.Count}건, 플래그: {_flags.Count}건, 단서: {_clues}");
         }
 
         /// <summary>
@@ -303,6 +448,9 @@ namespace LoveSimulation.Core
             _maxAffection.Clear();
             _flags.Clear();
             _diamonds = 0;
+            _clues = 0;
+            _dailyInvestigationsRemaining = MaxDailyInvestigations;
+            _lastInvestigationResetDate = string.Empty;
             Debug.Log("[GameData] 데이터 초기화 완료.");
         }
     }
