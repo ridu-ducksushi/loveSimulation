@@ -12,7 +12,7 @@ namespace LoveSimulation.DebugTools
     /// </summary>
     public class DebugEpisodeSelectUI : MonoBehaviour
     {
-        private const int ChapterCount = 5;
+        private const int ChapterCount = 6;
         private const float ButtonHeight = 120f;
         private const int FontSize = 32;
         [SerializeField] private Button _devButton;

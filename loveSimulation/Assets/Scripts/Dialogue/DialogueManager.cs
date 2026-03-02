@@ -329,7 +329,14 @@ namespace LoveSimulation.Dialogue
                 "공작" => "duke",
                 "대공" => "duke",
                 "리온" => "leon",
+                "카이델" => "kaidel",
+                "마법사" => "kaidel",
                 "황녀" => "princess",
+                "백작" => "count",
+                "시종" => "attendant",
+                "하녀" => "maid",
+                "드래곤" => "dragon",
+                "에르하" => "dragon",
                 _ => speaker.ToLower()
             };
         }

@@ -1,6 +1,6 @@
 {
   "dialogueId": "chapter01",
-  "chapterTitle": "Chapter01\n낯선 손님",
+  "chapterTitle": "Chapter01\n공작가의 불청객",
   "sections": {
     "start": {
       "lines": [
@@ -16,7 +16,7 @@
         },
         {
           "speaker": "",
-          "text": "그날, 대공은 정체불명의 여자를\n'은인'이라는 이름으로 성 안에 들였다.",
+          "text": "그날, 대공은 정체불명의 여인을\n'은인'이라는 이름으로 성 안에 들였다.",
           "textAlign": "center"
         },
         {
@@ -39,7 +39,7 @@
         },
         {
           "speaker": "",
-          "text": "그 여인은 나를 발견하자\n천진난만한 미소를 지으며 다가왔다."
+          "text": "그녀는 나를 발견하자\n천진난만한 미소를 지으며 다가왔다."
         },
         {
           "speaker": "",
@@ -51,7 +51,7 @@
         },
         {
           "speaker": "낯선 여인",
-          "text": "대공비님...!",
+          "text": "안녕하세요. 대공비님!",
           "characters": [
             {"id": "adelin", "position": "Center", "emotion": "neutral"}
           ],
@@ -77,7 +77,7 @@
         },
           {
           "speaker": "",
-          "text": "나의 당황스러움이 느껴졌는지\n대공이 미소를 지으며 말을 이었다."
+          "text": "당황하는 나와 별개로\n대공이 미소를 지으며 말을 이었다."
         },
         {
           "speaker": "대공",
@@ -108,7 +108,7 @@
         },
         {
           "speaker": "대공",
-          "text": "그순간엔, 내게 운명이 찾아온 것 같더군.",
+          "text": "눈을 떠서 아델린을 본 그 순간엔,\n내게 운명이 찾아온 것 같더군.",
           "characters": [
             {"id": "adelin", "position": "Left", "emotion": "neutral"},
             {"id": "duke", "position": "Right", "emotion": "neutral"}
@@ -151,16 +151,21 @@
         },
         {
           "speaker": "",
+          "text": "!!",          
+          "hideCharactersAfter": true          
+        },
+        {
+          "speaker": "",
           "text": "낯선 여인을 정부로 맞이한다는 남편의 말",
           "choices": [
             {
-              "text": "뭐라고?",
+              "text": "밀도 안돼!",
               "goto": "confrontation",
               "affectionChange": 5,
               "flagToSet": "ch1_confronted"
             },
             {
-              "text": "설마 농담이지?",
+              "text": "...진심이야?",
               "goto": "denial",
               "affectionChange": -2,
               "flagToSet": "ch1_denied"
@@ -180,11 +185,23 @@
       "lines": [
         {
           "speaker": "me",
-          "text": "신분도 모르는 자를 들이는 건 말도 안돼요!"
+          "text": "그럴 수는 없어요!"
+        },
+         {
+          "speaker": "",
+          "text": "당황한건 나뿐만이 아니었는지,\n옆에 있던 기사단장이 놀란 표정으로 우리를 바라보았다."        
         },
         {
+          "speaker": "기사단장",
+          "text": "전하...! 무슨 이야기십니까"        
+        },      
+         {
+          "speaker": "기사단장",
+          "text": "신분도 모르는 자를 들이는 건 말도 안됩니다!"
+        },               
+        {
           "speaker": "대공",
-          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 고아출신 아이라는군.",
+          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 아이라는군.",
           "emotion":"neutral"
         },
         {
@@ -199,7 +216,7 @@
         },
         {
           "speaker": "대공",
-          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지.",
+          "text": "대공비도 곧 알게 될 거야.\n그녀의 존재가 얼마나 소중한지.",
           "emotion":"neutral",
           "hideCharactersAfter": true
         },
@@ -223,7 +240,7 @@
       "lines": [
         {
           "speaker": "me",
-          "text": "농담이라고 해줘요."
+          "text": "그게 당신의 선택인가요?"
         },
         {
           "speaker": "대공",
@@ -231,12 +248,35 @@
         },
         {
           "speaker": "대공",
-          "text": "대공비도 곧 알게 될 거야.\n그녀가 얼마나 감사한 존재인지."
+          "text": "대공비도 곧 알게 될 거야.\n그녀의 존재가 얼마나 소중한지."
+        },
+         {
+          "speaker": "",
+          "text": "당황한건 나뿐만이 아니었는지,\n옆에 있던 기사단장이 놀란 표정으로 우리를 바라보았다."        
         },
         {
-          "speaker": "me",
-          "text": "…당신이 그렇게 원한다면."
+          "speaker": "기사단장",
+          "text": "전하...! 무슨 이야기십니까"        
+        },      
+         {
+          "speaker": "기사단장",
+          "text": "신분도 모르는 자를 들이는 건 말도 안됩니다!"
         },
+         {
+          "speaker": "기사단장",
+          "text": "그리고 전하께는,,, 대공비님이 계시잖습니까!"        
+        },          
+        {
+          "speaker": "대공",
+          "text": "남부 남작의 성에서 전갈이 왔어.\n후원하는 아이라는군.",
+          "emotion":"neutral"
+        },
+        {
+          "speaker": "대공",
+          "text": "내가 책임지고 돌볼 생각이야.",
+          "emotion":"neutral",
+          "hideCharactersAfter": true
+        }, 
         {
           "speaker": "",
           "text": "나는 깊은 한숨을 내쉬었다.",
@@ -288,12 +328,33 @@
         },
         {
           "speaker": "",
-          "text": "며칠 뒤."
+          "text": "신이나서 조잘거리는 그녀를\n기사단장이 막아섰다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "네가 마음대로 말 걸만한 분이 아니시다."        
+        },     
+        {
+          "speaker": "기사단장",
+          "text": "주제파악을 하도록"        
+        },
+        {
+          "speaker": "아델린",
+          "text": "네 그럴게요.",
+          "emotion": "neutral"
+        },    
+        {
+          "speaker": "",
+          "text": "사건이 있고난 후 며칠 뒤."
         },
         {
           "speaker": "",
           "text": "성 안에서의 그녀의 존재감은\n날이 갈수록 커져갔다."
-        },
+        }, 
+        {
+          "speaker": "",
+          "text": "사용인들의 마음을 사로잡는 법도,\n대공과 함께하는 시간도 점점 늘어났다."
+        },        
         {
           "speaker": "하녀",
           "text": "대공비님, 오늘 저녁 만찬에\n'아델린'님도 참석하신다고 합니다."
@@ -304,7 +365,7 @@
         },
         {
           "speaker": "",
-          "text": "대공은 그녀와 함께 있는 시간이 늘어났고,\n나와의 대화는 점점 줄어들었다."
+          "text": "대공은 나를 점점 찾지 않았다."
         },
            {
           "speaker": "",
@@ -318,7 +379,7 @@
         },
         {
           "speaker": "아델린",
-          "text": "대공님, 정말 재미있으시네요.",
+          "text": "전하, 정말 재미있으시네요.",
           "emotion": "smile",
           "hideCharactersAfter": true
         },
@@ -331,10 +392,10 @@
         },
         {
           "speaker": "",
-          "text": "두 사람이 나란히 걸어오고 있었다.",
+          "text": "행복해보이는 두 사람이 나란히 걸어오고 있었다.",
           "choices": [
             {
-              "text": "모른 척 지나간다",
+              "text": "마침 다가오는 기사단장을 붙잡는다.",
               "goto": "ignore_them",
               "flagToSet": "ch1_ignored_couple"
             },
@@ -351,8 +412,12 @@
       "lines": [
         {
           "speaker": "",
-          "text": "나는 시선을 피해 빠르게 지나쳤다."
+          "text": "나는 시선을 피해 빠르게 기사단장에게 다가갔다."
         },
+        {
+          "speaker": "기사단장",
+          "text": "앗, 대공비님. 만찬장으로 가시는 길인가요?"        
+        }, 
         {
           "speaker": "대공",
           "text": "…대공비?"
@@ -363,7 +428,25 @@
         },
         {
           "speaker": "me",
-          "text": "(이럴거 까진 아니었는데...)",
+          "text": "아뇨, 잠시 저택을 둘러보고 있었어요.",
+          "emotion":"neutral"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "아, 그렇군요. 실례가 아니라면\n호위해도 될까요?"
+        },
+        {
+          "speaker": "",
+          "text": "그녀와 함께있는 대공을 보니\n더 이상 그 자리에 머물고 싶지 않아졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "네 그러세요.",
+          "emotion":"neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(이렇게 까지 피할 생각은 아니었는데...)",
           "emotion":"neutral"
         },
         {
@@ -388,7 +471,7 @@
         },
         {
           "speaker": "대공",
-          "text": "아, 대공비. 그래, 같이 가지.",
+          "text": "아, 대공비군. 그래, 같이 가지.",
           "emotion":"smile"
         },
         {
@@ -420,6 +503,10 @@
         {
           "speaker": "",
           "text": "나는 억지로 미소를 지으며\n두 사람과 함께 만찬장으로 향했다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장을 붙잡아 자리를 피하는게 나았던 걸까."
         },
         {
           "speaker": "",
