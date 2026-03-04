@@ -4,69 +4,11 @@
   "sections": {
     "start": {
       "lines": [
-        {
-          "speaker": "",
-          "text": "카이델이 발을 멈추었다.\n앞에는 아무것도 없는 황야가 펼쳐져 있었다."
-        },
-        {
-          "speaker": "카이델",
-          "text": "여기서부터는 걸어서 갈 수 없어.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "...그럼 어떻게요?"
-        },
-        {
-          "speaker": "카이델",
-          "text": "텔레포트.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "텔레포트...?"
-        },
-        {
-          "speaker": "카이델",
-          "text": "산맥 너머까지 걸으면 한 달이야.\n하지만 공간 도약 마법이면 한순간이지.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "카이델이 지면에 마법진을 그리기 시작했다.\n푸른 빛이 발밑에서 피어올랐다."
-        },
-        {
-          "speaker": "카이델",
-          "text": "내 손을 잡아.\n마법진 밖으로 나가면 위험해.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "...네."
-        },
-        {
-          "speaker": "",
-          "text": "카이델의 손을 잡았다.\n손끝에서 따뜻한 마나가 흘러들어왔다."
-        },
-        {
+         {
           "speaker": "카이델",
           "text": "눈 감아. 어지러울 수 있으니까.",
           "emotion": "neutral"
         },
-        {
-          "speaker": "",
-          "text": "빛이 점점 강해졌다.\n세상이 하얗게 물들었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "teleport_experience"
-            }
-          ]
-        }
-      ]
-    },
-    "teleport_experience": {
-      "lines": [
         {
           "speaker": "",
           "text": "세상이 뒤집혔다.",
@@ -80,6 +22,17 @@
           "speaker": "",
           "text": "눈을 떴다.\n바람이 달랐다. 공기가 달랐다."
         },
+        {
+          "speaker": "me",
+          "text": "...이게 뭐죠?",
+          "emotion": "neutral"
+        },        
+        {
+          "speaker": "카이델",
+          "text": "텔레포트.",
+          "emotion": "neutral"
+        }
+        ,
         {
           "speaker": "",
           "text": "황량한 바위산 사이로\n거대한 골짜기가 펼쳐져 있었다."
@@ -133,9 +86,19 @@
         },
         {
           "speaker": "카이델",
-          "text": "...신기한 사람.",
+          "text": "드래곤의 영역은 인간이 닿을 수 없어.\n그곳을 걸어가려고 했어?",
+          "emotion": "smile"
+        },        
+        {
+          "speaker": "me",
+          "text": "마법이란, 정말 놀라운 거네요.",
           "emotion": "smile"
         },
+        {
+          "speaker": "카이델",
+          "text": "당신같은 반응이라면, 마법을 경험시켜 주는 것도\n나쁘지 않군.",
+          "emotion": "smile"
+        }, 
         {
           "speaker": "",
           "text": "그 말에 왠지 얼굴이 달아올랐다.",

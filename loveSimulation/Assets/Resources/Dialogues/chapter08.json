@@ -1,0 +1,668 @@
+{
+  "dialogueId": "chapter08",
+  "chapterTitle": "Chapter08\n백작가의 정체",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "아침이 왔다.",
+          "background": "emilia_room"
+        },
+        {
+          "speaker": "",
+          "text": "창문 너머로 백작의 마차가\n저택 문을 빠져나가는 소리가 들렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...지금이야.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "백작이 나갔어.\n하지만 조심해.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 목걸이 보석 안에서\n작게 속삭였다."
+        },
+        {
+          "speaker": "me",
+          "text": "서재부터 살펴볼게.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mansion_explore"
+            }
+          ]
+        }
+      ]
+    },
+    "mansion_explore": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "서재의 문을 열었다.",
+          "background": "count_study"
+        },
+        {
+          "speaker": "",
+          "text": "빽빽하게 꽂힌 서류들.\n먼지 쌓인 장부들.\n그 사이에 봉인된 서신 묶음이 보였다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...대공가와의 거래 장부...?)"
+        },
+        {
+          "speaker": "",
+          "text": "손이 멈추었다.\n전생의 기억이 스쳐 지나갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...알고 있어. 이 집안.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(...대공비로 살던 시절—\n이 백작가는 대공가와\n거래를 끊은 배신자였어.)"
+        },
+        {
+          "speaker": "",
+          "text": "하지만 지금 손에 쥔 장부에는\n거래가 멀쩡히 이어지고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...지금은 아직 배신 전이야.\n이 거래가 끊기는 건—\n앞으로 일어날 일이야.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 눈이 천천히 좁아졌다.\n손 안의 장부가 다르게 보이기 시작했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "past_connection"
+            }
+          ]
+        }
+      ]
+    },
+    "past_connection": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "장부를 품에 넣고\n서재를 빠져나왔다.",
+          "background": "emilia_room"
+        },
+        {
+          "speaker": "",
+          "text": "방 안에서 에르하가\n정령의 형태로 기다리고 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "뭘 찾은 거야?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "장부야. 공작가와의 거래 기록."
+        },
+        {
+          "speaker": "me",
+          "text": "이걸 보고 알았어.\n내가 이 몸에 처음 들어온 날—\n공작가로 잔금을 치르러\n가는 날이었어."
+        },
+        {
+          "speaker": "에르하",
+          "text": "잔금...?\n그게 왜 중요한 거야?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "백작은 나를 공작에게\n직접 보여줘야 했어.\n돈만 보내는 게 아니라—\n딸을 데려간 거지."
+        },
+        {
+          "speaker": "me",
+          "text": "(...공작에게 나를 보여주며\n꼬시게 할 계획이었던 거야.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "......너를 미끼로 쓴 거야?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "그런 셈이야.\n그런데 하나 더 걸리는 게 있어."
+        },
+        {
+          "speaker": "me",
+          "text": "왜 하필 공작가였을까.\n단순한 거래라면\n나를 데려갈 이유가 없어."
+        },
+        {
+          "speaker": "me",
+          "text": "(...혹시 드래곤의 심장과\n관련이 있는 건 아닐까.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mana_discovery"
+            }
+          ]
+        }
+      ]
+    },
+    "mana_discovery": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "잠시 침묵이 흘렀다.\n에밀리아가 먼저 입을 열었다."
+        },
+        {
+          "speaker": "me",
+          "text": "에르하, 하나 더 물어볼 게 있어."
+        },
+        {
+          "speaker": "me",
+          "text": "생각해보니 이 몸...\n마나를 자연스럽게 느끼고 있었어.\n처음부터."
+        },
+        {
+          "speaker": "me",
+          "text": "대공비 시절엔 마나 같은 건\n느낄 수 없었어.\n마나는 특별한 사람들—\n마법사만이 가진 것이었거든."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......그러고 보니 신기하긴 해.",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 에밀리아의 주위를\n천천히 맴돌기 시작했다.\n집중하는 듯 빛이 강해졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "너한테서 느껴지는 마나는\n일반적인 마나가 아니야.",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "에르하",
+          "text": "인공적으로 마나를 느끼게\n만들어 놓은 것 같아.\n누군가 이 몸에 손을 댄 거야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "인공적으로...?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "몸 안의 마나 흐름이 엉망이야.\n고쳐주고 싶지만...\n지금의 내 힘으로는 불가능해.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 빛이 가늘게 흔들렸다.\n안타까움이 그 빛에 배어 있었다.",
+          "choices": [
+            {
+              "text": "걱정해줘서 고마워, 에르하.",
+              "goto": "evening_summon",
+              "affectionChange": 3
+            },
+            {
+              "text": "네가 심장을 되찾으면\n가능한 거야?",
+              "goto": "evening_summon",
+              "affectionChange": 5
+            },
+            {
+              "text": "반드시 네 심장을\n찾아줄게.",
+              "goto": "evening_summon",
+              "affectionChange": 8
+            }
+          ]
+        }
+      ]
+    },
+    "evening_summon": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "하루가 지나갔다.",
+          "background": "emilia_room"
+        },
+        {
+          "speaker": "",
+          "text": "창밖이 어둠으로 물들어갈 무렵,\n문 너머에서 노크 소리가 들렸다."
+        },
+        {
+          "speaker": "하녀",
+          "text": "아가씨, 백작님께서\n부르십니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "이 시간에...?\n뭔가 이상해.",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 목걸이 안으로\n조용히 숨어 들었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...어디로 데려가는 거지.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 하녀의 뒤를 따라\n계단 아래로 향했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "basement_descent"
+            }
+          ]
+        }
+      ]
+    },
+    "basement_descent": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "어두운 계단이었다.",
+          "background": "basement",
+          "hideCharactersAfter": true
+        },
+        {
+          "speaker": "",
+          "text": "벽에 박힌 횃불이 흔들렸다.\n그림자가 계단을 타고 흘러내렸다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...검은 마력이 느껴져.\n조심해.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...이런 곳이\n저택 아래에 있었다니.)"
+        },
+        {
+          "speaker": "",
+          "text": "하녀가 계단 끝에서 멈추었다.\n묵직한 나무 문이 앞에 서 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "횃불 하나가 바람도 없이\n꺼졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dark_ritual"
+            }
+          ]
+        }
+      ]
+    },
+    "dark_ritual": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "문이 안쪽에서 열렸다."
+        },
+        {
+          "speaker": "",
+          "text": "붉은 빛이 쏟아져 나왔다.\n그 뒤로 검은 안개가 천천히 흘렀다."
+        },
+        {
+          "speaker": "",
+          "text": "바닥에 거대한 마법진이\n그려져 있었다.\n복잡한 문양이 붉게 빛나고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "마법진 주위로\n검은 로브를 뒤집어쓴 자들이\n여럿 서 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...한 명이 아니야.\n여러 명의 마법사가 있어.)"
+        },
+        {
+          "speaker": "",
+          "text": "그중 한 명이\n에밀리아 쪽으로 고개를 돌렸다."
+        },
+        {
+          "speaker": "",
+          "text": "로브 사이로 드러난 눈이\n에밀리아와 마주쳤다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 흠칫 놀라며\n반보 뒤로 물러섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "kaidel_reveal"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_reveal": {
+      "lines": [
+        {
+          "speaker": "백작",
+          "text": "걱정 마라.\n내가 부른 마법사들이다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "놀란 남자가 천천히\n후드를 내렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...카이델?!)"
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 얼굴이었다.\n놀람이 스치고—\n곧 태연한 표정으로 굳어졌다."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 카이델은 다시 후드를 올리고\n마법진 쪽으로 돌아섰다.\n다른 마법사들 틈에 섞여 들었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "찝찝해...\n저놈한테서 흑마법 기운이\n느껴졌어. 저놈이 쓴 거야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에서 궁정마법사였던\n카이델이... 흑마법을?)"
+        },
+        {
+          "speaker": "",
+          "text": "카이델은 마법사들 사이에서\n조용히 서 있을 뿐이었다.\n에밀리아에게 다가올 기색은 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...저쪽에서 먼저 말을 걸\n생각은 없는 것 같아.\n내가 다가가지 않는 한\n대화할 일은 없겠지.)",
+          "choices": [
+            {
+              "text": "카이델에게 다가간다.",
+              "goto": "kaidel_approach",
+              "affectionChange": 3,
+              "flagToSet": "ch8_kaidel_approached"
+            },
+            {
+              "text": "지금은 가만히 있는다.",
+              "goto": "count_order",
+              "flagToSet": "ch8_kaidel_ignored"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_approach": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아가 카이델 곁으로 걸어갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "...또 만나네요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "......그러게요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델은 짧게 대답했을 뿐,\n시선은 마법진에 고정되어 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...더 이상 말할 생각이\n없는 것 같아.)"
+        },
+        {
+          "speaker": "",
+          "text": "그때 백작이 에밀리아를 불렀다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "count_order"
+            }
+          ]
+        }
+      ]
+    },
+    "count_order": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "백작이 자리를 옮겼다.\n낡은 탁자 위의 작은 상자를\n에밀리아 앞에 내려놓았다."
+        },
+        {
+          "speaker": "",
+          "text": "상자가 열렸다.\n안에는 선명한 붉은 보석이\n담겨 있었다."
+        },
+        {
+          "speaker": "백작",
+          "text": "이건 사람의 마음을\n움직이는 보석이다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 눈이 굳었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...사람을 조종하는\n주술이 걸린 보석이야.)"
+        },
+        {
+          "speaker": "백작",
+          "text": "곧 성년식이 열린다.\n그 자리에서 북부대공에게\n이것을 사용해라.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...북부대공...)\n(...전생의... 내 남편.)"
+        },
+        {
+          "speaker": "백작",
+          "text": "대공을 우리 편으로 만들어야 한다.\n네가 그 역할이다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "백작의 눈에는 감정이 없었다.\n에밀리아를 바라보는 게 아니라—\n도구를 확인하는 눈이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "reaction_choice"
+            }
+          ]
+        }
+      ]
+    },
+    "reaction_choice": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "(...이 보석을 쓰면 대공은\n백작가의 손에 넘어가.\n전생과 같은 배신이 시작되는 거야.)"
+        },
+        {
+          "speaker": "",
+          "text": "붉은 보석이 손안에서\n차갑게 빛나고 있었다.",
+          "choices": [
+            {
+              "text": "...알겠습니다, 아버지.",
+              "goto": "return_to_room",
+              "flagToSet": "ch8_obey_count"
+            },
+            {
+              "text": "이런 건 사용하고 싶지 않아요.",
+              "goto": "return_to_room",
+              "flagToSet": "ch8_refuse_count"
+            }
+          ]
+        }
+      ]
+    },
+    "return_to_room": {
+      "lines": [
+        {
+          "speaker": "백작",
+          "text": "네 의견을 물은 게 아니다.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 돌아섰다.\n이미 결론난 일이라는 듯이."
+        },
+        {
+          "speaker": "",
+          "text": "방으로 돌아왔다.",
+          "background": "emilia_room"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 목걸이 밖으로 나왔다.\n빛이 불안하게 일렁이고 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "그 보석... 위험해.\n절대 쓰면 안 돼.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 손안의 붉은 보석을\n조용히 바라보았다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...이 보석의 정체를\n정확히 알아야 해.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 서랍에서\n작은 영상구를 꺼냈다.\n렌이 지난번에 건네준 연락 수단이었다."
+        },
+        {
+          "speaker": "",
+          "text": "영상구에 마나를 흘려넣자\n희미한 빛이 피어오르며\n렌의 얼굴이 떠올랐다."
+        },
+        {
+          "speaker": "렌",
+          "text": "이 시간에 연락이라니.\n무슨 일이에요?",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "me",
+          "text": "알아봐 줄 게 있어요.\n사람을 조종하는 주술이 걸린\n붉은 보석에 대해서."
+        },
+        {
+          "speaker": "렌",
+          "text": "조종 주술?\n...꽤 위험한 물건이네요.",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "렌",
+          "text": "알겠어요. 조사해볼게요.\n다음에 만날 때 알려드리죠.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "me",
+          "text": "부탁해요, 길드장님."
+        },
+        {
+          "speaker": "렌",
+          "text": "렌이라고 불러주셔도 돼요.\n우리 사이에 직함은\n좀 딱딱하잖아요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "영상구의 빛이 꺼졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...꼭 그 남자한테\n부탁해야 했어?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "다른 방법이 없잖아."
+        },
+        {
+          "speaker": "에르하",
+          "text": "렌이라고 불러달라니.\n뻔뻔한 놈.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "......또 질투야?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "질투 아니야!\n그냥 그 놈이 마음에 안 드는 거야!",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 빛이 붉게 달아올랐다.\n변명치고는 너무 정직한 반응이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...귀엽다.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 다시\n붉은 보석을 바라보았다."
+        },
+        {
+          "speaker": "me",
+          "text": "성년식...\n북부대공..."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생의 남편을\n다시 만나게 되는 거야.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(...하지만 이번엔 달라.\n나는 이미 끝을 알고 있어.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "chapter_end": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "백작가의 어둠은\n생각보다 깊었다."
+        },
+        {
+          "speaker": "",
+          "text": "지하에서 흑마법이 행해지고 있었고—\n그 중심에 카이델이 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에서 나를 지켜준\n궁정마법사가, 이 시대에선\n흑마법을 쓰고 있어.)"
+        },
+        {
+          "speaker": "",
+          "text": "그리고 성년식이 다가오고 있었다.\n붉은 보석과 함께."
+        },
+        {
+          "speaker": "",
+          "text": "전생의 남편—\n북부대공과의 재회."
+        },
+        {
+          "speaker": "",
+          "text": "어떤 패를 쥐고\n그 자리에 나설 것인가."
+        },
+        {
+          "speaker": "me",
+          "text": "(...이번엔 내가\n판을 짜는 거야.)"
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 8 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}

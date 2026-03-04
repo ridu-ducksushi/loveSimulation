@@ -337,6 +337,9 @@ namespace LoveSimulation.Dialogue
                 "하녀" => "maid",
                 "드래곤" => "dragon",
                 "에르하" => "dragon",
+                "클라라" => "clara",
+                "루카스" => "lucas",
+                "렌" => "ren",
                 _ => speaker.ToLower()
             };
         }
