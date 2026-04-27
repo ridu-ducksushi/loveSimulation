@@ -15,20 +15,7 @@
         },
         {
           "speaker": "me",
-          "text": "(...지금이야.)"
-        },
-        {
-          "speaker": "에르하",
-          "text": "백작이 나갔어. 조심해야 해.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "에르하가 목걸이 보석 안에서\n작게 속삭였다."
-        },
-        {
-          "speaker": "me",
-          "text": "서재부터 살펴볼게.",
+          "text": "(...지금이야.)",
           "choices": [
             {
               "text": "계속하기",
@@ -54,32 +41,57 @@
           "text": "(...거래 장부...?)"
         },
         {
-          "speaker": "",
-          "text": "손이 멈추었다.\n전생의 기억이 스쳐 지나갔다."
-        },
-        {
           "speaker": "me",
-          "text": "(...알고 있어. 이 가문.)"
-        },
-        {
-          "speaker": "me",
-          "text": "(...3년 전. 대공비로 살던 시절— 남부의 한 백작이\n북부 공작가에게 거래를 시도하려 한 적이 있다.)"
+          "text": "(...'양녀 에밀리아 — 공작가에 공납.')"
         },
         {
           "speaker": "",
-          "text": "지금 손에 쥔 장부에는\n백작가와의 거래를 제안하는 내용이 담겨 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...지금은 거래를 시도하기 전.\n이 거래가 끊기는 건— 과거의 내가 한 판단이었지.)"
+          "text": "숨이 한 박자 멎었다.\n양녀라는 명목이 무엇이었는지, 그제야 형체를 갖췄다."
         },
         {
           "speaker": "",
-          "text": "에밀리아의 눈이 천천히 좁아졌다.\n3년 전의 일이 돌아온 과거에서도 재현되고 있었다.",
+          "text": "장부 깊은 곳에서, 또 한 장의 봉인된 서신이 떨어졌다.\n인장이 백작의 것이 아니었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...뭐지, 이건.)"
+        },
+        {
+          "speaker": "",
+          "text": "봉랍을 조심스레 들춰낸 종이 안쪽에는\n낯선 마법 문양과 함께, 한 줄의 지령만이 남겨져 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 공작가 보물고. 성물 회수.",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "me",
+          "text": "(…성물. 에르하가 말한 — 그 심장이다.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(…이 몸에서 깨어난 날. 백작은 그 단어를 입에 올렸지.\n그땐 흘려들었지만 — 모든 것이 한 줄로 꿰어지는군.)"
+        },
+        {
+          "speaker": "",
+          "text": "공작가에 들어간 뒤, 안쪽에서 보물고를 열어줄 첩자.\n그것이 백작이 — 양녀라는 명목으로 길러둔 진짜 그림이었다."
+        },
+        {
+          "speaker": "",
+          "text": "가슴 위에서 목걸이가 한 번, 깊게 진동했다.\n에르하의 호흡이 거칠게 가라앉는 것이, 살갗 너머로 전해져 왔다.",
           "choices": [
             {
-              "text": "계속하기",
-              "goto": "past_connection"
+              "text": "장부와 서신을 가져나간다",
+              "goto": "past_connection",
+              "affectionChange": 3,
+              "flagToSet": "ch7_take_evidence"
+            },
+            {
+              "text": "원래 자리에 두고, 머리에만 새긴다",
+              "goto": "past_connection",
+              "affectionChange": 1,
+              "flagToSet": "ch7_leave_evidence"
             }
           ]
         }
@@ -89,63 +101,71 @@
       "lines": [
         {
           "speaker": "",
-          "text": "장부를 품에 넣고 서재를 빠져나왔다.",
+          "text": "방으로 돌아왔다.",
           "background": "emilia_room"
         },
         {
           "speaker": "",
-          "text": "방 안에서 에르하가 기다리고 있었다."
+          "text": "에르하가 인간 형상으로 흩어져 나왔다.\n눈꼬리가 평소처럼 접혀 있지 않았다.",
+          "characters": [
+            {"id": "dragon", "position": "Center", "emotion": "angry"}
+          ]
         },
         {
           "speaker": "에르하",
-          "text": "뭘 찾은 거야?",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "me",
-          "text": "장부야. 공작가와의 거래 기록."
-        },
-        {
-          "speaker": "me",
-          "text": "이걸 보고 알았어. 내가 이 몸에 처음 들어온 날—\n그 날은 백작이 공작가에 거래 제안을 하러 가는 날이었어."
-        },
-        {
-          "speaker": "에르하",
-          "text": "제안...? 거래를 하던 사이었던거야?",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "me",
-          "text": "그게 중요한게 아니야.\n백작의 진짜 목적은 나를 보여주려는거지."
-        },
-        {
-          "speaker": "me",
-          "text": "(...백작은 이 몸을 미끼로 삼아서\n공작가에 접근하려 했던 거야.)"
-        },
-        {
-          "speaker": "에르하",
-          "text": "...너를 미끼로 쓴 거야?",
+          "text": "…표정이, 편치 않네.",
           "emotion": "angry"
         },
         {
           "speaker": "me",
-          "text": "그런 셈이야. 이유는 아마도... 드래곤의 심장"
+          "text": "장부에서 본 것이 떠올라서 그래."
         },
         {
           "speaker": "me",
-          "text": "공작에게 딸을 보여줘서 흥미를 끌려고 했겠지.\n자연스럽게 공작저에 갈 수 있는 명분도 만들어야 하니까"
+          "text": "(…도구로 키워졌으리라는 짐작은 있었지.\n하지만... 직접 보고 나니, 잠시 — 원래 이 몸을 살던 그 아이가 가엾어지더군.)"
+        },
+        {
+          "speaker": "me",
+          "text": "백작이 그린 그림은 단순한 정략이 아니었어.\n양녀라는 이름으로 공작가 안쪽까지 들여보내려 키워둔 거였지."
+        },
+        {
+          "speaker": "에르하",
+          "text": "…그래서, 그 다음은.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "공작가 보물고에 잠들어 있는 — 너의 심장."
         },
         {
           "speaker": "",
-          "text": "에르하가 기분 나쁜듯 낮게 으릉거렸다."
+          "text": "에르하가 한 박자, 숨을 멈췄다.\n해맑던 눈빛 아래, 천 년 묵은 자의 본성이 살짝 비쳤다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "…그건 — 내 거다.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "한 옥타브 내려간 저음.\n그가 말한 \"내 거\"가 심장을 가리키는 건지, 주인을 가리키는 건지,\n어느 쪽인지 분간하기 어려웠다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "주인의 몸도, 내 심장도 —\n그 백작이라는 자가 손댈 것이 아니야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "송곳니 끝이 아랫입술 위로 한 번 스치고 사라졌다.\n천 년의 평정이 깜빡였던 자리에, 짙은 소유욕만 남아 있었다."
         },
         {
           "speaker": "me",
-          "text": "그 날 내가 자리를 비워서 계획이 흐트러졌던거야."
+          "text": "…백작의 손에 들어가지 않게. 먼저 손에 넣어야 해."
         },
         {
           "speaker": "me",
-          "text": "백작과 어둠은 무슨 관계가 있는 걸까?\n그리고 그 분이라는 존재는 대체...",
+          "text": "(…백작의 도구로 끌려가는 게 아니라,\n내 발로 그 안에 들어갈 이유가 — 생긴 셈이지.)",
           "choices": [
             {
               "text": "계속하기",
@@ -180,11 +200,11 @@
         },
         {
           "speaker": "",
-          "text": "에르하가 에밀리아의 주위를 천천히 맴돌기 시작했다.\n집중하는 듯 빛이 강해졌다."
+          "text": "에르하가 에밀리아의 주위를 천천히 맴돌며 손끝을 가볍게 펼쳤다.\n손가락 끝에 옅은 빛이 일렁였다."
         },
         {
           "speaker": "에르하",
-          "text": "모든 인간에겐 마나가 있지.\n하지만, 너한테서 느껴지는 마나는 일반적인 마나가 아니야.",
+          "text": "모든 인간에겐 마나가 있지.\n하지만 주인한테서 느껴지는 마나는 — 일반적인 마나가 아니야.",
           "emotion": "curious"
         },
         {
@@ -203,7 +223,7 @@
         },
         {
           "speaker": "",
-          "text": "에르하의 빛이 가늘게 흔들렸다.\n안타까움이 그 빛에 배어 있었다.",
+          "text": "에르하의 눈매가 가늘게 흔들렸다.\n안타까움이 그 눈빛에 배어 있었다.",
           "choices": [
             {
               "text": "걱정해줘서 고마워, 에르하.",
@@ -211,14 +231,9 @@
               "affectionChange": 3
             },
             {
-              "text": "네가 심장을 되찾으면 가능한 거야?",
+              "text": "네 심장을 꼭 찾아줄게.",
               "goto": "mana_response_heart",
               "affectionChange": 5
-            },
-            {
-              "text": "반드시 네 심장을 찾아줄게.",
-              "goto": "mana_response_promise",
-              "affectionChange": 8
             }
           ]
         }
@@ -233,7 +248,7 @@
         },
         {
           "speaker": "",
-          "text": "에르하의 빛이 살짝 흔들렸다.\n당연하다는 말과는 달리,\n목소리가 미세하게 떨리고 있었다."
+          "text": "에르하의 시선이 살짝 흩어졌다.\n당연하다는 말과는 달리, 목소리가 미세하게 떨리고 있었다."
         },
         {
           "speaker": "에르하",
@@ -261,16 +276,16 @@
         },
         {
           "speaker": "",
-          "text": "에르하의 빛이 순간 멈췄다.\n마치 심장이 뛰는 것처럼—\n한 박자 늦게 다시 흔들렸다."
+          "text": "에르하의 호흡이 순간 멎었다.\n있지도 않은 심장이 한 박자 뛴 것처럼 — 한 박자 늦게, 다시 풀어졌다."
         },
         {
           "speaker": "에르하",
-          "text": "...심장을 가진 드래곤은 위대해.",
+          "text": "…심장을 가진 드래곤은 위대해.",
           "emotion": "neutral"
         },
         {
           "speaker": "에르하",
-          "text": "내 힘을 온전히 되찾는게 되면-",
+          "text": "내 힘을 온전히 되찾게 된다면 —",
           "emotion": "sad"
         },
         {
@@ -279,63 +294,12 @@
         },
         {
           "speaker": "에르하",
-          "text": "그때가 되면 너를 지켜줄게.",
+          "text": "그때가 되면, 주인을 지켜줄게.",
           "emotion": "neutral"
         },
         {
           "speaker": "",
           "text": "낮은 목소리에 묵직한 맹세가 실려 있었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "evening_summon"
-            }
-          ]
-        }
-      ]
-    },
-    "mana_response_promise": {
-      "lines": [
-        {
-          "speaker": "에르하",
-          "text": "......뭐라고?",
-          "emotion": "surprised"
-        },
-        {
-          "speaker": "",
-          "text": "에르하의 빛이 크게 흔들렸다.\n한순간 빛이 너무 밝아져서\n방 안이 환하게 물들었다."
-        },
-        {
-          "speaker": "에르하",
-          "text": "...지금 나한테\n약속한 거야?",
-          "emotion": "embarrassed"
-        },
-        {
-          "speaker": "me",
-          "text": "약속이야."
-        },
-        {
-          "speaker": "에르하",
-          "text": "......",
-          "emotion": "embarrassed"
-        },
-        {
-          "speaker": "",
-          "text": "에르하가 말을 잇지 못했다.\n빛이 불규칙하게 명멸하며 감정을 감추지 못하고 있었다."
-        },
-        {
-          "speaker": "에르하",
-          "text": "...기억해. 네가 먼저 한 말이야.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "에르하",
-          "text": "그 약속—\n절대 잊지 마.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "에르하의 목소리는 낮고 단단했다.\n드래곤의 심장을 찾겠다는 약속.\n그것이 에르하에게 어떤 의미인지—\n에밀리아는 아직 알지 못했다.",
           "choices": [
             {
               "text": "계속하기",
@@ -369,10 +333,6 @@
         {
           "speaker": "",
           "text": "에르하가 목걸이 안으로\n조용히 숨어 들었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...어디로 데려가는 거지.)"
         },
         {
           "speaker": "",
@@ -427,11 +387,7 @@
       "lines": [
         {
           "speaker": "",
-          "text": "문이 안쪽에서 열렸다."
-        },
-        {
-          "speaker": "",
-          "text": "붉은 빛이 쏟아져 나왔다.\n그 뒤로 검은 안개가 천천히 흘렀다."
+          "text": "문이 안쪽에서 열리자, 붉은 빛이 쏟아져 나왔다.\n그 뒤로 검은 안개가 천천히 흘렀다."
         },
         {
           "speaker": "",
@@ -474,7 +430,7 @@
         },
         {
           "speaker": "",
-          "text": "놀란 남자가 천천히\n후드를 내렸다."
+          "text": "남자의 후드 사이로, 살풋 얼굴이 ㄷ ㅡ러났다.."
         },
         {
           "speaker": "me",
@@ -482,15 +438,15 @@
         },
         {
           "speaker": "",
-          "text": "카이델의 얼굴이었다.\n놀람이 스치고—\n곧 태연한 표정으로 굳어졌다."
+          "text": "카이델의 얼굴이었다.\n놀람이 스치고— 곧 태연한 표정으로 굳어졌다."
         },
         {
           "speaker": "",
-          "text": "카이델 또한 다시 후드를 올리고\n마법진 쪽으로 돌아 다른 마법사들 틈에 섞여 들었다."
+          "text": "그가 시선을 한 박자 길게 내 쪽에 두었다가,\n다시 후드를 깊이 끌어내려 마법사들 틈으로 돌아섰다."
         },
         {
           "speaker": "에르하",
-          "text": "찝찝해...\n저 마법사들 한테서 흑마법 기운이 느껴졌어. 저들이 쓴 거야.",
+          "text": "찝찝해…\n저 마법사들한테서 흑마법 기운이 느껴졌어. 저들이 쓴 거야.",
           "emotion": "angry"
         },
         {
@@ -498,54 +454,8 @@
           "text": "(카이델이... 흑마법을?)"
         },
         {
-          "speaker": "",
-          "text": "카이델은 마법사들 사이에서\n조용히 서 있을 뿐이었다."
-        },
-        {
           "speaker": "me",
-          "text": "(...저쪽에서 먼저 말을 걸 생각은 없는 것 같아.\n내가 다가가지 않는 한 대화할 일은 없겠지.)",
-          "choices": [
-            {
-              "text": "카이델에게 다가간다.",
-              "goto": "kaidel_approach",
-              "affectionChange": 3,
-              "flagToSet": "ch8_kaidel_approached"
-            },
-            {
-              "text": "지금은 가만히 있는다.",
-              "goto": "count_order",
-              "flagToSet": "ch8_kaidel_ignored"
-            }
-          ]
-        }
-      ]
-    },
-    "kaidel_approach": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "에밀리아가 카이델 곁으로 걸어갔다."
-        },
-        {
-          "speaker": "me",
-          "text": "...또 만나네요."
-        },
-        {
-          "speaker": "카이델",
-          "text": "......",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "카이델은 짧게 끄덕일 뿐,\n시선은 마법진에 고정되어 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...말할 생각이 없는 것 같아.)"
-        },
-        {
-          "speaker": "",
-          "text": "그때 백작이 에밀리아를 불렀다.",
+          "text": "(…여기서 다가갈 자리가 아니야.\n백작도 보고 있고.)",
           "choices": [
             {
               "text": "계속하기",
@@ -580,21 +490,16 @@
         },
         {
           "speaker": "백작",
-          "text": "곧 황녀의 성년식이 열린다.\n그 자리에는 북부대공이 참석하지.\n너는 그 때 북부대공에게 이것을 사용해라.",
+          "text": "곧 황녀의 성년식이 열린다.\n그 자리엔 북부 대공이 참석하지.\n너는 그때, 그에게 이것을 써라.",
           "emotion": "neutral"
         },
         {
           "speaker": "me",
-          "text": "(...이 보석으로 대공과 사용인들을 조종한거였군)"
+          "text": "(…이 보석으로, 전생의 대공과 사용인들을 조종한 거였군.)"
         },
         {
           "speaker": "백작",
-          "text": "대공을 우리 편으로 만들어야 한다.\n네가 그 역할이다.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "백작의 눈에는 감정이 없었다.\n에밀리아를 바라보는 게 아니라—\n도구를 확인하는 눈이었다.",
+          "text": "대공을 우리 소유로 만들어야 한다.\n네가 그 역할이다.",
           "choices": [
             {
               "text": "계속하기",
@@ -608,7 +513,7 @@
       "lines": [
         {
           "speaker": "me",
-          "text": "(...이 보석을 쓰면 대공가는 백작가의 손에 넘어가.\n전생과 같은 일이 반복되는거야.)"
+          "text": "(…이 보석을 쓰면 대공가는 백작가의 손에 넘어가.\n전생과 같은 일이 반복되는 거야.)"
         },
         {
           "speaker": "",
@@ -645,11 +550,11 @@
         },
         {
           "speaker": "me",
-          "text": "(...순종하는 척 하는 게\n지금은 안전해.)"
+          "text": "(…순종하는 척하는 것이, 지금은 안전해.)"
         },
         {
           "speaker": "me",
-          "text": "(...하지만 이 보석을\n그대로 쓸 생각은 없어.)",
+          "text": "(…하지만 이 보석을, 그대로 쓸 생각은 없어.)",
           "choices": [
             {
               "text": "계속하기",
@@ -672,7 +577,7 @@
         },
         {
           "speaker": "백작",
-          "text": "거부할 수 있다고 생각하느냐.\n네가 이 가문에서 어떤 존재인지 잊지마라.",
+          "text": "거부할 수 있다고 생각하느냐.\n네가 이 가문에서 어떤 존재인지 — 잊지 마라.",
           "emotion": "angry"
         },
         {
@@ -682,11 +587,7 @@
         },
         {
           "speaker": "",
-          "text": "백작이 돌아섰다.\n이미 결론난 일이라는 듯이."
-        },
-        {
-          "speaker": "me",
-          "text": "(...거부해도 소용없어.\n어차피 이 보석은 내 손에 쥐어졌으니까.)",
+          "text": "백작이 돌아섰다.\n이미 결론난 일이라는 듯이",
           "choices": [
             {
               "text": "계속하기",
@@ -705,20 +606,23 @@
         },
         {
           "speaker": "",
-          "text": "에르하가 목걸이 밖으로 나왔다.\n빛이 불안하게 일렁이고 있었다."
+          "text": "에르하가 눈꼬리가 미세하게 일그러진 채로 나타났다.",
+          "characters": [
+            {"id": "dragon", "position": "Center", "emotion": "angry"}
+          ]
         },
         {
           "speaker": "에르하",
-          "text": "그 보석... 흑마법으로 만들어졌어.",
+          "text": "그 보석… 흑마법으로 만들어졌어.\n가까이 두는 것만으로 마나가 흩어지고 있어.",
           "emotion": "angry"
         },
         {
           "speaker": "",
-          "text": "에밀리아는 손안의 붉은 보석을\n조용히 바라보았다."
+          "text": "에밀리아는 손안의 붉은 보석을 조용히 바라보았다."
         },
         {
           "speaker": "me",
-          "text": "(...이 보석의 정체를 정확히 알아야 해.)"
+          "text": "(…이 보석의 정체를 정확히 알아야 해.)"
         },
         {
           "speaker": "",
@@ -726,82 +630,382 @@
         },
         {
           "speaker": "",
-          "text": "영상구에 마나를 흘려넣자\n희미한 빛이 피어오르며 렌의 얼굴이 떠올랐다."
+          "text": "영상구에 마나를 흘려넣자\n희미한 빛이 피어오르며 신난 렌의 얼굴이 떠올랐다.",
+          "characters": [
+            {"id": "ren", "position": "Center", "emotion": "smile"}
+          ]
         },
         {
           "speaker": "렌",
-          "text": "이 시간에 연락이라니.\n무슨 일이에요?",
+          "text": "이 시간에 연락이라니. 무슨 일이신가요, 고객님~?",
           "emotion": "smile"
         },
         {
           "speaker": "me",
-          "text": "알아봐 줄 게 있어요.\n사람을 조종하는 주술이 걸린\n붉은 보석에 대해서."
+          "text": "알아봐 줄 게 있어요.\n사람을 조종하는 주술이 걸린 붉은 보석에 대해서."
         },
         {
           "speaker": "렌",
-          "text": "조종 주술?\n...꽤 위험한 물건이네요.",
+          "text": "조종 주술? …꽤 위험한 물건이네요.\n어디서 흑마법이라도 쓰인건가요?",
           "emotion": "curious"
         },
         {
-          "speaker": "렌",
-          "text": "알겠어요. 조사해볼게요.\n다음에 만날 때 알려드리죠.",
-          "emotion": "smile"
-        },
-        {
           "speaker": "me",
-          "text": "부탁해요, 길드장님."
+          "text": "그쪽은 — 다음에 직접 만나서 이야기하죠."
         },
         {
           "speaker": "렌",
-          "text": "렌이라고 불러주셔도 돼요.\n우리 사이에 직함은\n좀 딱딱하잖아요.",
+          "text": "흐음~",
           "emotion": "smile"
         },
         {
           "speaker": "",
-          "text": "영상구의 빛이 꺼졌다."
+          "text": "그가 화면 너머에서 책상 끝에 한 손을 짚으며 상체를 살짝 기울였다.\n평소보다 낮아진 목소리였다."
         },
         {
+          "speaker": "렌",
+          "text": "고객님이 그렇게 말씀하시면, 당장 달려가고 싶어지거든요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "렌",
+          "text": "다음번엔 영상구 너머가 아니라,\n제가 직접 모실겠습니다. 고객님.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "장난기를 가장한 어조 끝에, 천천히 올라오는 시선이 닿아 왔다.",
+          "choices": [
+            {
+              "text": "기대할게요.",
+              "goto": "ren_call_warm",
+              "affectionChange": 5,
+              "flagToSet": "ch7_ren_flirt_accept"
+            },
+            {
+              "text": "용건만 부탁할게요.",
+              "goto": "ren_call_cool",
+              "affectionChange": 2,
+              "flagToSet": "ch7_ren_business_only"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_call_warm": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "…저야말로.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 입가에 만족스러운 웃음이 걸렸다."
+        },
+        {
+          "speaker": "",
+          "text": "영상구의 빛이 꺼졌다.",
+          "hideCharactersAfter": true,
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_jealousy_to_kaidel"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_call_cool": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "…아쉽네요. 그것마저도 매력이지만요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "어깨를 한 번 으쓱하고는, 그가 가볍게 입꼬리를 끌어올렸다.\n물러서는 자의 미소가 아니라, 다음 자리를 비워두는 자의 미소였다."
+        },
+        {
+          "speaker": "",
+          "text": "영상구의 빛이 꺼졌다.",
+          "hideCharactersAfter": true,
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_jealousy_to_kaidel"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_jealousy_to_kaidel": {
+      "lines": [        
+        {
           "speaker": "에르하",
-          "text": "...꼭 그 남자한테\n부탁해야 했어?",
+          "text": "...난 저녀석이 마음에 들지 않아.",
           "emotion": "angry"
         },
         {
           "speaker": "me",
-          "text": "다른 방법이 없잖아."
+          "text": "……혹시 질투야?"
         },
         {
           "speaker": "에르하",
-          "text": "렌이라고 불러달라니.\n뻔뻔한 놈.",
-          "emotion": "angry"
-        },
-        {
-          "speaker": "me",
-          "text": "......또 질투야?"
-        },
-        {
-          "speaker": "에르하",
-          "text": "질투 아니야!\n그냥 그 놈이 마음에 안 드는 거야!",
+          "text": "질투 아니야!\n그냥, 그 자가 주인을 탐내는게 마음에 안 드는 거야!",
           "emotion": "embarrassed"
         },
         {
           "speaker": "",
-          "text": "에르하의 빛이 붉게 달아올랐다.\n변명치고는 너무 정직한 반응이었다."
+          "text": "송곳니 끝이 살짝 드러났다가, 들킨 듯 곧장 감춰졌다.\n변명치고는 너무 정직한 반응이었다."
         },
         {
           "speaker": "me",
-          "text": "(...귀엽다.)"
+          "text": "(…귀엽다.)"
         },
         {
           "speaker": "",
-          "text": "에밀리아가 다시\n붉은 보석을 바라보았다."
+          "text": "그 순간, 창가에 찬 바람이 불었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "…방해꾼이 또 나타났군.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "창문이 안쪽으로 천천히 밀려 열렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "kaidel_window"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_window": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "창틀에 한 손을 짚고 선 자가 있었다.\n달빛 아래 풀린 푸른 머리칼, 같은 색조의 푸른 눈동자.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "neutral"}
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "낮의 후드 아래에서 스쳤던 그 얼굴이,\n지금은 한 점 가림 없이 맨 시선으로 닿아 왔다."
         },
         {
           "speaker": "me",
-          "text": "황녀의 성년식..."
+          "text": "당신은... 왜 여기 있죠? 흑마법사들과 함께 있었던 것 같은데요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…저는 적이 아닙니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "카이델",
+          "text": "방금 그 자리에 있던 것을 — 변명하지는 않겠습니다.\n그저 — 한 가지, 확인해야 할 것이 있어 들렀을 뿐입니다.",
+          "emotion": "neutral"
         },
         {
           "speaker": "me",
-          "text": "(...북부대공을 다시 만난다. 그리고 그 자리에는...)",
+          "text": "…흑마법사들과 한 자리에 있던 자의 말을, 어떻게 믿으라는 거예요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "믿으라 청하지 않습니다.\n다만, 소문으로 듣던 백작가의 도구가 당신이라니.\n조금 놀랐을 뿐.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "목소리가 미세하게 떨렸다가, 언제그랬냐는 듯 다시 평온해졌다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 창틀 안쪽으로 한 걸음 들어와, 숨이 닿을 듯 가까이 다가왔다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…당신은. 묘하게 — 익숙합니다.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "푸른 눈동자는 짐짓 다른 것을 보는 것 같았다.",
+          "choices": [
+            {
+              "text": "가만히 있는다.",
+              "goto": "kaidel_accept",
+              "affectionChange": 5,
+              "flagToSet": "ch7_kaidel_accept_touch"
+            },
+            {
+              "text": "한 발짝 물러선다",
+              "goto": "kaidel_distance",
+              "affectionChange": 2,
+              "flagToSet": "ch7_kaidel_keep_distance"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_accept": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "그대로 서 있었다.\n카이델의 시선이 에밀리아의 얼굴을 훑었다.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "sad"}
+          ]
+        },
+        {
+          "speaker": "카이델",
+          "text": "...백작의 뒤에는 황후가 있습니다.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "그가 천천히 물러났다.\n손끝이 살갗에 미련처럼 머물다가, 마지막에 떨어졌다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "다음에 다시 뵙겠습니다.\n다음엔, 드래곤님께도 인사드릴 수 있으면 좋겠네요.",
+          "emotion": "neutral",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "kaidel_leaving"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_distance": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "한 발짝 뒤로 물러섰다.\n그의 시선이 허공에 얇게 멈췄다가, 천천히 거두어졌다.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "sad"}
+          ]
+        },
+        {
+          "speaker": "카이델",
+          "text": "…현명하십니다. 저 같은 자에게는, 그 거리가 옳지요.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "미소는 그대로였지만, 푸른 눈동자는 차가웠다..\n물러섬을 받아들이는 그 절제가, 오히려 다음 자리를 더 무겁게 만들었다."
+        },        
+        {
+          "speaker": "",
+          "text": "황후를... 주의하십시오."
+        },
+        {
+          "speaker": "카이델",
+          "text": "다음에 다시 뵙겠습니다. — 그때까지, 부디 무사하시길.",
+          "emotion": "neutral",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "kaidel_leaving"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_leaving": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "그가 가볍게 고개를 숙이고는, 창틀 쪽으로 등을 돌렸다.\n로브 자락이 한 번 일렁였다.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "neutral"}
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "달빛 아래, 창틀에 한 손을 짚은 그의 옆모습이 — 닿을 듯, 멀어지고 있었다.",
+          "choices": [
+            {
+              "text": "잡는다",
+              "goto": "kaidel_grab",
+              "affectionChange": 3,
+              "flagToSet": "ch7_kaidel_grab_leaving"
+            },
+            {
+              "text": "그대로 둔다",
+              "goto": "kaidel_let_go",
+              "affectionChange": 1,
+              "flagToSet": "ch7_kaidel_let_go"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_grab": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "잠깐…!"
+        },
+        {
+          "speaker": "",
+          "text": "손이 먼저 움직였다.\n로브 자락 끝을 잡아끈 것이, 머리보다 빨랐다.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "surprised"}
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "그가 한 박자 멈춘 채로, 어깨 너머로 천천히 돌아보았다.\n정리되지 않은 시선이, 그 한 번에 에밀리아의 얼굴에 머물렀다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…그 손은, 어떤 의미로 받아들이면 됩니까.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "본능이 이끈것을, 답할 말이 없었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…답은, 다음 자리에서 듣겠습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "그가 부드럽게 로브 자락을 빼내고는, 다시 창틀 쪽으로 돌아섰다.",
+          "hideCharactersAfter": true,
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "kaidel_let_go": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "손이 한 박자, 움직이려 하다가 — 결국 멈췄다.",
+          "characters": [
+            {"id": "kaidel", "position": "Center", "emotion": "neutral"}
+          ]
+        },
+        {
+          "speaker": "",
+          "text": "그가 창틀을 넘어, 달빛 안쪽으로 한 걸음 사라졌다.\n로브 자락이 마지막으로 한 번 일렁이고 — 그것이 전부였다.",
+          "hideCharactersAfter": true,
           "choices": [
             {
               "text": "계속하기",
@@ -815,15 +1019,20 @@
       "lines": [
         {
           "speaker": "",
-          "text": "전생의 내가 있다."
+          "text": "창의 격자가 푸른 마나에 휘감겨 본래 자리로 굳었다.\n카이델이 서 있던 자리에는, 옅은 마나의 잔향만이 남아 있었다.",
+          "hideCharactersAfter": true
+        },
+        {
+          "speaker": "me",
+          "text": "(…황후를 주의하라니...\n어째서 그런말을 한거지?)"
         },
         {
           "speaker": "",
-          "text": "그리고 성년식이 다가오고 있었다.\n붉은 보석이 불길하게 빛났다.."
+          "text": "손에 쥔 붉은 보석이 다시 한 번, 차갑게 빛났다.\n성년식이 다가오고 있었다."
         },
         {
           "speaker": "",
-          "text": "— Chapter 8 End —",
+          "text": "— Chapter 7 End —",
           "textAlign": "center"
         }
       ]
