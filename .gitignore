@@ -62,3 +62,6 @@ nul
 
 # Claude Code
 .claude/
+
+# Unity scene auto-recovery backups
+_Recovery/
