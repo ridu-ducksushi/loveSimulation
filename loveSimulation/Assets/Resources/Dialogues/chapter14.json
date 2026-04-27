@@ -1,0 +1,827 @@
+{
+  "dialogueId": "chapter14",
+  "chapterTitle": "Chapter14\n황궁으로 가는 길",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "마차 안과 밖.\n에밀리아와 카이델 사이에 잠깐의 침묵이 흘렀다."
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 낮게 속삭였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...전에 만난 그 놈이네.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "카이델이 왜 여기 있는 거지?"
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 손이 아직 뻗어 있었다.",
+          "choices": [
+            {
+              "text": "에르하에게 : 고마워, 네 덕분이야",
+              "goto": "thanks_erha",
+              "affectionChange": 5,
+              "flagToSet": "ch14_thanks_erha"
+            },
+            {
+              "text": "카이델에게 : 도와주셔서 감사합니다",
+              "goto": "thanks_mage",
+              "affectionChange": 3,
+              "flagToSet": "ch14_thanks_mage"
+            },
+            {
+              "text": "둘 다에게 감사를 표현한다",
+              "goto": "thanks_both",
+              "affectionChange": 8,
+              "premiumCost": 5,
+              "flagToSet": "ch14_thanks_both"
+            }
+          ]
+        }
+      ]
+    },
+    "thanks_erha": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아는 카이델의 손을 잡으며\n마음속으로 에르하에게 말했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하, 고마워. 네 덕분이야.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "......뭘.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "목걸이가 살짝 따뜻해졌다.\n짧고, 조용한 반응이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "도와주셔서 감사합니다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "다치지 않으셨으면 다행입니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 마차에서 내려섰다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_battle"
+            }
+          ]
+        }
+      ]
+    },
+    "thanks_mage": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아가 카이델의 손을 잡으며 내려섰다."
+        },
+        {
+          "speaker": "me",
+          "text": "도와주셔서 감사합니다.\n덕분에 살았어요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "다친곳은 없나요?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...뒤늦게 왔으면서 잘난 체 하긴",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하, 조용히.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 카이델을 다시 바라보았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_battle"
+            }
+          ]
+        }
+      ]
+    },
+    "thanks_both": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아가 카이델의 손을 잡고 내려서며\n동시에 목걸이에 살짝 손을 얹었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...둘 다 감사해요."
+        },
+        {
+          "speaker": "에르하",
+          "text": "—나한테도 고맙다고 한거야?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "me",
+          "text": "응. 에르하가 먼저 막아줬잖아."
+        },
+        {
+          "speaker": "에르하",
+          "text": ".......",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "보석이 조용히 빛났다가 꺼졌다.\n에밀리아만이 그 온기를 느꼈다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...둘?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "아, 에르하도 같이 있어요."
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 잠시 에밀리아의 목걸이를 바라보았다.\n무언가를 알아챈 듯한 눈이었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...그렇군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "더 이상 말을 잇지 않았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "after_battle"
+            }
+          ]
+        }
+      ]
+    },
+    "after_battle": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "숲이 다시 조용해졌다.",
+          "background": "forest_road"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 마차에서 내려 상황을 확인하고 있었다.\n호위 기사 몇이 도적의 시신을 치우는 중이었다."
+        },
+        {
+          "speaker": "백작",
+          "text": "...카이델.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 카이델를 바라보았다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "소리가 들려서 왔습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "백작",
+          "text": "...쓸 만한 짓을 했군.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...백작이 고용한 마법사들도 함께왔지.\n그래서 카이델도 근처에 있었던 거야.)"
+        },
+        {
+          "speaker": "백작",
+          "text": "마차에 타라. 황궁까지 동행한다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...황궁으로 가는 길에 도적의 습격이라니.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(...잠깐.)"
+        },
+        {
+          "speaker": "",
+          "text": "문득 머릿속에 떠오르는 것이 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(전생에도— 이런 일이 있었던 걸까?\n에밀리아가 성년식에 오지 않았던 이유가\n혹시 도적의 습격 때문이라면?)"
+        },
+        {
+          "speaker": "me",
+          "text": "(만약 그랬다면— 그때의 에밀리아 곁에는\n에르하도, 카이델도 없었겠지.)"
+        },
+        {
+          "speaker": "",
+          "text": "그런 상황이 왔다면, 주변 병력은\n에밀리아가 아닌 백작의 안전만 책임졌을 것이다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 자신의 몸을 내려다보았다.\n상처 하나 없는, 멀쩡한 몸."
+        },
+        {
+          "speaker": "me",
+          "text": "(이번에는 에르하가, 그리고 카이델이 지켜줬지.)"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 에밀리아와 마주보는 자리로 탑승했다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 자연스럽게 그 눈을 마주쳤다.\n그리고 시선을 옮겼다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mage_gaze"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_gaze": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "마차가 다시 움직이기 시작했다."
+        },
+        {
+          "speaker": "",
+          "text": "백작은 눈을 감고 잠들어 있었다.\n차분한 공기가 마차 안을 채웠다."
+        },
+        {
+          "speaker": "me",
+          "text": "(카이델이 백작 앞에서는 저렇게 고분고분하구나.\n지하실에서 의식할 때도 그랬지만...)"
+        },
+        {
+          "speaker": "me",
+          "text": "(나와 둘이 있을 때랑은 분위기가 달라.\n백작 앞에서는 감정을 완전히 숨기고 있어.)"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 창밖을 바라보고 있었다.\n조용하고 무심한 얼굴."
+        },
+        {
+          "speaker": "",
+          "text": "그러다 시선이 돌아왔다.\n에밀리아와 눈이 마주쳤다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...생각이 많으신 것 같군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 시선이 에밀리아를 향해 있었다.\n무표정하지만 읽으려는 듯한 눈.",
+          "choices": [
+            {
+              "text": "...네 조금요.",
+              "goto": "mage_reply_casual",
+              "affectionChange": 3
+            },
+            {
+              "text": "당신때문이에요.",
+              "goto": "mage_reply_direct",
+              "affectionChange": 5
+            },
+            {
+              "text": "(대답하지 않고 목걸이를 만진다)",
+              "goto": "mage_reply_silent",
+              "affectionChange": 5
+            }
+          ]
+        }
+      ]
+    },
+    "mage_reply_casual": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...네 조금요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "그렇군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델가 가볍게 고개를 끄덕였다.\n더 이상 묻지 않았다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...흥.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델가 에밀리아의 목걸이를 잠깐 내려다보았다.\n그러고는 다시 창밖으로 시선을 돌렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "honorific_question"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_reply_direct": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "카이델...당신 때문이잖아요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...네?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 눈이 미세하게 흔들렸다.\n이내 입꼬리가 아주 살짝 올라갔다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...저를 의식하시는건가요?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "갑자기 나타나셨으니 그럴 수 밖에요.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "honorific_question"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_reply_silent": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아는 대답 대신 목걸이를 살짝 만졌다.\n보석이 가늘게 빛났다."
+        },
+        {
+          "speaker": "카이델",
+          "text": ".......",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 시선이 목걸이 위에 멈추었다.\n알 수 없는 표정으로."
+        },
+        {
+          "speaker": "에르하",
+          "text": "무슨 일있어?",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "(...그냥. 만지면 안심이 돼서.)"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 아무 말도 하지 않았다.\n그러나 보석의 빛이 조금 더 따뜻해졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "honorific_question"
+            }
+          ]
+        }
+      ]
+    },
+    "honorific_question": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "잠시 침묵이 흘렀다.\n마차의 바퀴 소리만이 일정하게 울렸다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 문득 궁금해졌다.\n오늘 마주쳤을 때부터 걸렸던 것."
+        },
+        {
+          "speaker": "me",
+          "text": "카이델. 왜 존댓말을 쓰세요?",
+          "choices": [
+            {
+              "text": "안그러셨잖아요.",
+              "goto": "honorific_ask",
+              "affectionChange": 3
+            },
+            {
+              "text": "어색해요.",
+              "goto": "honorific_ask_casual",
+              "affectionChange": 8,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "honorific_ask": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "왜 저한테 존댓말을 쓰세요?\n첫만남 때는 안그러셨잖아요."
+        },
+        {
+          "speaker": "카이델",
+          "text": ".......",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 잠깐 에밀리아를 바라보았다.\n그 시선이 에밀리아의 얼굴 위를 천천히 훑었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "아름답게 차려입은 숙녀분께\n함부로 말을 놓는 건 예의가 아니니까요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...네?"
+        },
+        {
+          "speaker": "카이델",
+          "text": "그에 맞는 대우를 하는 겁니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "담담한 목소리였다.\n그러나 그 말에는 묘한 무게가 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...이 놈 지금 작업 거는 거야?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...아닌 것 같은데....아닌 거 맞나?)"
+        },
+        {
+          "speaker": "",
+          "text": "카이델는 더 이상 설명하지 않았다.\n다시 창밖으로 시선을 돌렸을 뿐.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mage_past_hint"
+            }
+          ]
+        }
+      ]
+    },
+    "honorific_ask_casual": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "왜 저한테 존댓말을 쓰세요?\n어색해요."
+        },
+        {
+          "speaker": "카이델",
+          "text": ".......",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 에밀리아를 바라보았다.\n평소와 다른, 조금 부드러운 눈."
+        },
+        {
+          "speaker": "카이델",
+          "text": "아름답게 차려입은 숙녀분께\\n말을 놓는 건 제 성격이 허락하질 않아서요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...차려입은 거랑 존댓말이랑 무슨 상관이에요?"
+        },
+        {
+          "speaker": "카이델",
+          "text": "아름다운 분에게는 그에 맞는 대우를 해야죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "아무렇지 않게 말했다.\n마치 당연한 사실을 말하듯이."
+        },
+        {
+          "speaker": "me",
+          "text": "......!"
+        },
+        {
+          "speaker": "에르하",
+          "text": "야!! 이 놈 지금 뭐라고 한 거야?!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하 진정해."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 고개를 돌렸다.\n창밖의 풍경이 흐릿하게 지나갔다."
+        },
+        {
+          "speaker": "",
+          "text": "카이델는 슬쩍 입꼬리를 올린 것 같았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mage_past_hint"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_past_hint": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "황도가 가까워졌다.\n황궁의 첨탑이 나무 사이로 조금씩 모습을 드러냈다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "성년식에서의 파트너는 정해지셨습니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "파트너요?"
+        },
+        {
+          "speaker": "카이델",
+          "text": "성년식 무도회요.\n입장할 때 에스코트해줄 상대가 필요하지 않습니까.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...파트너라. 내 목표는 공작의 눈에 띄는 것이니—\n파트너까지는 미처 신경 쓸 겨를이 없었지.)"
+        },
+        {
+          "speaker": "me",
+          "text": "아뇨. 아직 정해진 사람은 없어요."
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 잠깐 침묵했다.\n그러고는 조심스럽게 입을 열었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...늦었지만, 괜찮으시다면\n제가 에스코트를 해도 될까요?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "예상치 못한 제안이었다.",
+          "choices": [
+            {
+              "text": "...좋아요. 부탁할게요.",
+              "goto": "escort_accept",
+              "affectionChange": 5,
+              "flagToSet": "ch15_escort_accept"
+            },
+            {
+              "text": "고맙지만, 혼자 들어갈게요.",
+              "goto": "escort_decline",
+              "affectionChange": 0,
+              "flagToSet": "ch15_escort_decline"
+            },
+            {
+              "text": "그래도 되는건가요?",
+              "goto": "escort_question",
+              "affectionChange": 8,
+              "premiumCost": 5,
+              "flagToSet": "ch15_escort_question"
+            }
+          ]
+        }
+      ]
+    },
+    "escort_accept": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...좋아요. 부탁할게요."
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 거절당할 줄 알았다는 듯이\n잠시 놀란 듯 했다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...감사합니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "......에밀리아, 왜 그 놈 제안을 받아?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...혼자 들어가는 것보다 나을 것 같아서.)"
+        },
+        {
+          "speaker": "",
+          "text": "마차가 황궁 정문 앞에 멈추었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "palace_gate"
+            }
+          ]
+        }
+      ]
+    },
+    "escort_decline": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "고맙지만, 혼자 들어갈게요.\n백작가 사람으로서 참석하는 거라."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...그렇군요. 실례했습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 고개를 살짝 숙이고는\n다시 창밖으로 시선을 돌렸다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "잘했어.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...근데 왜 갑자기 에스코트를 하겠다고 한 걸까.\n...백작가 소속 마법사가 귀족을 에스코트하다니.)"
+        },
+        {
+          "speaker": "",
+          "text": "마차가 황궁 정문 앞에 멈추었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "palace_gate"
+            }
+          ]
+        }
+      ]
+    },
+    "escort_question": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "마법사가 일반인의 에스코트를 해도 되는 건가요?"
+        },
+        {
+          "speaker": "카이델",
+          "text": ".......",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "카이델",
+          "text": "저는 가능합니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...그게 뭐죠."
+        },
+        {
+          "speaker": "카이델",
+          "text": "제가 하지 못할 일은 없어요.\n...그래서, 어떻게 하시겠습니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...이 사람, 은근히 밀어붙이는 타입이네.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...저 놈 눈빛 봐. 수상해.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "...좋아요. 그러면 부탁할게요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...감사합니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "짧은 대답이었지만,\n카이델의 목소리가 평소보다 한 톤 낮아진 것 같았다."
+        },
+        {
+          "speaker": "",
+          "text": "마차가 황궁 정문 앞에 멈추었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "palace_gate"
+            }
+          ]
+        }
+      ]
+    },
+    "palace_gate": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "황궁의 대문이 열렸다.",
+          "background": "palace_exterior"
+        },
+        {
+          "speaker": "",
+          "text": "황금빛 기둥과 넓은 정원.\n귀족들의 마차가 줄지어 입장하고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에서 당연하듯 왔던 곳.)"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 먼저 내렸다.\n에밀리아가 그 뒤를 따랐다."
+        },
+        {
+          "speaker": "",
+          "text": "카이델도 조용히 내렸다.\n에밀리아와 나란히 서는 형태가 되었다."
+        },
+        {
+          "speaker": "백작",
+          "text": "안으로 들어가지.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "세 사람이 황궁 안으로 걸어 들어갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "(성년식. 황녀를 처음 제대로 만나는 날.\n그리고 모두가 한 자리에서 모이게 된 날.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 황궁의 높은 천장을 올려다보았다.\n빛이 가득했다."
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 에밀리아만 들릴 목소리로\n아주 낮게 속삭였다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "...이 곳에 오게 될 줄 알았습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 돌아봤을 때\n카이델는 이미 시선을 앞으로 돌린 뒤였다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 15 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}

@@ -1,696 +1,1034 @@
 {
   "dialogueId": "chapter03",
-  "chapterTitle": "-서서히 시작되는 계략-",
+  "chapterTitle": "Chapter03\n위기에 처하다",
   "sections": {
     "start": {
       "lines": [
         {
           "speaker": "",
-          "text": "어느 날부터인가, 저택의 공기가 달라졌다."
+          "text": "— 황궁, 귀족회의 대기실. —",
+          "textAlign": "center"
         },
         {
           "speaker": "",
-          "text": "복도를 지나는 사용인들의 발걸음이\n이상하리만치 고요해졌다."
+          "text": "",
+          "background": "palace_exterior",
+          "pause": true
         },
         {
           "speaker": "",
-          "text": "눈빛이 흐릿한 하녀가\n내 부름에도 반응하지 않았다."
+          "text": "회의 시작까지 반 각.\n대기실의 공기는 이미 식어 있었다."
+        },
+        {
+          "speaker": "귀족1",
+          "text": "들었소? 북부 대공가에서\n반역을 도모하고 있다더군."
+        },
+        {
+          "speaker": "귀족2",
+          "text": "그것뿐이겠소? 대공비가 배후라는 소문까지 있다던데."
+        },
+        {
+          "speaker": "",
+          "text": "찻잔을 쥔 손끝에 미세한 떨림이 일었다.\n— 나는 그것이 흘러나가지 못하도록, 손가락 관절 하나 움직이지 않았다."
         },
         {
           "speaker": "me",
-          "text": "...잠깐, 이리 와봐요."
+          "text": "(아델린. 그 여자가 무슨 일을 꾸미고 있는게 분명해.)"
         },
         {
-          "speaker": "하녀",
-          "text": "......"
+          "speaker": "귀족1",
+          "text": "대공비가 왕도까지 직접 온 건\n의심을 피하려는 수라던가…"
         },
         {
-          "speaker": "",
-          "text": "하녀는 대공비의 목소리를 듣고도\n멍하니 서 있을 뿐이었다."
-        },
-        {
-          "speaker": "",
-          "text": "그러다 아델린이 복도 끝에서 나타나자,\n하녀가 자석에 끌리듯 고개를 돌렸다."
-        },
-        {
-          "speaker": "하녀",
-          "text": "아델린님... 부르셨나요?"
+          "speaker": "귀족2",
+          "text": "설마 귀족회의를 이용해 왕실 정보까지 빼내려는 수작은 아니겠지?"
         },
         {
           "speaker": "",
-          "text": "하녀의 눈동자가 아델린만을 향해 있었다.\n내 존재는 완전히 잊은 것처럼.",
+          "text": "사방의 시선이 천천히, 그러나 분명하게 내 목덜미를 향해 모여들었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 피부를 얇게 깎아내리는 듯한 시선들.",
           "choices": [
             {
-              "text": "대체 무슨 일이야?",
-              "goto": "confront_maid",
-              "affectionChange": 0,
-              "flagToSet": "ch3_confronted_maid"
-            },
-            {
-              "text": "...조용히 지켜본다",
-              "goto": "observe_quietly",
-              "affectionChange": 0,
-              "flagToSet": "ch3_observed"
-            }
-          ]
-        }
-      ]
-    },
-    "confront_maid": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "잠깐."
-        },
-        {
-          "speaker": "",
-          "text": "나는 하녀의 어깨를 잡고 돌려세웠다."
-        },
-        {
-          "speaker": "me",
-          "text": "내가 부른 건 나인데,\n왜 아델린에게 가는 거죠?"
-        },
-        {
-          "speaker": "하녀",
-          "text": "...아델린님이... 시키셔서..."
-        },
-        {
-          "speaker": "",
-          "text": "하녀의 동공은 흐릿했다.\n초점 없는 눈이 허공을 떠돌고 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "아델린이 뭘 시켰어요?"
-        },
-        {
-          "speaker": "하녀",
-          "text": "...네? 저, 저요?"
-        },
-        {
-          "speaker": "",
-          "text": "잠시 후, 하녀의 눈에 정상적인 빛이 돌아왔다.\n본인이 무슨 말을 했는지 모르는 눈치였다."
-        },
-        {
-          "speaker": "하녀",
-          "text": "대, 대공비님? 죄송합니다,\n제가 무슨... 실례를..."
-        },
-        {
-          "speaker": "",
-          "text": "하녀는 당황하며 황급히 물러났다.\n남은 것은 불길한 위화감뿐이었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "duke_enchanted"
-            }
-          ]
-        }
-      ]
-    },
-    "observe_quietly": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "나는 기둥 뒤에 서서 조용히 지켜보았다."
-        },
-        {
-          "speaker": "",
-          "text": "복도를 지나는 사용인들.\n하나같이 동공이 흐릿했다."
-        },
-        {
-          "speaker": "",
-          "text": "그때, 아델린이 복도 저편에서 나타났다."
-        },
-        {
-          "speaker": "",
-          "text": "사용인들이 일제히 고개를 숙였다.\n꼭두각시처럼 일사불란하게."
-        },
-        {
-          "speaker": "아델린",
-          "text": "오늘 대공님 서재에 차를 준비해줘.\n향은 늘 쓰던 걸로."
-        },
-        {
-          "speaker": "하녀",
-          "text": "네, 아델린님."
-        },
-        {
-          "speaker": "",
-          "text": "정상적인 복종이 아니었다.\n명령에 의문조차 품지 않는 조종된 움직임."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이건 분명히 이상해.)"
-        },
-        {
-          "speaker": "",
-          "text": "사용인들은 대공비의 존재를\n인지하지 못하는 것처럼 지나쳤다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "duke_enchanted"
-            }
-          ]
-        }
-      ]
-    },
-    "duke_enchanted": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "— 대공의 서재 —"
-        },
-        {
-          "speaker": "",
-          "text": "서재 문을 열자, 예상치 못한 광경이 눈에 들어왔다."
-        },
-        {
-          "speaker": "",
-          "text": "아델린이 대공의 곁에 바짝 붙어 앉아 있었다.\n차를 따르며 다정하게 미소 짓고 있었다."
-        },
-        {
-          "speaker": "아델린",
-          "text": "전하, 이 향이 마음에 드세요?\n전하를 위해 특별히 구한 거예요."
-        },
-        {
-          "speaker": "대공",
-          "text": "...응. 좋아."
-        },
-        {
-          "speaker": "",
-          "text": "대공의 눈빛이 흐릿했다.\n평소의 날카로움은 온데간데없고,\n아델린에게 의존적인 눈으로 기대고 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "전하."
-        },
-        {
-          "speaker": "",
-          "text": "대공은 고개조차 돌리지 않았다.\n마치 내 존재를 인식하지 못하는 것처럼."
-        },
-        {
-          "speaker": "아델린",
-          "text": "어머, 대공비님. 오셨어요?\n전하께서 좀 피곤하신 것 같아서 제가 곁에서...",
-          "choices": [
-            {
-              "text": "전하, 괜찮으세요?",
-              "goto": "talk_to_duke",
-              "affectionChange": 2,
-              "flagToSet": "ch3_talked_duke"
-            },
-            {
-              "text": "아델린, 무슨 짓을 한 거죠?",
-              "goto": "guard_adeline",
-              "affectionChange": -2,
-              "flagToSet": "ch3_guarded_adeline"
-            }
-          ]
-        }
-      ]
-    },
-    "talk_to_duke": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "전하, 괜찮으세요?\n안색이 좋지 않은데..."
-        },
-        {
-          "speaker": "대공",
-          "text": "...아델린이... 곁에 있으면 편안해."
-        },
-        {
-          "speaker": "대공",
-          "text": "아델린이 필요해... 늘 곁에 있었으면..."
-        },
-        {
-          "speaker": "",
-          "text": "대공의 말투가 평소와 전혀 달랐다.\n나른하고, 몽롱하고, 의지가 빠져나간 목소리."
-        },
-        {
-          "speaker": "아델린",
-          "text": "대공님은 좀 쉬셔야 해요.\n제가 곁에서 돌봐드릴게요."
-        },
-        {
-          "speaker": "",
-          "text": "아델린이 다정한 미소를 지으며\n대공의 손을 감싸 쥐었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이건 단순한 호감이 아니야.\n전하의 눈빛이 사용인들과 같아.)"
-        },
-        {
-          "speaker": "",
-          "text": "가슴속에서 불안이 치밀어 올랐다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "knight_approaches"
-            }
-          ]
-        }
-      ]
-    },
-    "guard_adeline": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "아델린. 전하께 무슨 짓을 한 거죠?"
-        },
-        {
-          "speaker": "아델린",
-          "text": "짓이라뇨, 무슨 말씀이세요?\n전하를 보살피고 있을 뿐인데요."
-        },
-        {
-          "speaker": "",
-          "text": "아델린은 능글맞게 웃으며\n한 치의 동요도 보이지 않았다."
-        },
-        {
-          "speaker": "me",
-          "text": "전하의 눈빛이 이상해요.\n이건 정상이 아닙니다."
-        },
-        {
-          "speaker": "대공",
-          "text": "왜 아델린한테 그러는 거야."
-        },
-        {
-          "speaker": "",
-          "text": "대공이 처음으로 고개를 돌렸다.\n하지만 그 눈빛은 여전히 흐릿했다."
-        },
-        {
-          "speaker": "대공",
-          "text": "아델린은 나를 걱정해서 온 것뿐이야.\n당신이 좀 심하잖아."
-        },
-        {
-          "speaker": "",
-          "text": "대공이 아델린의 편을 든다.\n이전까지는 한 번도 없던 일이었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "knight_approaches"
-            }
-          ]
-        }
-      ]
-    },
-    "knight_approaches": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "서재를 나온 뒤, 무거운 발걸음으로\n복도를 걷고 있을 때였다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "전하."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장이 빠른 걸음으로 다가왔다.\n표정이 심상치 않았다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "전하, 성 안이 이상합니다."
-        },
-        {
-          "speaker": "me",
-          "text": "...당신도 느꼈어요?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "사용인들이 제 지시를 무시합니다.\n경비 교대 명령도, 순찰 보고도 없었습니다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "그런데... 이상한 건,"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "저만 멀쩡한 것 같습니다."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장의 눈빛은 또렷했다.\n다른 이들처럼 흐릿해지지 않았다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "대공님도... 이상합니다.\n평소 같지 않으시고, 그 여자 곁에만..."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장이 말을 잇지 못하고\n불안한 눈으로 나를 바라보았다.",
-          "choices": [
-            {
-              "text": "나도 느꼈어요, 솔직히 말할게요",
-              "goto": "confide_knight",
-              "affectionChange": 5,
-              "flagToSet": "ch3_confided"
-            },
-            {
-              "text": "제가 알아서 해요, 걱정 마세요",
-              "goto": "handle_alone",
-              "affectionChange": 0,
-              "flagToSet": "ch3_handled_alone"
-            }
-          ]
-        }
-      ]
-    },
-    "confide_knight": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "...사용인들의 눈이 이상해요.\n전하도 마찬가지고."
-        },
-        {
-          "speaker": "me",
-          "text": "하녀를 추궁했을 때,\n'아델린님이 시키셔서'라고 했어요."
-        },
-        {
-          "speaker": "me",
-          "text": "정신이 돌아오자 자기가 한 말을\n기억하지 못하더라고요."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "예상 가는 것이 있습니다. 그것은...흑마법."
-        },
-        {
-          "speaker": "me",
-          "text": "네?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "정신을 조종하는 흑마법이\n대륙에 존재한다고 들었습니다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "확실한 건 아닙니다. 하지만\n이 상황에 다른 설명이 있겠습니까."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장의 주먹이 떨리고 있었다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "전하를 반드시 지키겠습니다.\n무슨 일이 있어도."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장의 눈빛에 단단한 결의가 서려 있었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "royal_summons"
-            }
-          ]
-        }
-      ]
-    },
-    "handle_alone": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "걱정 마세요. 제가 처리하겠어요."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "...전하."
-        },
-        {
-          "speaker": "me",
-          "text": "기사단장의 임무는 성의 경비예요.\n이 문제는 제가 알아볼 테니."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "하지만 성 안이 이렇게 된 상황에서\n전하 혼자—"
-        },
-        {
-          "speaker": "me",
-          "text": "혼자 해왔어요, 지금까지도."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장은 입술을 꽉 깨물었다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "...전하 혼자 짊어지지 마십시오."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "제가 곁에 있다는 것만은\n기억해 주십시오."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장은 불안한 눈으로 물러났다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "royal_summons"
-            }
-          ]
-        }
-      ]
-    },
-    "royal_summons": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "— 며칠 후, 아침 —"
-        },
-        {
-          "speaker": "",
-          "text": "왕실 문장이 찍힌 서신이 도착했다."
-        },
-        {
-          "speaker": "me",
-          "text": "귀족회의 참석 요청..."
-        },
-        {
-          "speaker": "",
-          "text": "국경 세금과 기사단 예산 삭감 문제로\n왕실에서 귀족들을 소집한 것이다."
-        },
-        {
-          "speaker": "me",
-          "text": "이 시기에 성을 비워야 하다니."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "전하, 제가 동행하겠습니다."
-        },
-        {
-          "speaker": "me",
-          "text": "...성의 경비는요?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "부단장에게 맡기겠습니다.\n지금 이 성에서 전하를 혼자 보낼 수 없습니다."
-        },
-        {
-          "speaker": "",
-          "text": "기사단장의 눈빛은 단호했다.\n거절할 수 없는 결의가 담겨 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "...알겠어요. 함께 가죠."
-        },
-        {
-          "speaker": "",
-          "text": "출발 준비를 마치고 마차에 올랐다."
-        },
-        {
-          "speaker": "",
-          "text": "저택 앞에 아델린이 서 있었다.\n대공의 팔에 기댄 채, 배웅하는 모습으로."
-        },
-        {
-          "speaker": "아델린",
-          "text": "조심히 다녀오세요, 대공비님.\n전하는 제가 잘 모시고 있을게요."
-        },
-        {
-          "speaker": "",
-          "text": "아델린의 입꼬리가 느리게 올라갔다.\n의미심장한, 승리자의 미소."
-        },
-        {
-          "speaker": "",
-          "text": "마차가 출발했다.\n저택이 점점 멀어져 갔다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "palace_wandering"
-            }
-          ]
-        }
-      ]
-    },
-    "palace_wandering": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "— 황궁 —"
-        },
-        {
-          "speaker": "",
-          "text": "며칠간의 여정 끝에 황궁에 도착했다."
-        },
-        {
-          "speaker": "",
-          "text": "귀족회의는 이튿날부터 시작이었다.\n먼저 숙소로 향하는 길."
-        },
-        {
-          "speaker": "",
-          "text": "오래간만의 황궁은 넓고 복잡했다.\n어느새 기사단장과 떨어져 버렸다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이쪽이 맞나? 길을 잘못 든 것 같은데.)"
-        },
-        {
-          "speaker": "",
-          "text": "인적 드문 회랑을 걷고 있을 때,\n등 뒤에서 낯선 목소리가 들려왔다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "잠시 실례."
-        },
-        {
-          "speaker": "",
-          "text": "돌아보니, 궁정 로브를 입은 남성이\n서 있었다."
-        },
-        {
-          "speaker": "",
-          "text": "나이는 젊어 보였지만, 눈빛은\n깊은 호수처럼 고요하고 날카로웠다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "당신에게서 이상한 기운이 느껴집니다."
-        },
-        {
-          "speaker": "me",
-          "text": "...이상한 기운이요?"
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "정확히는... 잔재.\n누군가의 술법이 당신 주변에 엉겨 있습니다."
-        },
-        {
-          "speaker": "",
-          "text": "마법사의 손끝에서 희미한 빛이 일었다.\n그것이 내 주위를 감싸며 떠돌았다.",
-          "choices": [
-            {
-              "text": "무슨 말이에요? 자세히 알려주세요",
-              "goto": "ask_wizard",
+              "text": "찻잔을 그대로 든 채 침묵한다",
+              "goto": "silent_poise",
               "affectionChange": 3,
-              "flagToSet": "ch3_asked_wizard"
+              "flagToSet": "ch3_silent_poise"
             },
             {
-              "text": "...누구세요?",
-              "goto": "retreat_cautious",
-              "affectionChange": 0,
-              "flagToSet": "ch3_cautious_wizard"
+              "text": "한 귀족의 눈을 정면으로 응시한다",
+              "goto": "confront_stare",
+              "affectionChange": 5,
+              "flagToSet": "ch3_confront_stare"
             }
           ]
         }
       ]
     },
-    "ask_wizard": {
+    "silent_poise": {
       "lines": [
         {
-          "speaker": "me",
-          "text": "잔재라니... 자세히 알려주실 수 있나요?"
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "정신 조종 계열의 흑마법입니다.\n대상의 의지를 잠식하여 복종시키는 술법."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "당신 자체에 걸린 건 아닙니다.\n하지만 가까이에 술자가 있었던 흔적이 분명합니다."
+          "speaker": "",
+          "text": "나는 찻잔을 입가로 가져갔다. 한 모금을 삼키는 그 사이,\n시선들이 더욱 두꺼워졌다."
         },
         {
           "speaker": "me",
-          "text": "...역시, 그랬군요."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "예상하셨군요. 이미 주변에서\n이상한 일이 있었나 봅니다."
+          "text": "(대꾸하지 않는다. — 반응은, 언제나 상대에게 확신을 준다.)"
         },
         {
           "speaker": "",
-          "text": "마법사는 품에서 작은 목걸이 하나를 꺼내\n내 손에 쥐어주었다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "이건 약한 방호 부적입니다.\n정신 간섭을 어느 정도 막아줄 겁니다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "강한 술자 앞에서는 한계가 있지만,\n없는 것보단 나을 겁니다."
-        },
-        {
-          "speaker": "me",
-          "text": "감사합니다. 그런데... 당신은 누구시죠?"
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "제 이름은..."
-        },
-        {
-          "speaker": "",
-          "text": "마법사가 의미심장하게 미소 지었다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "다음에 알려드리죠.\n곧 다시 만나게 될 테니까요."
-        },
-        {
-          "speaker": "",
-          "text": "마법사는 로브 자락을 휘날리며\n회랑 저편으로 사라졌다.",
+          "text": "귀족들은 내 무반응에 잠시 입을 다물었으나 — 시선만은 거두지 않았다.",
           "choices": [
             {
               "text": "계속하기",
-              "goto": "rebellion_news"
+              "goto": "knight_whisper"
             }
           ]
         }
       ]
     },
-    "retreat_cautious": {
+    "confront_stare": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 찻잔을 내려놓고, 가장 소리 높게 떠든 귀족의 눈을 정면으로 응시했다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 한 박자 늦게 시선을 피했다. — 내가 이긴 쪽이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(시선을 피하는 자가, 진실을 숨긴 자니까.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_whisper"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_whisper": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "복도로 나서자, 그림자처럼 기사단장이 곁에 붙었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하."
+        },
+        {
+          "speaker": "",
+          "text": "그의 목소리는 늘 그렇듯 낮고 단단했다.\n그러나 그 결에, 평소와는 다른 미세한 떨림이 섞여 있었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "누군가 의도적으로 퍼뜨린 소문입니다.\n— 전하께서 자리를 비우신 사이에."
+        },
+        {
+          "speaker": "me",
+          "text": "…아델린."
+        },
+        {
+          "speaker": "",
+          "text": "고개를 들자, 회랑 저편에서 낯익은 금발이 스쳐 지나간 듯한 착각이 일었다.\n— 그녀가 황궁에 있을 리 없는데도."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "지금 즉시 북부로 돌아가셔야 합니다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 한 걸음 더 내 곁으로 붙었다.\n— 기사가 모시는 주인과 지켜야 할 거리보다, 한 뼘 가까운 거리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "carriage_north"
+            }
+          ]
+        }
+      ]
+    },
+    "carriage_north": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 북부로 향하는 마차 안. —",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "",
+          "text": "",
+          "background": "carriage_interior",
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "밤낮으로 달렸다. 잠을 청해도 눈꺼풀이 감기지 않았다."
+        },
+        {
+          "speaker": "",
+          "text": "맞은편에 앉은 기사단장의 시선은, 평소처럼 내 발치 언저리에 얌전히 머물러 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 그러나 마차가 흔들릴 때마다,\n그 시선이 한 박자 늦게 내 얼굴에 닿았다 떨어지는 것을 나는 알고 있었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하, 조금이라도 눈을 붙이시지요."
+        },
+        {
+          "speaker": "me",
+          "text": "쉴 수 없어요."
+        },
+        {
+          "speaker": "me",
+          "text": "전하가 — 남편이 걱정돼요."
+        },
+        {
+          "speaker": "",
+          "text": "그 단어, '남편'을 발음한 순간 —\n맞은편의 어깨가 눈에 띄지 않을 만큼 가늘게 굳었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "……."
+        },
+        {
+          "speaker": "me",
+          "text": "(…방금, 뭔가...)"
+        },
+        {
+          "speaker": "",
+          "text": "검집 위에 얹힌 그의 손이, 하얗게 쥐어져 있었다.",
+          "choices": [
+            {
+              "text": "모른 척, 창밖으로 시선을 돌린다",
+              "goto": "carriage_silent",
+              "affectionChange": 3,
+              "flagToSet": "ch3_carriage_silent"
+            },
+            {
+              "text": "그 손을 묻듯 오래 바라본다",
+              "goto": "carriage_gaze",
+              "affectionChange": 5,
+              "flagToSet": "ch3_carriage_gaze"
+            }
+          ]
+        }
+      ]
+    },
+    "carriage_silent": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 창밖으로 시선을 돌렸다.\n달빛 아래 지나가는 나무 그림자들만이, 우리의 침묵을 대신 흘려보냈다."
+        },
+        {
+          "speaker": "me",
+          "text": "(…묻지 않는 것이, 때로는 가장 깊은 존중이겠지.)"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장은 끝내 입을 열지 않았다.\n다만 굳어 있던 그의 어깨가, 내 시선이 떠난 뒤에야 가느다랗게 풀리는 듯했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "arrival_sealed"
+            }
+          ]
+        }
+      ]
+    },
+    "carriage_gaze": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 그의 손등 위에 시선을 얹었다.\n— 마차가 흔들릴 때마다, 그 관절의 떨림이 내 눈에 남김없이 담겼다."
+        },
+        {
+          "speaker": "me",
+          "text": "…손에 너무 힘이 들어가 있어요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 손이 들키자마자 한 박자 굳었다가, 천천히 풀렸다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…송구합니다, 전하."
+        },
+        {
+          "speaker": "me",
+          "text": "(그 짧은 사과 속에, 내가 알지 못하는 무게가 얹혀 있었다.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "arrival_sealed"
+            }
+          ]
+        }
+      ]
+    },
+    "arrival_sealed": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 며칠 후, 대공 저택. —",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "",
+          "text": "",
+          "background": "castle_hall",
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "저택 정문에 꽂혀 있는 것은, 북부 공작가의 설원 문장이 아니었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 왕실 깃발. 그리고 저택을 포위한 왕실 근위대의 은빛 갑주."
+        },
+
+
+
+        {
+          "speaker": "me",
+          "text": "…이게, 무슨."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "봉쇄된 것입니다. — 전하, 제 뒤로 오십시오."
+        },
+        {
+          "speaker": "",
+          "text": "그가 한 팔을 옆으로 뻗어 나를 등 뒤로 가렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "duke_confront"
+            }
+          ]
+        }
+      ]
+    },
+    "duke_confront": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 대공의 서재. —",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "",
+          "text": "",
+          "characters": [
+            {"id": "duke", "position": "Center", "emotion": "angry"}
+          ],
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "서재의 문이 열리는 순간, 그가 거기에 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 그러나 나를 바라보는 눈빛은, 내가 아는 남편의 것이 아니었다."
+        },
+        {
+          "speaker": "",
+          "text": "흐릿함을 넘어, 서늘하고 적대적인 결의 금빛."
+        },
+        {
+          "speaker": "대공",
+          "text": "…돌아왔나.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "전하, 이게 대체 — 반역이라니, 무슨 말씀이세요."
+        },
+        {
+          "speaker": "대공",
+          "text": "소문이 아니야. 네가 꾸민 일이지 않나.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "대공",
+          "text": "왕도에서 귀족들을 포섭하고 — 내 자리를 빼앗으려 했다더군.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "기계적으로 굴러 나오는 단어들. — 그의 것이 아닌, 누군가 심어둔 대본.",
+          "hideCharactersAfter": true,
+          "choices": [
+            {
+              "text": "전하— 제 얼굴을 한번만 봐주세요",
+              "goto": "plead_softly",
+              "affectionChange": 5,
+              "flagToSet": "ch3_pleaded"
+            },
+            {
+              "text": "증거를 보이세요. 위조는 쉽게 드러납니다",
+              "goto": "deny_cold",
+              "affectionChange": 2,
+              "flagToSet": "ch3_denied_cold"
+            },
+            {
+              "text": "당신의 정신을 누군가 조종하고 있어요",
+              "goto": "break_spell",
+              "affectionChange": 10,
+              "flagToSet": "ch3_break_spell",
+              "currencyCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "plead_softly": {
       "lines": [
         {
           "speaker": "me",
-          "text": "...실례지만, 누구시죠?\n낯선 사람의 말을 쉽게 믿을 수는 없는데."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "경계심이 강하시군요.\n현명한 태도입니다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "믿지 않으셔도 됩니다.\n다만, 한 가지만 말씀드리죠."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "당신 주변에 정신을 잠식하는\n흑마법의 흔적이 있습니다."
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "술자는 당신 가까이에 있고,\n아마 이미 알고 계실 겁니다."
-        },
-        {
-          "speaker": "me",
-          "text": "......"
-        },
-        {
-          "speaker": "궁정마법사",
-          "text": "곧 알게 될 겁니다.\n그때 다시 찾아오셔도 좋습니다."
+          "text": "전하. 제발, 제 얼굴을 한 번만 보세요."
         },
         {
           "speaker": "",
-          "text": "마법사는 의미심장한 미소를 남기고\n회랑 저편으로 사라졌다."
+          "text": "떨리는 손을 겨우 쥐고, 그의 앞에 한 걸음 다가섰다."
         },
         {
           "speaker": "me",
-          "text": "(...흑마법이라. 믿어야 하나.)"
+          "text": "…저는 전하의 아내입니다.\n삼 년을 같은 식탁에 앉은 여자예요."
         },
         {
           "speaker": "",
-          "text": "하지만 저택에서 본 것들이\n머릿속을 떠나지 않았다."
+          "text": "대공의 눈이 찰나, 무언가를 떠올리려는 듯 흔들렸다."
+        },
+        {
+          "speaker": "대공",
+          "text": "…너는…"
+        },
+        {
+          "speaker": "",
+          "text": "— 그러나 그것은 눈을 깜빡이는 순간만큼 짧았다."
+        },
+        {
+          "speaker": "",
+          "text": "마치 누군가 실을 다시 팽팽히 잡아당긴 것처럼, 그의 동공이 다시 얼어붙었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "aelin_reveal_arrest"
+            }
+          ]
+        }
+      ]
+    },
+    "deny_cold": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "증거를 보이세요. 위조는 쉽게 드러납니다."
+        },
+        {
+          "speaker": "",
+          "text": "목소리는 떨리지 않았다. 떨지 않도록 혀끝을 이로 눌렀을 뿐."
+        },
+        {
+          "speaker": "대공",
+          "text": "…거짓말은 그만둬라.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "그의 감정 없는 말투가, 나를 향해 날카롭게 찔려 들어왔다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "aelin_reveal_arrest"
+            }
+          ]
+        }
+      ]
+    },
+    "break_spell": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "당신의 정신을 — 누군가 조종하고 있어요."
+        },
+        {
+          "speaker": "",
+          "text": "나는 한 걸음 더 다가가, 그의 손목 안쪽에 손끝을 댔다.\n그 감각이, 내 손끝에 곧바로 전해졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "…당신의 숨이 이상해요. 이 온기는, 당신의 것이 아니에요."
+        },
+        {
+          "speaker": "",
+          "text": "대공의 어깨가 눈에 띄게 굳었다.\n그의 시선이 내 손끝으로, 다시 내 얼굴로 흔들리듯 옮겨갔다."
+        },
+        {
+          "speaker": "대공",
+          "text": "…손을, 떼라.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "목소리가 한 톤 낮아졌다.\n그 낮음은 분노가 아니라, 무언가를 억누르는 자의 것이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(…돌아오고 있다. 아주 잠깐만 더.)"
+        },
+        {
+          "speaker": "",
+          "text": "그러나 — 서재 문이 그 순간 열렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "aelin_reveal_arrest"
+            }
+          ]
+        }
+      ]
+    },
+    "aelin_reveal_arrest": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "smile"},
+            {"id": "duke", "position": "Right", "emotion": "neutral"}
+          ]
+        },
+        {
+          "speaker": "아델린",
+          "text": "전하, 제가 말씀드린 대로지요?",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "서재의 그림자에서 걸어 나온 아델린이,\n대공의 팔에 손을 올렸다."
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 손끝이 그의 팔뚝을 부드럽게 쓸어내리는 순간,\n— 대공의 눈에서 마지막 한 줄기의 흔들림이 사라졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "아델린… 당신—"
+        },
+        {
+          "speaker": "아델린",
+          "text": "흥분하지 마세요, 대공비님.\n진실은 스스로 드러나는 법이니까요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "대공",
+          "text": "…대공비를 체포하라.",
+          "emotion": "neutral",
+          "hideCharactersAfter": true
+        },
+        {
+          "speaker": "",
+          "text": "서재의 문이 다시 열렸다. 왕실 근위병들의 은빛 갑주가 일제히 방을 채웠다."
+        },
+        {
+          "speaker": "근위병",
+          "text": "대공비, 반역 혐의로 체포한다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "— 잠깐! 이건 오해다. 대공비 전하께서는—"
+        },
+        {
+          "speaker": "me",
+          "text": "…괜찮아요. 검을 거두세요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "전하…!"
+        },
+        {
+          "speaker": "me",
+          "text": "여기서 피를 보면, 이것이 정말로 반역이 됩니다."
+        },
+        {
+          "speaker": "",
+          "text": "그의 손이 검집 위에서 부들거리며 멈춰 섰다.\n평생 복종해온 사람이 복종하지 못하고 있는 순간이었다."
+        },
+        {
+          "speaker": "",
+          "text": "차가운 쇠사슬이 내 손목을 감쌌다. 그 감각은 이상하리만치 고요했다."
+        },
+        {
+          "speaker": "",
+          "text": "끌려가는 나의 뒤로 — 아델린의 입꼬리가 느리게 올라가는 것을,\n나는 보지 않아도 알 수 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "그리고 공작은. — 끝내 한 번도, 뒤돌아보지 않았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "prison_cell"
+            }
+          ]
+        }
+      ]
+    },
+    "prison_cell": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 지하 감옥. —",
+          "textAlign": "center",
+          "background": "prison_cell"
+        },
+        {
+          "speaker": "",
+          "text": "차가운 돌바닥에 무릎을 세우고 앉았다.\n좁은 창으로 새어드는 달빛만이, 쇠사슬의 결을 비추고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "…전하."
+        },
+        {
+          "speaker": "",
+          "text": "눈을 감자, 결혼의 첫 겨울이 떠올랐다."
+        },
+        {
+          "speaker": "",
+          "text": "정원에 눈이 내리던 날, 말없이 내 어깨에 외투를 걸쳐주던 손."
+        },
+        {
+          "speaker": "",
+          "text": "손끝이 스치던 그 찰나의 온기.\n— 나는 지금도, 그 감각을 선명히 기억하고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(…나는 당신에게 무엇이었을까.)"
+        },
+        {
+          "speaker": "",
+          "text": "차가운 돌바닥에 이마를 댔다. 숨이 내뱉어질 때마다 하얗게 흩어졌다.",
+          "choices": [
+            {
+              "text": "(그때 당신의 미소가… 좋았지.)",
+              "goto": "memory_warmth",
+              "affectionChange": 5,
+              "flagToSet": "ch3_warm_memory"
+            },
+            {
+              "text": "(공작가를 지키는 것이 내 의무였을 뿐.)",
+              "goto": "memory_duty",
+              "affectionChange": 0,
+              "flagToSet": "ch3_duty_memory"
+            }
+          ]
+        }
+      ]
+    },
+    "memory_warmth": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "(…당신이 드물게 웃던 그 입꼬리.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(나는 그 작은 각도를 — 몇 번이나 눈에 담으려 애썼는지.)"
+        },
+        {
+          "speaker": "",
+          "text": "한 번도 소리 내어 말하지 못했다.\n그것이 내 자존심의 방식이었으므로."
+        },
+        {
+          "speaker": "me",
+          "text": "(냉정한 아내로 보였을지 모르나 사실은, 당신이 참 좋았다.)"
+        },
+        {
+          "speaker": "",
+          "text": "차가운 돌바닥 위로 눈물 한 방울이 번졌다.\n나는 그것을 훔치지 않았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "memory_duty": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "(정략혼이었지. 영지와 영지의 거래.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(완벽한 귀부인이 되는 것. 그것이 내 자리였다.)"
+        },
+        {
+          "speaker": "",
+          "text": "그 문장을 속으로 반복할수록\n왜, 가슴 한편이 느리게 무너져 내리는가."
+        },
+        {
+          "speaker": "me",
+          "text": "(…의무뿐이었다고 되뇌는 것이, 이제 와서 무슨 소용인가.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_visit": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 깊은 밤. —",
+          "textAlign": "center"
+        },
+        {
+          "speaker": "",
+          "text": "복도 끝에서 발소리가 들렸다."
+        },
+        {
+          "speaker": "",
+          "text": "쇠창살 너머에 한 남자가 무릎을 꿇었다.\n은빛 갑주는 벗어놓은 채, 검은 외투 하나만 걸친 모습으로."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하."
+        },
+        {
+          "speaker": "",
+          "text": "그의 얼굴이, 처음으로 내 얼굴을 정면으로 바라보고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 평생 비스듬히 비껴 있던 시선이,\n오늘 밤엔 숨을 곳을 잃은 자의 그것이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "…어떻게 여기에 —"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "교대 틈을 노렸습니다. 시간이 없습니다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 쇠창살 사이로 손을 내밀었다.\n지하 수로의 약도가 손바닥 위에 꼭 쥐여 있었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…제가, 모시겠습니다. 지금 당장 떠나시지요."
+        },
+        {
+          "speaker": "",
+          "text": "그의 목소리가 흔들리고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "…당신은, 왜 이렇게까지."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "소신이 — 처음부터, 먼저 말씀드렸어야 했습니다."
+        },
+        {
+          "speaker": "",
+          "text": "그의 입이 한 문장을 더 꺼내려다 끝내 다물렸다.",
+          "choices": [
+            {
+              "text": "거절하고 마지막 부탁을 남긴다",
+              "goto": "refuse_with_plea",
+              "affectionChange": 5,
+              "flagToSet": "ch3_refuse_plea"
+            },
+            {
+              "text": "쇠창살 사이로, 그의 뺨에 손을 얹는다",
+              "goto": "last_touch",
+              "affectionChange": 15,
+              "flagToSet": "ch3_last_touch",
+              "currencyCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "refuse_with_plea": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "…고마워요. 그러나 갈 수 없어요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하! 내일 아침 처형입니다. 무슨—"
+        },
+        {
+          "speaker": "me",
+          "text": "도망치면, 정말 반역이 돼요."
+        },
+        {
+          "speaker": "me",
+          "text": "그러면 공작가도, 영지의 백성도 모두가 끝이에요."
+        },
+        {
+          "speaker": "",
+          "text": "쇠창살 사이로 손을 뻗어, 그의 손등 위에 내 손끝을 잠시 올렸다.\n닿은 피부는 뜨거웠다."
+        },
+        {
+          "speaker": "me",
+          "text": "대신, 부탁 하나만 들어주세요."
+        },
+        {
+          "speaker": "me",
+          "text": "전하를 지켜줘요. 진짜 그분을, 북부를 되찾아 주세요."
+        },
+        {
+          "speaker": "me",
+          "text": "아델린이 그분께 건 세뇌를 당신이 끊어줘요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 입이 한참 동안 열리지 않았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…반드시. 반드시, 되찾겠습니다."
+        },
+        {
+          "speaker": "",
+          "text": "돌아서는 그의 어깨가, 소리 없이 떨리고 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "execution_dawn"
+            }
+          ]
+        }
+      ]
+    },
+    "last_touch": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "나는 그의 눈을 오래 바라보다가, 쇠창살 사이로 천천히 손을 내밀었다."
+        },
+        {
+          "speaker": "",
+          "text": "손끝이 그의 뺨에 닿는 순간, 그의 어깨 전체가 한 번 크게 흔들렸다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…전하."
+        },
+        {
+          "speaker": "",
+          "text": "그의 목소리가 갈라졌다. — 평생 다물고 살아온 자의 첫 균열."
+        },
+        {
+          "speaker": "",
+          "text": "그가 내 손등 위에 제 손바닥을 덧댔다.\n검 자루에 닳은 거친 손바닥이 놀라울 만큼 따뜻했다."
+        },
+        {
+          "speaker": "me",
+          "text": "…당신의 얼굴을 이렇게 마주 보는 것은, 처음이군요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…송구합니다. 소신이 주제넘게."
+        },
+        {
+          "speaker": "me",
+          "text": "아니. — 그대로 있어요. 조금만 더."
+        },
+        {
+          "speaker": "",
+          "text": "그가 눈을 질끈 감았다. 닫힌 속눈썹 끝이 은은하게 떨렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "…갈 수 없어요. 도망치면, 공작가가 끝이에요."
+        },
+        {
+          "speaker": "me",
+          "text": "대신, 전하를 지켜줘요. 진짜 그분을, 되찾아 주세요."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…반드시."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "…그리고 전하. 소신이 다음 생에서는,\n먼저 이름을 불러드려도 되겠습니까."
+        },
+        {
+          "speaker": "",
+          "text": "손끝이 떨어지는 순간,\n그의 뺨 위에 내 체온이 잠시 남는 듯했다."
+        },
+        {
+          "speaker": "",
+          "text": "돌아서는 그의 어깨가 처음이자 마지막으로, 소리 없이 흐느끼고 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "execution_dawn"
+            }
+          ]
+        }
+      ]
+    },
+    "execution_dawn": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 처형 당일, 이른 새벽. —",
+          "textAlign": "center",
+          "background": "execution_ground"
+        },
+        {
+          "speaker": "",
+          "text": "눈이 내리고 있었다. 하얀 눈 위로 끌려 나왔다."
+        },
+        {
+          "speaker": "",
+          "text": "처형대 앞에 영지의 백성들, 사용인들, 근위병들이 모여 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "높은 단 위 — 남편이 내려다보고 있었다.",
+          "characters": [
+            {"id": "adelin", "position": "Left", "emotion": "sad"}
+          ]
+        },
+        {
+          "speaker": "아델린",
+          "text": "…대공비님.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "아델린이 내 옆으로 다가와\n포옹을 가장한 몸짓으로 귓가에 입술을 가져다 댔다."
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 숨이 귓불에 닿는 순간, 감각이 서늘하게 곤두섰다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "…대공님 서재 아래에, 숨겨진 방이 있지요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "아델린",
+          "text": "거기에서 제가 찾던 성물을 발견했답니다.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "아델린",
+          "text": "…방해가 되는 당신을 치우니,\n모든 일이 어쩌면 이리도 순조로운지.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "아델린",
+          "text": "대공비님이 그간 공작저를 잘 지켜주신 덕분이랍니다.\n감사하게 받겠어요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "me",
+          "text": "……!"
+        },
+        {
+          "speaker": "",
+          "text": "그녀가 몸을 떼며 다시 슬픈 얼굴로 돌아갔다.\n그 전환의 속도에, 나는 마지막까지 익숙해지지 못했다."
+        },
+        {
+          "speaker": "아델린",
+          "text": "…모든 건 그분의 뜻대로.",
+          "emotion": "smile",
+          "hideCharactersAfter": true
+        },
+        {
+          "speaker": "",
+          "text": "그녀의 달콤한 독이 귓가에서 사라진 뒤에야, 나는 숨을 다시 골랐다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "chapter_end": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "근위병이 나를 처형대 위로 이끌었다."
+        },
+        {
+          "speaker": "",
+          "text": "무릎을 꿇었다. 차가운 나무 바닥이 드레스 너머로 살갗에 닿았다."
+        },
+        {
+          "speaker": "",
+          "text": "눈발이 거세졌다. 하얀 눈이 시야를 흐리며 덮어왔다."
+        },
+        {
+          "speaker": "me",
+          "text": "…전하."
+        },
+        {
+          "speaker": "",
+          "text": "나는 고개를 들어, 마지막으로 그를 올려다보았다."
+        },
+        {
+          "speaker": "",
+          "text": "표정 없는 그 얼굴 — 흐릿한 금빛 눈동자에서."
+        },
+        {
+          "speaker": "",
+          "text": "— 한 방울의 눈물이, 천천히 볼을 타고 흘러내렸다."
+        },
+        {
+          "speaker": "",
+          "text": "저 멀리, 군중의 가장자리에서\n한 검은 외투의 사내가 고개를 깊이 숙이고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "그의 어깨가 눈발 속에서 소리 없이 흔들리는 것을, 나는 보았다."
+        },
+        {
+          "speaker": "me",
+          "text": "(…그대가 한 약속을, 나는 다음 생에서 기억하겠습니다.)"
+        },
+        {
+          "speaker": "",
+          "text": "눈을 감았다."
+        },
+        {
+          "speaker": "",
+          "text": "— 그것이, 대공비가 본 마지막 풍경이었다."
         },
         {
           "speaker": "",

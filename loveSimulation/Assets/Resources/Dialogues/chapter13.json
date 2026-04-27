@@ -1,0 +1,751 @@
+{
+  "dialogueId": "chapter13",
+  "chapterTitle": "Chapter13\n황녀의 성년식",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "성년식 당일 아침.",
+          "background": "emilia_room"
+        },
+        {
+          "speaker": "",
+          "text": "시녀들이 분주히 움직였다."
+        },
+        {
+          "speaker": "me",
+          "text": "다시 돌아왔어도 치장은 역시 힘드네."
+        },
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 목걸이도 교체해드릴까요?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 손이 목걸이 위로 갔다.\n목걸이 안쪽의 보석이 가늘게 빛났다."
+        },
+        {
+          "speaker": "me",
+          "text": "괜찮아. 이걸로 할게."
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하, 들려?)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "들려. 오늘 예쁘네.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 목소리가 전달되었다."
+        },
+        {
+          "speaker": "me",
+          "text": "오늘 황궁에서는 조용히 있어줘야 해."
+        },
+        {
+          "speaker": "에르하",
+          "text": "내가 언제 시끄럽게 굴었다고.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "항상."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "시녀가 에밀리아의 머리를 마저 정리하며\n화제를 바꾸듯 조심스럽게 말했다."
+        },
+        {
+          "speaker": "시녀",
+          "text": "성년식은 황녀 전하께서 처음으로\n귀족들 앞에 정식으로 서시는 자리라죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(알아. 아주 화려한 자리였지.)"
+        },
+        {
+          "speaker": "",
+          "text": "거울 속의 에밀리아가 조용히 눈을 감았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_choice"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_choice": {
+      "lines": [
+        {
+          "speaker": "에르하",
+          "text": "에밀리아.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "응?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "오늘 그 황궁이라는 데 가면\n이상한 놈들 많이 있어?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "함부로 건드리는 놈 없게 내가 지켜줄게.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 말에 뭐라고 대답해줄까.",
+          "choices": [
+            {
+              "text": "넌 항상 이렇게 티가 나게 걱정하니?",
+              "goto": "erha_tease",
+              "affectionChange": 3,
+              "flagToSet": "ch14_erha_tease"
+            },
+            {
+              "text": "...함께라서 든든해.",
+              "goto": "erha_warm",
+              "affectionChange": 5,
+              "flagToSet": "ch14_erha_warm"
+            },
+            {
+              "text": "에르하가 있어서 무섭지 않아. 항상 고마워.",
+              "goto": "erha_premium",
+              "affectionChange": 10,
+              "premiumCost": 5,
+              "flagToSet": "ch14_erha_premium"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_tease": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "넌 항상 이렇게 티가 나게 걱정하니?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "걱...걱정 아니거든!!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "에르하",
+          "text": "그냥 나와 함께하는 인간이\n바보짓 하면 귀찮아져서 하는 말이야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "그래그래."
+        },
+        {
+          "speaker": "에르하",
+          "text": "무시하는 거야?!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 짧게 웃었다.\n시녀가 고개를 갸웃하며 눈치를 살폈다."
+        },
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 다 됐습니다.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "거울 속에 완성된 에밀리아가 서 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "carriage_depart"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_warm": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...함께라서 든든해."
+        },
+        {
+          "speaker": "에르하",
+          "text": "당연하지. 드래곤이 함께인데 뭐가 무섭겠어.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하도 나름 기쁜가봐.)"
+        },
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 다 됐습니다.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "거울 속에 완성된 에밀리아가 서 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "carriage_depart"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_premium": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하가 있어서 무섭지 않아. 항상 고마워."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...뭐야 갑자기. 왜 그런 말 해.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "당황한 것 같았다. 귀까지 붉어졌을 것만 같은 목소리였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "나야 원래 여기 있는 건데.\n고마워할 것도 없잖아.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...그래도 고마워.)"
+        },
+        {
+          "speaker": "",
+          "text": "목걸이의 보석이 잠깐 따뜻하게 빛났다.\n에밀리아만이 느낄 수 있는 온기였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......오늘 절대 다치지 마.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 다 됐습니다.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "거울 속에 완성된 에밀리아가 서 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "carriage_depart"
+            }
+          ]
+        }
+      ]
+    },
+    "carriage_depart": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "백작가의 문장이 새겨진 마차가 저택 앞에 대기하고 있었다.",
+          "background": "carriage_exterior"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 먼저 탑승해 있었다.\n에밀리아가 시녀의 부축을 받으며 마차에 올랐다."
+        },
+        {
+          "speaker": "백작",
+          "text": "늦었다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "죄송합니다"
+        },
+        {
+          "speaker": "",
+          "text": "백작은 에밀리아를 한 번 훑어보고\n시선을 창밖으로 돌렸다."
+        },
+        {
+          "speaker": "백작",
+          "text": "황궁에서는 입을 조심해라.\n필요 이상으로 눈에 띄지 말고.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "백작",
+          "text": "붉은 보석은 갖고 있겠지.\n성년식에서 공작에게 쓰는 걸 잊지 마라.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...네. 갖고 있습니다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에서 나를 죽게 만든 보석.\n백작이 하란대로 하진 않을거야.)"
+        },
+        {
+          "speaker": "",
+          "text": "마차가 움직이기 시작했다.\n자갈길의 진동이 발바닥까지 올라왔다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 창밖으로 흘러가는 저택의 풍경을 바라보았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "emilia_memory"
+            }
+          ]
+        }
+      ]
+    },
+    "emilia_memory": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "마차가 도심을 지나 황도의 큰 길로 접어들었다.",
+          "background": "carriage_interior"
+        },
+        {
+          "speaker": "me",
+          "text": "(이 몸으로 처음 가는 황궁.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(전생에서 에밀리아는 성년식에 참석하지 않았어.\n도대체 왜지?)"
+        },
+        {
+          "speaker": "me",
+          "text": "(궁금하지만 우선 가야 해.\n과거의 나를 만날 수 있을지도 모르니까.)"
+        },
+        {
+          "speaker": "백작",
+          "text": "...쓸데없는 생각은 접어라.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 눈을 떴다.\n백작은 여전히 창밖을 보고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...깜짝 놀랐네.)"
+        },
+        {
+          "speaker": "",
+          "text": "마차가 황도 외곽의 숲길로 접어들었다.\n길이 좁아지며 나뭇가지가 마차 위를 스쳤다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "bandit_ambush"
+            }
+          ]
+        }
+      ]
+    },
+    "bandit_ambush": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "—쾅."
+        },
+        {
+          "speaker": "",
+          "text": "마차가 갑자기 멈추었다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 몸이 앞으로 쏠렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "...?"
+        },
+        {
+          "speaker": "",
+          "text": "밖에서 말 울음소리가 들렸다.\n이어서 호위 기사의 다급한 외침이 울려퍼졌다."
+        },
+        {
+          "speaker": "호위기사",
+          "text": "도적입니다! 숲에서—",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "고함소리와 함께 검이 부딪히는 소리가 연이어 터졌다."
+        },
+        {
+          "speaker": "백작",
+          "text": "감히!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "백작이 마차 창문을 열어젖혔다.\n밖에서 흙먼지가 흘러들어왔다."
+        },
+        {
+          "speaker": "me",
+          "text": "(도적...?! 이런 곳에서?)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 심장이 빠르게 뛰었다.\n손이 마차 문 손잡이 위에 올라가 있었다.",
+          "choices": [
+            {
+              "text": "마차 안에서 숨죽이고 기다린다",
+              "goto": "stay_inside",
+              "affectionChange": 3
+            },
+            {
+              "text": "커튼을 젖혀 밖을 살핀다",
+              "goto": "peek_outside",
+              "affectionChange": 5
+            },
+            {
+              "text": "에르하에게: 밖에 뭐가 보여?",
+              "goto": "ask_erha_scout",
+              "affectionChange": 8,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "stay_inside": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "(나가면 안 돼. 호위 기사들이 있잖아.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 떨리는 손을 무릎 위에 내렸다.\n숨을 죽이고 마차 안에 머물렀다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...가만히 있어. 내가 지켜줄게.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "낮지만 단단한 목소리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "count_rage"
+            }
+          ]
+        }
+      ]
+    },
+    "peek_outside": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "(상황은 파악해야 해. 얼마나 되는 거지?)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 조심스럽게 커튼을 젖혀 밖을 살폈다."
+        },
+        {
+          "speaker": "me",
+          "text": "(도적은 대여섯...호위 기사가 밀리고 있진 않아.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "에밀리아, 고개 내밀지 마.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "보기만 할게."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...못말려.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 한숨을 내쉬었다.\n걱정과 짜증이 뒤섞인 한숨이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "count_rage"
+            }
+          ]
+        }
+      ]
+    },
+    "ask_erha_scout": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하, 밖에 뭐가 보여?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...드디어 나한테 관심가져주네",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 목소리에 은근한 만족감이 깔렸다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "하급 도적 여섯. 위험해보이지 않아보여.\n네 호위 기사들이면 충분해.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "역시 에르하야."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...칭찬이면 더 해도 돼.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "목걸이가 살짝 따뜻해졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "count_rage"
+            }
+          ]
+        }
+      ]
+    },
+    "count_rage": {
+      "lines": [
+        {
+          "speaker": "백작",
+          "text": "뭣들 하느냐! 잡아 죽여라!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "백작의 고함이 숲을 뒤흔들었다.\n호위 기사들이 일제히 도적들에게 달려들었다."
+        },
+        {
+          "speaker": "",
+          "text": "쨍— 쨍— 검과 검이 부딪혔다.\n마차 밖이 아수라장이 되었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(숫자는...호위기사가 더 많아.\n이대로면 이길 수 있어.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 마차의 문손잡이를 꽉 쥔 채.\n숨을 죽이고 창밖을 바라보았다."
+        },
+        {
+          "speaker": "",
+          "text": "그 순간—\n마차의 문이 밖에서 거칠게 열렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_saves"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_saves": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "눈빛이 사나운 도적 하나가 마차 안을 들여다보고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "손에 칼이 들려있었다.\n그 칼끝이 에밀리아를 향했다."
+        },
+        {
+          "speaker": "도적",
+          "text": "여기에 귀한 상품이 있었군.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "—!"
+        },
+        {
+          "speaker": "",
+          "text": "칼이 에밀리아 쪽으로 날아들었다."
+        },
+        {
+          "speaker": "",
+          "text": "— 그 순간."
+        },
+        {
+          "speaker": "",
+          "text": "칼이 허공에서 멈추었다.",
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "보이지 않는 무언가에 튕겨나가듯\n칼이 옆으로 꺾였다."
+        },
+        {
+          "speaker": "",
+          "text": "도적이 얼어붙었다."
+        },
+        {
+          "speaker": "도적",
+          "text": "뭐, 뭐야...!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "마치 공기의 벽이라도 있는 것처럼\n그 이상 칼이 나아가지 못했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...에르하.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "마나쉴드야. 이 안은 안전해",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "다정하게 말했지만 그 힘은 분명했다."
+        },
+        {
+          "speaker": "",
+          "text": "도적이 비명을 지르며 뒤로 날아갔다.\n마차 문이 저절로 닫혔다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mage_appears"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_appears": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "마차 밖의 소리가 잦아들기 시작했다.\n도적들이 쫓기는 소리, 발소리."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 조심스럽게 숨을 내쉬었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(끝났나? 아니—)"
+        },
+        {
+          "speaker": "",
+          "text": "—퍽."
+        },
+        {
+          "speaker": "",
+          "text": "마차 지붕 위에서 충격이 느껴졌다.\n누군가 올라탄 것이다."
+        },
+        {
+          "speaker": "",
+          "text": "마차의 창문 틈으로 도적의 팔이 들어왔다.\n에밀리아의 머리채를 향해 손이 뻗었다."
+        },
+        {
+          "speaker": "me",
+          "text": "—!"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 반응하기 직전—"
+        },
+        {
+          "speaker": "",
+          "text": "차가운 빛이 번쩍했다.",
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "도적이 손 하나 뻗지 못한 채. 의식을 잃고 쓰러졌다."
+        },
+        {
+          "speaker": "",
+          "text": "마차 밖의 모든 소란이 일순간에 잠잠해졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "고요함 속에서 발소리 하나가 다가왔다.\n느리고 조용한, 그러나 또렷한 발걸음."
+        },
+        {
+          "speaker": "",
+          "text": "마차 문이 바깥에서 조심스럽게 열렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mage_first_look"
+            }
+          ]
+        }
+      ]
+    },
+    "mage_first_look": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "빛이 쏟아졌다."
+        },
+        {
+          "speaker": "",
+          "text": "가을 숲의 빛 속에\n서 있는 사람의 윤곽이 드러났다."
+        },
+        {
+          "speaker": "",
+          "text": "어둠과 같은 긴 흑빛 머리카락.\n붉게 빛나는 아름다운 눈동자.\n그리고 손에 아직 마나의 잔광이 남아 있는 지팡이."
+        },
+        {
+          "speaker": "카이델",
+          "text": "괜찮으십니까, 아가씨.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이었다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 14 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}

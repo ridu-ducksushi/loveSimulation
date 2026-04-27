@@ -1,1124 +1,1102 @@
 {
   "dialogueId": "chapter05",
-  "chapterTitle": "Chapter05\n끝나지 않는 악몽",
+  "chapterTitle": "Chapter05\n드래곤과의 조우",
   "sections": {
     "start": {
       "lines": [
         {
-          "speaker": "",
-          "text": "칼날이 목을 스치는 감각이\n아직도 피부에 남아 있었다.",
-          "textAlign": "center"
+          "speaker": "카이델",
+          "text": "눈을 감으시지요. 어지러우실 수 있으니.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "차가운 쇠의 감촉.\n피가 흐르는 온기.\n그리고 — 어둠.",
-          "textAlign": "center"
+          "text": "세상이 뒤집혔다.",
+          "background": "dragon_nest"
         },
         {
           "speaker": "",
-          "text": "죽었다. 분명히 죽었다.\n그런데 왜, 심장이 뛰고 있는 걸까.",
-          "textAlign": "center"
+          "text": "몸이 공중에 떠오르는 듯한 감각.\n중력이 사라졌다가 돌아왔다."
+        },
+        {
+          "speaker": "me",
+          "text": "...이게 뭐죠?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "카이델",
+          "text": "…텔레포트입니다.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "",
-          "background": "unfamiliar_bedroom",
-          "pause": true
+          "text": "황량한 바위산 사이로\n거대한 골짜기가 펼쳐져 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...여기가..."
+        },
+        {
+          "speaker": "카이델",
+          "text": "드래곤의 요새 근처입니다.\n여기서부터는 걸어가야 겠군요.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "눈을 떴다.\n낯선 천장이 보였다.",
+          "text": "방금 일어난 일이 믿기지 않았다.\n한 순간 전까지 호숫가에 있었는데,\n지금은 산맥 한복판에 서 있다.",
           "choices": [
             {
-              "text": "계속하기",
-              "goto": "waking_confusion"
-            }
-          ]
-        }
-      ]
-    },
-    "waking_confusion": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "몸이 이상했다.\n손가락 하나 움직이는 것조차 낯설었다."
-        },
-        {
-          "speaker": "",
-          "text": "손을 들어 올렸다.\n가늘고 하얀 손가락. 내 손이 아니었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이건 뭐야.)"
-        },
-        {
-          "speaker": "",
-          "text": "이불을 걷어내고 몸을 일으켰다.\n어지러움에 비틀거렸다."
-        },
-        {
-          "speaker": "",
-          "text": "키가 달랐다. 무게중심이 달랐다.\n머리카락이 어깨를 넘어 허리까지 내려왔다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이건 내 몸이 아니야.)"
-        },
-        {
-          "speaker": "",
-          "text": "목 아래로 차가운 것이 닿았다.\n손으로 더듬었다."
-        },
-        {
-          "speaker": "",
-          "text": "목걸이였다.\n푸른빛이 도는 작은 보석이 달린."
-        },
-        {
-          "speaker": "me",
-          "text": "...이 목걸이는..."
-        },
-        {
-          "speaker": "",
-          "text": "본 적이 있었다.\n어디서였는지 기억이 가물거렸다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "servant_summons"
-            }
-          ]
-        }
-      ]
-    },
-    "servant_summons": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "문을 두드리는 소리가 들렸다."
-        },
-        {
-          "speaker": "시종",
-          "text": "에밀리아 아가씨, 일어나셨습니까?\n백작님께서 부르십니다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...에밀리아?)"
-        },
-        {
-          "speaker": "",
-          "text": "에밀리아.\n그 이름에 반응할 리 없는 이 몸이\n자연스럽게 고개를 돌렸다."
-        },
-        {
-          "speaker": "me",
-          "text": "...네. 곧 나가겠습니다."
-        },
-        {
-          "speaker": "",
-          "text": "입에서 나온 목소리는 나의 것이 아니었다.\n맑고 어린, 낯선 목소리."
-        },
-        {
-          "speaker": "",
-          "text": "발소리가 멀어지자 숨을 크게 내쉬었다."
-        },
-        {
-          "speaker": "me",
-          "text": "(백작...? 에밀리아...? 대체 여기가 어디지.)"
-        },
-        {
-          "speaker": "",
-          "text": "옷을 갈아입고 방을 나섰다.\n복도는 화려하고 눈부셨다.\n척박한 북부의 공작가와는 비교할 수 없는 커다란 저택.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "count_meeting"
-            }
-          ]
-        }
-      ]
-    },
-    "count_meeting": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "— 백작가 응접실 —",
-          "background": "count_manor_hall"
-        },
-        {
-          "speaker": "",
-          "text": "집무실에 들어서자,\n중년의 남자가 의자에 앉아 있었다.",
-          "characters": [
-            {"id": "count", "position": "Center", "emotion": "neutral"}
-          ]
-        },
-        {
-          "speaker": "백작",
-          "text": "에밀리아. 앉아라."
-        },
-        {
-          "speaker": "",
-          "text": "차가운 눈빛.\n다정함이라곤 찾아볼 수 없는 얼굴이었다."
-        },
-        {
-          "speaker": "백작",
-          "text": "준비는 됐느냐.\n그분께서 드래곤의 심장을 원하신다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...드래곤의 심장?)"
-        },
-        {
-          "speaker": "백작",
-          "text": "네가 가진 마나 감응 능력이 드디어 쓸모가 생기는거야."
-        },
-        {
-          "speaker": "백작",
-          "text": "이번 임무를 성공하면\n그분께서 우리 가문을 기억해주실 것이다."
-        },
-        {
-          "speaker": "",
-          "text": "백작의 말투에는 경외가 서려 있었다.\n'그분'이 누구인지 묻는 것조차 허락되지 않는 분위기."
-        },
-        {
-          "speaker": "me",
-          "text": "...알겠습니다, 아버지."
-        },
-        {
-          "speaker": "",
-          "text": "입에서 자연스럽게 '아버지'가 나왔다.\n이 몸의 기억인지, 본능인지.",
-          "hideCharactersAfter": true
-        },
-        {
-          "speaker": "백작",
-          "text": "내일 출발한다. 물자는 이미 준비해두었다.\n...실패는 없다. 알겠지?"
-        },
-        {
-          "speaker": "me",
-          "text": "...네."
-        },
-        {
-          "speaker": "me",
-          "text": "(드래곤의 심장... 마나 감응...이 몸의 주인은 대체 누구야.)"
-        },
-        {
-          "speaker": "",
-          "text": "머릿속이 뒤엉켰다.\n하지만 먼저 확인해야 할 것이 있었다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "outside_mirror"
-            }
-          ]
-        }
-      ]
-    },
-    "outside_mirror": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "집무실을 나와 열린 창가를 바라보았다.\n큰 마을이 보였다."
-        },
-        {
-          "speaker": "",
-          "text": "공기가 달랐다.\n북부의 차갑고 건조한 바람이 아니라,\n습하고 따뜻한 바람."
-        },
-        {
-          "speaker": "me",
-          "text": "(이건 꿈이 아니야.\n너무 생생해. 바람의 냄새까지 느껴져.)"
-        },
-        {
-          "speaker": "",
-          "text": "저택으로 돌아와\n복도 끝 거울 앞에 섰다.",
-          "background": "mirror_room"
-        },
-        {
-          "speaker": "",
-          "text": "거울에 비친 얼굴을 보았다.",
-          "choices": [
-            {
-              "text": "계속하기",
-              "goto": "possessed_revelation"
-            }
-          ]
-        }
-      ]
-    },
-    "possessed_revelation": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "거울 속에 비친 것은\n대공비의 얼굴이 아니었다."
-        },
-        {
-          "speaker": "",
-          "text": "금색 머리카락. 큰 눈. 작고 오밀조밀한 코와 도톰한 입술. \n어디서 본 적 있는 얼굴."
-        },
-        {
-          "speaker": "me",
-          "text": "...아델린?"
-        },
-        {
-          "speaker": "",
-          "text": "아니. 정확히는 아델린이 아니었다.\n비슷하지만 더 앳된, 그 얼굴이 나를 정면으로 응시하고 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "...에밀리아가 아델린이었어?\n아니, 아델린이 에밀리아였던 거야?"
-        },
-        {
-          "speaker": "",
-          "text": "손이 떨렸다.\n거울 속 얼굴의 입술이 파르르 떨리고 있었다."
-        },
-        {
-          "speaker": "",
-          "text": "지나가던 하녀를 붙잡았다."
-        },
-        {
-          "speaker": "me",
-          "text": "지금이 몇 년도지?"
-        },
-        {
-          "speaker": "하녀",
-          "text": "네? 제국력 990년이요, 아가씨.\n갑자기 왜 그러세요?"
-        },
-        {
-          "speaker": "me",
-          "text": "...990년."
-        },
-        {
-          "speaker": "",
-          "text": "제국력 990년.\n대공비가 처형당한 것은 993년.\n3년 전이다."
-        },
-        {
-          "speaker": "",
-          "text": "아델린이 공작가에 오기도 전.\n모든 비극이 시작되기 전의 시간.",
-          "choices": [
-            {
-              "text": "이건 저주야! 빠져나가야 해!",
-              "goto": "revelation_rage",
-              "affectionChange": 0,
-              "flagToSet": "ch5_rage_reaction"
+              "text": "...이게 텔레포트?",
+              "goto": "teleport_wonder",
+              "affectionChange": 2,
+              "flagToSet": "ch5_wonder_teleport"
             },
             {
-              "text": "...아델린. 당신이 나를 이렇게 만든 거야?",
-              "goto": "revelation_despair",
+              "text": "...멀미가 나요.",
+              "goto": "teleport_dizzy",
               "affectionChange": 0,
-              "flagToSet": "ch5_despair_reaction"
+              "flagToSet": "ch5_dizzy_teleport"
             }
           ]
         }
       ]
     },
-    "revelation_rage": {
+    "teleport_wonder": {
       "lines": [
         {
           "speaker": "me",
-          "text": "이건 저주야...!"
+          "text": "...이게 텔레포트?"
         },
         {
           "speaker": "",
-          "text": "거울을 바닥으로 내리쳤다.\n깨진 유리가 아델린의 얼굴에서 산산이 흩어졌다."
+          "text": "주변을 둘러보며 감탄이 새어 나왔다.\n전생에서는 상상도 못 했던 경험이었다."
         },
         {
           "speaker": "me",
-          "text": "빠져나가야 해.\n이 몸에서, 이 시간에서."
+          "text": "순간이동이라니... 정말 마법이구나."
         },
         {
           "speaker": "",
-          "text": "하지만 손등에서 피가 흘렀다.\n아팠다. 너무나 생생하게 아팠다."
+          "text": "카이델이 잠깐 나를 바라보았다.\n입꼬리가 미세하게 올라갔다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "드래곤의 영역은 인간이 닿을 수 없지요.\n…그곳을, 걸어가시려 했습니까?",
+          "emotion": "smile"
         },
         {
           "speaker": "me",
-          "text": "...아파."
+          "text": "마법이란, 정말 놀라운 거네요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "카이델",
+          "text": "당신 같은 반응이라면 마법을 경험시켜 드리는 것도,\n나쁘지 않군요.",
+          "emotion": "smile"
         },
         {
           "speaker": "",
-          "text": "이건 꿈이 아니었다.\n저주든 기적이든,\n이 몸은 지금 살아 있었다."
-        },
-        {
-          "speaker": "me",
-          "text": "...나가야 해. 여기서 나가야 해."
-        },
-        {
-          "speaker": "",
-          "text": "피가 묻은 손을 움켜쥐고\n저택을 뛰쳐나갔다.",
+          "text": "그 말을 내뱉을 때 그의 푸른 눈동자가 한 박자 오래 내 얼굴에 머물렀다.\n왠지 모르게 귓불이 달아오르는 것을, 나는 뒤늦게 알아차렸다.",
           "choices": [
             {
               "text": "계속하기",
-              "goto": "to_the_lake"
+              "goto": "nest_arrival"
             }
           ]
         }
       ]
     },
-    "revelation_despair": {
+    "teleport_dizzy": {
       "lines": [
         {
           "speaker": "me",
-          "text": "...아델린."
+          "text": "으... 멀미가 나요."
         },
         {
           "speaker": "",
-          "text": "거울 속 아델린의 얼굴을\n가만히 들여다보았다."
+          "text": "속이 뒤집히는 감각에 비틀거렸다."
         },
         {
-          "speaker": "me",
-          "text": "당신이 나를 이렇게 만든 거야?\n죽여놓고도 모자라서, 이런 장난까지?"
-        },
-        {
-          "speaker": "",
-          "text": "대답은 없었다.\n거울 속 얼굴은 그저 나와 같은 표정을\n하고 있을 뿐이었다."
-        },
-        {
-          "speaker": "me",
-          "text": "...아니. 이 몸은 당신의 과거잖아.\n그러면 이건 우연이 아니야."
+          "speaker": "카이델",
+          "text": "처음이면 그럴 수 있지요.\n…잠시 서 계시지요.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "차갑게 생각을 정리했다.\n감정을 삼키는 건 대공비로서 오래 연습한 기술이었다."
-        },
+          "text": "카이델이 손바닥으로 내 허리 뒤를 받쳤다."
+        },        
         {
           "speaker": "me",
-          "text": "에밀리아라는 이름.\n백작의 지시.\n마나 감응 능력."
-        },
-        {
-          "speaker": "me",
-          "text": "...당신은 처음부터 준비되어 온 사람이구나."
+          "text": "…괜찮아요. 이제 됐어요."
         },
         {
           "speaker": "",
-          "text": "조용히 거울에서 눈을 떼고\n저택을 나섰다.",
+          "text": "그가 뒤늦게 제 손이 머물러 있는 시간을 자각한 듯,\n한 박자 늦게 손을 거두었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "걸으실 수 있겠습니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "네.",
           "choices": [
             {
               "text": "계속하기",
-              "goto": "to_the_lake"
+              "goto": "nest_arrival"
             }
           ]
         }
       ]
     },
-    "to_the_lake": {
+    "nest_arrival": {
       "lines": [
         {
           "speaker": "",
-          "text": "— 호숫가 —",
-          "background": "lakeside"
+          "text": "골짜기를 따라 한참을 걸었다.\n바위 사이로 거대한 공터가 나타났다."
         },
         {
           "speaker": "",
-          "text": "어디로 가는지도 모른 채 걸었다.\n발이 멈춘 곳은 호수였다."
+          "text": "엄청나게 넓은 공간.\n거대한 발톱 자국이 바위에 새겨져 있었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "여기입니다. — 드래곤의 요새.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "고요한 수면에 아델린의 얼굴이 비쳤다.\n보고 싶지 않은 얼굴."
+          "text": "하지만 요새라기에는 너무 황량했다."
         },
         {
           "speaker": "me",
-          "text": "...죽었는데도 끝이 아니라니."
+          "text": "...아무것도 없는데요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "인간의 눈에 보이지 않을 뿐이지요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "카이델",
+          "text": "목걸이를 꺼내 보시지요.\n마나에, 반응할지도 모릅니다.",
+          "emotion": "curious"
         },
         {
           "speaker": "",
-          "text": "호수 가장자리에 섰다.\n물은 깊어 보였다."
+          "text": "목걸이를 꺼내 손에 쥐었다.\n보석이 희미하게 떨리기 시작했다."
         },
         {
           "speaker": "me",
-          "text": "한 걸음만 더 내디디면\n이번에는 정말로 끝낼 수 있을까."
+          "text": "...떨려요. 목걸이가 떨리고 있어요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "역시 — 반응하고 있군요.\n조금만 더—",
+          "emotion": "surprised"
         },
         {
           "speaker": "",
-          "text": "발끝이 물에 닿았다.\n차가웠다.",
+          "text": "그때, 바위 뒤에서 무언가가 튀어나왔다.",
           "choices": [
             {
               "text": "계속하기",
-              "goto": "necklace_light"
+              "goto": "monster_attack"
             }
           ]
         }
       ]
     },
-    "necklace_light": {
+    "monster_attack": {
       "lines": [
         {
           "speaker": "",
-          "text": "그 순간, 가슴 위 목걸이가 빛났다."
+          "text": "— 크아아아악!!"
         },
         {
           "speaker": "",
-          "text": "차가운 푸른빛이 수면 위로 번졌다.\n호수 전체가 잠깐 파랗게 물들었다."
-        },
-        {
-          "speaker": "me",
-          "text": "...뭐야, 이건."
+          "text": "검은 비늘로 뒤덮인 괴물이\n바위 틈에서 솟아올랐다."
         },
         {
           "speaker": "",
-          "text": "목걸이의 보석이 진동했다.\n안에 담긴 것이 울리는 것 같았다."
+          "text": "드래곤보다 훨씬 작았지만,\n날카로운 이빨과 발톱이 번뜩였다."
         },
         {
-          "speaker": "me",
-          "text": "푸른 빛...?"
-        },
-        {
-          "speaker": "",
-          "text": "대공비는 마나를 느낀 적이 없었다.\n하지만 이 몸은 달랐다.\n보석 안의 에너지가 손바닥까지 전해져 왔다."
+          "speaker": "카이델",
+          "text": "…와이번이로군요. 드래곤의 요새를 차지한 모양입니다.",
+          "emotion": "surprised"
         },
         {
           "speaker": "",
-          "text": "뒤에서 발소리가 들렸다.\n빠르고, 급한 발소리.",
+          "text": "와이번이 날카로운 울음소리를 내며 돌진해왔다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "뒤로 물러서십시오!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 손을 들어 마법 장벽을 펼쳤다.\n와이번의 돌진을 간신히 막아냈다.",
           "choices": [
             {
-              "text": "계속하기",
-              "goto": "mage_appears"
+              "text": "카이델 뒤로 숨는다",
+              "goto": "fight_behind_kaidel",
+              "affectionChange": 3,
+              "flagToSet": "ch5_hide_behind_kaidel"
+            },
+            {
+              "text": "직접 맞선다",
+              "goto": "fight_alone",
+              "affectionChange": 0,
+              "flagToSet": "ch5_fight_alone"
             }
           ]
         }
       ]
     },
-    "mage_appears": {
+    "fight_behind_kaidel": {
       "lines": [
         {
           "speaker": "",
-          "text": "돌아보자 한 남자가 서 있었다.",
-          "characters": [
-            {"id": "kaidel", "position": "Center", "emotion": "surprised"}
-          ]
-        },
-        {
-          "speaker": "",
-          "text": "후드를 깊이 눌러쓴 젊은 남자. 어디선가 만난 얼굴이다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "거기 서. 움직이지 마."
-        },
-        {
-          "speaker": "",
-          "text": "남자가 다가오더니\n내 팔목을 잡았다."
+          "text": "본능적으로 카이델의 뒤로 숨었다."
         },
         {
           "speaker": "me",
           "text": "...!"
         },
         {
-          "speaker": "마법사",
-          "text": "그 목걸이. 어디서 났어?",
-          "emotion": "curious"
+          "speaker": "",
+          "text": "카이델의 등이 넓었다.\n마법사의 체격이라고는 믿기 어려운 안정감."
         },
         {
           "speaker": "",
-          "text": "남자의 눈이 목걸이를 뚫어지게 바라보고 있었다.\n탐욕이 아니었다. 경악에 가까운 눈빛."
+          "text": "그리고 내 허리를 감아 당겨, 자신의 등 뒤로 완전히 밀어 넣었다.\n로브 자락 안에서, 그의 체온이 허리선을 따라 고스란히 번져왔다."
         },
         {
-          "speaker": "마법사",
-          "text": "그 안에 든 마나...\n이건 내가 만든 목걸이야.\n네가 어떻게 이걸 가지고 있는 거냐고"
+          "speaker": "카이델",
+          "text": "…괜찮습니다. 이 정도는, 상대할 수 있지요.",
+          "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "팔목을 잡은 손에 힘이 들어갔다.\n빠져나갈 수 없었다.",
+          "text": "카이델이 마법진을 전개했다.\n불꽃이 손끝에서 피어올라 와이번을 향해 쏟아졌다."
+        },
+        {
+          "speaker": "",
+          "text": "와이번이 비명을 지르며 뒤로 물러났다.\n하지만 곧 다시 돌진해왔다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "질기군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "카이델이 주문을 외자 바위가 솟아올라\n와이번의 앞길을 막았다."
+        },
+        {
+          "speaker": "",
+          "text": "그 틈에 와이번의 날개 하나가\n내 쪽으로 스쳐 지나갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "—!",
           "choices": [
             {
-              "text": "...당신이 줬잖아요.",
-              "goto": "tell_truth",
-              "affectionChange": 3,
-              "flagToSet": "ch5_honest_mage"
-            },
-            {
-              "text": "이 목걸이는 내 거예요. 손 놔요.",
-              "goto": "tell_truth_premium",
-              "affectionChange": 5,
-              "flagToSet": "ch5_defiant_mage"
+              "text": "계속하기",
+              "goto": "mana_explosion"
             }
           ]
         }
       ]
     },
-    "tell_truth": {
+    "fight_alone": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "도망칠 수 없었다.\n이 몸에 전투 경험 따위 없었지만,\n대공비로서 겁먹는 것은 허락할 수 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...물러서지 않아."
+        },
+        {
+          "speaker": "카이델",
+          "text": "뭐 하시는 겁니까! 위험합니다!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "와이번이 이쪽을 향해 돌진했다.\n카이델이 급히 마법 장벽을 펼쳤지만\n와이번의 꼬리가 옆을 스치며 날아왔다."
+        },
+        {
+          "speaker": "",
+          "text": "피할 수 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "—!",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "mana_explosion"
+            }
+          ]
+        }
+      ]
+    },
+    "mana_explosion": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "위험을 느낀 순간,\n가슴 깊은 곳에서 무언가가 폭발했다."
+        },
+        {
+          "speaker": "me",
+          "text": "위험해—!!"
+        },
+        {
+          "speaker": "",
+          "text": "목걸이가 눈부시게 빛났다.\n그리고 목걸이 안의 마나가 터져나왔다."
+        },
+        {
+          "speaker": "",
+          "text": "제어할 수 없는 힘.\n마나가 폭풍처럼 사방으로 흩어졌다."
+        },
+        {
+          "speaker": "",
+          "text": "와이번이 마나의 충격에 날아갔다.\n하지만 나도 멈출 수 없었다."
+        },
+        {
+          "speaker": "",
+          "text": "발밑의 바위가 갈라졌고, 아래에 거대한 호수가 숨겨져 있었다.\n벗어날 수 없었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "안 돼—!!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "정중한 말씨가 완전히 부서진 외침.\n그가 필사적으로 손을 뻗어왔지만, 내 몸은 이미 아래로 빨려들어가고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 손끝이 내 옷자락을 스쳤다가 — 놓쳤다.\n나는 물속으로 떨어졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "underwater_panic"
+            }
+          ]
+        }
+      ]
+    },
+    "underwater_panic": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "물속이었다.",
+          "background": "underwater"
+        },
+        {
+          "speaker": "",
+          "text": "차가운 물이 온몸을 감쌌다.\n위도 아래도 구분할 수 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(숨이... 숨을 쉴 수 없—)"
+        },
+        {
+          "speaker": "",
+          "text": "패닉이 밀려왔다.\n손발을 버둥거렸지만 몸이 가라앉았다."
+        },
+        {
+          "speaker": "",
+          "text": "그때, 목걸이가 다시 빛났다.\n물속에서 푸른 빛이 퍼져나갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "...숨을 쉴 수 있어...?"
+        },
+        {
+          "speaker": "",
+          "text": "물이 아니었다.\n물처럼 보이지만, 그것과는 다른.\n거대하고 웅장한 힘..."
+        },
+        {
+          "speaker": "",
+          "text": "빛을 따라 더 깊이 가라앉았다.\n저 아래에서 무언가가 기다리고 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dragon_world"
+            }
+          ]
+        }
+      ]
+    },
+    "dragon_world": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "빛이 사라졌다.\n그리고 눈 앞에 세계가 펼쳐졌다.",
+          "background": "dragon_consciousness"
+        },
+        {
+          "speaker": "",
+          "text": "끝없이 넓은 초원.\n하늘은 보라빛으로 물들어 있었다.\n현실의 어떤 풍경과도 달랐다."
+        },
+        {
+          "speaker": "me",
+          "text": "…여기는 어디지."
+        },
+        {
+          "speaker": "",
+          "text": "초원 한가운데,\n거대한 존재가 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "비늘이 은빛으로 빛나는 거대한 용.\n한쪽 눈을 감고 있었지만, 나머지 한 눈이 나를 바라보고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "그 시선이 닿는 순간, 발아래 대지가 숨을 쉬듯 휘어졌다.\n이 존재가 내뱉는 숨결 하나에, 나라는 것이 통째로 녹아 없어질 수 있다는\n본능적인 확신이 척추를 타고 흘렀다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "…오래 걸렸구나."
+        },
+        {
+          "speaker": "me",
+          "text": "…!!"
+        },
+        {
+          "speaker": "",
+          "text": "용이 말하고 있었다.\n입이 아니라, 의식 속에서 직접 울리는 목소리."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "시간을 넘어온 자여.\n네가 여기까지 오리라 기다리고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "나를… 기다렸다고요?"
+        },
+        {
+          "speaker": "드래곤",
+          "text": "그렇다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dragon_explains"
+            }
+          ]
+        }
+      ]
+    },
+    "dragon_explains": {
+      "lines": [
+        {
+          "speaker": "드래곤",
+          "text": "이 세계에 어둠이 드리운 것은 수백 년 전.\n흑마법사들이 금단의 의식을 행했다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "그들은 세계의 마나를 오염시켜\n어둠을 각성 시키려 했지."
+        },
+        {
+          "speaker": "me",
+          "text": "어둠의 각성...?"
+        },
+        {
+          "speaker": "드래곤",
+          "text": "세계의 모든 마나가 어둠에 물들면\n이 대륙은 멸망한다.\n인간도, 마물도, 나조차 예외가 아니야."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "당시의 마법사가 그것을 막기 위해\n금단의 마법을 사용했다."
+        },
+        {
+          "speaker": "me",
+          "text": "금단의 마법...?"
+        },
+        {
+          "speaker": "드래곤",
+          "text": "시간역전.\n시간의 흐름 자체를 되감는 마법이다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "그 마법으로 어둠의 각성은 일시적으로 봉인되었다.\n하지만... 봉인은 약해지고 있어."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "그리고 네가 시간을 넘어 이 몸에 깨어난 것도\n그 마법의 때문이지.",
+          "choices": [
+            {
+              "text": "내가 어떻게 해야 하죠?",
+              "goto": "ask_guidance",
+              "affectionChange": 0,
+              "flagToSet": "ch5_asks_guidance"
+            },
+            {
+              "text": "그게 나와 무슨 상관인데요?",
+              "goto": "challenge_dragon",
+              "affectionChange": 0,
+              "flagToSet": "ch5_challenges_dragon"
+            }
+          ]
+        }
+      ]
+    },
+    "ask_guidance": {
       "lines": [
         {
           "speaker": "me",
-          "text": "...당신이 줬잖아요."
+          "text": "내가 어떻게 해야 하죠?"
         },
         {
-          "speaker": "마법사",
-          "text": "뭐?",
+          "speaker": "me",
+          "text": "시간을 넘어온 것도, 이 몸에 깨어난 것도\n내가 원한 게 아니에요."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "알고 있다.\n하지만 원하지 않았다고 해서\n책임이 사라지는 것은 아니지."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "너는 이미 이 시간축에 개입한 존재야.\n네 선택이 세계의 흐름을 바꿀 수 있다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dragon_will"
+            }
+          ]
+        }
+      ]
+    },
+    "challenge_dragon": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "그것이 저와, 무슨 상관이 있는지요."
+        },
+        {
+          "speaker": "me",
+          "text": "나는 이미 한 번 죽은 사람이에요.\n세계의 멸망이든 뭐든, 나와는 관계없어요."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "…정말 그렇게 생각하느냐."
+        },
+        {
+          "speaker": "",
+          "text": "드래곤의 은빛 눈동자 속에서, 동공이 세로로 천천히 좁혀졌다.\n도망칠 수 있다는 착각조차 허락하지 않는, 포식자의 눈이었다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "네 안에는, 지키고 싶은 것이 남아 있다.\n그래서 아직 이곳에 서 있는 것이지."
+        },
+        {
+          "speaker": "",
+          "text": "— 내 심장 가장 깊은 곳에 있던 것조차 발라내듯 읽어내는 목소리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dragon_will"
+            }
+          ]
+        }
+      ]
+    },
+    "dragon_will": {
+      "lines": [
+        {
+          "speaker": "드래곤",
+          "text": "지금 이 순간에도\n흑마법사들은 봉인을 풀기 위해 움직이고 있다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "봉인이 풀리면,\n어둠의 각성이 완성된다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "이 대륙 위의 모든 생명이 어둠에 삼켜진다.\n너도, 네가 아는 사람들도 모두."
+        },
+        {
+          "speaker": "me",
+          "text": "......"
+        },
+        {
+          "speaker": "",
+          "text": "드래곤의 말이 의식 속에 울렸다.\n거짓이 아니라는 것을 직감했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "north_memory"
+            }
+          ]
+        }
+      ]
+    },
+    "north_memory": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "문득, 머릿속에 얼굴들이 떠올랐다."
+        },
+        {
+          "speaker": "",
+          "text": "북부 대공 저택의 식솔들.\n말없이 곁을 지켜주던 사람들."
+        },
+        {
+          "speaker": "",
+          "text": "대공비로서의 삶은 차갑고 외로웠지만,\n그래도 그곳에는 사람들이 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "하녀장 마르타의 잔소리.정원사 노인의 미소.\n어린 시종의 서툰 인사."
+        },
+        {
+          "speaker": "me",
+          "text": "...그 사람들이 사라진다고요?"
+        },
+        {
+          "speaker": "드래곤",
+          "text": "모두."
+        },
+        {
+          "speaker": "",
+          "text": "심장이 쥐어짜이듯 아팠다."
+        },
+        {
+          "speaker": "me",
+          "text": "...나는.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "resolve_fight"
+            }
+          ]
+        }
+      ]
+    },
+    "resolve_fight": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "나는 한 번 죽었어요."
+        },
+        {
+          "speaker": "me",
+          "text": "아무것도 지키지 못하고,\n아무런 의미도 없이 죽었어요."
+        },
+        {
+          "speaker": "",
+          "text": "목소리가 떨렸다.\n하지만 눈은 떨리지 않았다."
+        },
+        {
+          "speaker": "me",
+          "text": "그런데 다시 살아났어요.\n이유도 모른 채."
+        },
+        {
+          "speaker": "me",
+          "text": "...이유가 있다면."
+        },
+        {
+          "speaker": "me",
+          "text": "이번에는 지키겠어요.\n흑마법사든 뭐든, 내가 막을 수 있는 거라면."
+        },
+        {
+          "speaker": "",
+          "text": "드래곤이 나를 내려다보았다.\n거대한 눈동자 속에 무언가가 흔들렸다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "...재밌는 인간이로군.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "dragon_joins"
+            }
+          ]
+        }
+      ]
+    },
+    "dragon_joins": {
+      "lines": [
+        {
+          "speaker": "드래곤",
+          "text": "좋다. 네 의지를 보았다."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "나는 오랜 세월 이 의식 속에 갇혀 있었다.\n인간을 보는 것도, 대화하는 것도 오랜만이군."
+        },
+        {
+          "speaker": "드래곤",
+          "text": "너에게 내 힘의 일부를 빌려주마.\n대신, 한 가지 부탁이 있다."
+        },
+        {
+          "speaker": "me",
+          "text": "...부탁이요?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "나를 너늬 세계로 데려가 다오."
+        },
+        {
+          "speaker": "",
+          "text": "드래곤의 목소리가 달라졌다.\n거대한 울림이 아닌, 또렷하고 맑은 목소리."
+        },
+        {
+          "speaker": "에르하",
+          "text": "이 의식 세계에만 갇혀 있으면\n아무것도 할 수 없으니까."
+        },
+        {
+          "speaker": "me",
+          "text": "당신의 이름은...?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "에르하."
+        },
+        {
+          "speaker": "에르하",
+          "text": "오래전에 잊혀진 이름이다.\n— 그 이름을 입에 올리는 인간이 남아 있을 줄은, 몰랐군."
+        },
+        {
+          "speaker": "",
+          "text": "에르하라고 이름을 밝힌 드래곤이\n은빛 빛을 내뿜었다."
+        },
+        {
+          "speaker": "",
+          "text": "은빛 빛이 살갗을 핥듯 온몸을 휘감았다.\n의식이 아득해지는 와중 — 그 빛 너머 용의 시선이 나를 떠나지 않았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "return_surface"
+            }
+          ]
+        }
+      ]
+    },
+    "return_surface": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "— 드래곤의 둥지, 호수 —",
+          "background": "dragon_nest"
+        },
+        {
+          "speaker": "",
+          "text": "수면을 뚫고 솟아올랐다.\n차가운 공기가 폐를 채우는 그 순간 —"
+        },
+        {
+          "speaker": "",
+          "text": "허리까지 호수에 들어와 기다리고 있던 카이델이, 두 팔로 내 어깨를 감아 끌어안았다.\n젖은 옷 너머로 그의 체온이 한 꺼번에 번져왔다.",
+          "characters": [
+            {
+              "id": "kaidel",
+              "position": "Center",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        {
+          "speaker": "카이델",
+          "text": "괜찮아?! 얼마나 오래 빠져 있었는지—",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "정중한 경어가 아니었다.\n— 그가 숨을 쉬고 있는지 확인하려 내 턱을 엄지로 받쳐 올리며 눈동자를 들여다보았다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…숨을 쉬고 계시는군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "겨우 내뱉은 한 마디. 그 순간에도 내 어깨에 얹힌 그의 손은, 쉽사리 떨어지지 않았다.",
+          "choices": [
+            {
+              "text": "\"…괜찮습니다. 일어날 수 있어요.\"",
+              "goto": "surface_composed",
+              "affectionChange": 3,
+              "flagToSet": "ch5_composed_return"
+            },
+            {
+              "text": "\"…잠시만요. 숨이 아직.\"",
+              "goto": "surface_lean",
+              "affectionChange": 2,
+              "flagToSet": "ch5_leaned_on_kaidel"
+            }
+          ]
+        }
+      ]
+    },
+    "surface_composed": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "…괜찮습니다. 일어날 수 있어요."
+        },
+        {
+          "speaker": "",
+          "text": "나는 그의 손을 부드럽게 벗어나 물가에 섰다.\n그가 떼어진 손을 어색하게 거두어들이는 것을, 시선 끝으로 알아차렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "surface_tell_kaidel"
+            }
+          ]
+        }
+      ]
+    },
+    "surface_lean": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "…잠시만요. 숨이 아직."
+        },
+        {
+          "speaker": "",
+          "text": "한 박자 그의 어깨에 체중을 맡겼다.\n젖은 옷이 살갗에 그대로 달라붙었다. 그의 숨결이 내 이마 위에서 짧게 끊어졌다."
+        },
+        {
+          "speaker": "",
+          "text": "카이델의 손이 천천히 올라와,\n내 뒷목을 받쳐 머리를 자신의 어깨로 기울여주었다."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…움직이지, 마시지요. 지금은.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "경어가 한 톤 낮아져 있었다. 호흡과 체온이 섞이는 거리에서만 들을 수 있는 목소리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "surface_tell_kaidel"
+            }
+          ]
+        }
+      ]
+    },
+    "surface_tell_kaidel": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "드래곤을 만났어요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…뭐라고요?",
           "emotion": "surprised"
         },
         {
           "speaker": "me",
-          "text": "이 목걸이.\n당신이... 나에게 준 거예요."
-        },
-        {
-          "speaker": "마법사",
-          "text": "...나는 너를 본 적도 없어.처음 보는 얼굴이야."
-        },
-        {
-          "speaker": "me",
-          "text": "...지금은 그렇겠죠."
+          "text": "호수 아래에 드래곤의 의식이 잠들어 있었고, 나에게 말했어요."
         },
         {
           "speaker": "",
-          "text": "마법사가 미간을 좁혔다.\n미친 사람을 보는 눈이 아니라, 무언가를 분석하는듯한 눈."
+          "text": "카이델에게 드래곤이 들려준 이야기를 전했다.\n흑마법사들의 계략. 어둠의 각성. 시간역전 마법. 그리고—"
         },
         {
-          "speaker": "마법사",
-          "text": "...설명해. 자세히.",
-          "emotion": "curious",
+          "speaker": "카이델",
+          "text": "…시간역전 마법이, 실재했다는 겁니까?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "네. 그리고 드래곤이, 함께 가겠다고 했어요."
+        },
+        {
+          "speaker": "카이델",
+          "text": "드래곤이 동행을…?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "그때, 호수에서 은빛 빛이 솟아올랐다.",
           "choices": [
             {
               "text": "계속하기",
-              "goto": "explain_mana"
+              "goto": "dragon_human_form"
             }
           ]
         }
       ]
     },
-    "tell_truth_premium": {
+    "dragon_human_form": {
       "lines": [
         {
-          "speaker": "me",
-          "text": "이 목걸이는 내 거예요.\n손 놔요."
+          "speaker": "",
+          "text": "은빛 빛이 호수 위에서 응축되더니, 사람의 형상을 이루기 시작했다."
         },
         {
           "speaker": "",
-          "text": "팔을 뿌리치며 한 걸음 물러섰다.\n마법사가 눈을 크게 떴다.",
-          "characters": [
-            {"id": "kaidel", "position": "Center", "emotion": "surprised"}
-          ]
+          "text": "불꽃처럼 타오르는 붉은 머리칼이 허리께까지 흘러내리고, 그 사이로 박힌 은빛 눈동자가 드러났다.\n드러난 쇄골과 맨살 위로, 희미하게 용의 비늘이 스며 반짝이고 있었다."
         },
         {
-          "speaker": "마법사",
-          "text": "...뭐?"
-        },
-        {
-          "speaker": "me",
-          "text": "당신이 만든 목걸이라고?\n맞아요. 당신이 직접 마나를 넣어줬어요."
-        },
-        {
-          "speaker": "me",
-          "text": "그러니까 이건 내 거예요.\n당신이 나한테 준 거니까."
+          "speaker": "에르하",
+          "text": "…좁군. 인간의 몸이란."
         },
         {
           "speaker": "",
-          "text": "마법사가 한 발 물러섰다.\n처음 보는 얼굴에 경계심이 섞여 있었지만,\n동시에 호기심이 번졌다."
+          "text": "그가 고개를 돌려 나를 바라보았다.\n은빛 홍채 안쪽에서 세로로 길어진 동공이, 내 머리끝부터 발끝까지 한 번에 훑고 지나갔다."
         },
         {
-          "speaker": "마법사",
-          "text": "...대단한 허세야.\n아니면 진짜 미친 거거나.",
+          "speaker": "me",
+          "text": "(…잡아 먹힐 것 같아.)"
+        },
+        {
+          "speaker": "카이델",
+          "text": "이게 무슨—",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "에르하",
+          "text": "…너인가. 내 흔적을 더듬으며 다닌 자가."
+        },
+        {
+          "speaker": "카이델",
+          "text": "위대하신 드래곤이 어째서 인간의 모습으로...!",
           "emotion": "curious"
         },
         {
-          "speaker": "마법사",
-          "text": "좋아. 들어볼게.\n대체 무슨 소리를 하는 건지."
+          "speaker": "에르하",
+          "text": "형태만이다. 이 그릇에 내 진정한 힘이 담길 수는 없지."
+        },
+        {
+          "speaker": "에르하",
+          "text": "왜냐하면—"
         },
         {
           "speaker": "",
-          "text": "마법사의 입꼬리가 미세하게 올라갔다.\n흥미를 느낀 것이다.",
+          "text": "에르하가 자신의 가슴에 손을 얹었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "내 심장이, 없기 때문이다.",
+          "hideCharactersAfter": true,
           "choices": [
             {
               "text": "계속하기",
-              "goto": "explain_mana"
+              "goto": "heart_revelation"
             }
           ]
         }
       ]
     },
-    "explain_mana": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "마법사가 팔짱을 끼고 기다렸다.\n설명을 요구하는 눈빛."
-        },
-        {
-          "speaker": "마법사",
-          "text": "내 마나가 이 목걸이에 담겨 있다는 건 인정해.\n이건 내 기술이 맞아.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "마법사",
-          "text": "하지만 나는 이 목걸이를 만든 적이 없어.\n아직."
-        },
-        {
-          "speaker": "",
-          "text": "'아직'이라는 단어에 힘이 실렸다.\n학자는 가능성을 배제하지 않는 법이다.",
-          "choices": [
-            {
-              "text": "당신이 직접 넣어줬어요. 황궁 회랑에서.",
-              "goto": "explain_mana_after",
-              "affectionChange": 3,
-              "flagToSet": "ch5_specific_detail"
-            },
-            {
-              "text": "...미래에서 왔다고 하면 믿겠어요?",
-              "goto": "explain_mana_after",
-              "affectionChange": 2,
-              "flagToSet": "ch5_meta_honest"
-            }
-          ]
-        }
-      ]
-    },
-    "explain_mana_after": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "마법사가 잠시 침묵했다.\n그리고 내 손을 잡았다."
-        },
-        {
-          "speaker": "me",
-          "text": "...뭐 하는—"
-        },
-        {
-          "speaker": "마법사",
-          "text": "조용히 해. 마나를 읽는 중이야."
-        },
-        {
-          "speaker": "",
-          "text": "마법사의 손에서 미세한 열기가 전해졌다.\n마나가 흐르는 느낌."
-        },
-        {
-          "speaker": "",
-          "text": "몇 초의 침묵 후,\n마법사의 표정이 굳었다.",
-          "characters": [
-            {"id": "kaidel", "position": "Center", "emotion": "surprised"}
-          ]
-        },
-        {
-          "speaker": "마법사",
-          "text": "...이상해."
-        },
-        {
-          "speaker": "me",
-          "text": "뭐가요?"
-        },
-        {
-          "speaker": "마법사",
-          "text": "네 몸의 마나 흐름.\n지금 이 시대의 것이 아니야."
-        },
-        {
-          "speaker": "마법사",
-          "text": "마나에는 시간이 누적되어 있어.\n네 마나는... 지금 가질 수 있는 것이 아니야."
-        },
-        {
-          "speaker": "me",
-          "text": "......"
-        },
-        {
-          "speaker": "마법사",
-          "text": "미래에서 왔다는 말이 사실이라면,\n이 마나가 설명이 돼.",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "",
-          "text": "마법사가 손을 놓고 한 걸음 물러섰다.\n경계심이 아닌, 경이로움이 담긴 눈."
-        },
-        {
-          "speaker": "마법사",
-          "text": "너 대체 누구야?"
-        },
-        {
-          "speaker": "",
-          "text": "대답할 수 있었다.\n하지만 입이 열리지 않았다.",
-          "choices": [
-            {
-              "text": "...놓아줘요. 나는 죽고 싶어요.",
-              "goto": "want_to_die",
-              "affectionChange": 0,
-              "flagToSet": "ch5_admits_death_wish"
-            },
-            {
-              "text": "상관없잖아요. 당신이랑 나는 아무 관계 없는데.",
-              "goto": "reject_mage",
-              "affectionChange": -2,
-              "flagToSet": "ch5_rejects_mage"
-            }
-          ]
-        }
-      ]
-    },
-    "want_to_die": {
+    "heart_revelation": {
       "lines": [
         {
           "speaker": "me",
-          "text": "...놓아줘요."
+          "text": "심장이 없다고요...?"
         },
         {
-          "speaker": "me",
-          "text": "나는 죽고 싶어요.\n이미 한 번 죽었는데,\n왜 하필 이 몸으로 깨어난 건지 모르겠어요."
+          "speaker": "에르하",
+          "text": "수백 년 전, 흑마법사들에게 빼앗겼다.\n내 심장에는 이 세계의 마나가 응축되어 있지."
         },
         {
-          "speaker": "",
-          "text": "마법사가 아무 말도 하지 않았다.\n표정도 변하지 않았다."
-        },
-        {
-          "speaker": "",
-          "text": "동정도, 위로도 없었다. 그저 가만히 듣고 있었다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "...그래서 호수에 들어가려던 거야."
-        },
-        {
-          "speaker": "me",
-          "text": "...네."
-        },
-        {
-          "speaker": "",
-          "text": "긴 침묵이 흘렀다.\n호수 위로 바람이 지나갔다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "한 가지 제안이 있어.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "마법사",
-          "text": "죽고 싶으면 죽어도 돼.\n말리지 않을게."
-        },
-        {
-          "speaker": "마법사",
-          "text": "하지만 그 전에 하나만 해줘.\n드래곤의 둥지까지 나와 같이 가자."
-        },
-        {
-          "speaker": "me",
-          "text": "...드래곤의 둥지?"
-        },
-        {
-          "speaker": "마법사",
-          "text": "네 몸의 마나는 시간을 넘은 마나야.\n그런 마나는 드래곤의 잔재에 반응해.",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "마법사",
-          "text": "내가 몇 년째 찾고 있는 것의\n열쇠가 될 수 있어."
-        },
-        {
-          "speaker": "마법사",
-          "text": "거기까지만 도와줘.\n그 뒤에 뭘 하든 상관 안 할게."
-        },
-        {
-          "speaker": "",
-          "text": "잔혹할 정도로 솔직한 제안이었다.\n하지만 그래서 오히려 거짓이 없어 보였다.",
-          "choices": [
-            {
-              "text": "...드래곤의 둥지. 말해줘요.",
-              "goto": "accept_dragon_nest",
-              "affectionChange": 3,
-              "flagToSet": "ch5_accepts_quest"
-            },
-            {
-              "text": "당신을 어떻게 믿어요? 이유를 말해줘요.",
-              "goto": "question_mage_trust",
-              "affectionChange": 1,
-              "flagToSet": "ch5_questions_trust"
-            }
-          ]
-        }
-      ]
-    },
-    "reject_mage": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "상관없잖아요.\n당신이랑 나는 아무 관계 없는데."
-        },
-        {
-          "speaker": "",
-          "text": "마법사에게 등을 돌렸다.\n다시 호수를 향해 걸었다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "관계는 없지.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "마법사",
-          "text": "하지만 네 목걸이에 담긴 마나는 내 것이라고 했잖아."
-        },
-        {
-          "speaker": "",
-          "text": "발이 멈췄다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "네가 죽으면 그 마나도 사라져.\n그건 내 연구의 손실이야."
-        },
-        {
-          "speaker": "마법사",
-          "text": "이기적인 이유야. 그러니까 믿어도 돼."
-        },
-        {
-          "speaker": "me",
-          "text": "......"
-        },
-        {
-          "speaker": "",
-          "text": "이상하게도, 그 이기적인 솔직함이\n가슴에 걸렸다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "드래곤의 둥지까지 같이 가줘.\n그 뒤에 뭘 하든 상관 안 할게."
-        },
-        {
-          "speaker": "",
-          "text": "호수를 바라보았다.\n아직도 발끝은 물가를 향하고 있었다.",
-          "choices": [
-            {
-              "text": "...드래곤의 둥지. 말해줘요.",
-              "goto": "accept_dragon_nest",
-              "affectionChange": 3,
-              "flagToSet": "ch5_accepts_quest"
-            },
-            {
-              "text": "당신을 어떻게 믿어요? 이유를 말해줘요.",
-              "goto": "question_mage_trust",
-              "affectionChange": 1,
-              "flagToSet": "ch5_questions_trust"
-            }
-          ]
-        }
-      ]
-    },
-    "accept_dragon_nest": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "...드래곤의 둥지."
-        },
-        {
-          "speaker": "me",
-          "text": "말해줘요. 어디 있는 건데."
-        },
-        {
-          "speaker": "마법사",
-          "text": "산맥 너머, 잊혀진 골짜기.\n보통 사람은 근처에도 못 가.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "마법사",
-          "text": "하지만 시간을 넘어온 마나 감응이 있으면 달라.\n드래곤이 남긴 잔재가 길을 알려주거든."
-        },
-        {
-          "speaker": "me",
-          "text": "...그러니까 나를 탐지기로 쓰겠다는 거죠."
-        },
-        {
-          "speaker": "마법사",
-          "text": "정확해.",
-          "emotion": "smile"
-        },
-        {
-          "speaker": "",
-          "text": "한 치의 망설임도 없는 대답이었다.\n이 사람은 거짓말을 할 줄 모르는 건지,\n할 필요를 못 느끼는 건지."
-        },
-        {
-          "speaker": "me",
-          "text": "...좋아요. 가죠."
-        },
-        {
-          "speaker": "",
-          "text": "어차피 갈 곳도 없었다.\n돌아갈 곳도 없었다.",
-          "choices": [
-            {
-              "text": "(그의 이름을 물어본다)",
-              "goto": "chapter_end_warm",
-              "affectionChange": 8,
-              "flagToSet": "ch5_asked_name"
-            },
-            {
-              "text": "그냥 따라간다",
-              "goto": "chapter_end",
-              "affectionChange": 0,
-              "flagToSet": "ch5_silent_follow"
-            }
-          ]
-        }
-      ]
-    },
-    "question_mage_trust": {
-      "lines": [
-        {
-          "speaker": "me",
-          "text": "당신을 어떻게 믿어요?"
-        },
-        {
-          "speaker": "me",
-          "text": "이유를 말해줘요.\n왜 드래곤의 둥지를 찾는 건데."
-        },
-        {
-          "speaker": "마법사",
-          "text": "......"
-        },
-        {
-          "speaker": "",
-          "text": "마법사가 잠시 망설였다.\n처음 보는 표정이었다."
-        },
-        {
-          "speaker": "마법사",
-          "text": "드래곤의 심장에는\n이 세계의 마나가 응축되어 있어.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "마법사",
-          "text": "그걸 이용하면 시간의 흐름을\n되돌릴 수 있는 마법진을 완성할 수 있어."
-        },
-        {
-          "speaker": "me",
-          "text": "시간을 되돌린다고요...?"
-        },
-        {
-          "speaker": "마법사",
-          "text": "아직 이론 단계야. 하지만 네 존재가\n그 이론이 틀리지 않았다는 증거야.",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "마법사",
-          "text": "미래에서 온 마나를 가진 사람이\n내 눈앞에 있잖아."
-        },
-        {
-          "speaker": "",
-          "text": "마법사의 눈이 빛나고 있었다.\n학자의 열정. 순수한 탐구심.\n그 안에 악의는 없어 보였다."
-        },
-        {
-          "speaker": "me",
-          "text": "...좋아요. 가죠."
-        },
-        {
-          "speaker": "",
-          "text": "믿어서가 아니었다.\n그저 이 사람의 눈빛에\n거짓이 없다는 것만은 알 수 있었다.",
-          "choices": [
-            {
-              "text": "(그의 이름을 물어본다)",
-              "goto": "chapter_end_warm",
-              "affectionChange": 8,
-              "flagToSet": "ch5_asked_name",
-              "currencyCost": 5
-            },
-            {
-              "text": "그냥 따라간다",
-              "goto": "chapter_end",
-              "affectionChange": 0,
-              "flagToSet": "ch5_silent_follow"
-            }
-          ]
-        }
-      ]
-    },
-    "chapter_end_warm": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "마법사가 앞서 걸기 시작했다.\n나는 한 발 뒤에서 따라갔다."
-        },
-        {
-          "speaker": "",
-          "text": "호수를 지나, 마을을 지나,\n낯선 길이 이어졌다."
-        },
-        {
-          "speaker": "",
-          "text": "한참을 걷다가, 문득 궁금해졌다."
-        },
-        {
-          "speaker": "me",
-          "text": "...이름."
-        },
-        {
-          "speaker": "마법사",
-          "text": "뭐?"
-        },
-        {
-          "speaker": "me",
-          "text": "당신 이름.\n아직 안 물어봤잖아요."
-        },
-        {
-          "speaker": "",
-          "text": "마법사가 발을 멈추고 돌아보았다.",
-          "characters": [
-            {"id": "kaidel", "position": "Center", "emotion": "smile"}
-          ]
-        },
-        {
-          "speaker": "",
-          "text": "석양빛이 그의 얼굴을 비추었다.\n후드 아래로 보이는 표정은—\n살짝 놀란, 그리고 어색한 미소."
+          "speaker": "에르하",
+          "text": "그들은 내 심장을 이용해\n어둠의 각성을 완성하려 했다."
         },
         {
           "speaker": "카이델",
-          "text": "...카이델."
+          "text": "…당신의 심장이, 어디에 있는지 아십니까?",
+          "emotion": "curious"
         },
         {
-          "speaker": "카이델",
-          "text": "이름을 물어보는 사람은 처음이야."
+          "speaker": "에르하",
+          "text": "안다. — 내 심장은, 주인의 것을 부르는 법이니까."
+        },
+        {
+          "speaker": "에르하",
+          "text": "내 심장은 지금,\n차가운 설원. 북부 대공의 저택에 있다."
         },
         {
           "speaker": "me",
-          "text": "...카이델."
+          "text": "...북부 대공 저택?!"
         },
         {
           "speaker": "",
-          "text": "그 이름을 입에 올리자,\n이상하게 가슴 한쪽이 따뜻해졌다."
-        },
-        {
-          "speaker": "",
-          "text": "3년 뒤의 황궁에서 만났던 그 마법사.\n그때는 몰랐던 이름을,\n지금 이렇게 듣고 있다."
+          "text": "심장이 멎는 듯했다.\n대공 저택. 내가 대공비로서 살았던 그곳."
         },
         {
           "speaker": "카이델",
-          "text": "...가자. 해가 지기 전에 마을을 벗어나야 해.",
-          "emotion": "smile"
+          "text": "북부 대공 저택이면 —\n제국 북방의, 그 대공가입니까.",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "에르하",
+          "text": "대공가의 지하에 봉인되어 있다.\n'성물'이라는 이름으로 말이지."
+        },
+        {
+          "speaker": "me",
+          "text": "...성물."
         },
         {
           "speaker": "",
-          "text": "마법사가 — 카이델이 다시 걸기 시작했다.\n이번에는 반 걸음 느리게."
+          "text": "기억이 떠올랐다.\n대공 저택의 지하에 있던 비밀공간.\n아무도 들어가지 못하게 했던 그 방."
+        },
+        {
+          "speaker": "me",
+          "text": "...아델린이 대공가에 온 이유."
         },
         {
           "speaker": "",
-          "text": "나란히 걸을 수 있도록.",
-          "hideCharactersAfter": true
+          "text": "모든 것이 연결되었다.\n아델린이 대공가에 온 것도, 대공비인 나를 제거한 것도—"
+        },
+        {
+          "speaker": "me",
+          "text": "드래곤의 심장 때문이었어.\n아델린은 처음부터 성물을 노리고 온 거야."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…상황이 복잡해졌군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "심장을 되찾아야 한다.\n그래야 어둠의 각성을 막을 수 있어."
         },
         {
           "speaker": "",
-          "text": "— Chapter 5 End —"
+          "text": "돌아가야 했다.\n죽음을 맞이했던 그곳으로."
+        },
+        {
+          "speaker": "카이델",
+          "text": "…가실 수 있겠습니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...가야죠."
+        },
+        {
+          "speaker": "me",
+          "text": "이번에는 도망치지 않을 거예요."
+        },
+        {
+          "speaker": "",
+          "text": "바람이 불었다.\n세 사람의 앞에 길이 놓여 있었다.\n북쪽으로 향하는, 먼 길.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
         }
       ]
     },
     "chapter_end": {
       "lines": [
-        {
-          "speaker": "",
-          "text": "마법사가 앞서 걸기 시작했다.\n나는 한 발 뒤에서 따라갔다."
-        },
-        {
-          "speaker": "",
-          "text": "이름도 모르는 사람의 뒤를 따라\n낯선 길을 걷고 있었다."
-        },
-        {
-          "speaker": "",
-          "text": "호수를 지나, 마을을 지나.\n석양이 길게 그림자를 드리웠다."
-        },
-        {
-          "speaker": "me",
-          "text": "......"
-        },
-        {
-          "speaker": "",
-          "text": "아무것도 묻지 않았다.\n묻고 싶은 것은 많았지만,\n입을 여는 것이 두려웠다."
-        },
-        {
-          "speaker": "",
-          "text": "이 사람을 알아가는 순간,\n다시 잃을 수 있으니까."
-        },
-        {
-          "speaker": "마법사",
-          "text": "...걷는 건 괜찮아?",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "...네."
-        },
-        {
-          "speaker": "",
-          "text": "그것이 전부였다.\n짧은 대화. 긴 침묵."
-        },
-        {
-          "speaker": "",
-          "text": "하지만 혼자가 아니라는 것만으로도\n발걸음이 조금은 가벼워졌다."
-        },
         {
           "speaker": "",
           "text": "— Chapter 5 End —"

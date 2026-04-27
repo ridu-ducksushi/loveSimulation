@@ -1,0 +1,1078 @@
+{
+  "dialogueId": "chapter12",
+  "chapterTitle": "Chapter12\n폭풍 뒤의 아침",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "이불 사이로 스며드는 햇살.\n새소리가 먼 곳에서 들려왔다."
+        },
+        {
+          "speaker": "",
+          "text": "몸이 무거웠지만 그 무거움이 불쾌하지 않았다.\n오래간만에 깊이 잠들었다는 증거였다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...얼마나 잔거지?)"
+        },
+        {
+          "speaker": "",
+          "text": "창밖으로 해가 높이 떠 있었다.\n오전은 이미 지난 듯했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(지하 경매장에서 돌아온 뒤로 기억이 없어.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 기지개를 켰다.\n온 몸의 관절이 뚝뚝 소리를 냈다."
+        },
+        {
+          "speaker": "me",
+          "text": "...살 것 같아."
+        },
+        {
+          "speaker": "",
+          "text": "그때— 방 안의 공기가 달라졌다."
+        },
+        {
+          "speaker": "",
+          "text": "목걸이의 보석이 강하게 빛나고 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "...에르하?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "......일어났어?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "잔뜩 화가 난 듯한 목소리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_tantrum"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_tantrum": {
+      "lines": [
+        {
+          "speaker": "에르하",
+          "text": "며칠간 날 쌔까맣게 잊고 잘 자더라구.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "...그게—"
+        },
+        {
+          "speaker": "에르하",
+          "text": "겨우 보내줬더니 그런 위험한 곳에 가?!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 목소리가 커졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "나도 데려갔어야지~~~~~~~~~!!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "에르하, 진정해. 무사히 돌아왔잖아."
+        },
+        {
+          "speaker": "에르하",
+          "text": "무사하면 됐다고?\n네가 다치기라도 했으면 어쩔 뻔 했어~~~!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "에르하",
+          "text": "그 은발 짐승이랑 갑옷 짐승과 함께라니,\n그놈들을 어떻게 믿고",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...은발 짐승이 렌님이고, 갑옷 짐승이 기사단장인가.)"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 멈추었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...네가 안 돌아올까봐 밤새 잠을 못 잤어.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "거의 들리지 않을 정도로 아주 작은 목소리였다.",
+          "choices": [
+            {
+              "text": "미안해, 걱정시켰지?",
+              "goto": "erha_apologize",
+              "affectionChange": 3
+            },
+            {
+              "text": "에르하가 보고 싶었어.",
+              "goto": "erha_missed",
+              "affectionChange": 5
+            },
+            {
+              "text": "다음엔 에르하도 꼭 데려갈게.",
+              "goto": "erha_promise",
+              "affectionChange": 10,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "erha_apologize": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "미안해, 걱정시켰지?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...당연히 걱정했지. 나는 너의 드래곤 인 걸.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 눈빛이 살짝 따뜻해졌다.\n하지만 금방 다시 차가워졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "다음에 또 혼자 가면 진짜 화낼 거야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "알겠어, 알겠어."
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 부드럽게 미소지었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "resolution_news"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_missed": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하가 보고 싶었어."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 잠시 멈추었다.\n그리고 순간 얼굴이 빠르게 붉어졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...뭐, 뭐야 갑자기.\n그런 말로 넘어갈 줄 알아?",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "넘어가려는 게 아니야.\n진심이야."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......하.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 에밀리아에게 조심스럽게 다가왔다.\n눈빛이 따뜻하게 일렁이고 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...나도.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "거의 숨소리에 가까운 아주 작은 목소리였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...뭐, 어쨌든 다음엔 혼자 가지 마.\n알았어?",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "resolution_news"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_promise": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "다음엔 에르하도 꼭 데려갈게."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......뭐라고?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 눈빛이 크게 흔들렸다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "지, 지금 약속하는 거야?",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "약속이야. 에르하 없이는 어디도 안 갈게."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 잠시 멈추었다가—\n천천히, 아주 천천히 따뜻한 미소를 지었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...그래.\n기억해. 네가 먼저 한 말이야.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...그 짐승들은 필요 없어.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 낮게 말했다.\n무언가를 더 말하려 했지만 참은 듯 했다.",
+          "flagToSet": "ch13_erha_promise",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "resolution_news"
+            }
+          ]
+        }
+      ]
+    },
+    "resolution_news": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하, 장부 말인데."
+        },
+        {
+          "speaker": "에르하",
+          "text": "그 은발 짐승한테 맡긴 거?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "...렌님이야. 이름으로 불러줘."
+        },
+        {
+          "speaker": "에르하",
+          "text": "싫어.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...이 드래곤은 정말.)"
+        },
+        {
+          "speaker": "me",
+          "text": "어쨌든, 장부는 렌님이 처리한다고 했어.\n백작가와 노예 경매의 연결고리가 담긴 증거니까."
+        },
+        {
+          "speaker": "에르하",
+          "text": "흥. 그 짐승이 제대로 처리하기나 할까.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "렌님의 길드가 다루면 온 수도의 화제가 될거야."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 과거의 기억을 떠올렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에서 렌님의 길드는\n노예상을 적발한 이후 기하급수적으로 커졌으니까.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "그 짐승은 믿지 않지만, 네 말이니 믿을게.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "렌님 이라니까?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "응, 렌."
+        },
+        {
+          "speaker": "",
+          "text": "며칠이 지나자 -\n과거의 기억대로 소식은 빠르게 퍼졌다.",
+          "pause": true
+        },
+        {
+          "speaker": "",
+          "text": "백작이 노예 경매에 관여했다는 증거가\n귀족 사회에 알려지기 시작했다."
+        },
+        {
+          "speaker": "",
+          "text": "백작은 황실의 심문을 받았다.\n하지만—"
+        },
+        {
+          "speaker": "me",
+          "text": "...역시."
+        },
+        {
+          "speaker": "",
+          "text": "막대한 위약금을 내고 풀려났다.\n귀족의 특권. 돈으로 살 수 있는 자유였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "인간들의 법이란 건 정말 쓸모가 없어.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "그래도 이걸로 한동안은 움직이지 못할거야."
+        },
+        {
+          "speaker": "",
+          "text": "그때— 방 밖에서 노크 소리가 들렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ren_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_visit": {
+      "lines": [
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 손님이 오셨습니다.\n은발의 젊은 남성입니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...은발?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 눈빛이 날카롭게 변했다."
+        },
+        {
+          "speaker": "me",
+          "text": "렌님이 오셨구나."
+        },
+        {
+          "speaker": "에르하",
+          "text": "왜 그 놈이 여기까지 와.\n영역 침범이라고.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "에르하, 잠깐만 참어.\n장부 건 보고가 있을 수도 있으니까."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...목걸이 안에 들어가 있을래.\n듣고 있으니 허튼 짓 하면 그놈 죽여버릴거야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 투덜거리며 목걸이 안으로 들어갔다.\n보석이 불만 가득한 빛으로 반짝거렸다."
+        },
+        {
+          "speaker": "me",
+          "text": "들어오세요."
+        },
+        {
+          "speaker": "",
+          "text": "문이 열렸다.\n은발이 햇살에 비치며 방 안으로 들어왔다."
+        },
+        {
+          "speaker": "렌",
+          "text": "안녕하세요, 에밀리아 님.\n몸은 좀 나아졌어요?",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "me",
+          "text": "네, 푹 자고 나니까 많이 나아졌어요.\n렌님은요?"
+        },
+        {
+          "speaker": "렌",
+          "text": "저야 뭐, 늘 하던 일이니까요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 의자에 앉으며 어깨를 한 번 돌렸다.\n경매장에서 다친 어깨가 아직 아픈 모양이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "어깨, 아직 다 낫지 않은 거 아니에요?"
+        },
+        {
+          "speaker": "렌",
+          "text": "이 정도는 아무것도 아니에요.\n걱정 마세요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "그건 그렇고— 에밀리아님 덕분에\n길드의 인지도가 대폭 상승했어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "...그래서 오늘은 감사 인사를 하러 왔고요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "감사 인사요?"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 품에서 작은 상자를 꺼냈다.\n검은 벨벳으로 감싼 상자였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ren_bracelet_gift"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_bracelet_gift": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "...이건 제 감사의 표시예요.\n받아주시면 좋겠습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "상자를 열자—\n은빛 팔찌가 빛나고 있었다.\n섬세한 문양이 새겨진, 아름다운 팔찌."
+        },
+        {
+          "speaker": "me",
+          "text": "...이건?"
+        },
+        {
+          "speaker": "렌",
+          "text": "기척을 숨겨주는 팔찌예요.\n착용하면 일정 시간 동안 기척을 감춰줍니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "경매장에서의 일을 보고 생각했어요.\n에밀리아 님에게 필요할 것 같아서.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 시선을 살짝 돌렸다.\n귀 끝이 붉어져 있었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...다음에 위험한 일이 생겼을 때\n당신이 도망칠 수 있게요.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "(...렌님이 부끄러워하고 있어.)"
+        },
+        {
+          "speaker": "렌",
+          "text": "제가 항상 곁에 있을 수는 없으니까.\n...그게 싫지만.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "마지막 한 마디를 렌이 아주 작게 덧붙였다.\n혼잣말에 가까웠다.",
+          "choices": [
+            {
+              "text": "고마워요, 렌님. 소중히 할게요.",
+              "goto": "ren_thanks",
+              "affectionChange": 3
+            },
+            {
+              "text": "렌님이 직접 고른 거예요?",
+              "goto": "ren_personal",
+              "affectionChange": 5
+            },
+            {
+              "text": "차고 있을게요. 항상.",
+              "goto": "ren_always",
+              "affectionChange": 10,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "ren_thanks": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "고마워요, 렌님. 소중히 할게요."
+        },
+        {
+          "speaker": "렌",
+          "text": "...마음에 드셨다면 다행이에요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 어색하게 미소 지었다.\n평소의 여유로운 모습과는 달랐다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 팔찌를 손목에 찼다.\n차가운 금속이 피부에 닿는 순간—\n팔찌에서 은은한 빛이 흘렀다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...예뻐요.",
+          "flagToSet": "ch13_bracelet_received",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ren_departs"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_personal": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님이 직접 고른 거예요?"
+        },
+        {
+          "speaker": "렌",
+          "text": "......",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 고개를 살짝 돌렸다.\n은발 사이로 붉어진 귀가 보였다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...길드에서 다루는 물품 중에\n에밀리아 님에게 어울릴 것을 골랐을 뿐이에요.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "직접 고른 거 맞네요."
+        },
+        {
+          "speaker": "렌",
+          "text": "...그렇게 해석하셔도 상관없습니다.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 목소리가 점점 작아지고\n귀만 점점 더 붉어지고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 팔찌를 손목에 찼다.\n은빛이 에밀리아의 피부 위에서 빛났다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...잘 어울리는군요.\n제 눈이 틀리지 않았어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아의 손목에서 시선을 거두지 못했다.",
+          "flagToSet": "ch13_bracelet_received",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ren_departs"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_always": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "차고 있을게요. 항상."
+        },
+        {
+          "speaker": "렌",
+          "text": "......",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 숨을 멈춘 것처럼 잠시 굳었다."
+        },
+        {
+          "speaker": "me",
+          "text": "렌님이 준 거니까요.\n항상 차고 있을게요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 천천히 에밀리아를 바라보았다.\n그 눈 안에 무언가가 흔들리고 있었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...당신은 정말.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아의 손을 잡았다.\n팔찌가 닿은 손목 위로\n그의 손가락이 조심스럽게 감겼다."
+        },
+        {
+          "speaker": "렌",
+          "text": "그렇게 말하면... 저는요.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 목소리가 낮아졌다.\n속삭임에 가까운."
+        },
+        {
+          "speaker": "렌",
+          "text": "당신 곁에 있고 싶어지잖아요.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아의 손을 놓았다.\n하지만 손끝이 떨어지기까지 한 박자가 늦었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...실례했어요.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 시선을 돌렸지만\n귀 끝이 새빨갛게 물들어 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...심장이 빠르게 뛰고 있어.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 팔찌를 손목에 찼다.\n차가운 금속 위에—\n렌의 체온이 남아 있는 것 같았다.",
+          "flagToSet": "ch13_bracelet_received",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ren_departs"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_departs": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "그럼 저는 이만. 길드 일도 밀려 있어서요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "네. 렌님도 무리하지 마세요.\n어깨 아직 다 낫지 않았잖아요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 문 앞에서 멈추었다.\n돌아보지 않은 채 말했다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...걱정해주셔서 고맙습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "필요한 일이 있으면 언제든 연락 주세요.\n저는— 에밀리아 님을 위해서라면\n언제든 움직일 준비가 되어 있으니까요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 문을 닫고 나갔다.\n은발이 햇살 속으로 사라졌다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 손목의 팔찌를 바라보았다.\n은빛이 조용히 빛나고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...기척 은폐라.\n다음에 위험한 일이 있을 때 쓸 수 있겠어.)"
+        },
+        {
+          "speaker": "",
+          "text": "그 순간—\n목걸이가 차갑게 빛났다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "erha_jealousy"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_jealousy": {
+      "lines": [
+        {
+          "speaker": "에르하",
+          "text": "...뭘 그렇게 쓰다듬고 있는 거야.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "어, 에르하?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "듣고 있었냐고?\n그 짐승이 네 손을 잡았잖아~~~~~!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "(...전부 다 들은 거구나.)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "기이이이척 은폐?\n그딴 거 내가 옆에만 있다면 눈 감고도 해줄 수 있어!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "에르하",
+          "text": "그리고 또, '곁에 있고 싶어진다'라고?",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "에르하. 진정해..."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...그 팔찌 차지 마.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "마지막 한 마디가 작았다.\n화가 아니라— 서운함에 가까운 목소리.",
+          "choices": [
+            {
+              "text": "에르하, 질투하는 거야?",
+              "goto": "erha_tease",
+              "affectionChange": 3
+            },
+            {
+              "text": "에르하가 준 목걸이가 더 소중해.",
+              "goto": "erha_reassure",
+              "affectionChange": 5
+            },
+            {
+              "text": "에르하한테도 뭔가 해줄까?",
+              "goto": "erha_offer",
+              "affectionChange": 10,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "erha_tease": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하, 혹시 질투하는 거야?"
+        },
+        {
+          "speaker": "에르하",
+          "text": "질, 질투~~~~~~~?!\n위대한 드래곤이 그따위 하찮은 감정을\n느낄 리가 없잖아!",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "그래? 그럼 됐고."
+        },
+        {
+          "speaker": "에르하",
+          "text": "이, 이건 분노야! 분노!\n그 짐승이 네 손을 잡은 게 화나는 거야!",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "......그걸 질투라고 하는 건데."
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 부끄러운지 목걸이 안으로 숨었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "maid_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_reassure": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하가 준 목걸이가 더 소중해."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......뭐?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "me",
+          "text": "이 목걸이에는 에르하가 들어있잖아.\n팔찌는 도구지만, 목걸이는 에르하 그 자체야."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 눈빛이 천천히 따뜻해졌다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...당연하지.\n나는 팔찌 따위랑은 비교도 안 돼.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "강한 말투였지만\n목소리가 미세하게 떨리고 있었다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...정말 목걸이가 더 소중한 거지?",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "정말이야."
+        },
+        {
+          "speaker": "에르하",
+          "text": "......좋아.\n그 말 기억할 거야.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 에밀리아의 목걸이 안으로\n조용히 돌아갔다.\n보석에서 따뜻한 빛이 오래 남았다.",
+          "flagToSet": "ch13_erha_reassured",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "maid_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "erha_offer": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "에르하한테도 뭔가 해줄까?\n에르하만을 위한 거.(선물같은걸 주는 이벤트 넣으면 좋을듯)"
+        },
+        {
+          "speaker": "에르하",
+          "text": "...뭐?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "me",
+          "text": "렌님한테 팔찌를 받았으니까,\n에르하한테도 뭔가 특별한 걸 해주고 싶어."
+        },
+        {
+          "speaker": "에르하",
+          "text": "나, 나한테?",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하에게서 강아지 귀가 보이는 것 같았다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...그 짐승한테 받은 거랑 나를 동등하게 놓지 마.",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "me",
+          "text": "동등하게 놓는 게 아니야.\n에르하가 더 특별하니까."
+        },
+        {
+          "speaker": "에르하",
+          "text": ".......",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "에르하가 말을 잇지 못했다.\n마치 심장이 빠르게 뛰는 것처럼 보였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "...정말 이거 나 주는거야?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "응 선물."
+        },
+        {
+          "speaker": "에르하",
+          "text": "나에게 선물을 주는 인간은 처음이야.\n고마워. 평생 간직할게..."
+        },
+        {
+          "speaker": "에르하",
+          "text": "그리고 심장을 꼭 되찾겠어."
+        },
+        {
+          "speaker": "에르하",
+          "text": "심장을 되찾으면\n난 너의 옆에 평생 있을수 있으니까.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에르하의 목소리가 낮아졌다.\n진지한 목소리였다."
+        },
+        {
+          "speaker": "에르하",
+          "text": "그때 되면—\n다른 짐승 따위 필요 없게 해줄게.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "드래곤의 눈이 에밀리아를 똑바로 바라보았다.\n빛이 강렬하고 뜨거웠다.\n집착이라 부를 수밖에 없는— 그런 눈이었다.",
+          "flagToSet": "ch13_erha_special_promise",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "maid_visit"
+            }
+          ]
+        }
+      ]
+    },
+    "maid_visit": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아가 팔찌와 목걸이를 번갈아 보았다."
+        },
+        {
+          "speaker": "me",
+          "text": "...백작은 위약금을 내고 풀려났어.\n하지만 완전히 끝난 건 아니야."
+        },
+        {
+          "speaker": "me",
+          "text": "...백작의 뒤에는 '그분'이라는 존재가 있지.\n아직 본질적인 문제는 해결되지 않았어."
+        },
+        {
+          "speaker": "me",
+          "text": "...다음에 해야 할 일은—"
+        },
+        {
+          "speaker": "",
+          "text": "똑, 똑."
+        },
+        {
+          "speaker": "",
+          "text": "문이 열렸다.\n시녀가 고개를 숙이며 들어왔다."
+        },
+        {
+          "speaker": "시녀",
+          "text": "아가씨, 실례합니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "무슨 일이야?"
+        },
+        {
+          "speaker": "시녀",
+          "text": "내일 열리는 황녀님의 성년식에\n준비를 도와드리러 왔습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 눈이 커졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...까맣게 잊고있었어.)"
+        },
+        {
+          "speaker": "",
+          "text": "창밖으로 햇살이 쏟아지고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 에밀리아의 눈 안에는\n다가올 폭풍의 그림자가 비치고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 13 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}

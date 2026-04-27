@@ -1,0 +1,890 @@
+{
+  "dialogueId": "chapter11",
+  "chapterTitle": "Chapter11\n노예 경매",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "경매장은 눈부시게 화려했다.",
+          "background": "slave_market"
+        },
+        {
+          "speaker": "",
+          "text": "지하임에도 천장은 높고,\n수많은 조명들과 검을 든 경비가 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "또한 무대를 바라보는 가면을 쓴 사람들이\n무수히 모여 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "높은 신분을 뽐내듯 부유해 보이는 의상들."
+        },
+        {
+          "speaker": "me",
+          "text": "(...아이들이다.)"
+        },
+        {
+          "speaker": "",
+          "text": "무대 위 아이들 뒤로 철창이 있었다.\n10살 남짓해보이는 아이들의 눈은 공허했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...마나를 가진 아이들)"
+        },
+        {
+          "speaker": "진행자",
+          "text": "오늘의 상품은 바다 건너 온 타지의 노예들 입니다!\n마나의 순도가 높은 상품으로만 준비했죠."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 주먹을 꽉 쥐었다."
+        },
+        {
+          "speaker": "",
+          "text": "렌은 군중 속을 조용히 훑어보았다."
+        },
+        {
+          "speaker": "렌",
+          "text": "가면을 쓴 사람들은 서른 정도...\n경비는 열 이에요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 미세하게 떨고 있었다.\n억누르고 있지만, 분노가 새어 나오고 있었다.",
+          "choices": [
+            {
+              "text": "...참을 수 있겠어요?",
+              "goto": "knight_rage",
+              "affectionChange": 5
+            },
+            {
+              "text": "지금은 참아야 해요.",
+              "goto": "knight_restrained",
+              "affectionChange": 3
+            }
+          ]
+        }
+      ]
+    },
+    "knight_rage": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...참을 수 있겠어요?"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 에밀리아를 돌아보았다.\n그 눈이 흔들리고 있었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...예. 참아야겠죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "턱이 굳어 있었다.\n이를 꽉 깨물고 있는 것이 보였다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 눈이 에밀리아에게 잠깐 머물렀다.\n뭔가를 말하려다 그냥 다문 듯 했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...진심으로 분노하고 있어.\n기사단장은 정의로운 사람이었지.)"
+        },
+        {
+          "speaker": "",
+          "text": "어떠한 상황에서도 정의를 굽히지 않는 사람.\n기사단장은 그런 사람이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "discover_henchman"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_restrained": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "지금은 참아야 해요.\n때를 기다려야 합니다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 에밀리아를 보았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...레이디 말씀이 맞습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "짧고 낮은 대답.\n하지만 그 안에 억지로 눌러담은 분노가 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 시선을 무대 쪽으로 돌렸다.\n하지만 어딘가 에밀리아의 말을 되씹는 눈이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...과거에도 기사단장은 정의로운 사람이었지\n지금 이 상황이 참기 힘들거야.)"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 잠깐 에밀리아 쪽을 흘끔 보았다.\n그리고 다시 앞을 바라보았다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "discover_henchman"
+            }
+          ]
+        }
+      ]
+    },
+    "discover_henchman": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "그때— 렌이 멈추었다.",
+          "flagToSet": "ch12_henchman_spotted"
+        },
+        {
+          "speaker": "렌",
+          "text": "...저쪽.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "군중 맨 뒤편.\n커다란 체구의 남자가 서 있었다.\n가면을 썼지만, 그 아래 특유의 문신이 드러났다."
+        },
+        {
+          "speaker": "me",
+          "text": "백작가의 시종...",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "백작의 뒤에 늘 함께 있던 그림자 같던 인물.\n그가 이 곳에 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "그 남자는 셋의 존재를 모른채로\n군중 속에 섞여 경매에 참여하고 있었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "저자가 백작과의 연결고리가 될 수 있습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...맞아. 저 사람을 따라가면\n백작이 연루된 새로운 증거를 찾을 수 있을지도 몰라.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 렌과 기사단장을 번갈아 보았다.",
+          "choices": [
+            {
+              "text": "렌님, 미행할 수 있어요?",
+              "goto": "sneak_deeper",
+              "affectionChange": 3
+            },
+            {
+              "text": "셋이 함께 움직이죠.",
+              "goto": "sneak_together",
+              "affectionChange": 5
+            }
+          ]
+        }
+      ]
+    },
+    "sneak_deeper": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님, 저 사람 미행할 수 있어요?"
+        },
+        {
+          "speaker": "렌",
+          "text": "제 전공이죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 군중 속으로 조용히 스며들었다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아와 기사단장이 적당한 거리를 두고 따랐다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 에밀리아 옆으로 조금 다가섰다.\n인파 사이에서 보호하려는 듯 했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...지켜주는 건가.)"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 아무 말도 하지 않은 채\n에밀리아와의 거리를 좁혀 두었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "prison_discovery"
+            }
+          ]
+        }
+      ]
+    },
+    "sneak_together": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "따로 움직이면 위험하니 셋이 함께 움직이죠."
+        },
+        {
+          "speaker": "렌",
+          "text": "찬성입니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아 옆에 붙었다.\n기사단장이 반대편에 섰다."
+        },
+        {
+          "speaker": "",
+          "text": "셋이 군중 속을 천천히 움직였다."
+        },
+        {
+          "speaker": "",
+          "text": "백작가의 시종은 경매를 마친 뒤,\n무대 뒤편으로 걸어 들어갔다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...저곳에서 거래가 이루어지나보군.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "prison_discovery"
+            }
+          ]
+        }
+      ]
+    },
+    "prison_discovery": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "무대 뒤, 좁은 통로를 지나자—\n계단이 더 깊은 곳으로 이어졌다.",
+          "background": "underground_prison"
+        },
+        {
+          "speaker": "",
+          "text": "차갑고, 축축하고, 오래된 공기."
+        },
+        {
+          "speaker": "",
+          "text": "지하에는 철창이 줄지어 있었다.\n그리고 그 안에— 아이들이 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "눈이 비어있는 아이들.\n두려움조차 이미 닳아버린 눈들이었다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 멈추었다.\n한 발짝도 더 들어가지 못하고 서 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 조용히 주변을 살폈다.\n그러다 탁자 위에 놓인 두꺼운 장부를 발견했다."
+        },
+        {
+          "speaker": "렌",
+          "text": "저것 좀 봐요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "장부를 펼치자 날짜, 이름, 금액.\n그리고 장부 윗머리에 백작가의 문양이 찍혀 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...증거다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 손이 조금 떨렸다.\n장부를 꼭 쥐었다."
+        },
+        {
+          "speaker": "me",
+          "text": "백작이 연루된 증거를 찾았어.\n이걸로 백작을 잠시 막을 수 있겠지.\n그리고 아이들도-"
+        },
+        {
+          "speaker": "",
+          "text": "그 순간\n발걸음 소리가 들렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "gatekeeper_battle"
+            }
+          ]
+        }
+      ]
+    },
+    "gatekeeper_battle": {
+      "lines": [
+        {
+          "speaker": "문지기",
+          "text": "침입자다!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "문이 열렸다.\n거대한 체구의 남자가 들이닥쳤다.\n이 지하의 문지기였다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아 앞으로 뛰어들며\n단검을 뽑아들었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "에밀리아 양은 제 뒤에 계세요!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장도 검을 뽑았다.\n하지만 공간이 좁았다. 둘이 함께 움직이기 어려웠다."
+        },
+        {
+          "speaker": "",
+          "text": "문지기가 렌을 향해 달려들었다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 빠르게 옆으로 피하며\n단검으로 견제했다."
+        },
+        {
+          "speaker": "렌",
+          "text": "제가 막고 있을테니 그 동안 도망치세요!",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 움직임은 빠르고 정확했다.\n상대의 허를 찌르는 동선이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...렌님!"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 장부를 꼭 쥔 채\n렌에게서 눈을 떼지 못했다.",
+          "choices": [
+            {
+              "text": "렌님, 조심해요!",
+              "goto": "battle_phase2",
+              "affectionChange": 5
+            },
+            {
+              "text": "렌님, 당신이 다치면 안 돼요!",
+              "goto": "battle_phase2_premium",
+              "affectionChange": 10,
+              "premiumCost": 5
+            }
+          ]
+        }
+      ]
+    },
+    "battle_phase2": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님, 조심해요!"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 단검을 회전시키며 상대의 팔을 쳤다.\n정확하고 빠른 동작이었다."
+        },
+        {
+          "speaker": "",
+          "text": "하지만 문지기는 물러서지 않았다.\n그 덩치에서 나오는 힘이 렌의 방어를 밀어붙였다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 한 걸음 뒤로 밀렸다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...예상보다 강하네요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 숨이 조금 거칠어졌다.\n하지만 눈이 흔들리지 않았다."
+        },
+        {
+          "speaker": "",
+          "text": "문지기가 다시 힘을 모아 달려들었다.\n렌이 옆으로 피했지만—\n어깨에 스치고 말았다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 어깨를 한 번 돌리며 자세를 다시 잡았다.\n표정은 여전히 냉정했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "battle_phase3"
+            }
+          ]
+        }
+      ]
+    },
+    "battle_phase2_premium": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님, 당신이 다치면 안 돼요!"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 순간 에밀리아를 돌아보았다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...그 말.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 입 끝이 아주 잠깐 올라갔다가 내려갔다."
+        },
+        {
+          "speaker": "렌",
+          "text": "당신 목소리가 들리면 더 강해지는 것 같아요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 단검을 다시 고쳐 쥐었다.\n아까보다 빠르게, 더 예리하게 움직였다."
+        },
+        {
+          "speaker": "",
+          "text": "문지기의 옆구리를 단검이 스치며 스파크가 튀었다.\n하지만 상대는 아직 쓰러지지 않았다."
+        },
+        {
+          "speaker": "",
+          "text": "문지기가 렌을 밀어붙였다.\n렌이 벽에 등을 부딪히며 어깨에 상처를 입었다."
+        },
+        {
+          "speaker": "me",
+          "text": "렌님!"
+        },
+        {
+          "speaker": "렌",
+          "text": "괜찮습니다. 얼른 도망치세요!",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 눈이 에밀리아를 향했다.\n그 눈 안에는, 에밀리아를 향한 걱정이 담겨있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "battle_phase3"
+            }
+          ]
+        }
+      ]
+    },
+    "battle_phase3": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "문지기가 다시 몰아붙였다.\n렌이 연속 공격을 받아내며 뒤로 밀려났다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...젠장.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "그 순간—\n날카로운 검날이 공기를 갈랐다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "물러서십시오.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 앞으로 나섰다.\n긴 검이 문지기의 무기를 막아냈다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "제가 막을테니, 잠시 쉬고 계십시오.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 눈이 에밀리아에게 잠깐 닿았다.\n그 눈 안에 무언가가 타올랐다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 기사단장 옆으로 달라붙으며\n함께 문지기를 압박했다."
+        },
+        {
+          "speaker": "렌",
+          "text": "고작 이정도로 쉴 수 없죠."
+        },
+        {
+          "speaker": "me",
+          "text": "(...두 사람 다.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 장부를 꽉 쥐며 두 사람을 지켜보았다.",
+          "choices": [
+            {
+              "text": "기사단장님, 믿고 있어요!",
+              "goto": "battle_cheer_knight",
+              "affectionChange": 5
+            },
+            {
+              "text": "두 분 다 무사해야 해요!",
+              "goto": "battle_cheer_both",
+              "affectionChange": 3
+            }
+          ]
+        }
+      ]
+    },
+    "battle_cheer_knight": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "기사단장님, 믿고 있어요!"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 어깨가 미세하게 떨렸다.\n에밀리아의 목소리에 반응한 것이었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...맡겨두십시오.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 검에 힘이 실렸다.\n에밀리아의 말이 그를 움직이게 했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "battle_resolution"
+            }
+          ]
+        }
+      ]
+    },
+    "battle_cheer_both": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "두 분 다 무사해야 해요!"
+        },
+        {
+          "speaker": "",
+          "text": "렌과 기사단장이 동시에 에밀리아를 보았다."
+        },
+        {
+          "speaker": "",
+          "text": "잠깐이었다.\n하지만 그 한마디가 둘 다에게 닿은 것 같았다."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 단검이 빨라졌고,\n기사단장의 검이 무거워졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "battle_resolution"
+            }
+          ]
+        }
+      ]
+    },
+    "battle_resolution": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "기사단장의 검과 렌의 단검이 동시에 움직였다."
+        },
+        {
+          "speaker": "",
+          "text": "큰 격파음과 함께 문지기의 무기가 튕겨 나갔다.\n그 순간, 기사단장의 검 등이 그의 뒤통수를 쳤다."
+        },
+        {
+          "speaker": "",
+          "text": "쿵—\n문지기가 쓰러졌다."
+        },
+        {
+          "speaker": "",
+          "text": "정적이 흘렀다.\n렌의 숨소리, 기사단장의 숨소리."
+        },
+        {
+          "speaker": "렌",
+          "text": "...끝났네요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 검을 거두었다.\n어깨를 한 번 폈다."
+        },
+        {
+          "speaker": "",
+          "text": "그 순간— 두 사람이 동시에\n에밀리아 쪽으로 시선을 돌렸다."
+        },
+        {
+          "speaker": "렌",
+          "text": "다친 데 없어요?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "괜찮습니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "두 목소리가 정확히 겹쳤다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 두 사람을 번갈아 보았다.",
+          "choices": [
+            {
+              "text": "렌님, 다친 데 없어요?",
+              "goto": "escape_ren",
+              "affectionChange": 5,
+              "flagToSet": "ch12_chose_ren"
+            },
+            {
+              "text": "기사단장님, 괜찮으세요?",
+              "goto": "escape_knight",
+              "affectionChange": 5,
+              "flagToSet": "ch12_chose_knight"
+            }
+          ]
+        }
+      ]
+    },
+    "escape_ren": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님, 다친 데 없어요?\n어깨에서 피가 나는 것 같은데."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아를 바라보았다.\n그 눈이 깊어졌다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...당신만 무사하면 돼요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "낮은 목소리였다.\n속삭임에 가까운."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 손이 에밀리아의 머리칼을 한 번 스치며\n흐트러진 부분을 정리해주었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "다친 데 없죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "질문이 아니었다.\n확인이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...이 사람 눈빛이.)"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아에게서 눈을 떼지 않았다.\n그 눈 안에, 안도와 집착이 뒤섞여 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "escape"
+            }
+          ]
+        }
+      ]
+    },
+    "escape_knight": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "기사단장님, 괜찮으세요?"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 멈추었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...나를 걱정합니까?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "진심으로 당황한 얼굴이었다.\n이런 말을 들을 것이라고 생각하지 않은 눈이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "물론이죠. 도와주신걸요."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 고개를 돌렸다.\n얼굴을 숨기려는 것 같았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...기사는 다치는 것에 익숙합니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "하지만 그 귀가 약간 붉어졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...부끄러워 하고 있는 건가)"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 에밀리아 쪽을 보지 않으며 말했다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...걱정해줘서 고맙습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "아주 낮고 작은 목소리였다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "escape"
+            }
+          ]
+        }
+      ]
+    },
+    "escape": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "지금 당장 나가야 해요.\n소리가 들렸을 거예요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "셋이 좁은 통로를 달렸다.",
+          "flagToSet": "ch12_ledger_obtained"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 장부를 품에 안고 달렸다.\n이 안에 모든 증거가 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "뒤에서 소란이 들렸다.\n누군가 발견한 것이었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "빨리 움직이십시오.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 후미를 막으며 달렸다.\n렌이 에밀리아와 함께 앞장섰다."
+        },
+        {
+          "speaker": "",
+          "text": "좁은 골목. 폐건물의 그림자.\n그리고 희미한 빛."
+        },
+        {
+          "speaker": "me",
+          "text": "(...저쪽이야.)"
+        },
+        {
+          "speaker": "",
+          "text": "새벽빛이었다.\n밤새 억눌렸던 하늘이 조금씩 열리고 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "ending"
+            }
+          ]
+        }
+      ]
+    },
+    "ending": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "새벽이었다."
+        },
+        {
+          "speaker": "",
+          "text": "셋이 폐건물 구역 밖에 멈추었다.\n숨을 고르며. 서로를 확인하며."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 품 안의 장부를 꺼내들었다.\n백작가의 문양이 새벽빛 속에서 뚜렷하게 보였다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아 왼쪽,\n기사단장이 오른쪽에 서 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "각자 다른 시선을 가진 두 사람.\n하지만 이 순간, 두 시선이 모두 에밀리아를 향해 있었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "수고하셨어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "기사단장",
+          "text": "용감했습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "여러분도 다치지 않아 다행이에요."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 장부를 꽉 쥐며 하늘을 올려다보았다.\n동이 트고 있었다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 12 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}

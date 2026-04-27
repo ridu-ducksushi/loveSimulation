@@ -1,0 +1,752 @@
+{
+  "dialogueId": "chapter09",
+  "chapterTitle": "Chapter09\n붉은 보석의 비밀",
+  "sections": {
+    "start": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "익숙한 건물이 보였다.",
+          "background": "guild_hall"
+        },
+        {
+          "speaker": "",
+          "text": "낮의 길드는 예상보다 활기찼다.\n안쪽에서 왁자지껄한 소리가 새어 나왔다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...렌이 보석에 대해 뭔가를 찾아낸 거겠지.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 문을 밀었다."
+        },
+        {
+          "speaker": "",
+          "text": "안은 생각보다 훨씬 넓었다.\n한쪽에는 의뢰서가 빽빽이 붙은 게시판,\n다른 쪽에는 탁자를 둘러싼 모험자들이 가득했다."
+        },
+        {
+          "speaker": "",
+          "text": "담배 연기와 술 냄새가 섞인 공기.\n쇠 부딪히는 소리, 웃음소리, 고함소리."
+        },
+        {
+          "speaker": "me",
+          "text": "(...이게 정보길드의 본거지라니.)"
+        },
+        {
+          "speaker": "",
+          "text": "그때 길드 안쪽에서 익숙한 은빛 머리가 보였다.\n렌이 에밀리아를 발견하고 손을 들었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "오셨군요. 기다리고 있었어요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아 쪽으로 걸어왔다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "guild_teasing"
+            }
+          ]
+        }
+      ]
+    },
+    "guild_teasing": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "그 순간, 주변 탁자에서 시선이 쏟아졌다."
+        },
+        {
+          "speaker": "길드원",
+          "text": "어? 길드장님이 직접 손님을 마중 나왔어!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "길드원",
+          "text": "게다가 여자잖아?\n길드장님이 여자 손님을 개인적으로 만나다니!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "길드 안이 순식간에 들썩였다.\n손가락질과 수군거림이 렌과 에밀리아 쪽으로 집중되었다."
+        },
+        {
+          "speaker": "길드원",
+          "text": "오호— 길드장님의 청춘에도 봄날이?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 귀가 조금 붉어지는 것이 보였다."
+        },
+        {
+          "speaker": "렌",
+          "text": "시끄러워! 일 때문에 온 거라고!",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "길드원",
+          "text": "길드장님이 부끄러워한다! 처음 본다!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아도 시선이 모이자\n자신도 모르게 굳어졌다.",
+          "choices": [
+            {
+              "text": "아, 아닙니다! 일 때문에 왔어요!",
+              "goto": "shy_reaction",
+              "affectionChange": 3,
+              "flagToSet": "ch10_emilia_shy"
+            },
+            {
+              "text": "네, 저와 렌님은 사이가 좋습니다만?",
+              "goto": "bold_reaction",
+              "affectionChange": 8,
+              "flagToSet": "ch10_emilia_bold"
+            }
+          ]
+        }
+      ]
+    },
+    "shy_reaction": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "아, 아닙니다! 일 때문에 왔어요!\n오해하지 마세요!"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 손을 젓자\n길드원들이 더 크게 웃었다."
+        },
+        {
+          "speaker": "길드원",
+          "text": "저렇게 부정하는 것 좀 봐.\n더 수상한데?",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 잠깐 안도한 기색을 보였다.\n하지만 그 눈 어딘가에 실망의 그림자가 스쳤다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...그렇죠, 당연히 일 때문이죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...왜 그런 표정이지?)"
+        },
+        {
+          "speaker": "길드원",
+          "text": "길드장님 표정이 왜 저래.\n기대했었던 거야~?",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 헛기침을 했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "private_talk"
+            }
+          ]
+        }
+      ]
+    },
+    "bold_reaction": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "네, 저와 렌님은 사이가 좋습니다만?\n무슨 문제라도 있나요?"
+        },
+        {
+          "speaker": "",
+          "text": "길드 안이 한 박자 조용해졌다가—"
+        },
+        {
+          "speaker": "길드원",
+          "text": "우와아아아!!",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "환호가 터졌다.\n길드원들이 탁자를 치며 좋아했다."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 얼굴이 완전히 빨개졌다.\n어디를 봐야 할지 모르는 눈이었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "이, 이쪽으로 오세요!\n빨리요!",
+          "emotion": "embarrassed"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아의 소매 끝을 잡아끌며\n서둘러 길드원들에게서 멀어졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...장난이 너무 심했나.)"
+        },
+        {
+          "speaker": "",
+          "text": "뒤에서 길드원들의 환성이 계속 들렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "private_talk"
+            }
+          ]
+        }
+      ]
+    },
+    "private_talk": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아를 길드 안쪽 복도로 안내했다.",
+          "background": "guild_private_room"
+        },
+        {
+          "speaker": "",
+          "text": "조용한 방이었다.\n두툼한 문이 닫히자 소란이 완전히 차단되었다."
+        },
+        {
+          "speaker": "",
+          "text": "작은 탁자, 의자 두 개. 창문 하나.\n빛이 비스듬히 들어왔다."
+        },
+        {
+          "speaker": "렌",
+          "text": "실례를 끼쳤습니다.\n저녀석들의 통제가 쉽지 않거든요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "괜찮아요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 탁자 앞에 앉으며 표정을 고쳤다.\n아까까지의 당황스러움이 사라지고 진지한 얼굴이 되었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "앉으세요.\n할 이야기가 있어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 탁자 위에 작은 상자를 올려놓았다.\n뚜껑을 열자— 붉은 보석이 빛났다."
+        },
+        {
+          "speaker": "me",
+          "text": "...이건.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "red_gem_secret"
+            }
+          ]
+        }
+      ]
+    },
+    "red_gem_secret": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "에밀리아 양이 부탁하신 붉은 보석과 같죠.\n며칠 동안 우리 길드원들이 추적하여 찾아낸 겁니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "결론부터 말씀드리면—\n이건 일반 아티팩트가 아니에요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...알고 있었어요. 사람의 마음을 조종하는..."
+        },
+        {
+          "speaker": "렌",
+          "text": "맞아요. 하지만, 중요한 것이 하나 더 있습니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 보석 가까이 손가락을 가져갔다.\n손끝에서 흐릿한 빛이 일었다가 사라졌다."
+        },
+        {
+          "speaker": "렌",
+          "text": "이 보석에는 흑마법이 담겨 있어요.\n정확히 말하면— 생명력을 흡수하는 마법이죠.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...생명력을 흡수?)"
+        },
+        {
+          "speaker": "렌",
+          "text": "정신을 조종당한 사람의 생명력이 서서히 빠져나가요.\n아티팩트는 그 생명력을 매개로 정신을 조종하는 겁니다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 목소리가 낮아졌다."
+        },
+        {
+          "speaker": "렌",
+          "text": "조종당한 사람은 서서히 죽어갈 때까지\n아무것도 알 수 없어요. 그저 이끌려 움직일 뿐이죠.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 손이 탁자 위에서\n천천히 주먹 쥐어졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...백작은 이걸로 공작가를 지배하려 했어.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(...드래곤의 심장을 가지기 위해\n다른 사람들의 생명은 중요하지 않았던거야.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "darkness_theory"
+            }
+          ]
+        }
+      ]
+    },
+    "darkness_theory": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...전생에도 이런 보석이 있었어요."
+        },
+        {
+          "speaker": "렌",
+          "text": "전생이요?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 멈추었다. 말실수였다."
+        },
+        {
+          "speaker": "me",
+          "text": "아— 꿈에서요. 꿈에서 본 것 같은 느낌이 든다는 뜻이에요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 에밀리아를 잠시 바라보았다.\n그 눈이 뭔가를 읽으려 했다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...그렇군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "(...분명히 전생에서 어둠의 존재가 있었어.\n대륙을 위협했던, 거의 마왕에 가까운 존재.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(...그 어둠은 봉인되어 있었어.\n하지만 누군가 그걸 깨우려 하고 있었고—\n그게 전생에서 내가 죽고 나서 현실이 되었지.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아가 시선을 들었다.\n렌이 기다리고 있었다.",
+          "choices": [
+            {
+              "text": "조심스럽게 말한다.",
+              "goto": "ren_serious",
+              "affectionChange": 3,
+              "flagToSet": "ch10_theory_cautious"
+            },
+            {
+              "text": "단호하게 말한다.",
+              "goto": "ren_serious_bold",
+              "affectionChange": 5,
+              "flagToSet": "ch10_theory_bold"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_serious": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "혹시... 어둠에 대해 아시나요?"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 표정이 굳었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...어둠의 부활.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "사실 우리 길드에서도 최근 이상한 움직임을 감지했어요.\n각지에서 이상하게 흘러가는 현상들.\n그리고 최근 늘어난 흑마법사들.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...이미 조사하고 있었군요."
+        },
+        {
+          "speaker": "렌",
+          "text": "우리 길드가 찾던걸 당신이 알고 있던 것이 더 놀라운걸요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 탁자 위의 보석을 다시 보았다."
+        },
+        {
+          "speaker": "렌",
+          "text": "의뢰주님. 이건 위험합니다.\n혼자 감당할 일이 아니에요.",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 목소리에 걱정이 배어 있었다.\n흘려듣기엔 너무 진심이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "trade_info"
+            }
+          ]
+        }
+      ]
+    },
+    "ren_serious_bold": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "이건 어둠의 부활 의식의 일부입니다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 눈을 가늘게 떴다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...어둠의 부활이라고요?\n그 근거는?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "백작가의 비밀, 붉은 보석...어둠을 부활하려는 자가 있어요."
+        },
+        {
+          "speaker": "",
+          "text": "침묵이 흘렀다.\n렌이 에밀리아를 오래 바라보았다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...당신은 보통 사람이 아니군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "허풍을 말하는 것 같지도 않고요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "실은 저희 길드에서도 최근 이상한 흐름을 추적 중이었어요.\n당신 말이 맞다면— 상황이 생각보다 심각한 거예요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 눈이 진지하게 빛났다.\n장사꾼의 눈이 아니라— 진심으로 위협을 가늠하는 눈이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "trade_info"
+            }
+          ]
+        }
+      ]
+    },
+    "trade_info": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "렌님.\n정보를 교환하죠."
+        },
+        {
+          "speaker": "렌",
+          "text": "...교환이요?",
+          "emotion": "curious"
+        },
+        {
+          "speaker": "me",
+          "text": "저는 어둠에 대해 함께 조사할 동료가 필요해요.\n그리고 이 길드의 정보력을 가지고 싶죠."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 눈에 흥미가 떠올랐다."
+        },
+        {
+          "speaker": "렌",
+          "text": "어떤 정보인지에 따라 다르겠지만—\n들어볼게요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 한 번 숨을 고른 뒤\n말을 시작했다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "slave_auction"
+            }
+          ]
+        }
+      ]
+    },
+    "slave_auction": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "지난 번, 노예 경매에 대해 말했었죠.\n어린 아이. 특히 마나를 가진 아이들이 대상이란 것을 아시나요."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 표정이 굳었다."
+        },
+        {
+          "speaker": "me",
+          "text": "마나 보유자— 그들이 납치되어 비공개 경매에서\n거래되고 있습니다."
+        },
+        {
+          "speaker": "me",
+          "text": "그리고 그 경매에 백작이 연루되어 있다는 사실까지."
+        },
+        {
+          "speaker": "",
+          "text": "침묵이 이어졌다.\n렌의 눈이 가늘어졌다."
+        },
+        {
+          "speaker": "렌",
+          "text": "마나를 가진 아이들을...",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 탁자를 손으로 짚었다.\n목소리를 낮추었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "그건 금지된 거래예요.\n명백히 제국법 위반이고—",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "me",
+          "text": "완전한 초승달이 뜨는 날 밤에 열려요.\n장소는 남부 외곽 지역이에요."
+        },
+        {
+          "speaker": "렌",
+          "text": "...확실한 정보여야 합니다.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "전생에서 알고 있던 사실이다.\n렌의 길드는 노예 경매 사건을 밝혀내 큰 길드로 자리매김한다."
+        },
+        {
+          "speaker": "me",
+          "text": "(어차피 조만간 당신과 길드가 밝혀낼 것이지만,\n지금은 내가 이용하겠어.)"
+        },
+        {
+          "speaker": "me",
+          "text": "확실해요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 잠시 눈을 감았다.\n무언가를 계산하는 듯한 침묵이었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "source_secret"
+            }
+          ]
+        }
+      ]
+    },
+    "source_secret": {
+      "lines": [
+        {
+          "speaker": "렌",
+          "text": "에밀리아 양.\n이 정보를 어디서 얻으신 겁니까?",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌의 시선이 에밀리아에게 고정되었다.\n아까까지의 따뜻함이 사라진, 길드장의 눈이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...이 사람도 정보상이야.\n내가 어디까지 말해야 할지 신중하게 생각해야 해.)",
+          "choices": [
+            {
+              "text": "살짝 힌트를 준다.",
+              "goto": "crescent_plan_hint",
+              "affectionChange": 5,
+              "flagToSet": "ch10_hint_given"
+            },
+            {
+              "text": "완전히 비밀로 한다.",
+              "goto": "crescent_plan_secret",
+              "affectionChange": 3,
+              "flagToSet": "ch10_source_hidden"
+            }
+          ]
+        }
+      ]
+    },
+    "crescent_plan_hint": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "저는 백작가에 있습니다."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 눈을 가늘게 떴다.\n그러다 천천히 고개를 끄덕였다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...백작가 내부인이었군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "그렇다면 더 위험한 거 아닙니까?\n그쪽에서 눈치채면—",
+          "emotion": "sad"
+        },
+        {
+          "speaker": "me",
+          "text": "제가 알아서 해요."
+        },
+        {
+          "speaker": "렌",
+          "text": "...결심하셨군요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 잠시 생각한 뒤 손을 탁자에 펼쳤다."
+        },
+        {
+          "speaker": "렌",
+          "text": "완전한 초승달이 되기까지 3일.\n 그때가 기회입니다. 제가 루트를 준비해두겠어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "함께 가주실 건가요?"
+        },
+        {
+          "speaker": "렌",
+          "text": "당연하죠.\n이 정도 일이면 직접 확인해야 해요.",
+          "emotion": "smile"
+        },
+        {
+          "speaker": "",
+          "text": "렌이 짧게 웃었다.\n그 웃음 뒤에 단호함이 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "crescent_plan_secret": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "그건 말씀드리기 어렵습니다."
+        },
+        {
+          "speaker": "",
+          "text": "렌의 시선이 에밀리아에게서 잠시 흔들렸다.\n불만족스러운 눈이었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "...알겠습니다.\n묻지 않겠어요.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "렌",
+          "text": "다만 한 가지만요.\n위험해지면 반드시 말해주세요.\n혼자 감당하지 마시고.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "...그렇게 할게요."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 탁자 위에 손을 가볍게 짚었다."
+        },
+        {
+          "speaker": "렌",
+          "text": "초승달은 3일 후.\n제가 루트를 확보해두겠습니다.\n그날 밤 함께 움직입시다.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "me",
+          "text": "감사해요, 렌님."
+        },
+        {
+          "speaker": "",
+          "text": "렌이 짧게 끄덕였다.\n하지만 그 눈 안에는 여전히\n에밀리아에 대한 물음표가 남아 있었다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "chapter_end": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "3일. 준비할 시간은 충분했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...경매장은 백작가와 관련있지.\n백작의 계략을 파헤치려면 그쪽으로 접근하는 게 가장 나아.)"
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아는 길드를 나서며\n하늘을 올려다보았다."
+        },
+        {
+          "speaker": "",
+          "text": "아직 둥근 달이 떠 있었다.\n3일 후, 저 달이 초승달이 되면—\n모든 것이 시작된다."
+        },
+        {
+          "speaker": "",
+          "text": "— Chapter 10 End —",
+          "textAlign": "center"
+        }
+      ]
+    }
+  }
+}
