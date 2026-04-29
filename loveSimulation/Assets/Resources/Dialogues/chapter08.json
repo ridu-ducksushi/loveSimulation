@@ -18,10 +18,6 @@
           "text": "(...성년식. 백작은 그 자리에서\n나를 대공에게 보여주려 하겠지.)"
         },
         {
-          "speaker": "me",
-          "text": "(...붉은 보석을 쓰라고 했지만—\n과거를 알고 있는 내가 선택할 리 없다.)"
-        },
-        {
           "speaker": "",
           "text": "에밀리아가 옷장 앞에 섰다.\n성년식에 입고 갈 옷을 골라야 했다."
         },
@@ -41,10 +37,6 @@
       "lines": [
         {
           "speaker": "",
-          "text": "옷장에서 드레스 몇 벌을 꺼냈다."
-        },
-        {
-          "speaker": "",
           "text": "하늘색 레이스 드레스.\n짙은 와인색 벨벳 드레스.\n은빛 자수가 놓인 흰색 드레스."
         },
         {
@@ -57,7 +49,10 @@
         },
         {
           "speaker": "",
-          "text": "에밀리아가 하늘색 드레스를\n몸에 대 보았다."
+          "text": "에밀리아가 하늘색 드레스를\n몸에 대 보았다.",
+          "characters": [
+            {"id": "dragon", "position": "Center", "emotion": "embarrassed"}
+          ]
         },
         {
           "speaker": "에르하",
@@ -66,7 +61,7 @@
         },
         {
           "speaker": "",
-          "text": "옆에서 구경하던 에르하가 휙 고개를 돌렸다.\n얼굴이 붉게 달아올라 있었다."
+          "text": "옆에서 구경하던 에르하가 휙 고개를 돌렸다.\n귓가가 붉게 달아올라 있었다."
         },
         {
           "speaker": "me",
@@ -74,7 +69,7 @@
         },
         {
           "speaker": "에르하",
-          "text": "아, 아무것도 아니야!\n그냥— 갑자기 옷을 갈아입으려고 하니까!",
+          "text": "아, 아무것도 아니야!\n그냥... 갑자기 옷을 갈아입으려고 하니까!",
           "emotion": "embarrassed"
         },
         {
@@ -88,7 +83,7 @@
         },
         {
           "speaker": "",
-          "text": "에르하가 천장을 향해 떠올라 갔다.\n의도적으로 시선을 피하는 것이 분명했다."
+          "text": "에르하가 등을 돌린 채로 한 발짝 물러섰다.\n시선을 의도적으로 피하는 것이 분명했다."
         },
         {
           "speaker": "me",
@@ -100,7 +95,7 @@
         },
         {
           "speaker": "에르하",
-          "text": "...그건 안 돼.",
+          "text": "...주인. 그건 안 돼.",
           "emotion": "angry"
         },
         {
@@ -109,16 +104,16 @@
         },
         {
           "speaker": "에르하",
-          "text": "너무 화려해.\n다른 남자들이 쳐다볼 거잖아. 인간들은 다 짐승이라고!",
+          "text": "너무 화려하잖아.\n다른 남자들이 쳐다볼 거잖아. 인간들은 다 짐승이라고!",
           "emotion": "angry"
         },
         {
           "speaker": "me",
-          "text": "(짐승...?은 오히려 에르하쪽인 것 같은데...)\n성년식인데 당연히 차려입어야지."
+          "text": "(짐승... 은 오히려 에르하 쪽인 것 같은데...)\n성년식인데 당연히 차려입어야지."
         },
         {
           "speaker": "에르하",
-          "text": "......나만 보면 안 되는 거야?",
+          "text": "......그런 모습은 나만 보면 안 되는 거야?",
           "emotion": "sad"
         },
         {
@@ -156,7 +151,7 @@
         },
         {
           "speaker": "",
-          "text": "에르하가 살짝 안도한 듯\n빛이 흔들렸다."
+          "text": "에르하의 어깨가 살짝 안도한 듯\n작게 풀렸다."
         },
         {
           "speaker": "에르하",
@@ -165,7 +160,7 @@
         },
         {
           "speaker": "me",
-          "text": "(...귀엽다.)",
+          "text": "(...귀엽기는.)",
           "choices": [
             {
               "text": "계속하기",
@@ -184,16 +179,16 @@
         },
         {
           "speaker": "me",
-          "text": "분명 뭐라고 했잖아.\n나만 보면 안 되냐고—"
+          "text": "분명 뭐라고 했잖아.\n나만 보면 안 되냐고..."
         },
         {
           "speaker": "에르하",
-          "text": "그, 그건—!\n그냥 다른 남자들이 싫다는 뜻이야!",
+          "text": "그, 그건...!\n그냥 다른 남자들이 싫다는 뜻이야!",
           "emotion": "embarrassed"
         },
         {
           "speaker": "",
-          "text": "에르하의 얼굴이 더욱 붉게 타올랐다.\n곧 있으면 터질것처럼 위험해보였다."
+          "text": "에르하의 귓가가 더욱 붉게 타올랐다.\n곧 터질 것처럼 위험해 보였다."
         },
         {
           "speaker": "me",
@@ -211,7 +206,7 @@
       "lines": [
         {
           "speaker": "",
-          "text": "에르하가 고장난듯 멈추었다."
+          "text": "에르하가 고장난 듯 멈추었다."
         },
         {
           "speaker": "에르하",
@@ -220,11 +215,11 @@
         },
         {
           "speaker": "me",
-          "text": "너한테만 보여줄게.\n다른 사람한테 보여줄 마음 없으니까."
+          "text": "너한테만 보여준다고.\n다른 사람한테 보여줄 마음 없으니까."
         },
         {
           "speaker": "",
-          "text": "에르하가 한참 동안 아무 말도 하지 못했다.\n에르하의 눈동자가 잔잔하게 흔들리고 있었다."
+          "text": "에르하의 얼굴이 토마토처럼 달아올랐다."
         },
         {
           "speaker": "에르하",
@@ -237,12 +232,10 @@
         },
         {
           "speaker": "",
-          "text": "에르하의 얼굴에 천천히,\n웃음이 피어났다."
-        },
-        {
-          "speaker": "에르하",
-          "text": "......고마워.",
-          "emotion": "smile"
+          "text": "에르하의 입가에 천천히\n웃음이 피어났다.",
+          "characters": [
+            {"id": "dragon", "position": "Center", "emotion": "smile"}
+          ]
         },
         {
           "speaker": "me",
@@ -260,7 +253,8 @@
       "lines": [
         {
           "speaker": "",
-          "text": "결국 은빛 자수가 놓인\n흰색 드레스를 골랐다."
+          "text": "결국 은빛 자수가 놓인\n흰색 드레스를 골랐다.",
+          "hideCharactersAfter": true
         },
         {
           "speaker": "",
@@ -272,11 +266,11 @@
         },
         {
           "speaker": "me",
-          "text": "(...전생에서도 이 성년식에 참석했었지.\n그 때는 지금과 다른 대공비의 자격으로.)"
+          "text": "(...전생에서도 이 성년식에 참석했었지.\n그때는 지금과 다른, 대공비의 자격으로.)"
         },
         {
           "speaker": "me",
-          "text": "(그때 북부대공은 내 옆에 있었어.\n하지만 에밀리아는— 이 몸의 원래 주인을 본 적은 없었다.)"
+          "text": "(그때 북부 대공은 내 옆에 있었어.\n하지만 에밀리아는, 이 몸의 원래 주인을 본 적은 없었지.)"
         },
         {
           "speaker": "me",
@@ -287,16 +281,8 @@
           "text": "그렇다면 전생의 에밀리아는\n성년식에서 무엇을 하고 있었을까."
         },
         {
-          "speaker": "me",
-          "text": "(...명목상으론 백작의 양녀니까 참석은 했겠지. 하지만—)"
-        },
-        {
-          "speaker": "me",
-          "text": "(...과거의 기억에는 성년식에서 에밀리아를 본 적 없어.\n아무 일도 없었던 걸까, 아니면—)"
-        },
-        {
           "speaker": "에르하",
-          "text": "무슨 생각해?",
+          "text": "무슨 생각해, 주인?",
           "emotion": "curious"
         },
         {
@@ -326,12 +312,8 @@
           "text": "영상구였다. 누군가 연락을 보내고 있었다."
         },
         {
-          "speaker": "",
-          "text": "마나를 흘려넣자\n렌의 얼굴이 떠올랐다."
-        },
-        {
           "speaker": "렌",
-          "text": "안녕하세요, 에밀리아 양.\n지난번에 부탁하신 건 조사가 끝났어요.",
+          "text": "안녕하세요, 고객님. 오늘도 눈부시네요.\n지난번에 부탁하신 건, 조사가 끝났습니다.",
           "emotion": "smile"
         },
         {
@@ -340,48 +322,12 @@
         },
         {
           "speaker": "렌",
-          "text": "네. 그런데 이건...\n영상구로 말하기엔 좀 그래요.",
-          "emotion": "curious"
-        },
-        {
-          "speaker": "렌",
-          "text": "직접 길드로 오실 수 있나요?\n중요한 이야기예요.",
+          "text": "직접 오셔서 결과를 들으시는 게 좋을 것 같아요.",
           "emotion": "smile"
         },
         {
           "speaker": "me",
-          "text": "알겠어요. 곧 갈게요."
-        },
-        {
-          "speaker": "",
-          "text": "영상구의 빛이 꺼졌다."
-        },
-        {
-          "speaker": "에르하",
-          "text": "또 그 남자야?",
-          "emotion": "angry"
-        },
-        {
-          "speaker": "me",
-          "text": "보석 조사 결과가 나왔대.\n직접 가야 한대."
-        },
-        {
-          "speaker": "에르하",
-          "text": "직접 오라고?\n그냥 여기서 말하면 되잖아.",
-          "emotion": "angry"
-        },
-        {
-          "speaker": "me",
-          "text": "중요한 이야기라잖아."
-        },
-        {
-          "speaker": "에르하",
-          "text": "...나는 그가 마음에 들지 않아.",
-          "emotion": "embarrassed"
-        },
-        {
-          "speaker": "",
-          "text": "에르하의 볼이 불만스럽게 부풀어 올랐다.",
+          "text": "알겠어요. 곧 갈게요.",
           "choices": [
             {
               "text": "계속하기",
@@ -395,33 +341,20 @@
       "lines": [
         {
           "speaker": "me",
-          "text": "에르하, 밖에 나갈 준비 해줄 수 있어?"
-        },
-        {
-          "speaker": "에르하",
-          "text": "...고집을 꺾지 못하겠군.",
-          "emotion": "neutral"
+          "text": "에르하, 밖에 나갈 준비 해 줄 수 있어?"
         },
         {
           "speaker": "",
           "text": "에르하가 빛을 내뿜자\n에밀리아와 똑같은 환영이 침대 위에 나타났다."
         },
         {
-          "speaker": "",
-          "text": "환영은 눈을 감고 잠든 것처럼 보였다."
-        },
-        {
-          "speaker": "에르하",
-          "text": "빨리 다녀와.",
+          "speaker": "me",
+          "text": "고마워.",
           "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "에밀리아가 로브를 걸쳤다."
-        },
-        {
-          "speaker": "",
-          "text": "텔레포트 마법진이 발밑에서 빛나기 시작했다.\n시장 근처의 골목으로 향하는 좌표였다.",
+          "text": "에밀리아는 후드를 깊이 눌러쓰고 창틀을 넘었다.",
           "choices": [
             {
               "text": "계속하기",
@@ -440,11 +373,11 @@
         },
         {
           "speaker": "",
-          "text": "낮의 시장은 활기로 가득했다.\n상인들의 호객 소리가 울려퍼졌다."
+          "text": "낮의 시장은 활기로 가득했다.\n상인들의 호객 소리가 울려 퍼졌다."
         },
         {
           "speaker": "me",
-          "text": "(...길드는 이 골목을 지나서 좀 더 가면—)"
+          "text": "(...길드는 이 골목을 지나서 좀 더 가면...)"
         },
         {
           "speaker": "",
@@ -465,10 +398,6 @@
     "thug_encounter": {
       "lines": [
         {
-          "speaker": "",
-          "text": "외진 골목이었다.\n인기척이 사라진 곳."
-        },
-        {
           "speaker": "남자",
           "text": "이봐, 거기 서.",
           "emotion": "neutral"
@@ -479,7 +408,7 @@
         },
         {
           "speaker": "남자",
-          "text": "혼자 돌아다니면 위험한데. 우리가 데려다줄까?",
+          "text": "혼자 돌아다니면 위험한데. 우리가 데려다 줄까?",
           "emotion": "neutral"
         },
         {
@@ -488,16 +417,12 @@
         },
         {
           "speaker": "me",
-          "text": "(...치한이야. 이런 곳에서—)"
-        },
-        {
-          "speaker": "me",
           "text": "고맙지만 사양하겠어요. 혼자 갈 수 있습니다.",
           "emotion": "angry"
         },
         {
           "speaker": "남자",
-          "text": "그렇게 재미 없게 굴지 말라고.\n지금 보니 얼굴도 제법 예쁘게 생겼잖아?"
+          "text": "그렇게 재미없게 굴지 말라고.\n지금 보니 얼굴도 제법 예쁘게 생겼잖아?"
         },
         {
           "speaker": "",
@@ -505,7 +430,7 @@
         },
         {
           "speaker": "",
-          "text": "그 순간—",
+          "text": "그 순간 —",
           "choices": [
             {
               "text": "계속하기",
@@ -519,11 +444,7 @@
       "lines": [
         {
           "speaker": "",
-          "text": "날카로운 검명이 울렸다."
-        },
-        {
-          "speaker": "",
-          "text": "칼날이 남자의 손목 앞에서\n딱 멈추었다."
+          "text": "날카로운 검명이 골목의 공기를 갈랐다."
         },
         {
           "speaker": "기사단장",
@@ -532,24 +453,20 @@
         },
         {
           "speaker": "",
-          "text": "낮고 단호한 목소리.\n은빛 갑옷에 짙은 푸른 망토를 걸친\n장신의 남자가 서 있었다."
+          "text": "낮고 단단한 저음.\n은빛 갑옷에 짙은 푸른 망토를 걸친\n장신의 남자가 서 있었다."
         },
         {
           "speaker": "남자",
-          "text": "뭐야, 이 자식—!",
-          "emotion": "neutral"
+          "text": "뭐야, 이 자식 — !",
+          "emotion": "angry"
         },
         {
           "speaker": "",
-          "text": "남자가 주먹을 휘둘렀다.\n기사단장이 가볍게 몸을 틀어 피한 뒤\n칼등으로 남자의 손을 쳤다."
+          "text": "남자가 주먹을 휘둘렀다.\n남자가 가볍게 몸을 틀어 피한 뒤\n칼등으로 남자의 손목을 쳤다."
         },
         {
           "speaker": "",
           "text": "우두둑.\n남자가 손목을 부여잡으며 쓰러졌다."
-        },
-        {
-          "speaker": "",
-          "text": "나머지 한 명이 뒷걸음질 쳤다."
         },
         {
           "speaker": "기사단장",
@@ -561,115 +478,180 @@
           "text": "한 마디.\n치한들은 허겁지겁 골목을 빠져나갔다."
         },
         {
-          "speaker": "",
-          "text": "기사단장이 검을 거두고 돌아섰다.\n에밀리아를 바라보았다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "괜찮습니까?",
-          "emotion": "neutral"
-        },
-        {
           "speaker": "me",
-          "text": "...괜찮아요. 감사합니다."
-        },
-        {
-          "speaker": "",
-          "text": "에밀리아는 로브를 깊이 쓰고 있었다.\n기사단장의 눈에는 에밀리아의 얼굴이\n거의 보이지 않았을 것이다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...이 갑옷. 낯익고 그리운 이 문양은 설마...)"
-        },
-        {
-          "speaker": "me",
-          "text": "(...북부 기사단의 문양이야. 그리고 저 장식... 혹시- 기사단장?)",
+          "text": "(...이 등. 검을 거두는 자세.\n전생에 늘 내 뒤에 서 있던, 같은 사람의 것이야.)",
           "choices": [
             {
-              "text": "계속하기",
-              "goto": "knight_conversation"
-            }
-          ]
-        }
-      ]
-    },
-    "knight_conversation": {
-      "lines": [
-        {
-          "speaker": "",
-          "text": "기사단장이 주변을 살핀 뒤\n다시 에밀리아를 보았다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "이런 골목에 혼자 다니면 위험합니다.\n큰 길로 돌아가세요 레이디.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "",
-          "text": "반가움과 혼란스러움이 뒤엉켰다.\n그저 반가운 얼굴에 눈물이 날 것만 같았다."
-        },
-        {
-          "speaker": "me",
-          "text": "(...그런데 지금은 나를 모르겠지.\n이 얼굴은 에밀리아니까.)"
-        },
-        {
-          "speaker": "",
-          "text": "기사단장이 돌아서려 했다.",
-          "choices": [
-            {
-              "text": "저기, 잠깐만요.",
-              "goto": "knight_talk_casual",
+              "text": "정중하게 인사 자세를 취한다.",
+              "goto": "knight_meet_bow",
               "affectionChange": 3,
-              "flagToSet": "ch9_knight_casual"
+              "flagToSet": "ch8_meet_bow"
             },
             {
-              "text": "혹시 북부에서 오신 건가요?",
-              "goto": "knight_talk_direct",
+              "text": "침묵 속에 그의 등을 응시한다.",
+              "goto": "knight_meet_silent_gaze",
               "affectionChange": 5,
-              "flagToSet": "ch9_knight_direct"
+              "flagToSet": "ch8_meet_silent_gaze"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_meet_bow": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "옷자락 끝을 짧게 정리하고, 가벼운 인사 자세를 취했다.\n대공비 시절의 몸에 벤 습관이었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...몸이 먼저 움직였군.\n한 번 죽어서도 빠지지 않는 습관이라니.)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_face_turn"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_meet_silent_gaze": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "호흡을 한 번, 깊이 골랐다.\n전생의 그를 알아챘다는 사실을 숨긴채, 그의 등을 정면으로 응시했다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...여기서 마주칠 줄은 몰랐는데...)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_face_turn"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_face_turn": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "기사단장이 검을 거두었다.\n그리고 그제야 에밀리아 쪽으로 천천히 돌아섰다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 에밀리아의 얼굴을 본 순간,\n낮게 깔려 있던 시선이 미세하게 일그러졌다."
+        },
+        {
+          "speaker": "",
+          "text": "단단했던 입매가 한층 더 굳었다.\n눈매에 차가운 무언가가 스쳐 지나갔다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "......",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "그는 마치 가까이 두기 거북한 무언가에서 거리를 두듯\n한 발짝 뒤로 물러섰다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...)",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_cold_words"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_cold_words": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "조금 늦게, 그가 입을 열었다.\n낮고 짧은, 단호한 음성이었다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "다친 곳은 없습니까.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "어조에는 의무감만이 실려 있었다.\n걱정도, 따스함도 없었다."
+        },
+        {
+          "speaker": "me",
+          "text": "...괜찮아요. 도와주셔서 감사합니다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "이런 골목에 혼자 다니지 마십시오.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "말끝이 단단하게 끊어졌다.\n레이디라는 호칭조차 붙이지 않았다."
+        },
+        {
+          "speaker": "",
+          "text": "그는 빨리 이 자리를 벗어나고 싶다는 듯이\n등을 절반 돌리고 있었다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...전생에 그는 늘 예의 있는 사람이었지.\n지금의 모습은 마치 다른 사람 같아.)"
+        },
+        {
+          "speaker": "me",
+          "text": "(혐오. 그래, 분명한 혐오야.\n나는 이 사람에게 아무것도 한 적이 없는데...)",
+          "choices": [
+            {
+              "text": "고개를 숙이고 보내드린다.",
+              "goto": "knight_quiet_bow",
+              "affectionChange": 2,
+              "flagToSet": "ch8_knight_quiet_bow"
             },
             {
-              "text": "기사단장님, 맞으시죠?",
-              "goto": "knight_talk_knowing",
-              "affectionChange": 8,
-              "flagToSet": "ch9_knight_knowing"
+              "text": "어째서 그런 눈으로 보시는지 묻는다.",
+              "goto": "knight_question_hate",
+              "affectionChange": 5,
+              "flagToSet": "ch8_knight_question_hate"
+            },
+            {
+              "text": "예의를 갖춰 다시 한 번 감사를 표한다.",
+              "goto": "knight_polite_thanks",
+              "affectionChange": 3,
+              "flagToSet": "ch8_knight_polite_thanks"
             }
           ]
         }
       ]
     },
-    "knight_talk_casual": {
+    "knight_quiet_bow": {
       "lines": [
         {
           "speaker": "",
-          "text": "기사단장이 멈추었다."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "무슨 일입니까?",
-          "emotion": "neutral"
+          "text": "에밀리아는 가만히 고개를 숙였다.\n그것이 가장 안전한 응답이었다."
         },
         {
           "speaker": "me",
-          "text": "도와주셔서 감사해요.\n이 근처에 사시나요?"
+          "text": "...신세 졌습니다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 어깨가 잠깐, 미세하게 굳었다.\n그 단정한 인사를 받기 거북하다는 듯이."
         },
         {
           "speaker": "기사단장",
-          "text": "남부에 볼일이 있어 왔을 뿐입니다.\n사소한 일이니 신경 쓰지 마세요.",
-          "emotion": "neutral"
+          "text": "......",
+          "emotion": "angry"
         },
         {
-          "speaker": "me",
-          "text": "볼일이요?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "네. 백작가에 일이 있어서요.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "(...거래 중단 서신.\n역시 전생과 같은 흐름이야.)",
+          "speaker": "",
+          "text": "그가 짧게 숨을 들이마셨다.\n무언가를 삼키는 것 같았다.",
           "choices": [
             {
               "text": "계속하기",
@@ -679,38 +661,23 @@
         }
       ]
     },
-    "knight_talk_direct": {
+    "knight_question_hate": {
       "lines": [
         {
+          "speaker": "me",
+          "text": "...실례지만,\n어째서 그런 눈으로 보시는 건가요."
+        },
+        {
           "speaker": "",
-          "text": "기사단장의 눈이 미세하게 좁아졌다."
+          "text": "기사단장의 발걸음이 멈추었다.\n등 너머의 어깨가, 한순간 단단해졌다."
+        },
+        {
+          "speaker": "",
+          "text": "그가 천천히 고개만 돌려 에밀리아를 보았다.\n방금 전 분명히 어렸던 혐오를, 이번엔 의식적으로 눌러 감춘 얼굴이었다."
         },
         {
           "speaker": "기사단장",
-          "text": "...어째서 그리 생각합니까?",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "갑옷의 문양이요.\n북부 기사단의 것이잖아요."
-        },
-        {
-          "speaker": "기사단장",
-          "text": "눈이 좋군요 레이디.\n예상하신 것이 맞습니다. 저는 북부에서 파견되었습니다.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "남부까지 무슨 일로요?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "남부 백작가와의 거래 때문입니다.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "(...역시. 전생과 같은 일이\n그대로 흘러가고 있어.)",
+          "text": "...무슨 말씀이신지 모르겠습니다.",
           "choices": [
             {
               "text": "계속하기",
@@ -720,38 +687,37 @@
         }
       ]
     },
-    "knight_talk_knowing": {
+    "knight_polite_thanks": {
       "lines": [
         {
+          "speaker": "me",
+          "text": "...구해 주셔서 정말 감사합니다.\n덕분에 무사할 수 있었어요."
+        },
+        {
           "speaker": "",
-          "text": "기사단장이 멈칫했다."
+          "text": "정중한 예의가 담긴 인사였다.\n어떤 귀부인이 들어도 흠 잡을 데 없는 예법이었다."
+        },
+        {
+          "speaker": "",
+          "text": "그러나 그 정중함이 닿는 순간,\n기사단장의 미간이 도리어 더 깊게 일그러졌다."
         },
         {
           "speaker": "기사단장",
-          "text": "...나를 아십니까?",
-          "emotion": "surprised"
-        },
-        {
-          "speaker": "me",
-          "text": "갑옷의 문양을 보고 짐작했어요.\n북부 기사단의 단장이시라면 소문을 들은 적이 있거든요."
+          "text": "...감사 인사는 받지 않겠소.",
+          "emotion": "angry"
         },
         {
           "speaker": "기사단장",
-          "text": "소문이라.\n대단한 것은 없습니다만.",
-          "emotion": "neutral"
+          "text": "기사로서 마땅한 일을 했을 뿐이오. 그 이상도, 그 이하도 아니오.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "단단히 끊어내는 말투였다.\n에밀리아의 호의가 닿는 자리마다, 그가 한 겹씩 더 갑옷을 두르는 것 같았다."
         },
         {
           "speaker": "me",
-          "text": "남부까지는 무슨 일로 오신거죠?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "이 지역 백작가와의 거래 때문입니다.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "(...전생과 같아.\n기사단장이 직접 서신을 가져왔구나.)",
+          "text": "(...받지 않겠다라.)",
           "choices": [
             {
               "text": "계속하기",
@@ -764,39 +730,106 @@
     "knight_recall": {
       "lines": [
         {
-          "speaker": "me",
-          "text": "...조만간 황녀님의 성년식이 열린다고 들었어요.\n혹시 기사님도 참석하시나요?"
-        },
-        {
-          "speaker": "기사단장",
-          "text": "공작님을 수행하여 참석할 예정입니다.\n황녀 전하의 성년식이니.",
-          "emotion": "neutral"
-        },
-        {
-          "speaker": "me",
-          "text": "그렇군요."
+          "speaker": "",
+          "text": "기사단장이 다시 발을 옮기려 했다.\n그러다가 멈추었다."
         },
         {
           "speaker": "",
-          "text": "잠시 침묵이 흘렀다.\n기사단장이 에밀리아를 보다가 갑자기 고개를 갸웃거렸다."
+          "text": "그의 시선이, 의지와 무관하게\n에밀리아의 얼굴 어딘가에 한 번 더 머물렀다."
         },
         {
           "speaker": "기사단장",
-          "text": "...실례지만,\n혹시 어디서 뵌 적이 있습니까?",
+          "text": "...실례지만, 한 가지만 묻겠소.",
           "emotion": "surprised"
         },
+        {
+          "speaker": "기사단장",
+          "text": "...우리, 어디서 본 적이 있습니까?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "",
+          "text": "낮은 목소리에 본인도 당황한 기색이 묻어 있었다.\n방금까지의 단호함이, 그 한마디 안에서 미세하게 흔들렸다."
+        },
+        {
+          "speaker": "",
+          "text": "에밀리아의 안에서 무언가가 위태롭게 차오르고 있었다.",
+          "choices": [
+            {
+              "text": "...아뇨. 처음 뵙는 걸요.",
+              "goto": "knight_deny",
+              "affectionChange": 3,
+              "flagToSet": "ch8_knight_deny_meeting"
+            },
+            {
+              "text": "...누구를 떠올리신 건가요?",
+              "goto": "knight_pry",
+              "affectionChange": 5,
+              "flagToSet": "ch8_knight_pry_memory"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_deny": {
+      "lines": [
         {
           "speaker": "me",
           "text": "...아뇨. 처음 뵙는 걸요."
         },
         {
+          "speaker": "",
+          "text": "기사단장이 잠시 에밀리아의 얼굴을 응시했다.\n무언가를 끄집어내려는 듯한 시선이었다."
+        },
+        {
           "speaker": "기사단장",
-          "text": "...그렇군요. 실례했습니다.",
+          "text": "...그렇소. 실례했소.",
           "emotion": "neutral"
         },
         {
           "speaker": "",
-          "text": "기사단장이 시선을 거뒀다.\n하지만 걸음을 옮기며 작게 중얼거렸다."
+          "text": "그가 시선을 거두고\n다시 등을 돌렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_mutter"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_pry": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "...누구를 떠올리신 건가요?"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 어깨가, 그 물음에 한 번 더 흔들렸다.\n대답하기 위해서가 아니라, 답을 자기 자신도 알지 못해서."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...아니오. 잘못 본 모양이오.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "낮은 음성이 자기 자신을 향한 변명처럼 들렸다.\n그가 시선을 거두고, 다시 등을 돌렸다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "knight_mutter"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_mutter": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "그가 한 걸음, 두 걸음 골목 안쪽으로 멀어졌다.\n그리고 본인도 의식하지 못한 듯, 작게 중얼거렸다."
         },
         {
           "speaker": "기사단장",
@@ -805,7 +838,7 @@
         },
         {
           "speaker": "",
-          "text": "그 한마디가 에밀리아의 귀에\n또렷이 들렸다."
+          "text": "그 한 마디가 에밀리아의 귀에\n또렷이 들렸다."
         },
         {
           "speaker": "me",
@@ -813,7 +846,81 @@
         },
         {
           "speaker": "me",
-          "text": "(전생과 모습과 다를 텐데..)",
+          "text": "(전생의 모습과는 다를 텐데...\n그런데 동시에, 어째서 그토록 혐오의 시선을 보낸 거지.)",
+          "choices": [
+            {
+              "text": "그를 잡아 세운다.",
+              "goto": "knight_call_back",
+              "affectionChange": 5,
+              "flagToSet": "ch8_knight_called_back"
+            },
+            {
+              "text": "그대로 보낸다.",
+              "goto": "knight_let_walk",
+              "affectionChange": 2,
+              "flagToSet": "ch8_knight_let_walk"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_call_back": {
+      "lines": [
+        {
+          "speaker": "me",
+          "text": "잠깐만요!"
+        },
+        {
+          "speaker": "",
+          "text": "기사단장이 멈추었다.\n그러나 이번엔, 돌아보지 않았다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...무슨 일이오.",
+          "emotion": "angry"
+        },
+        {
+          "speaker": "",
+          "text": "등을 돌린 채 흘러나온 음성이,\n돌아볼 자신이 없는 자의 그것 같았다."
+        },
+        {
+          "speaker": "me",
+          "text": "...성함을, 여쭤도 될까요."
+        },
+        {
+          "speaker": "",
+          "text": "오랜 침묵이 흘렀다.\n갑옷 너머로 들리는 그의 호흡만이 또렷했다."
+        },
+        {
+          "speaker": "기사단장",
+          "text": "...리온이라 하오.",
+          "emotion": "neutral"
+        },
+        {
+          "speaker": "",
+          "text": "그것이 전부였다.\n그가 다시 걸음을 옮겼고, 그림자가 골목 끝으로 지워졌다.",
+          "choices": [
+            {
+              "text": "계속하기",
+              "goto": "chapter_end"
+            }
+          ]
+        }
+      ]
+    },
+    "knight_let_walk": {
+      "lines": [
+        {
+          "speaker": "",
+          "text": "에밀리아는 부르려던 손을 거두었다."
+        },
+        {
+          "speaker": "",
+          "text": "기사단장의 뒷모습이 골목 끝으로 사라졌다.\n갑옷 자락의 마지막 빛만이, 천천히 시야에서 떨어졌다."
+        },
+        {
+          "speaker": "me",
+          "text": "(...지금 그를 붙잡는 건, 의미가 없어.)",
           "choices": [
             {
               "text": "계속하기",
@@ -827,15 +934,11 @@
       "lines": [
         {
           "speaker": "",
-          "text": "기사단장의 뒷모습이 골목 끝으로 사라졌다."
+          "text": "에밀리아는 한참을 그 자리에 서 있었다.\n검 끝이 가른 공기의 잔영이, 골목에 아직 남아 있는 듯했다."
         },
         {
           "speaker": "me",
-          "text": "(...전생에서 내 곁을 지키던 사람.)"
-        },
-        {
-          "speaker": "me",
-          "text": "(...지금은 나를 알아보지 못하면서도\n무의식 중에 대공비를 떠올린다.)"
+          "text": "(...전생에서 내 그림자처럼 곁을 지키던 사람.)"
         },
         {
           "speaker": "",
@@ -851,12 +954,7 @@
         },
         {
           "speaker": "",
-          "text": "작은 인연의 실이\n다시 얽히기 시작하고 있었다.",
-          "flagToSet": "ch9_knight_met"
-        },
-        {
-          "speaker": "",
-          "text": "— Chapter 9 End —",
+          "text": "— Chapter 8 End —",
           "textAlign": "center"
         }
       ]
