@@ -108,10 +108,13 @@
 
 ### 1. 새 챕터 작성 전 필수 확인
 - `Assets/Resources/Dialogues/chapter_summary.md`를 먼저 읽고 전체 스토리 흐름을 파악
+- `Assets/Resources/Dialogues/character_settings.md` 의 캐릭터·세계관 SSOT 확인
+- **`Assets/Resources/Dialogues/writing_style_guide.md` 의 글쓰기 자제 규칙 확인** (em dash·말줄임표·verbal tic·반복 문장·부위 다양화 — AI 같아 보이는 글쓰기 차단 SSOT)
 - 직전 2~3개 챕터 JSON을 반드시 읽고, 구조·톤·설정을 파악한 뒤 작성
 - 등장인물 이름, 말투, 호칭, 관계 설정이 기존과 일치하는지 확인
 - 진행 중인 플래그(`flagToSet`) 흐름이 끊기지 않도록 이전 챕터의 플래그 확인
 - **새 챕터 작성 완료 후 `chapter_summary.md`에 해당 챕터 요약을 반드시 추가**
+- **새 챕터 작성 직후 `writing_style_guide.md` 의 자가점검 루틴(grep 카운트) 실행 — 기준치 초과 시 사용자 보고 전 자체 정정**
 
 ### 2. JSON 구조 규칙
 - 루트 필드: `dialogueId`, `chapterTitle`, `sections` (필수)
